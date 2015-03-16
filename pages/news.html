@@ -22,8 +22,18 @@
 	<!-- Basic Stylesheet -->
 	<link href="../stylesheets/styles.css" rel="stylesheet">
 	
-	<!-- Tree Stylesheet -->
-	<link href="../stylesheets/tree.css" rel="stylesheet">
+	<!-- Safari Tree Stylesheet -->
+	<script type="text/javascript">
+	var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
+		if (isSafari == true) 
+		{
+  		 document.write('<link rel="stylesheet" type="text/css" href="../stylesheets/safari-tree.css">');        
+		} else {
+		 document.write('<link rel="stylesheet" type="text/css" href="../stylesheets/tree.css">');
+		}
+		
+	</script>
+
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
