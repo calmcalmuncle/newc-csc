@@ -144,8 +144,22 @@ transform: translateX(-50%) translatey(-100%);
 overflow:hidden;
 }
 
-.TierOneHeader h3 {
+.TierOneHeader h2{
 text-align: center;
+color:black;
+padding:5px;
+margin:0px;
+font-size:20px;
+line-height:22px;
+}
+
+.TierTwoHeader h3 {
+text-align: center;
+color:black;
+padding:5px;
+margin:0px;
+font-size:17.5px;
+line-height:22px;
 }
 
 #TierOneHeaderOne{
@@ -239,16 +253,6 @@ transition: all ease-in-out 0.4s;
 pointer-events: none;
 transform: translateX(-50%) translatey(-100%);
 overflow:hidden;
-}
-
-#T1H1Fetch{
-font-family: Verdana, Geneva, sans-serif;
-font-size: 1px;
-font-style: normal;
-font-variant: normal;
-font-weight: 500;
-line-height: 26.3999996185303px;
-transform: translateX(0%) translatey(-45%);
 }
 
 #TierTwoHeaderOne{
