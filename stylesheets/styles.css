@@ -1,0 +1,251 @@
+body{
+height:100%;
+padding-top: 60px;
+padding-top: 60px;
+}
+
+
+
+html {
+height: 100%;
+}
+
+hr{
+border-color:white;
+}
+
+.navbar{
+min-height:45px;
+margin:0px;
+}
+
+#navimage{
+height:28;
+width:160px;
+}
+
+#navcontainer ul
+{
+margin: 0;
+padding: 5px;
+list-style-type: none;
+text-align: center;
+}
+
+#navcontainer ul li { 
+display: inline; 
+}
+
+#navcontainer ul li a
+{
+text-decoration: none;
+margin:10px;
+color: black;
+}
+
+
+.wrapper{
+width: 1400px;
+margin-left:auto;
+margin-right:auto;
+}
+
+.wrapLeft{
+width: 210px;
+float:left;
+}
+
+.marquee{
+background-color:rgba(0, 0, 0, 0.6);
+margin-top:50%;
+transform: translatey(-70%);
+border: none;
+color:white;
+}
+
+
+#MainTree{
+height:960px;
+width:960px;
+margin-bottom:30px;
+width:960px;
+border-radius:10px;
+border: 0px solid #e7e7e7;
+background-color:#F2D8A7;
+margin-left:auto;
+margin-right:auto;
+position:relative;
+background-image: url("../images/treee - Copy.png");
+background-position:center;
+background-repeat:no-repeat;
+}
+
+.BarLeft{
+height:400px;
+width:210px;
+float:left;
+background-color:#c8c8c8;
+border-radius:10px;
+border: 1px solid #e7e7e7;
+text-align:center;
+}
+
+#BarLeft1{
+height:520px;
+width:210px;
+float:left;
+}
+
+#BarLeft2{
+margin-top:20px;
+height:400px;
+width:210px;
+float:left;
+}
+
+#FeaturedText{
+margin-top:5px;
+text-align:center;
+}
+
+#FeaturedOne{
+width:200px;
+height:230px;
+}
+
+#FeaturedTwo{
+width:200px;
+height:230px;
+margin-top:5px;
+margin-left:auto;
+margin-right:auto;
+background-color:white;
+border-bottom-left-radius:5px;
+border-bottom-right-radius:5px;
+}
+
+#FeaturedTwoText{
+font-size: 11px;
+color: #333;
+}
+
+.wrapRight{
+width: 210px;
+float:right;
+}
+
+.BarRight{
+height:400px;
+width:210px;
+float:right;
+color:inherit;
+background-color:#c8c8c8;
+border-radius:10px;
+border: 1px solid #e7e7e7;
+text-align:center;
+}
+
+#BarRight1{
+}
+
+#BarRight2{
+margin-top:20px;
+height:280px;
+}
+
+#BarRight3{
+margin-top:20px;
+height:240px;
+}
+
+.BarRight button {
+width: inherit;
+height: 40px;
+border-right-color:#e7e7e7;
+border-left-color:#e7e7e7;
+}
+.BarRight button:focus{
+outline: 0;
+}
+
+#TopButton{
+width:inherit;
+border-top-left-radius:inherit;
+border-top-right-radius:inherit;
+}
+#TopButton:hover{
+border-bottom: 5px solid #990000;
+}
+
+#BottomButton{
+border-bottom-left-radius:inherit;
+border-bottom-right-radius:inherit;
+}
+#BottomButton:hover{
+border-bottom: 5px solid #2b3a76;
+}
+.BarRight #Video:hover{
+border-bottom: 5px solid #000000;
+}
+.BarRight #Twitter:hover{
+border-bottom: 5px solid #5EA9DD;
+}
+.BarRight #Stream:hover{
+border-bottom: 5px solid #FFFFFF;
+}
+.BarRight #Fash:hover{
+border-bottom: 5px solid #FA58F4;
+}
+.BarRight #Sci:hover{
+border-bottom: 5px solid #2EFE2E;
+}
+.BarRight #Tech:hover{
+border-bottom: 5px solid #FF0000;
+}
+.BarRight #Busi:hover{
+border-bottom: 5px solid #A901DB;
+}
+.BarRight #Food:hover{
+border-bottom: 5px solid #FFFF00;
+}
+
+.row{
+margin:auto;
+min-width:150vh;
+}
+
+.container-fluid{
+width:960px;
+margin-left:auto;
+margin-right:auto;
+}
+.container{
+width:960px;
+margin-left:auto;
+margin-right:auto;
+}
+
+.ContactText{
+text-align:center;
+margin-top:50%;
+transform:translatey(-50%);
+}
+
+footer {
+width: 100%;
+float: left;
+margin: 0 0 .5% 0;
+border-radius: 10px;
+}
+
+address {
+margin:0px;
+font-size : 18px; 
+text-align : center; 
+color: #000;
+padding: 0;
+}
+
+.fancybox-custom .fancybox-skin {
+			box-shadow: 0 0 50px #222;
+		}
