@@ -67,18 +67,18 @@ var query = [
 
 // Make Ajax request to Noodle server
 jQuery.getJSON(request, function (data) {
-  document.getElementById('Sec1').href = 'http://www.bbc.co.uk'+data[0].results;
-  document.getElementById('Ter1').href = 'http://www.bbc.co.uk'+data[3].results;
-  document.getElementById('Ter2').href = 'http://www.bbc.co.uk'+data[6].results;
-  document.getElementById('Ter3').href = 'http://www.bbc.co.uk'+data[9].results;
-  document.getElementById('Sec1').title = data[1].results;
-  document.getElementById('Ter1').title = data[4].results;
-  document.getElementById('Ter2').title = data[7].results;
-  document.getElementById('Ter3').title = data[10].results;
-  document.getElementById('Sec1').style.backgroundImage = 'url("'+data[2].results+'")';
-  document.getElementById('Ter1').style.backgroundImage = 'url("'+data[5].results+'")';
-  document.getElementById('Ter2').style.backgroundImage = 'url("'+data[8].results+'")';
-  document.getElementById('Ter3').style.backgroundImage = 'url("'+data[11].results+'")';
+  document.getElementById('T1C1Fetch').href = 'http://www.bbc.co.uk'+data[0].results;
+  document.getElementById('T2C1Fetch').href = 'http://www.bbc.co.uk'+data[3].results;
+  document.getElementById('T2C2Fetch').href = 'http://www.bbc.co.uk'+data[6].results;
+  document.getElementById('T2C3Fetch').href = 'http://www.bbc.co.uk'+data[9].results;
+  document.getElementById('T1H1Fetch').innerHTML = data[1].results;
+  document.getElementById('T2H1Fetch').innerHTML = data[4].results;
+  document.getElementById('T2H2Fetch').innerHTML = data[7].results;
+  document.getElementById('T2H3Fetch').innerHTML = data[10].results;
+  document.getElementById('T1C1Fetch').style.backgroundImage = 'url("'+data[2].results+'")';
+  document.getElementById('T2C1Fetch').style.backgroundImage = 'url("'+data[5].results+'")';
+  document.getElementById('T2C2Fetch').style.backgroundImage = 'url("'+data[8].results+'")';
+  document.getElementById('T2C3Fetch').style.backgroundImage = 'url("'+data[11].results+'")';
 });
 
 var query = [
@@ -161,18 +161,18 @@ var query = [
 
 // Make Ajax request to Noodle server
 jQuery.getJSON(request, function (data) {
-  document.getElementById('Sec2').href = 'http://www.dailymail.co.uk'+data[0].results;
-  document.getElementById('Ter4').href = 'http://www.dailymail.co.uk'+data[3].results;
-  document.getElementById('Ter5').href = 'http://www.dailymail.co.uk'+data[6].results;
-  document.getElementById('Ter6').href = 'http://www.dailymail.co.uk/'+data[9].results;
-  document.getElementById('Sec2').title = data[1].results;
-  document.getElementById('Ter4').title = data[4].results;
-  document.getElementById('Ter5').title = data[7].results;
-  document.getElementById('Ter6').title = data[10].results;
-  document.getElementById('Sec2').style.backgroundImage = 'url("'+data[2].results+'")';
-  document.getElementById('Ter4').style.backgroundImage = 'url("'+data[5].results+'")';
-  document.getElementById('Ter5').style.backgroundImage = 'url("'+data[8].results+'")';
-  document.getElementById('Ter6').style.backgroundImage = 'url("'+data[11].results+'")';
+  document.getElementById('T1C2Fetch').href = data[0].results;
+  document.getElementById('T2C4Fetch').href = data[3].results;
+  document.getElementById('T2C5Fetch').href = data[6].results;
+  document.getElementById('T2C6Fetch').href = data[9].results;
+  document.getElementById('T1H2Fetch').innerHTML = data[1].results;
+  document.getElementById('T2H4Fetch').innerHTML = data[4].results;
+  document.getElementById('T2H5Fetch').innerHTML = data[7].results;
+  document.getElementById('T2H6Fetch').innerHTML = data[10].results;
+  document.getElementById('T1C2Fetch').style.backgroundImage = 'url("'+data[2].results+'")';
+  document.getElementById('T2C4Fetch').style.backgroundImage = 'url("'+data[5].results+'")';
+  document.getElementById('T2C5Fetch').style.backgroundImage = 'url("'+data[8].results+'")';
+  document.getElementById('T2C6Fetch').style.backgroundImage = 'url("'+data[11].results+'")';
 });
 
 var query = [
@@ -255,18 +255,18 @@ var query = [
 
 // Make Ajax request to Noodle server
 jQuery.getJSON(request, function (data) {
-  document.getElementById('Sec3').href = 'http://news.sky.com'+data[0].results;
-  document.getElementById('Sec3').title = data[1].results;
-  document.getElementById('Sec3').style.backgroundImage = 'url("'+data[2].results+'")';
-  document.getElementById('Ter7').href = 'http://news.sky.com'+data[3].results;
-  document.getElementById('Ter7').title = data[4].results;
-  document.getElementById('Ter7').style.backgroundImage = 'url("'+data[5].results+'")';
-  document.getElementById('Ter8').href = 'http://news.sky.com'+data[6].results;
-  document.getElementById('Ter8').title = data[7].results;
-  document.getElementById('Ter8').style.backgroundImage = 'url("'+data[8].results+'")';
-  document.getElementById('Ter9').href = 'http://news.sky.com'+data[9].results;
-  document.getElementById('Ter9').title = data[10].results;
-  document.getElementById('Ter9').style.backgroundImage = 'url("'+data[11].results+'")';
+  document.getElementById('T1C3Fetch').href = 'http://news.sky.com'+data[0].results;
+  document.getElementById('T1H3Fetch').innerHTML = data[1].results;
+  document.getElementById('T1C3Fetch').style.backgroundImage = 'url("'+data[2].results+'")';
+  document.getElementById('T2C7Fetch').href = 'http://news.sky.com'+data[3].results;
+  document.getElementById('T2H7Fetch').innerHTML = data[4].results;
+  document.getElementById('T2C7Fetch').style.backgroundImage = 'url("'+data[5].results+'")';
+  document.getElementById('T2C8Fetch').href = 'http://news.sky.com'+data[6].results;
+  document.getElementById('T2H8Fetch').innerHTML = data[7].results;
+  document.getElementById('T2C8Fetch').style.backgroundImage = 'url("'+data[8].results+'")';
+  document.getElementById('T2C9Fetch').href = 'http://news.sky.com'+data[9].results;
+  document.getElementById('T2H9Fetch').innerHTML = data[10].results;
+  document.getElementById('T2C9Fetch').style.backgroundImage = 'url("'+data[11].results+'")';
 });
 
 var query = [
@@ -303,7 +303,7 @@ var query = [
 {
     url: 'http://www.independent.co.uk/',
     type: 'html',
-    selector: '#widget8552102-story10096252-picture9995789 > img',
+    selector: '#widget8552102-story10113939-picture9236151 > img',
     extract: 'src'
   },
   {
@@ -349,17 +349,17 @@ var query = [
 
 // Make Ajax request to Noodle server
 jQuery.getJSON(request, function (data) {
-  document.getElementById('Sec4').href = data[0].results;
-  document.getElementById('Sec4').title = data[1].results;
-  document.getElementById('Sec4').style.backgroundImage = 'url("'+data[2].results+'")';
-  document.getElementById('Ter10').href = data[3].results;
-  document.getElementById('Ter10').title = data[4].results;
-  document.getElementById('Ter10').style.backgroundImage = 'url("'+data[5].results+'")';
-  document.getElementById('Ter11').href = 'http://www.itv.com'+data[6].results;
-  document.getElementById('Ter11').title = data[7].results;
-  document.getElementById('Ter11').style.backgroundImage = 'url("'+data[8].results+'")';
-  document.getElementById('Ter12').href = 'http://www.itv.com'+data[9].results;
-  document.getElementById('Ter12').title = data[10].results;
-  document.getElementById('Ter12').style.backgroundImage = 'url("'+data[11].results+'")';
+  document.getElementById('T1C4Fetch').href = data[0].results;
+  document.getElementById('T1H4Fetch').innerHTML = data[1].results;
+  document.getElementById('T1C4Fetch').style.backgroundImage = 'url("'+data[2].results+'")';
+  document.getElementById('T2C10Fetch').href = data[3].results;
+  document.getElementById('T2H10Fetch').innerHTML = data[4].results;
+  document.getElementById('T2C10Fetch').style.backgroundImage = 'url("'+data[5].results+'")';
+  document.getElementById('T2C11Fetch').href = 'http://www.itv.com'+data[6].results;
+  document.getElementById('T2H11Fetch').innerHTML = data[7].results;
+  document.getElementById('T2C11Fetch').style.backgroundImage = 'url("'+data[8].results+'")';
+  document.getElementById('T2C12Fetch').href = 'http://www.itv.com'+data[9].results;
+  document.getElementById('T2H12Fetch').innerHTML = data[10].results;
+  document.getElementById('T2C12Fetch').style.backgroundImage = 'url("'+data[11].results+'")';
 });
 

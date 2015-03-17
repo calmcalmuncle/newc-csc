@@ -191,77 +191,77 @@ jQuery.getJSON(request, function (data) {
 });
   
 var query = [
-{
-    url: 'http://www.vogue.com/?us_site=y',
-    type: 'html',
-    selector: '#main > div.feed-page.feed-page__home > div.feed-page--left > article:nth-child(2) > div.feed-card--info > h2 > a',
-    extract: 'href'
-  },
-{
-    url: 'http://www.vogue.com/?us_site=y',
-    type: 'html',
-    selector: '#main > div.feed-page.feed-page__home > div.feed-page--left > article:nth-child(2) > div.feed-card--info > h2 > a',
-    extract: 'text'
-  },
-{
-    url: 'http://www.vogue.com/?us_site=y',
-    type: 'html',
-    selector: '#main > div.feed-page.feed-page__home > div.feed-page--left > article:nth-child(3) > div.feed-card--image > a > picture',
-    extract: 'data-src'
-  },
   {
-    url: 'http://www.theguardian.com/fashion',
+    url: 'http://news.sky.com/technology',
     type: 'html',
-    selector: '#fashion > div > div.fc-container--rolled-up-hide.fc-container__body.fc-show-more--hidden > div:nth-child(1) > ul > li.fc-slice__item.l-row__item.l-row__item--span-3.u-faux-block-link > div > div > a',
+    selector: 'body > div.viewport > div.main.main--sponsored > div > div > div > div:nth-child(2) > ol > li.section-top-stories__item.section-top-stories__item--2.section-top-stories__item--even > a',
     extract: 'href'
   },
 {
-    url: 'http://www.theguardian.com/fashion',
+    url: 'http://news.sky.com/technology',
     type: 'html',
-    selector: '#fashion > div > div.fc-container--rolled-up-hide.fc-container__body.fc-show-more--hidden > div:nth-child(1) > ul > li.fc-slice__item.l-row__item.l-row__item--span-3.u-faux-block-link > div > div > a',
-    extract: 'text'
-  },
-{
-    url: 'http://www.theguardian.com/fashion',
-    type: 'html',
-    selector: '#fashion > div > div.fc-container--rolled-up-hide.fc-container__body.fc-show-more--hidden > div:nth-child(1) > ul > li.fc-slice__item.l-row__item.l-row__item--span-3.u-faux-block-link > div > div > div.fc-item__media-wrapper > div > img',
+    selector: 'body > div.viewport > div.main.main--sponsored > div > div > div > div:nth-child(2) > ol > li.section-top-stories__item.section-top-stories__item--2.section-top-stories__item--even > a > div > div > img',
     extract: 'src'
   },
 {
-    url: 'http://fashion.telegraph.co.uk/',
+    url: 'http://news.sky.com/technology',
     type: 'html',
-    selector: '#Carousel1_ctl00_ctl06_ContainingFormView_hypBottomLink1',
-    extract: 'href'
-  },
-{
-    url: 'http://fashion.telegraph.co.uk/',
-    type: 'html',
-    selector: '#Carousel1_ctl00_ctl06_ContainingFormView_hypBottomLink1 > span.colourTtl.sp.themeColor',
+    selector: 'body > div.viewport > div.main.main--sponsored > div > div > div > div:nth-child(2) > ol > li.section-top-stories__item.section-top-stories__item--2.section-top-stories__item--even > a > span',
     extract: 'text'
-  },
-{
-    url: 'http://fashion.telegraph.co.uk/',
-    type: 'html',
-    selector: '#Carousel1_ctl00_ctl06_ContainingFormView_imgMain1',
-    extract: 'src'
   },
   {
-    url: 'http://www.vogue.com/fashion/trends/',
+    url: 'http://news.sky.com/technology',
     type: 'html',
-    selector: '#main > article.hero.multi-story.multi-story__recommended > div > ul > li:nth-child(1) > h3 > a',
+    selector: 'body > div.viewport > div.main.main--sponsored > div > div > div > div:nth-child(2) > ol > li.section-top-stories__item.section-top-stories__item--3.section-top-stories__item--odd > a',
     extract: 'href'
   },
 {
-    url: 'http://www.vogue.com/fashion/trends/',
+    url: 'http://news.sky.com/technology',
     type: 'html',
-    selector: '#main > article.hero.multi-story.multi-story__recommended > div > ul > li:nth-child(1) > h3 > a',
+    selector: 'body > div.viewport > div.main.main--sponsored > div > div > div > div:nth-child(2) > ol > li.section-top-stories__item.section-top-stories__item--3.section-top-stories__item--odd > a > div > div > img',
+    extract: 'src'
+  },
+{
+    url: 'http://news.sky.com/technology',
+    type: 'html',
+    selector: 'body > div.viewport > div.main.main--sponsored > div > div > div > div:nth-child(2) > ol > li.section-top-stories__item.section-top-stories__item--3.section-top-stories__item--odd > a > span',
     extract: 'text'
   },
 {
-    url: 'http://www.vogue.com/fashion/trends/',
+    url: 'http://news.sky.com/technology',
     type: 'html',
-    selector: '#main > article.hero.multi-story.multi-story__recommended > div > ul > li:nth-child(1) > div > a > picture',
-    extract: 'data-src'
+    selector: 'body > div.viewport > div.main.main--sponsored > div > div > div > div:nth-child(2) > ol > li.section-top-stories__item.section-top-stories__item--4.section-top-stories__item--even > a',
+    extract: 'href'
+  },
+{
+    url: 'http://news.sky.com/technology',
+    type: 'html',
+    selector: 'body > div.viewport > div.main.main--sponsored > div > div > div > div:nth-child(2) > ol > li.section-top-stories__item.section-top-stories__item--4.section-top-stories__item--even > a > div > div > img',
+    extract: 'src'
+  },
+{
+    url: 'http://news.sky.com/technology',
+    type: 'html',
+    selector: 'body > div.viewport > div.main.main--sponsored > div > div > div > div:nth-child(2) > ol > li.section-top-stories__item.section-top-stories__item--4.section-top-stories__item--even > a > span',
+    extract: 'text'
+  },
+{
+    url: 'http://news.sky.com/technology',
+    type: 'html',
+    selector: 'body > div.viewport > div.main.main--sponsored > div > div > div > div:nth-child(3) > ol > li.section-top-stories__item.section-top-stories__item--6.section-top-stories__item--even > a',
+    extract: 'href'
+  },
+{
+    url: 'http://news.sky.com/technology',
+    type: 'html',
+    selector: 'body > div.viewport > div.main.main--sponsored > div > div > div > div:nth-child(3) > ol > li.section-top-stories__item.section-top-stories__item--6.section-top-stories__item--even > a > div > div > img',
+    extract: 'src'
+  },
+{
+    url: 'http://news.sky.com/technology',
+    type: 'html',
+    selector: 'body > div.viewport > div.main.main--sponsored > div > div > div > div:nth-child(3) > ol > li.section-top-stories__item.section-top-stories__item--6.section-top-stories__item--even > a > span',
+    extract: 'text'
   }
 ]
   uriQuery = encodeURIComponent(JSON.stringify(query)),
@@ -270,18 +270,111 @@ var query = [
 
 // Make Ajax request to Noodle server
 jQuery.getJSON(request, function (data) {
-document.getElementById('Sec3').href = data[0].results;
-document.getElementById('Sec3').title = data[1].results;
-document.getElementById('Sec3').style.backgroundImage = 'url("'+data[2].results+'")';
-document.getElementById('Ter7').href = data[3].results;
-document.getElementById('Ter7').title = data[4].results;
-document.getElementById('Ter7').style.backgroundImage = 'url("http:'+data[5].results+'")';
-document.getElementById('Ter8').href = data[6].results;
-document.getElementById('Ter8').title = data[7].results;
-document.getElementById('Ter8').style.backgroundImage = 'url("'+data[8].results+'")';
-document.getElementById('Ter9').href = data[9].results;
-document.getElementById('Ter9').title = data[10].results;
-document.getElementById('Ter9').style.backgroundImage = 'url("'+data[11].results+'")';
+  document.getElementById('T1C3Fetch').href = data[0].results;
+  document.getElementById('T2C7Fetch').href = data[3].results;
+  document.getElementById('T2C8Fetch').href = data[6].results;
+  document.getElementById('T2C9Fetch').href = data[9].results;
+  document.getElementById('T1H3Fetch').innerHTML = data[2].results;
+  document.getElementById('T2H7Fetch').innerHTML = data[5].results;
+  document.getElementById('T2H8Fetch').innerHTML = data[8].results;
+  document.getElementById('T2H9Fetch').innerHTML = data[11].results;
+  document.getElementById('T1C3Fetch').style.backgroundImage = 'url("'+data[1].results+'")';
+  document.getElementById('T2C7Fetch').style.backgroundImage = 'url("'+data[4].results+'")';
+  document.getElementById('T2C8Fetch').style.backgroundImage = 'url("'+data[7].results+'")';
+  document.getElementById('T2C9Fetch').style.backgroundImage = 'url("'+data[10].results+'")';
 });
 
 
+var query = [
+{
+    url: 'http://techcrunch.com/',
+    type: 'html',
+    selector: 'body > div.fluid.flush.split.homepage > div.lc.flush.lc-island > div > div.l-main-container > div > div.island.plain-island > div > a',
+    extract: 'href'
+  },
+{
+    url: 'http://techcrunch.com/',
+    type: 'html',
+    selector: 'body > div.fluid.flush.split.homepage > div.lc.flush.lc-island > div > div.l-main-container > div > div.island.plain-island > div > a > div > h2',
+    extract: 'text'
+  },
+{
+    url: 'http://techcrunch.com/',
+    type: 'html',
+    selector: 'body > div.fluid.flush.split.homepage > div.lc.flush.lc-island > div > div.l-main-container > div > div.island.plain-island > div > a > img',
+    extract: 'src'
+  },
+{
+    url: 'http://techcrunch.com/',
+    type: 'html',
+    selector: 'body > div.fluid.flush.split.homepage > div.lc.flush.lc-island > div > div.l-main-container > div > div.island.plain-island > ul > li:nth-child(1) > a',
+    extract: 'href'
+  },
+{
+    url: 'http://techcrunch.com/',
+    type: 'html',
+    selector: 'body > div.fluid.flush.split.homepage > div.lc.flush.lc-island > div > div.l-main-container > div > div.island.plain-island > ul > li:nth-child(1) > a > div > h2',
+    extract: 'text'
+  },
+{
+    url: 'http://techcrunch.com/',
+    type: 'html',
+    selector: 'body > div.fluid.flush.split.homepage > div.lc.flush.lc-island > div > div.l-main-container > div > div.island.plain-island > ul > li:nth-child(1) > a > img',
+    extract: 'src'
+  },
+{
+    url: 'http://techcrunch.com/',
+    type: 'html',
+    selector: 'body > div.fluid.flush.split.homepage > div.lc.flush.lc-island > div > div.l-main-container > div > div.island.plain-island > ul > li:nth-child(2) > a',
+    extract: 'href'
+  },
+{
+    url: 'http://techcrunch.com/',
+    type: 'html',
+    selector: 'body > div.fluid.flush.split.homepage > div.lc.flush.lc-island > div > div.l-main-container > div > div.island.plain-island > ul > li:nth-child(2) > a > div > h2',
+    extract: 'text'
+  },
+{
+    url: 'http://techcrunch.com/',
+    type: 'html',
+    selector: 'body > div.fluid.flush.split.homepage > div.lc.flush.lc-island > div > div.l-main-container > div > div.island.plain-island > ul > li:nth-child(2) > a > img',
+    extract: 'src'
+  },
+  {
+    url: 'http://techcrunch.com/',
+    type: 'html',
+    selector: 'body > div.fluid.flush.split.homepage > div.lc.flush.lc-island > div > div.l-main-container > div > div.island.plain-island > ul > li:nth-child(3) > a',
+    extract: 'href'
+  },
+{
+    url: 'http://techcrunch.com/',
+    type: 'html',
+    selector: 'body > div.fluid.flush.split.homepage > div.lc.flush.lc-island > div > div.l-main-container > div > div.island.plain-island > ul > li:nth-child(3) > a > div > h2',
+    extract: 'text'
+  },
+{
+    url: 'http://techcrunch.com/',
+    type: 'html',
+    selector: 'body > div.fluid.flush.split.homepage > div.lc.flush.lc-island > div > div.l-main-container > div > div.island.plain-island > ul > li:nth-child(3) > a > img',
+    extract: 'src'
+  }
+]
+  uriQuery = encodeURIComponent(JSON.stringify(query)),
+  request  = 'http://treemac.herokuapp.com/?q=' +
+             uriQuery + '&callback=?';
+
+// Make Ajax request to Noodle server
+jQuery.getJSON(request, function (data) {
+  document.getElementById('T1C4Fetch').href = data[0].results;
+  document.getElementById('T2C10Fetch').href = data[3].results;
+  document.getElementById('T2C11Fetch').href = data[6].results;
+  document.getElementById('T2C12Fetch').href = data[9].results;
+  document.getElementById('T1H4Fetch').innerHTML = data[1].results;
+  document.getElementById('T2H10Fetch').innerHTML = data[4].results;
+  document.getElementById('T2H11Fetch').innerHTML = data[7].results;
+  document.getElementById('T2H12Fetch').innerHTML = data[10].results;
+  document.getElementById('T1C4Fetch').style.backgroundImage = 'url("'+data[2].results+'")';
+  document.getElementById('T2C10Fetch').style.backgroundImage = 'url("'+data[5].results+'")';
+  document.getElementById('T2C11Fetch').style.backgroundImage = 'url("'+data[8].results+'")';
+  document.getElementById('T2C12Fetch').style.backgroundImage = 'url("'+data[11].results+'")';
+});
