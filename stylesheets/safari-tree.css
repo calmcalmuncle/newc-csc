@@ -17,8 +17,8 @@ height:100px;
 width:100px;
 border-top-left-radius:100%;
 position:relative;
-top:45%;
-left:45%;
+top:40%;
+left:40%;
 transform:translateX(-50%) translatey(-50%);
 background-color:#990000;
 text-decoration:none;
@@ -39,8 +39,8 @@ height:100px;
 width:100px;
 border-top-right-radius:100%;
 position:relative;
-top:34.6%;
-left:55.4%;
+top:29.6%;
+left:50.4%;
 transform:translateX(-50%) translatey(-50%);
 background-color:#000000;
 text-decoration:none;
@@ -61,8 +61,8 @@ height:100px;
 width:100px;
 border-bottom-left-radius:100%;
 position:relative;
-top:34.5%;
-left:45%;
+top:29.5%;
+left:40%;
 transform:translateX(-50%) translatey(-50%);
 background-color:#5EA9DD;
 text-decoration:none;
@@ -83,8 +83,8 @@ height:100px;
 width:100px;
 border-bottom-right-radius:100%;
 position:relative;
-top:24.1%;
-left:55.4%;
+top:19.1%;
+left:50.4%;
 transform:translateX(-50%) translatey(-50%);
 background-color:#2b3a76;
 text-decoration:none;
@@ -112,7 +112,7 @@ font-size: 15px;
 left: -10px;
 }
 
-.SecondaryCircles {
+.TierOneCircle {
 position: absolute;
 display:block;
 background-position: center;
@@ -125,12 +125,12 @@ width: 150px;
 height: 150px;
 }
 
-.SecondaryCircles:hover +.exampleHeader {
+.TierOneCircle:hover +.TierOneHeader {
 opacity: 1;
 margin-top: 30px;
 }
 
-.exampleHeader {
+.TierOneHeader {
 position: absolute;
 z-index: 2;
 height: 50px;
@@ -144,62 +144,62 @@ transform: translateX(-50%) translatey(-100%);
 overflow:hidden;
 }
 
-.exampleHeader h3 {
+.TierOneHeader h3 {
 text-align: center;
 }
 
-#TopLeftTitle{
+#TierOneHeaderOne{
 text-align:center;
 color:black;
 top:30%;
 left:30%;
 }
 
-.TopLeftCircle{
-top:30%;
-left:30%;
+.TierOneCircleOne{
+top:22.5%;
+left:22.5%;
 background-color:#990000;
 border:1px solid #990000;
 }
 
-#TopRightTitle{
+#TierOneHeaderTwo{
 text-align:center;
 color:black;
 top:30%;
 left:70%;
 }
 
-.TopRightCircle{
-top:30%;
-left:70%;
+.TierOneCircleTwo{
+top:22.5%;
+left:62.5%;
 background-color:#990000;
 border:1px solid #990000;
 }
 
-#BottomLeftTitle{
+#TierOneHeaderFour{
 text-align:center;
 color:black;
 top:70%;
 left:30%;
 }
 
-.BottomLeftCircle{
-top:70%;
-left:30%;
+.TierOneCircleFour{
+top:62.5%;
+left:22.5%;
 border:1px solid #5EA9DD;
 background-color:#5EA9DD;
 }
 
-#BottomRightTitle{
+#TierOneHeaderThree{
 text-align:center;
 color:black;
-top:70%;
-left:70%;
+top:62.5%;
+left:62.5%;
 }
 
-.BottomRightCircle{
-top:70%;
-left:70%;
+.TierOneCircleThree{
+top:62.5%;
+left:62.5%;
 border:1px solid #2b3a76;
 background-color:#2b3a76;
 }
@@ -210,7 +210,7 @@ color:red;
 font-size:100px;
 }
 
-.TertiaryCircles{
+.TierTwoCircle{
 display:block;
 height:100px;
 width:100px;
@@ -222,12 +222,12 @@ background-repeat: no-repeat;
 position: absolute;
 }
 
-.TertiaryCircles:hover +.TertiaryHeader {
+.TierTwoCircle:hover +.TierTwoHeader {
 opacity: 1;
 margin-top: 30px;
 }
 
-.TertiaryHeader {
+.TierTwoHeader {
 position: absolute;
 z-index: 2;
 height: 50px;
@@ -241,7 +241,7 @@ transform: translateX(-50%) translatey(-100%);
 overflow:hidden;
 }
 
-#Tier2Title1Text{
+#T1H1Fetch{
 font-family: Verdana, Geneva, sans-serif;
 font-size: 1px;
 font-style: normal;
@@ -251,7 +251,7 @@ line-height: 26.3999996185303px;
 transform: translateX(0%) translatey(-45%);
 }
 
-#TierTwoTitleOne{
+#TierTwoHeaderOne{
 text-align:center;
 color:black;
 top:15%;
@@ -259,13 +259,13 @@ left:15%;
 }
 
 .TierTwoCircleOne{
-top:15%;
-left:15%;
+top:10%;
+left:10%;
 border:1px solid #990000;
 background-color:#990000;
 }
 
-#TierTwoTitleTwo{
+#TierTwoHeaderTwo{
 text-align:center;
 color:black;
 top:30%;
@@ -273,13 +273,13 @@ left:10%;
 }
 
 .TierTwoCircleTwo{
-top:30%;
-left:10%;
+top:25%;
+left:5%;
 border:1px solid #990000;
 background-color:#990000;
 }
 
-#TierTwoTitleThree{
+#TierTwoHeaderThree{
 text-align:center;
 color:black;
 top:10%;
@@ -287,13 +287,13 @@ left:30%;
 }
 
 .TierTwoCircleThree{
-top:10%;
-left:30%;
+top:5%;
+left:25%;
 border:1px solid #990000;
 background-color:#990000;
 }
 
-#TierTwoTitleFour{
+#TierTwoHeaderFour{
 text-align:center;
 color:black;
 top:15%;
@@ -301,13 +301,13 @@ left:85%;
 }
 
 .TierTwoCircleFour{
-top:15%;
-left:85%;
+top:10%;
+left:80%;
 border:1px solid #000000;
 background-color:#000000;
 }
 
-#TierTwoTitleFive{
+#TierTwoHeaderFive{
 text-align:center;
 color:black;
 top:10%;
@@ -315,13 +315,13 @@ left:70%;
 }
 
 .TierTwoCircleFive{
-top:10%;
-left:70%;
+top:5%;
+left:65%;
 border:1px solid #000000;
 background-color:#000000;
 }
 
-#TierTwoTitleSix{
+#TierTwoHeaderSix{
 text-align:center;
 color:black;
 top:30%;
@@ -329,13 +329,13 @@ left:90%;
 }
 
 .TierTwoCircleSix{
-top:30%;
-left:90%;
+top:25%;
+left:85%;
 border:1px solid #000000;
 background-color:#000000;
 }
 
-#TierTwoTitleSeven{
+#TierTwoHeaderTen{
 text-align:center;
 color:black;
 top:85%;
@@ -343,13 +343,13 @@ left:15%;
 }
 
 .TierTwoCircleSeven{
-top:85%;
-left:15%;
+top:80%;
+left:10%;
 border:1px solid ##5EA9DD;
 background-color:#5EA9DD;
 }
 
-#TierTwoTitleEight{
+#TierTwoHeaderEleven{
 top:70%;
 left:10%;
 text-align:center;
@@ -357,13 +357,13 @@ color:black;
 }
 
 .TierTwoCircleEight{
-top:70%;
-left:10%;
+top:65%;
+left:5%;
 border:1px solid ##5EA9DD;
 background-color:#5EA9DD;
 }
 
-#TierTwoTitleNine{
+#TierTwoHeaderTwelve{
 top:90%;
 left:30%;
 text-align:center;
@@ -371,13 +371,13 @@ color:black;
 }
 
 .TierTwoCircleNine{
-top:90%;
-left:30%;
+top:85%;
+left:25%;
 border:1px solid ##5EA9DD;
 background-color:#5EA9DD;
 }
 
-#TierTwoTitleTen{
+#TierTwoHeaderSeven{
 top:85%;
 left:85%;
 text-align:center;
@@ -385,13 +385,13 @@ color:black;
 }
 
 .TierTwoCircleTen{
-top:85%;
-left:85%;
+top:80%;
+left:80%;
 border:1px solid #2b3a76;
 background-color:#2b3a76;
 }
 
-#TierTwoTitleEleven{
+#TierTwoHeaderEight{
 top:90%;
 left:70%;
 text-align:center;
@@ -399,13 +399,13 @@ color:black;
 }
 
 .TierTwoCircleEleven{
-top:90%;
-left:70%;
+top:85%;
+left:65%;
 border:1px solid #2b3a76;
 background-color:#2b3a76;
 }
 
-#TierTwoTitleTwelve{
+#TierTwoHeaderNine{
 top:70%;
 left:90%;
 text-align:center;
@@ -413,8 +413,8 @@ color:black;
 }
 
 .TierTwoCircleTwelve{
-top:70%;
-left:90%;
+top:65%;
+left:85%;
 border:1px solid #2b3a76;
 background-color:#2b3a76;
 }
