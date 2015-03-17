@@ -191,6 +191,101 @@ jQuery.getJSON(request, function (data) {
 });
   
 var query = [
+  {
+    url: 'http://news.sky.com/technology',
+    type: 'html',
+    selector: 'body > div.viewport > div.main.main--sponsored > div > div > div > div:nth-child(2) > ol > li.section-top-stories__item.section-top-stories__item--2.section-top-stories__item--even > a',
+    extract: 'href'
+  },
+{
+    url: 'http://news.sky.com/technology',
+    type: 'html',
+    selector: 'body > div.viewport > div.main.main--sponsored > div > div > div > div:nth-child(2) > ol > li.section-top-stories__item.section-top-stories__item--2.section-top-stories__item--even > a > div > div > img',
+    extract: 'src'
+  },
+{
+    url: 'http://news.sky.com/technology',
+    type: 'html',
+    selector: 'body > div.viewport > div.main.main--sponsored > div > div > div > div:nth-child(2) > ol > li.section-top-stories__item.section-top-stories__item--2.section-top-stories__item--even > a > span',
+    extract: 'text'
+  },
+  {
+    url: 'http://news.sky.com/technology',
+    type: 'html',
+    selector: 'body > div.viewport > div.main.main--sponsored > div > div > div > div:nth-child(2) > ol > li.section-top-stories__item.section-top-stories__item--3.section-top-stories__item--odd > a',
+    extract: 'href'
+  },
+{
+    url: 'http://news.sky.com/technology',
+    type: 'html',
+    selector: 'body > div.viewport > div.main.main--sponsored > div > div > div > div:nth-child(2) > ol > li.section-top-stories__item.section-top-stories__item--3.section-top-stories__item--odd > a > div > div > img',
+    extract: 'src'
+  },
+{
+    url: 'http://news.sky.com/technology',
+    type: 'html',
+    selector: 'body > div.viewport > div.main.main--sponsored > div > div > div > div:nth-child(2) > ol > li.section-top-stories__item.section-top-stories__item--3.section-top-stories__item--odd > a > span',
+    extract: 'text'
+  },
+{
+    url: 'http://news.sky.com/technology',
+    type: 'html',
+    selector: 'body > div.viewport > div.main.main--sponsored > div > div > div > div:nth-child(2) > ol > li.section-top-stories__item.section-top-stories__item--4.section-top-stories__item--even > a',
+    extract: 'href'
+  },
+{
+    url: 'http://news.sky.com/technology',
+    type: 'html',
+    selector: 'body > div.viewport > div.main.main--sponsored > div > div > div > div:nth-child(2) > ol > li.section-top-stories__item.section-top-stories__item--4.section-top-stories__item--even > a > div > div > img',
+    extract: 'src'
+  },
+{
+    url: 'http://news.sky.com/technology',
+    type: 'html',
+    selector: 'body > div.viewport > div.main.main--sponsored > div > div > div > div:nth-child(2) > ol > li.section-top-stories__item.section-top-stories__item--4.section-top-stories__item--even > a > span',
+    extract: 'text'
+  },
+{
+    url: 'http://news.sky.com/technology',
+    type: 'html',
+    selector: 'body > div.viewport > div.main.main--sponsored > div > div > div > div:nth-child(3) > ol > li.section-top-stories__item.section-top-stories__item--6.section-top-stories__item--even > a',
+    extract: 'href'
+  },
+{
+    url: 'http://news.sky.com/technology',
+    type: 'html',
+    selector: 'body > div.viewport > div.main.main--sponsored > div > div > div > div:nth-child(3) > ol > li.section-top-stories__item.section-top-stories__item--6.section-top-stories__item--even > a > div > div > img',
+    extract: 'src'
+  },
+{
+    url: 'http://news.sky.com/technology',
+    type: 'html',
+    selector: 'body > div.viewport > div.main.main--sponsored > div > div > div > div:nth-child(3) > ol > li.section-top-stories__item.section-top-stories__item--6.section-top-stories__item--even > a > span',
+    extract: 'text'
+  }
+]
+  uriQuery = encodeURIComponent(JSON.stringify(query)),
+  request  = 'http://treemac.herokuapp.com/?q=' +
+             uriQuery + '&callback=?';
+
+// Make Ajax request to Noodle server
+jQuery.getJSON(request, function (data) {
+  document.getElementById('T1C3Fetch').href = data[0].results;
+  document.getElementById('T2C7Fetch').href = data[3].results;
+  document.getElementById('T2C8Fetch').href = data[6].results;
+  document.getElementById('T2C9Fetch').href = data[9].results;
+  document.getElementById('T1H3Fetch').innerHTML = data[2].results;
+  document.getElementById('T2H7Fetch').innerHTML = data[5].results;
+  document.getElementById('T2H8Fetch').innerHTML = data[8].results;
+  document.getElementById('T2H9Fetch').innerHTML = data[11].results;
+  document.getElementById('T1C3Fetch').style.backgroundImage = 'url("'+data[1].results+'")';
+  document.getElementById('T2C7Fetch').style.backgroundImage = 'url("'+data[4].results+'")';
+  document.getElementById('T2C8Fetch').style.backgroundImage = 'url("'+data[7].results+'")';
+  document.getElementById('T2C9Fetch').style.backgroundImage = 'url("'+data[10].results+'")';
+});
+
+
+var query = [
 {
     url: 'http://techcrunch.com/',
     type: 'html',
@@ -270,111 +365,16 @@ var query = [
 
 // Make Ajax request to Noodle server
 jQuery.getJSON(request, function (data) {
-  document.getElementById('T1C3Fetch').href = data[0].results;
-  document.getElementById('T2C7Fetch').href = data[3].results;
-  document.getElementById('T2C8Fetch').href = data[6].results;
-  document.getElementById('T2C9Fetch').href = data[9].results;
-  document.getElementById('T1H3Fetch').innerHTML = data[1].results;
-  document.getElementById('T2H7Fetch').innerHTML = data[4].results;
-  document.getElementById('T2H8Fetch').innerHTML = data[7].results;
-  document.getElementById('T2H9Fetch').innerHTML = data[10].results;
-  document.getElementById('T1C3Fetch').style.backgroundImage = 'url("'+data[2].results+'")';
-  document.getElementById('T2C7Fetch').style.backgroundImage = 'url("'+data[5].results+'")';
-  document.getElementById('T2C8Fetch').style.backgroundImage = 'url("'+data[8].results+'")';
-  document.getElementById('T2C9Fetch').style.backgroundImage = 'url("'+data[11].results+'")';
-});
-
-
-var query = [
-{
-    url: 'http://www.theguardian.com/uk/technology',
-    type: 'html',
-    selector: '#technology > div > div.fc-container--rolled-up-hide.fc-container__body.fc-show-more--hidden > div:nth-child(1) > ul > li.fc-slice__item.l-row__item.l-row__item--span-2.u-faux-block-link > div > div > a',
-    extract: 'href'
-  },
-{
-    url: 'http://www.theguardian.com/uk/technology',
-    type: 'html',
-    selector: '#technology > div > div.fc-container--rolled-up-hide.fc-container__body.fc-show-more--hidden > div:nth-child(1) > ul > li.fc-slice__item.l-row__item.l-row__item--span-2.u-faux-block-link > div > div > a',
-    extract: 'text'
-  },
-{
-    url: 'http://www.theguardian.com/uk/technology',
-    type: 'html',
-    selector: '#technology > div > div.fc-container--rolled-up-hide.fc-container__body.fc-show-more--hidden > div:nth-child(1) > ul > li.fc-slice__item.l-row__item.l-row__item--span-2.u-faux-block-link > div > div > div.fc-item__media-wrapper > div > img',
-    extract: 'src'
-  },
-{
-    url: 'http://www.theguardian.com/uk/technology',
-    type: 'html',
-    selector: '#technology > div > div.fc-container--rolled-up-hide.fc-container__body.fc-show-more--hidden > div:nth-child(1) > ul > li:nth-child(2) > div > div > a',
-    extract: 'href'
-  },
-{
-    url: 'http://www.theguardian.com/uk/technology',
-    type: 'html',
-    selector: '#technology > div > div.fc-container--rolled-up-hide.fc-container__body.fc-show-more--hidden > div:nth-child(1) > ul > li:nth-child(2) > div > div > a',
-    extract: 'text'
-  },
-{
-    url: 'http://www.theguardian.com/uk/technology',
-    type: 'html',
-    selector: '#technology > div > div.fc-container--rolled-up-hide.fc-container__body.fc-show-more--hidden > div:nth-child(1) > ul > li:nth-child(2) > div > div > div.fc-item__media-wrapper > div > img',
-    extract: 'src'
-  },
-{
-    url: 'http://www.bbc.com/future/sections/technology',
-    type: 'html',
-    selector: '#blq-content > section.main-column > article.story-index-item.full-width-text-inset > div.text-box > div > h1 > a',
-    extract: 'href'
-  },
-{
-    url: 'http://www.bbc.com/future/sections/technology',
-    type: 'html',
-    selector: '#blq-content > section.main-column > article.story-index-item.full-width-text-inset > div.text-box > div > h1 > a',
-    extract: 'text'
-  },
-{
-    url: 'http://www.bbc.com/future/sections/technology',
-    type: 'html',
-    selector: '#blq-content > section.main-column > article.story-index-item.full-width-text-inset > div.image-container > a > img',
-    extract: 'src'
-  },
-{
-    url: 'http://www.bbc.com/future/sections/technology',
-    type: 'html',
-    selector: '#blq-content > section.secondary-column > article:nth-child(2) > div.text-box > div > h1 > a',
-    extract: 'href'
-  },
-{
-    url: 'http://www.bbc.com/future/sections/technology',
-    type: 'html',
-    selector: '#blq-content > section.secondary-column > article:nth-child(2) > div.text-box > div > h1 > a',
-    extract: 'text'
-  },
-{
-    url: 'http://www.bbc.com/future/sections/technology',
-    type: 'html',
-    selector: '#blq-content > section.secondary-column > article:nth-child(2) > div.image-container > a > img',
-    extract: 'src'
-  }
-]
-  uriQuery = encodeURIComponent(JSON.stringify(query)),
-  request  = 'http://treemac.herokuapp.com/?q=' +
-             uriQuery + '&callback=?';
-
-// Make Ajax request to Noodle server
-jQuery.getJSON(request, function (data) {
   document.getElementById('T1C4Fetch').href = data[0].results;
   document.getElementById('T2C10Fetch').href = data[3].results;
-  document.getElementById('T2C11Fetch').href = 'http://www.bbc.com'+data[6].results;
-  document.getElementById('T2C12Fetch').href = 'http://www.bbc.com'+data[9].results;
+  document.getElementById('T2C11Fetch').href = data[6].results;
+  document.getElementById('T2C12Fetch').href = data[9].results;
   document.getElementById('T1H4Fetch').innerHTML = data[1].results;
   document.getElementById('T2H10Fetch').innerHTML = data[4].results;
   document.getElementById('T2H11Fetch').innerHTML = data[7].results;
   document.getElementById('T2H12Fetch').innerHTML = data[10].results;
   document.getElementById('T1C4Fetch').style.backgroundImage = 'url("'+data[2].results+'")';
-  document.getElementById('T2C10Fetch').style.backgroundImage = 'url("http:'+data[5].results+'")';
+  document.getElementById('T2C10Fetch').style.backgroundImage = 'url("'+data[5].results+'")';
   document.getElementById('T2C11Fetch').style.backgroundImage = 'url("'+data[8].results+'")';
   document.getElementById('T2C12Fetch').style.backgroundImage = 'url("'+data[11].results+'")';
 });
