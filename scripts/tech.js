@@ -270,10 +270,10 @@ var query = [
 
 // Make Ajax request to Noodle server
 jQuery.getJSON(request, function (data) {
-  document.getElementById('T1C3Fetch').href = data[0].results;
-  document.getElementById('T2C7Fetch').href = data[3].results;
-  document.getElementById('T2C8Fetch').href = data[6].results;
-  document.getElementById('T2C9Fetch').href = data[9].results;
+  document.getElementById('T1C3Fetch').href = 'http://news.sky.com'+data[0].results;
+  document.getElementById('T2C7Fetch').href = 'http://news.sky.com'+data[3].results;
+  document.getElementById('T2C8Fetch').href = 'http://news.sky.com'+data[6].results;
+  document.getElementById('T2C9Fetch').href = 'http://news.sky.com'+data[9].results;
   document.getElementById('T1H3Fetch').innerHTML = data[2].results;
   document.getElementById('T2H7Fetch').innerHTML = data[5].results;
   document.getElementById('T2H8Fetch').innerHTML = data[8].results;
