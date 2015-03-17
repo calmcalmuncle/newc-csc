@@ -64,18 +64,18 @@ jQuery.getJSON(request, function (data) {
   var res3 = string3.substr(9);
   var string4 = ""+data[6].results;
   var res4 = string4.substr(9);
-  document.getElementById('Sec2').href = 'https://www.youtube.com/embed/'+res1+'?autoplay=1';
-  document.getElementById('Ter4').href = 'https://www.youtube.com/embed/'+res2+'?autoplay=1';
-  document.getElementById('Ter5').href = 'https://www.youtube.com/embed/'+res3+'?autoplay=1';
-  document.getElementById('Ter6').href = 'https://www.youtube.com/embed/'+res4+'?autoplay=1';
-  document.getElementById('Sec2').title = data[1].results;
-  document.getElementById('Ter4').title = data[3].results;
-  document.getElementById('Ter5').title = data[5].results;
-  document.getElementById('Ter6').title = data[7].results;
-  document.getElementById('Sec2').style.backgroundImage = 'url("http://i.ytimg.com/vi/'+res1+'/mqdefault.jpg")';
-  document.getElementById('Ter4').style.backgroundImage = 'url("http://i.ytimg.com/vi/'+res2+'/mqdefault.jpg")';
-  document.getElementById('Ter5').style.backgroundImage = 'url("http://i.ytimg.com/vi/'+res3+'/mqdefault.jpg")';
-  document.getElementById('Ter6').style.backgroundImage = 'url("http://i.ytimg.com/vi/'+res4+'/mqdefault.jpg")';
+  document.getElementById('T1C1Fetch').href = 'https://www.youtube.com/embed/'+res1+'?autoplay=1';
+  document.getElementById('T2C1Fetch').href = 'https://www.youtube.com/embed/'+res2+'?autoplay=1';
+  document.getElementById('T2C2Fetch').href = 'https://www.youtube.com/embed/'+res3+'?autoplay=1';
+  document.getElementById('T2C3Fetch').href = 'https://www.youtube.com/embed/'+res4+'?autoplay=1';
+  document.getElementById('T1H1Fetch').innerHTML = data[1].results;
+  document.getElementById('T2H1Fetch').innerHTML = data[3].results;
+  document.getElementById('T2H2Fetch').innerHTML = data[5].results;
+  document.getElementById('T2H3Fetch').innerHTML = data[7].results;
+  document.getElementById('T1C1Fetch').style.backgroundImage = 'url("http://i.ytimg.com/vi/'+res1+'/mqdefault.jpg")';
+  document.getElementById('T2C1Fetch').style.backgroundImage = 'url("http://i.ytimg.com/vi/'+res2+'/mqdefault.jpg")';
+  document.getElementById('T2C2Fetch').style.backgroundImage = 'url("http://i.ytimg.com/vi/'+res3+'/mqdefault.jpg")';
+  document.getElementById('T2C3Fetch').style.backgroundImage = 'url("http://i.ytimg.com/vi/'+res4+'/mqdefault.jpg")';
 });
 
 var query = [
@@ -143,18 +143,18 @@ jQuery.getJSON(request, function (data) {
   var res3 = string3.substr(9);
   var string4 = ""+data[6].results;
   var res4 = string4.substr(9);
-  document.getElementById('Sec1').href = 'https://www.youtube.com/embed/'+res1+'?autoplay=1';
-  document.getElementById('Ter1').href = 'https://www.youtube.com/embed/'+res2+'?autoplay=1';
-  document.getElementById('Ter2').href = 'https://www.youtube.com/embed/'+res3+'?autoplay=1';
-  document.getElementById('Ter3').href = 'https://www.youtube.com/embed/'+res4+'?autoplay=1';
-  document.getElementById('Sec1').title = data[1].results;
-  document.getElementById('Ter1').title = data[3].results;
-  document.getElementById('Ter2').title = data[5].results;
-  document.getElementById('Ter3').title = data[7].results;
-  document.getElementById('Sec1').style.backgroundImage = 'url("http://i.ytimg.com/vi/'+res1+'/mqdefault.jpg")';
-  document.getElementById('Ter1').style.backgroundImage = 'url("http://i.ytimg.com/vi/'+res2+'/mqdefault.jpg")';
-  document.getElementById('Ter2').style.backgroundImage = 'url("http://i.ytimg.com/vi/'+res3+'/mqdefault.jpg")';
-  document.getElementById('Ter3').style.backgroundImage = 'url("http://i.ytimg.com/vi/'+res4+'/mqdefault.jpg")';
+  document.getElementById('T1C2Fetch').href = 'https://www.youtube.com/embed/'+res1+'?autoplay=1';
+  document.getElementById('T2C4Fetch').href = 'https://www.youtube.com/embed/'+res2+'?autoplay=1';
+  document.getElementById('T2C5Fetch').href = 'https://www.youtube.com/embed/'+res3+'?autoplay=1';
+  document.getElementById('T2C6Fetch').href = 'https://www.youtube.com/embed/'+res4+'?autoplay=1';
+  document.getElementById('T1H2Fetch').innerHTML = data[1].results;
+  document.getElementById('T2H4Fetch').innerHTML = data[3].results;
+  document.getElementById('T2H5Fetch').innerHTML = data[5].results;
+  document.getElementById('T2H6Fetch').innerHTML = data[7].results;
+  document.getElementById('T1C2Fetch').style.backgroundImage = 'url("http://i.ytimg.com/vi/'+res1+'/mqdefault.jpg")';
+  document.getElementById('T2C4Fetch').style.backgroundImage = 'url("http://i.ytimg.com/vi/'+res2+'/mqdefault.jpg")';
+  document.getElementById('T2C5Fetch').style.backgroundImage = 'url("http://i.ytimg.com/vi/'+res3+'/mqdefault.jpg")';
+  document.getElementById('T2C6Fetch').style.backgroundImage = 'url("http://i.ytimg.com/vi/'+res4+'/mqdefault.jpg")';
 });
 
 var query = [
@@ -222,18 +222,18 @@ jQuery.getJSON(request, function (data) {
   var res3 = string3.substr(9);
   var string4 = ""+data[6].results;
   var res4 = string4.substr(9);
-  document.getElementById('Sec3').href = 'https://www.youtube.com/embed/'+res1+'?autoplay=1';
-  document.getElementById('Ter7').href = 'https://www.youtube.com/embed/'+res2+'?autoplay=1';
-  document.getElementById('Ter8').href = 'https://www.youtube.com/embed/'+res3+'?autoplay=1';
-  document.getElementById('Ter9').href = 'https://www.youtube.com/embed/'+res4+'?autoplay=1';
-  document.getElementById('Sec3').title = data[1].results;
-  document.getElementById('Ter7').title = data[3].results;
-  document.getElementById('Ter8').title = data[5].results;
-  document.getElementById('Ter9').title = data[7].results;
-  document.getElementById('Sec3').style.backgroundImage = 'url("http://i.ytimg.com/vi/'+res1+'/mqdefault.jpg")';
-  document.getElementById('Ter7').style.backgroundImage = 'url("http://i.ytimg.com/vi/'+res2+'/mqdefault.jpg")';
-  document.getElementById('Ter8').style.backgroundImage = 'url("http://i.ytimg.com/vi/'+res3+'/mqdefault.jpg")';
-  document.getElementById('Ter9').style.backgroundImage = 'url("http://i.ytimg.com/vi/'+res4+'/mqdefault.jpg")';
+  document.getElementById('T1C3Fetch').href = 'https://www.youtube.com/embed/'+res1+'?autoplay=1';
+  document.getElementById('T2C7Fetch').href = 'https://www.youtube.com/embed/'+res2+'?autoplay=1';
+  document.getElementById('T2C8Fetch').href = 'https://www.youtube.com/embed/'+res3+'?autoplay=1';
+  document.getElementById('T2C9Fetch').href = 'https://www.youtube.com/embed/'+res4+'?autoplay=1';
+  document.getElementById('T1H3Fetch').innerHTML = data[1].results;
+  document.getElementById('T2H7Fetch').innerHTML = data[3].results;
+  document.getElementById('T2H8Fetch').innerHTML = data[5].results;
+  document.getElementById('T2H9Fetch').innerHTML = data[7].results;
+  document.getElementById('T1C3Fetch').style.backgroundImage = 'url("http://i.ytimg.com/vi/'+res1+'/mqdefault.jpg")';
+  document.getElementById('T2C7Fetch').style.backgroundImage = 'url("http://i.ytimg.com/vi/'+res2+'/mqdefault.jpg")';
+  document.getElementById('T2C8Fetch').style.backgroundImage = 'url("http://i.ytimg.com/vi/'+res3+'/mqdefault.jpg")';
+  document.getElementById('T2C9Fetch').style.backgroundImage = 'url("http://i.ytimg.com/vi/'+res4+'/mqdefault.jpg")';
 });
 
 var query = [
@@ -301,18 +301,18 @@ jQuery.getJSON(request, function (data) {
   var res3 = string3.substr(9);
   var string4 = ""+data[6].results;
   var res4 = string4.substr(9);
-  document.getElementById('Sec4').href = 'https://www.youtube.com/embed/'+res1+'?autoplay=1';
-  document.getElementById('Ter10').href = 'https://www.youtube.com/embed/'+res2+'?autoplay=1';
-  document.getElementById('Ter11').href = 'https://www.youtube.com/embed/'+res3+'?autoplay=1';
-  document.getElementById('Ter12').href = 'https://www.youtube.com/embed/'+res4+'?autoplay=1';
-  document.getElementById('Sec4').title = data[1].results;
-  document.getElementById('Ter10').title = data[3].results;
-  document.getElementById('Ter11').title = data[5].results;
-  document.getElementById('Ter12').title = data[7].results;
-  document.getElementById('Sec4').style.backgroundImage = 'url("http://i.ytimg.com/vi/'+res1+'/mqdefault.jpg")';
-  document.getElementById('Ter10').style.backgroundImage = 'url("http://i.ytimg.com/vi/'+res2+'/mqdefault.jpg")';
-  document.getElementById('Ter11').style.backgroundImage = 'url("http://i.ytimg.com/vi/'+res3+'/mqdefault.jpg")';
-  document.getElementById('Ter12').style.backgroundImage = 'url("http://i.ytimg.com/vi/'+res4+'/mqdefault.jpg")';
+  document.getElementById('T1C4Fetch').href = 'https://www.youtube.com/embed/'+res1+'?autoplay=1';
+  document.getElementById('T2C10Fetch').href = 'https://www.youtube.com/embed/'+res2+'?autoplay=1';
+  document.getElementById('T2C11Fetch').href = 'https://www.youtube.com/embed/'+res3+'?autoplay=1';
+  document.getElementById('T2C12Fetch').href = 'https://www.youtube.com/embed/'+res4+'?autoplay=1';
+  document.getElementById('T1H4Fetch').innerHTML = data[1].results;
+  document.getElementById('T2H10Fetch').innerHTML = data[3].results;
+  document.getElementById('T2H11Fetch').innerHTML = data[5].results;
+  document.getElementById('T2H12Fetch').innerHTML = data[7].results;
+  document.getElementById('T1C4Fetch').style.backgroundImage = 'url("http://i.ytimg.com/vi/'+res1+'/mqdefault.jpg")';
+  document.getElementById('T2C10Fetch').style.backgroundImage = 'url("http://i.ytimg.com/vi/'+res2+'/mqdefault.jpg")';
+  document.getElementById('T2C11Fetch').style.backgroundImage = 'url("http://i.ytimg.com/vi/'+res3+'/mqdefault.jpg")';
+  document.getElementById('T2C12Fetch').style.backgroundImage = 'url("http://i.ytimg.com/vi/'+res4+'/mqdefault.jpg")';
 });
 
 
