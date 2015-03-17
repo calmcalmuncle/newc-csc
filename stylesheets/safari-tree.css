@@ -7,7 +7,7 @@ border-radius:50%;
 position: absolute;
 top:50%;
 left:50%;
-transform: translateX(-50%) translatey(-50%);
+-webkit-transform: translateX(-50%) translatey(-50%);
 /*background-image: url("../rangers.jpg");*/
 }
 
@@ -17,9 +17,9 @@ height:100px;
 width:100px;
 border-top-left-radius:100%;
 position:relative;
-top:40%;
-left:40%;
-transform:translateX(-50%) translatey(-50%);
+top:45%;
+left:45%;
+-webkit-transform:translateX(-50%) translatey(-50%);
 background-color:#990000;
 text-decoration:none;
 text-align:center;
@@ -30,7 +30,7 @@ padding-top:45%;
 color:white;
 text-decoration:none;
 font-size:20px;
-transform: translateX(8%);
+-webkit-transform: translateX(8%);
 }
 
 a.MainCircleVid {
@@ -39,9 +39,9 @@ height:100px;
 width:100px;
 border-top-right-radius:100%;
 position:relative;
-top:29.6%;
-left:50.4%;
-transform:translateX(-50%) translatey(-50%);
+top:34.6%;
+left:55.4%;
+-webkit-transform:translateX(-50%) translatey(-50%);
 background-color:#000000;
 text-decoration:none;
 text-align:center;
@@ -52,7 +52,7 @@ padding-top:45%;
 color:white;
 text-decoration:none;
 font-size:20px;
-transform: translateX(-8%);
+-webkit-transform: translateX(-8%);
 }
 
 a.MainCircleTwitch {
@@ -61,9 +61,9 @@ height:100px;
 width:100px;
 border-bottom-left-radius:100%;
 position:relative;
-top:29.5%;
-left:40%;
-transform:translateX(-50%) translatey(-50%);
+top:34.5%;
+left:45%;
+-webkit-transform:translateX(-50%) translatey(-50%);
 background-color:#5EA9DD;
 text-decoration:none;
 text-align:center;
@@ -74,7 +74,7 @@ padding-top:30%;
 color:white;
 text-decoration:none;
 font-size:20px;
-transform: translateX(4%);
+-webkit-transform: translateX(4%);
 }
 
 a.MainCircleSport {
@@ -83,9 +83,9 @@ height:100px;
 width:100px;
 border-bottom-right-radius:100%;
 position:relative;
-top:19.1%;
-left:50.4%;
-transform:translateX(-50%) translatey(-50%);
+top:24.1%;
+left:55.4%;
+-webkit-transform:translateX(-50%) translatey(-50%);
 background-color:#2b3a76;
 text-decoration:none;
 text-align:center;
@@ -96,7 +96,7 @@ padding-top:30%;
 color:white;
 text-decoration:none;
 font-size:20px;
-transform: translateX(-8%);
+-webkit-transform: translateX(-8%);
 }
 
 .zoom:hover { 
@@ -105,7 +105,7 @@ transform: translateX(-8%);
  
 .ap {
 color: white;
-transform: translateX(15%);
+-webkit-transform: translateX(15%);
 position: relative;
 top: 40%;
 font-size: 15px;
@@ -117,7 +117,7 @@ position: absolute;
 display:block;
 background-position: center;
 background-repeat:no-repeat;
-transform: translateX(-50%) translatey(-50%);
+-webkit-transform: translateX(-50%) translatey(-50%);
 border-radius:50%;
 background-size: cover;
 z-index: 1;
@@ -140,7 +140,7 @@ background: rgba(255,255,255,0.9);
 opacity: 0;
 transition: all ease-in-out 0.4s;
 pointer-events: none;
-transform: translateX(-50%) translatey(-100%);
+-webkit-transform: translateX(-50%) translatey(-100%);
 overflow:hidden;
 }
 
@@ -156,8 +156,8 @@ left:30%;
 }
 
 .TierOneCircleOne{
-top:22.5%;
-left:22.5%;
+top:30%;
+left:30%;
 background-color:#990000;
 border:1px solid #990000;
 }
@@ -170,8 +170,8 @@ left:70%;
 }
 
 .TierOneCircleTwo{
-top:22.5%;
-left:62.5%;
+top:30%;
+left:70%;
 background-color:#990000;
 border:1px solid #990000;
 }
@@ -184,8 +184,8 @@ left:30%;
 }
 
 .TierOneCircleFour{
-top:62.5%;
-left:22.5%;
+top:70%;
+left:30%;
 border:1px solid #5EA9DD;
 background-color:#5EA9DD;
 }
@@ -193,13 +193,13 @@ background-color:#5EA9DD;
 #TierOneHeaderThree{
 text-align:center;
 color:black;
-top:62.5%;
-left:56.5%;
+top:70%;
+left:70%;
 }
 
 .TierOneCircleThree{
-top:62.5%;
-left:62.5%;
+top:70%;
+left:70%;
 border:1px solid #2b3a76;
 background-color:#2b3a76;
 }
@@ -214,7 +214,7 @@ font-size:100px;
 display:block;
 height:100px;
 width:100px;
-transform: translateX(-50%) translatey(-50%);
+-webkit-transform: translateX(-50%) translatey(-50%);
 border-radius:50%;
 background-position: center;
 background-size: cover;
@@ -237,7 +237,7 @@ background: rgba(255,255,255,0.9);
 opacity: 0;
 transition: all ease-in-out 0.4s;
 pointer-events: none;
-transform: translateX(-50%) translatey(-100%);
+-webkit-transform: translateX(-50%) translatey(-100%);
 overflow:hidden;
 }
 
@@ -248,7 +248,7 @@ font-style: normal;
 font-variant: normal;
 font-weight: 500;
 line-height: 26.3999996185303px;
-transform: translateX(0%) translatey(-45%);
+-webkit-transform: translateX(0%) translatey(-45%);
 }
 
 #TierTwoHeaderOne{
@@ -259,8 +259,8 @@ left:15%;
 }
 
 .TierTwoCircleOne{
-top:10%;
-left:10%;
+top:15%;
+left:15%;
 border:1px solid #990000;
 background-color:#990000;
 }
@@ -273,8 +273,8 @@ left:10%;
 }
 
 .TierTwoCircleTwo{
-top:25%;
-left:5%;
+top:30%;
+left:10%;
 border:1px solid #990000;
 background-color:#990000;
 }
@@ -287,8 +287,8 @@ left:30%;
 }
 
 .TierTwoCircleThree{
-top:5%;
-left:25%;
+top:10%;
+left:30%;
 border:1px solid #990000;
 background-color:#990000;
 }
@@ -301,8 +301,8 @@ left:85%;
 }
 
 .TierTwoCircleFour{
-top:10%;
-left:80%;
+top:15%;
+left:85%;
 border:1px solid #000000;
 background-color:#000000;
 }
@@ -315,8 +315,8 @@ left:70%;
 }
 
 .TierTwoCircleFive{
-top:5%;
-left:65%;
+top:10%;
+left:70%;
 border:1px solid #000000;
 background-color:#000000;
 }
@@ -329,8 +329,8 @@ left:90%;
 }
 
 .TierTwoCircleSix{
-top:25%;
-left:85%;
+top:30%;
+left:90%;
 border:1px solid #000000;
 background-color:#000000;
 }
@@ -343,8 +343,8 @@ left:15%;
 }
 
 .TierTwoCircleSeven{
-top:80%;
-left:10%;
+top:85%;
+left:15%;
 border:1px solid ##5EA9DD;
 background-color:#5EA9DD;
 }
@@ -357,8 +357,8 @@ color:black;
 }
 
 .TierTwoCircleEight{
-top:65%;
-left:5%;
+top:70%;
+left:10%;
 border:1px solid ##5EA9DD;
 background-color:#5EA9DD;
 }
@@ -371,8 +371,8 @@ color:black;
 }
 
 .TierTwoCircleNine{
-top:85%;
-left:25%;
+top:90%;
+left:30%;
 border:1px solid ##5EA9DD;
 background-color:#5EA9DD;
 }
@@ -385,8 +385,8 @@ color:black;
 }
 
 .TierTwoCircleTen{
-top:80%;
-left:80%;
+top:85%;
+left:85%;
 border:1px solid #2b3a76;
 background-color:#2b3a76;
 }
@@ -399,8 +399,8 @@ color:black;
 }
 
 .TierTwoCircleEleven{
-top:85%;
-left:65%;
+top:90%;
+left:70%;
 border:1px solid #2b3a76;
 background-color:#2b3a76;
 }
@@ -413,8 +413,8 @@ color:black;
 }
 
 .TierTwoCircleTwelve{
-top:65%;
-left:85%;
+top:70%;
+left:90%;
 border:1px solid #2b3a76;
 background-color:#2b3a76;
 }
