@@ -62,7 +62,7 @@ var query = [
 
 ],
   uriQuery = encodeURIComponent(JSON.stringify(query)),
-  request  = 'http://example.noodlejs.com/?q=' +
+  request  = 'http://treemac.herokuapp.com/?q=' +
              uriQuery + '&callback=?';
 
 // Make Ajax request to Noodle server
@@ -125,7 +125,7 @@ var query = [
 
 ],
   uriQuery = encodeURIComponent(JSON.stringify(query)),
-  request  = 'http://example.noodlejs.com/?q=' +
+  request  = 'http://treemac.herokuapp.com/?q=' +
              uriQuery + '&callback=?';
 
 // Make Ajax request to Noodle server
@@ -216,7 +216,7 @@ var query = [
 
 ],
   uriQuery = encodeURIComponent(JSON.stringify(query)),
-  request  = 'http://example.noodlejs.com/?q=' +
+  request  = 'http://treemac.herokuapp.com/?q=' +
              uriQuery + '&callback=?';
 
 // Make Ajax request to Noodle server
@@ -310,7 +310,7 @@ var query = [
   }
 ]
   uriQuery = encodeURIComponent(JSON.stringify(query)),
-  request  = 'http://example.noodlejs.com/?q=' +
+  request  = 'http://treemac.herokuapp.com/?q=' +
              uriQuery + '&callback=?';
 
 // Make Ajax request to Noodle server
