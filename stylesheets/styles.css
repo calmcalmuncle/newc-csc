@@ -4,8 +4,6 @@ padding-top: 60px;
 padding-top: 60px;
 }
 
-
-
 html {
 height: 100%;
 }
@@ -67,7 +65,7 @@ color:white;
 #MainTree{
 height:960px;
 width:960px;
-margin-bottom:30px;
+margin-bottom:10px;
 width:960px;
 border-radius:10px;
 border: 0px solid #e7e7e7;
@@ -208,6 +206,54 @@ border-bottom: 5px solid #A901DB;
 .BarRight #Food:hover{
 border-bottom: 5px solid #FFFF00;
 }
+
+.CommentSection{
+height:auto;
+max-height:2000px;
+margin-bottom:30px;
+width:960px;
+border-radius:10px;
+border: 1px solid #e7e7e7;
+background-color:white;
+margin-left:auto;
+margin-right:auto;
+position:relative;
+margin-bottom:
+}
+
+.CommentButton{
+height:105px;
+margin-bottom:30px;
+width:960px;
+margin-left:auto;
+margin-right:auto;
+position:relative;
+color:inherit;
+background-color:#c8c8c8;
+border-radius:10px;
+border: 1px solid #e7e7e7;
+text-align:center;
+background-image: url("../images/fbbanner.jpg");
+}
+
+.Arrow{
+margin-left:auto;
+margin-right:auto;
+height:100px;
+width:100px;
+background-image: url("../images/arrowdown.png");
+background-position:center;
+background-repeat:no-repeat;
+background-size:100%;
+transform: rotate(90deg);
+}
+
+
+
+
+
+
+
 
 .row{
 margin:auto;
