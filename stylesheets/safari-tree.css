@@ -7,7 +7,7 @@ border-radius:50%;
 position: absolute;
 top:50%;
 left:50%;
-transform: translateX(-50%) translatey(-50%);
+-webkit-transform: translateX(-50%) translatey(-50%);
 /*background-image: url("../rangers.jpg");*/
 }
 
@@ -19,7 +19,7 @@ border-top-left-radius:100%;
 position:relative;
 top:45%;
 left:45%;
-transform:translateX(-50%) translatey(-50%);
+-webkit-transform:translateX(-50%) translatey(-50%);
 background-color:#990000;
 text-decoration:none;
 text-align:center;
@@ -30,7 +30,7 @@ padding-top:45%;
 color:white;
 text-decoration:none;
 font-size:20px;
-transform: translateX(8%);
+-webkit-transform: translateX(8%);
 }
 
 a.MainCircleVid {
@@ -41,7 +41,7 @@ border-top-right-radius:100%;
 position:relative;
 top:34.6%;
 left:55.4%;
-transform:translateX(-50%) translatey(-50%);
+-webkit-transform:translateX(-50%) translatey(-50%);
 background-color:#000000;
 text-decoration:none;
 text-align:center;
@@ -52,7 +52,7 @@ padding-top:45%;
 color:white;
 text-decoration:none;
 font-size:20px;
-transform: translateX(-8%);
+-webkit-transform: translateX(-8%);
 }
 
 a.MainCircleTwitch {
@@ -63,7 +63,7 @@ border-bottom-left-radius:100%;
 position:relative;
 top:34.5%;
 left:45%;
-transform:translateX(-50%) translatey(-50%);
+-webkit-transform:translateX(-50%) translatey(-50%);
 background-color:#5EA9DD;
 text-decoration:none;
 text-align:center;
@@ -74,7 +74,7 @@ padding-top:30%;
 color:white;
 text-decoration:none;
 font-size:20px;
-transform: translateX(4%);
+-webkit-transform: translateX(4%);
 }
 
 a.MainCircleSport {
@@ -85,7 +85,7 @@ border-bottom-right-radius:100%;
 position:relative;
 top:24.1%;
 left:55.4%;
-transform:translateX(-50%) translatey(-50%);
+-webkit-transform:translateX(-50%) translatey(-50%);
 background-color:#2b3a76;
 text-decoration:none;
 text-align:center;
@@ -96,7 +96,7 @@ padding-top:30%;
 color:white;
 text-decoration:none;
 font-size:20px;
-transform: translateX(-8%);
+-webkit-transform: translateX(-8%);
 }
 
 .zoom:hover { 
@@ -105,19 +105,19 @@ transform: translateX(-8%);
  
 .ap {
 color: white;
-transform: translateX(15%);
+-webkit-transform: translateX(15%);
 position: relative;
 top: 40%;
 font-size: 15px;
 left: -10px;
 }
 
-.SecondaryCircles {
+.TierOneCircle {
 position: absolute;
 display:block;
 background-position: center;
 background-repeat:no-repeat;
-transform: translateX(-50%) translatey(-50%);
+-webkit-transform: translateX(-50%) translatey(-50%);
 border-radius:50%;
 background-size: cover;
 z-index: 1;
@@ -125,12 +125,12 @@ width: 150px;
 height: 150px;
 }
 
-.SecondaryCircles:hover +.exampleHeader {
+.TierOneCircle:hover +.TierOneHeader {
 opacity: 1;
 margin-top: 30px;
 }
 
-.exampleHeader {
+.TierOneHeader {
 position: absolute;
 z-index: 2;
 height: 50px;
@@ -140,64 +140,64 @@ background: rgba(255,255,255,0.9);
 opacity: 0;
 transition: all ease-in-out 0.4s;
 pointer-events: none;
-transform: translateX(-50%) translatey(-100%);
+-webkit-transform: translateX(-50%) translatey(-100%);
 overflow:hidden;
 }
 
-.exampleHeader h3 {
+.TierOneHeader h3 {
 text-align: center;
 }
 
-#TopLeftTitle{
+#TierOneHeaderOne{
 text-align:center;
 color:black;
 top:30%;
 left:30%;
 }
 
-.TopLeftCircle{
+.TierOneCircleOne{
 top:30%;
 left:30%;
 background-color:#990000;
 border:1px solid #990000;
 }
 
-#TopRightTitle{
+#TierOneHeaderTwo{
 text-align:center;
 color:black;
 top:30%;
 left:70%;
 }
 
-.TopRightCircle{
+.TierOneCircleTwo{
 top:30%;
 left:70%;
 background-color:#990000;
 border:1px solid #990000;
 }
 
-#BottomLeftTitle{
+#TierOneHeaderFour{
 text-align:center;
 color:black;
 top:70%;
 left:30%;
 }
 
-.BottomLeftCircle{
+.TierOneCircleFour{
 top:70%;
 left:30%;
 border:1px solid #5EA9DD;
 background-color:#5EA9DD;
 }
 
-#BottomRightTitle{
+#TierOneHeaderThree{
 text-align:center;
 color:black;
 top:70%;
 left:70%;
 }
 
-.BottomRightCircle{
+.TierOneCircleThree{
 top:70%;
 left:70%;
 border:1px solid #2b3a76;
@@ -210,11 +210,11 @@ color:red;
 font-size:100px;
 }
 
-.TertiaryCircles{
+.TierTwoCircle{
 display:block;
 height:100px;
 width:100px;
-transform: translateX(-50%) translatey(-50%);
+-webkit-transform: translateX(-50%) translatey(-50%);
 border-radius:50%;
 background-position: center;
 background-size: cover;
@@ -222,12 +222,12 @@ background-repeat: no-repeat;
 position: absolute;
 }
 
-.TertiaryCircles:hover +.TertiaryHeader {
+.TierTwoCircle:hover +.TierTwoHeader {
 opacity: 1;
 margin-top: 30px;
 }
 
-.TertiaryHeader {
+.TierTwoHeader {
 position: absolute;
 z-index: 2;
 height: 50px;
@@ -237,21 +237,21 @@ background: rgba(255,255,255,0.9);
 opacity: 0;
 transition: all ease-in-out 0.4s;
 pointer-events: none;
-transform: translateX(-50%) translatey(-100%);
+-webkit-transform: translateX(-50%) translatey(-100%);
 overflow:hidden;
 }
 
-#Tier2Title1Text{
+#T1H1Fetch{
 font-family: Verdana, Geneva, sans-serif;
 font-size: 1px;
 font-style: normal;
 font-variant: normal;
 font-weight: 500;
 line-height: 26.3999996185303px;
-transform: translateX(0%) translatey(-45%);
+-webkit-transform: translateX(0%) translatey(-45%);
 }
 
-#TierTwoTitleOne{
+#TierTwoHeaderOne{
 text-align:center;
 color:black;
 top:15%;
@@ -265,7 +265,7 @@ border:1px solid #990000;
 background-color:#990000;
 }
 
-#TierTwoTitleTwo{
+#TierTwoHeaderTwo{
 text-align:center;
 color:black;
 top:30%;
@@ -279,7 +279,7 @@ border:1px solid #990000;
 background-color:#990000;
 }
 
-#TierTwoTitleThree{
+#TierTwoHeaderThree{
 text-align:center;
 color:black;
 top:10%;
@@ -293,7 +293,7 @@ border:1px solid #990000;
 background-color:#990000;
 }
 
-#TierTwoTitleFour{
+#TierTwoHeaderFour{
 text-align:center;
 color:black;
 top:15%;
@@ -307,7 +307,7 @@ border:1px solid #000000;
 background-color:#000000;
 }
 
-#TierTwoTitleFive{
+#TierTwoHeaderFive{
 text-align:center;
 color:black;
 top:10%;
@@ -321,7 +321,7 @@ border:1px solid #000000;
 background-color:#000000;
 }
 
-#TierTwoTitleSix{
+#TierTwoHeaderSix{
 text-align:center;
 color:black;
 top:30%;
@@ -335,7 +335,7 @@ border:1px solid #000000;
 background-color:#000000;
 }
 
-#TierTwoTitleSeven{
+#TierTwoHeaderTen{
 text-align:center;
 color:black;
 top:85%;
@@ -349,7 +349,7 @@ border:1px solid ##5EA9DD;
 background-color:#5EA9DD;
 }
 
-#TierTwoTitleEight{
+#TierTwoHeaderEleven{
 top:70%;
 left:10%;
 text-align:center;
@@ -363,7 +363,7 @@ border:1px solid ##5EA9DD;
 background-color:#5EA9DD;
 }
 
-#TierTwoTitleNine{
+#TierTwoHeaderTwelve{
 top:90%;
 left:30%;
 text-align:center;
@@ -377,7 +377,7 @@ border:1px solid ##5EA9DD;
 background-color:#5EA9DD;
 }
 
-#TierTwoTitleTen{
+#TierTwoHeaderSeven{
 top:85%;
 left:85%;
 text-align:center;
@@ -391,7 +391,7 @@ border:1px solid #2b3a76;
 background-color:#2b3a76;
 }
 
-#TierTwoTitleEleven{
+#TierTwoHeaderEight{
 top:90%;
 left:70%;
 text-align:center;
@@ -405,7 +405,7 @@ border:1px solid #2b3a76;
 background-color:#2b3a76;
 }
 
-#TierTwoTitleTwelve{
+#TierTwoHeaderNine{
 top:70%;
 left:90%;
 text-align:center;
