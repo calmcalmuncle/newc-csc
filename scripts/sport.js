@@ -307,21 +307,21 @@ var query = [
     extract: 'src'
   },
 {
-    url: 'http://www.independent.co.uk/sport/',
+    url: 'http://www.theguardian.com/uk/sport',
     type: 'html',
-    selector: '#main > div.widget.stories.topstory.widget-editable.viziwyg-section-1029.inpage-widget-8935429.default > div > div > div.media.news.text-top > h1 > a',
+    selector: '#sport > div > div.fc-container--rolled-up-hide.fc-container__body > div:nth-child(1) > ul > li.fc-slice__item.l-row__item.l-row__item--span-3.u-faux-block-link > div > div > a',
     extract: 'href'
   },
 {
-    url: 'http://www.independent.co.uk/sport/',
+    url: 'http://www.theguardian.com/uk/sport',
     type: 'html',
-    selector: '#main > div.widget.stories.topstory.widget-editable.viziwyg-section-1029.inpage-widget-8935429.default > div > div > div.media.news.text-top > h1 > a',
+    selector: '#sport > div > div.fc-container--rolled-up-hide.fc-container__body > div:nth-child(1) > ul > li.fc-slice__item.l-row__item.l-row__item--span-3.u-faux-block-link > div > div > a',
     extract: 'text'
   },
 {
-    url: 'http://www.independent.co.uk/sport/',
+    url: 'http://www.theguardian.com/uk/sport',
     type: 'html',
-    selector: '#widget8935429-story10114979-picture10115126 > img',
+    selector: '#sport > div > div.fc-container--rolled-up-hide.fc-container__body > div:nth-child(1) > ul > li.fc-slice__item.l-row__item.l-row__item--span-3.u-faux-block-link > div > div > div.fc-item__media-wrapper > div > img',
     extract: 'src'
   },
 {
@@ -361,7 +361,7 @@ document.getElementById('T2H12Fetch').innerHTML = data[10].results;
 
 document.getElementById('T1C4Fetch').style.backgroundImage = 'url("'+data[2].results+'")';
 document.getElementById('T2C10Fetch').style.backgroundImage = 'url("http:'+data[5].results+'")';
-document.getElementById('T2C11Fetch').style.backgroundImage = 'url("'+data[8].results+'")';
+document.getElementById('T2C11Fetch').style.backgroundImage = 'url("http:'+data[8].results+'")';
 document.getElementById('T2C12Fetch').style.backgroundImage = 'url("http:'+data[11].results+'")';
 });
 
