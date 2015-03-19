@@ -33,14 +33,16 @@
 		}
 		
 	</script>
-
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    	<!-- adds the dynamic links via node/noodle -->
+	<script type="text/javascript" src="../scripts/some.js"></script>
   </head>
   
 <!-- Body -->
 <body>
+
+<!-- Something Required for FB Comments -->
+<div id="fb-root"></div>
   
 <!-- Fixed NavBar -->
 <nav class="navbar navbar-default navbar-fixed-top">
@@ -101,12 +103,9 @@
 	<button type="button" onClick="location.href='news.html'" id="Video">News</button>
 	<button type="button" onClick="location.href='video.html'" id="Video">Video</button>
 	<button type="button" onClick="location.href='sport.html'" id="Twitter">Sport</button>
-	<button type="button" onClick="location.href='streaming.html'" id="Stream">Streaming</button>
 	<button type="button" onClick="location.href='fashion.html'" id="Fash">Fashion</button>
 	<button type="button" onClick="location.href='science.html'" id="Sci">Science</button>
 	<button type="button" onClick="location.href='technology.html'" id="Tech">Technology</button>
-	<button type="button" onClick="location.href='food.html'" id="Food">Food</button>
-	<button type="button" id="BottomButton">Load More...</button>
     </div>
 	
 	<!-- Right Bar Two -->
@@ -123,8 +122,14 @@
 	<!-- Right Bar Three -->
 	<div class="BarRight" id="BarRight3">
 	
-	<p>Some Content</p>
-	
+	<p>Editors Choice</p>
+	<a href="http://www.bbc.co.uk/news/world-africa-31956026" class="iframe">
+	<div ><img id="EDimg" src="http://news.bbcimg.co.uk/media/images/81750000/jpg/_81750956_81750928.jpg"></div>
+	<div id="EDtxt"><p>Tunisia's president vows to fight 
+	terrorism "without mercy", following a gun attack on 
+	the Bardo Museum in the capital Tunis that killed 19 
+	people.</p></div>
+	</a>
 	</div>
 
 	<!-- /WrapRight -->
@@ -140,17 +145,21 @@
 		<a class="MainCircleSport" href"#"><p class="SportText">Sport</p></a>
 
 		<!-- Tier One Circles -->
+		<!-- Tier One Circle One -->
 		<a href="" class="iframe TierOneCircle TierOneCircleOne" id="T1C1Fetch"></a>
-		<div class="TierOneHeader" id="TierOneHeaderOne"><h3 id="T1H1Fetch"></h3></div>
+		<div class="TierOneHeader" id="TierOneHeaderOne"><h2 class="T1H1TextFormat" id="T1H1Fetch"></h2></div>
 		
+		<!-- Tier One Circle Two -->
 		<a href="" class="iframe TierOneCircle TierOneCircleTwo" id="T1C2Fetch"></a>
-		<div class="TierOneHeader" id="TierOneHeaderTwo"><h3 id="T1H2Fetch"></h3></div>
+		<div class="TierOneHeader" id="TierOneHeaderTwo"><h2 class="T1H1TextFormat" id="T1H2Fetch"></h2></div>
 		
+		<!-- Tier One Circle Three -->
 		<a href="" class="iframe TierOneCircle TierOneCircleThree" id="T1C3Fetch"></a>
-		<div class="TierOneHeader" id="TierOneHeaderThree"><h3 id="T1H3Fetch"></h3></div>
+		<div class="TierOneHeader" id="TierOneHeaderThree"><h2 class="T1H1TextFormat" id="T1H3Fetch"></h2></div>
 		
+		<!-- Tier One Circle Four -->
 		<a href="" class="iframe TierOneCircle TierOneCircleFour" id="T1C4Fetch"></a>
-		<div class="TierOneHeader" id="TierOneHeaderFour"><h3 id="T1H4Fetch"></h3></div>
+		<div class="TierOneHeader" id="TierOneHeaderFour"><h2 class="T1H1TextFormat" id="T1H4Fetch"></h2></div>
 		
 		<!-- Tertiary Circles -->
 		<a href="" class="iframe zoom TierTwoCircle TierTwoCircleOne" id="T2C1Fetch"></a>
@@ -180,9 +189,17 @@
 		<div class="TierTwoHeader" id="TierTwoHeaderEleven"><h3 id="T2H11Fetch"></h3></div>
 		<a href="" class="iframe zoom TierTwoCircle TierTwoCircleNine" id="T2C12Fetch"></a>
 		<div class="TierTwoHeader" id="TierTwoHeaderTwelve"><h3 id="T2H12Fetch"></h3></div>
-	
-	
+
 	 </div>
+	 
+	<!--Facebook Comment Section -->
+	<div id="CommentSection" class="CommentSection"  style="display:none;">
+		<div class="fb-comments" data-href="http://test.treemac.com/TreeMac/pages/streaming.html" data-width="960" data-numposts="20" data-colorscheme="light"></div>
+	</div>
+	
+	<div id="CommentButton" class="CommentButton"  style="" onClick="showDiv()">
+		<div class="Arrow"></div>
+	</div>
 	 
 <!-- /Wrapper -->
 </div> 
@@ -200,33 +217,46 @@
 				    <!-- Bootstrap core JavaScript -->
     <!-- ========================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="../scripts/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../scripts/ie10-viewport-bug-workaround.js"></script>
 	<!-- Scroll to element animation -->
 	<script type="text/javascript" src="../scripts/scroll.js"></script>
-	<!-- adds the dynamic links via node/noodle -->
-	<script type="text/javascript" src="../scripts/some.js"></script>
+
 	
 	<!-- FancyBox -->
 	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 	<link rel="stylesheet" href="../fancybox/source/jquery.fancybox.css" type="text/css" media="screen" />
 	<script type="text/javascript" src="../fancybox/source/jquery.fancybox.pack.js"></script>
 	<script type="text/javascript">
-$(document).ready(function() {
-$(".iframe").fancybox({
-'width' : 1000,
-'height' : 675,
-'type' : 'iframe',
-'autoScale' : false,
-'padding' :0,
-'onComplete' : function(){
-$('#fancybox-content').css({height:'2000px',width:'2000px'});
-}
-});
-});
-
+		$(document).ready(function() {
+		$(".iframe").fancybox({
+		'width' : 1000,
+		'height' : 675,
+		'type' : 'iframe',
+		'autoScale' : false,
+		'padding' :0,
+		'onComplete' : function(){
+		$('#fancybox-content').css({height:'2000px',width:'2000px'});
+		}
+		});
+		});
+	</script>
+	
+	<script>
+	function showDiv() {
+		document.getElementById('CommentButton').style.display = "none";
+		document.getElementById('CommentSection').style.display = "block";
+	}
+	</script>
+	
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
 </script>
 
 

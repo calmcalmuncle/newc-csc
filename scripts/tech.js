@@ -194,19 +194,19 @@ var query = [
   {
     url: 'http://news.sky.com/technology',
     type: 'html',
-    selector: 'body > div.viewport > div.main.main--sponsored > div > div > div > div:nth-child(2) > ol > li.section-top-stories__item.section-top-stories__item--2.section-top-stories__item--even > a',
+    selector: 'body > div.viewport > div.main.main--sponsored > div > div > div > div:nth-child(2) > ol > li.section-top-stories__item.section-top-stories__item--1.section-top-stories__item--odd > a',
     extract: 'href'
   },
 {
     url: 'http://news.sky.com/technology',
     type: 'html',
-    selector: 'body > div.viewport > div.main.main--sponsored > div > div > div > div:nth-child(2) > ol > li.section-top-stories__item.section-top-stories__item--2.section-top-stories__item--even > a > div > div > img',
+    selector: 'body > div.viewport > div.main.main--sponsored > div > div > div > div:nth-child(2) > ol > li.section-top-stories__item.section-top-stories__item--1.section-top-stories__item--odd > a > div > div > img',
     extract: 'src'
   },
 {
     url: 'http://news.sky.com/technology',
     type: 'html',
-    selector: 'body > div.viewport > div.main.main--sponsored > div > div > div > div:nth-child(2) > ol > li.section-top-stories__item.section-top-stories__item--2.section-top-stories__item--even > a > span',
+    selector: 'body > div.viewport > div.main.main--sponsored > div > div > div > div:nth-child(2) > ol > li.section-top-stories__item.section-top-stories__item--1.section-top-stories__item--odd > a > span',
     extract: 'text'
   },
   {
@@ -263,9 +263,9 @@ var query = [
     selector: 'body > div.viewport > div.main.main--sponsored > div > div > div > div:nth-child(3) > ol > li.section-top-stories__item.section-top-stories__item--6.section-top-stories__item--even > a > span',
     extract: 'text'
   }
-]
+],
   uriQuery = encodeURIComponent(JSON.stringify(query)),
-  request  = 'http://treemac.herokuapp.com/?q=' +
+  request  = 'http://secret-reaches-3678.herokuapp.com/?q=' +
              uriQuery + '&callback=?';
 
 // Make Ajax request to Noodle server
