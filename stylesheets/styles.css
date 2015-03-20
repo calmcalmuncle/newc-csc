@@ -362,22 +362,21 @@ transform: translateX(-50%) translatey(-50%);
 border-radius:10%;
 z-index: 1;
 background-color: #51B848;
-text-align:center;
+padding-left:2px;
+padding-right:2px;
 }
 
-.AboutSection p{
-margin-left:2px;
-margin-right:2px;
-}
 
 #AboutSectionOne{
 top:22%;
 left:22%;
+text-align:center;
 }
 
 #AboutSectionTwo{
 top:22%;
 left:78%;
+text-align:center;
 }
 
 #AboutSectionThree{
@@ -385,7 +384,15 @@ top:78%;
 left:22%;
 }
 
+#AboutSectionThree h2{
+text-align:center;
+}
+
 #AboutSectionFour{
 top:78%;
 left:78%;
+}
+
+#AboutSectionFour h2{
+text-align:center;
 }
