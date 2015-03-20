@@ -1,63 +1,75 @@
 var query = [
   {
-    "url": "http://www.bbc.co.uk/sport/",
-    "selector": "#story-2 > a",
-    "extract": "href"
+    url: "http://www.bbc.co.uk/sport/",
+    selector: "#story-2 > a",
+    extract: "href",
+    cache: 'false'
   },
   {
-    "url": "http://www.bbc.co.uk/sport/",
-    "selector": "#story-2 > a > span.headline-wrapper",
-    "extract": "text"
+    url: "http://www.bbc.co.uk/sport/",
+    selector: "#story-2 > a > span.headline-wrapper",
+    extract: "text",
+    cache: 'false'
   },
   {
-    "url": "http://www.bbc.co.uk/sport/",
-    "selector": "#story-2 > a > span.image-wrapper.image-small > img",
-    "extract": "src"
+    url: "http://www.bbc.co.uk/sport/",
+    selector: "#story-2 > a > span.image-wrapper.image-small > img",
+    extract: "src",
+    cache: 'false'
   },
   {
-    "url": "http://www.bbc.co.uk/sport/",
-    "selector": "#story-3 > a",
-    "extract": "href"
+    url: "http://www.bbc.co.uk/sport/",
+    selector: "#story-3 > a",
+    extract: "href",
+    cache: 'false'
   },
   {
-    "url": "http://www.bbc.co.uk/sport/",
-    "selector": "#story-3 > a > span.headline-wrapper",
-    "extract": "text"
+    url: "http://www.bbc.co.uk/sport/",
+    selector: "#story-3 > a > span.headline-wrapper",
+    extract: "text",
+    cache: 'false'
   },
   {
-    "url": "http://www.bbc.co.uk/sport/",
-    "selector": "#story-3 > a > span.image-wrapper.image-small > img",
-    "extract": "src"
+    url: "http://www.bbc.co.uk/sport/",
+    selector: "#story-3 > a > span.image-wrapper.image-small > img",
+    extract: "src",
+    cache: 'false'
   },
   {
-    "url": "http://www.bbc.co.uk/sport/",
-    "selector": "#live-first-story > a",
-    "extract": "href"
+    url: "http://www.bbc.co.uk/sport/",
+    selector: "#live-first-story > a",
+    extract: "href",
+    cache: 'false'
   },
   {
-    "url": "http://www.bbc.co.uk/sport/",
-    "selector": "#live-first-story > a > h2",
-    "extract": "text"
+    url: "http://www.bbc.co.uk/sport/",
+    selector: "#live-first-story > a > h2",
+    extract: "text",
+    cache: 'false'
   },
   {
-    "url": "http://www.bbc.co.uk/sport/",
-    "selector": "#live-first-story > a > img",
-    "extract": "src"
+    url: "http://www.bbc.co.uk/sport/",
+    selector: "#live-first-story > a > img",
+    extract: "src",
+    cache: 'false'
   },
   {
-    "url": "http://www.bbc.co.uk/sport/",
-    "selector": "#live-story-2 > a",
-    "extract": "href"
+    url: "http://www.bbc.co.uk/sport/",
+    selector: "#live-story-2 > a",
+    extract: "href",
+    cache: 'false'
   },
   {
-    "url": "http://www.bbc.co.uk/sport/",
-    "selector": "#live-story-2 > a > span.headline-wrapper",
-    "extract": "text"
+    url: "http://www.bbc.co.uk/sport/",
+    selector: "#live-story-2 > a > span.headline-wrapper",
+    extract: "text",
+    cache: 'false'
   },
   {
-    "url": "http://www.bbc.co.uk/sport/",
-    "selector": "#live-story-2 > a > span.image-wrapper.image-medium > img",
-    "extract": "src"
+    url: "http://www.bbc.co.uk/sport/",
+    selector: "#live-story-2 > a > span.image-wrapper.image-medium > img",
+    extract: "src",
+    cache: 'false'
   }
 
 ],
@@ -86,73 +98,85 @@ var query = [
     url: 'http://www.sport.co.uk/',
     type: 'html',
     selector: '#main-story-module > ul:nth-child(2) > li:nth-child(1) > a',
-    extract: 'href'
+    extract: 'href',
+    cache: 'false'
   },
 {
     url: 'http://www.sport.co.uk/',
     type: 'html',
     selector: '#main-story-module > ul:nth-child(2) > li:nth-child(1) > a',
-    extract: 'text'
+    extract: 'text',
+    cache: 'false'
   },
 {
     url: 'http://www.sport.co.uk/',
     type: 'html',
     selector: '#main-story-module > ul:nth-child(2) > li:nth-child(1) > a > div > img',
-    extract: 'src'
+    extract: 'src',
+    cache: 'false'
   },
   {
     url: 'http://www.sport.co.uk/',
     type: 'html',
     selector: '#main-story-module > ul:nth-child(2) > li:nth-child(2) > a',
-    extract: 'href'
+    extract: 'href',
+    cache: 'false'
   },
 {
     url: 'http://www.sport.co.uk/',
     type: 'html',
     selector: '#main-story-module > ul:nth-child(2) > li:nth-child(2) > a',
-    extract: 'text'
+    extract: 'text',
+    cache: 'false'
   },
 {
     url: 'http://www.sport.co.uk/',
     type: 'html',
     selector: '#main-story-module > ul:nth-child(2) > li:nth-child(2) > a > div > img',
-    extract: 'src'
+    extract: 'src',
+    cache: 'false'
   },
   {
     url: 'http://www.sport.co.uk/',
     type: 'html',
     selector: '#main-story-module > ul:nth-child(2) > li:nth-child(3) > a',
-    extract: 'href'
+    extract: 'href',
+    cache: 'false'
   },
 {
     url: 'http://www.sport.co.uk/',
     type: 'html',
     selector: '#main-story-module > ul:nth-child(2) > li:nth-child(3) > a',
-    extract: 'text'
+    extract: 'text',
+    cache: 'false'
   },
 {
     url: 'http://www.sport.co.uk/',
     type: 'html',
     selector: '#main-story-module > ul:nth-child(2) > li:nth-child(3) > a > div > img',
-    extract: 'src'
+    extract: 'src',
+    cache: 'false'
   },
   {
     url: 'http://www.sport.co.uk/',
     type: 'html',
     selector: '#main-story-module > ul:nth-child(2) > li:nth-child(4) > a',
-    extract: 'href'
+    extract: 'href',
+    cache: 'false'
   },
 {
     url: 'http://www.sport.co.uk/',
     type: 'html',
     selector: '#main-story-module > ul:nth-child(2) > li:nth-child(4) > a',
-    extract: 'text'
+    extract: 'text',
+    cache: 'false'
   },
 {
     url: 'http://www.sport.co.uk/',
     type: 'html',
     selector: '#main-story-module > ul:nth-child(2) > li:nth-child(4) > a > div > img',
-    extract: 'src'
+    extract: 'src',
+    cache: 'false'
   }
 ],
   uriQuery = encodeURIComponent(JSON.stringify(query)),
@@ -180,73 +204,85 @@ var query = [
     url: 'http://www.skysports.com/',
     type: 'html',
     selector: 'body > div.site-wrapper > div > div > div > div.v5-2col-t3 > div.col1 > div:nth-child(5) > ul > li:nth-child(1) > h4 > a',
-    extract: 'href'
+    extract: 'href',
+    cache: 'false'
   },
 {
     url: 'http://www.skysports.com/',
     type: 'html',
     selector: 'body > div.site-wrapper > div > div > div > div.v5-2col-t3 > div.col1 > div:nth-child(5) > ul > li:nth-child(1) > h4 > a',
-    extract: 'text'
+    extract: 'text',
+    cache: 'false'
   },
 {
     url: 'http://www.skysports.com/',
     type: 'html',
     selector: 'body > div.site-wrapper > div > div > div > div.v5-2col-t3 > div.col1 > div:nth-child(5) > ul > li:nth-child(1) > a > img',
-    extract: 'src'
+    extract: 'src',
+    cache: 'false'
   },
   {
     url: 'http://www.skysports.com/',
     type: 'html',
     selector: 'body > div.site-wrapper > div > div > div > div.v5-2col-t3 > div.col1 > div:nth-child(5) > ul > li:nth-child(2) > h4 > a',
-    extract: 'href'
+    extract: 'href',
+    cache: 'false'
   },
 {
     url: 'http://www.skysports.com/',
     type: 'html',
     selector: 'body > div.site-wrapper > div > div > div > div.v5-2col-t3 > div.col1 > div:nth-child(5) > ul > li:nth-child(2) > h4 > a',
-    extract: 'text'
+    extract: 'text',
+    cache: 'false'
   },
 {
     url: 'http://www.skysports.com/',
     type: 'html',
     selector: 'body > div.site-wrapper > div > div > div > div.v5-2col-t3 > div.col1 > div:nth-child(5) > ul > li:nth-child(2) > a > img',
-    extract: 'src'
+    extract: 'src',
+    cache: 'false'
   },
   {
     url: 'http://www.skysports.com/',
     type: 'html',
     selector: 'body > div.site-wrapper > div > div > div > div.v5-2col-t3 > div.col1 > div:nth-child(5) > ul > li:nth-child(3) > h4 > a',
-    extract: 'href'
+    extract: 'href',
+    cache: 'false'
   },
 {
     url: 'http://www.skysports.com/',
     type: 'html',
     selector: 'body > div.site-wrapper > div > div > div > div.v5-2col-t3 > div.col1 > div:nth-child(5) > ul > li:nth-child(3) > h4 > a',
-    extract: 'text'
+    extract: 'text',
+    cache: 'false'
   },
 {
     url: 'http://www.skysports.com/',
     type: 'html',
     selector: 'body > div.site-wrapper > div > div > div > div.v5-2col-t3 > div.col1 > div:nth-child(5) > ul > li:nth-child(3) > a > img',
-    extract: 'src'
+    extract: 'src',
+    cache: 'false'
   },
   {
     url: 'http://www.skysports.com/',
     type: 'html',
     selector: 'body > div.site-wrapper > div > div > div > div.v5-2col-t3 > div.col1 > div:nth-child(5) > ul > li:nth-child(4) > h4 > a',
-    extract: 'href'
+    extract: 'href',
+    cache: 'false'
   },
 {
     url: 'http://www.skysports.com/',
     type: 'html',
     selector: 'body > div.site-wrapper > div > div > div > div.v5-2col-t3 > div.col1 > div:nth-child(5) > ul > li:nth-child(4) > h4 > a',
-    extract: 'text'
+    extract: 'text',
+    cache: 'false'
   },
 {
     url: 'http://www.skysports.com/',
     type: 'html',
     selector: 'body > div.site-wrapper > div > div > div > div.v5-2col-t3 > div.col1 > div:nth-child(5) > ul > li:nth-child(4) > a > img',
-    extract: 'src'
+    extract: 'src',
+    cache: 'false'
   }
 ],
   uriQuery = encodeURIComponent(JSON.stringify(query)),
@@ -274,73 +310,85 @@ var query = [
     url: 'http://www.mirror.co.uk/sport/',
     type: 'html',
     selector: '#row1 > div.tmCol.span-6.last.col-2 > div:nth-child(2) > h3 > a',
-    extract: 'href'
+    extract: 'href',
+    cache: 'false'
   },
 {
     url: 'http://www.mirror.co.uk/sport/',
     type: 'html',
     selector: '#row1 > div.tmCol.span-6.last.col-2 > div:nth-child(2) > h3 > a',
-    extract: 'text'
+    extract: 'text',
+    cache: 'false'
   },
 {
     url: 'http://www.mirror.co.uk/sport/',
     type: 'html',
     selector: '#row1 > div.tmCol.span-6.last.col-2 > div:nth-child(2) > figure > a > img',
-    extract: 'src'
+    extract: 'src',
+    cache: 'false'
   },
 {
     url: 'http://www.theguardian.com/uk/sport',
     type: 'html',
     selector: '#sport > div > div.fc-container--rolled-up-hide.fc-container__body > div:nth-child(2) > ul > li:nth-child(1) > div > div > a',
-    extract: 'href'
+    extract: 'href',
+    cache: 'false'
   },
 {
     url: 'http://www.theguardian.com/uk/sport',
     type: 'html',
     selector: '#sport > div > div.fc-container--rolled-up-hide.fc-container__body > div:nth-child(2) > ul > li:nth-child(1) > div > div > a',
-    extract: 'text'
+    extract: 'text',
+    cache: 'false'
   },
 {
     url: 'http://www.theguardian.com/uk/sport',
     type: 'html',
     selector: '#sport > div > div.fc-container--rolled-up-hide.fc-container__body > div:nth-child(2) > ul > li:nth-child(1) > div > div > div.fc-item__media-wrapper > div > img',
-    extract: 'src'
+    extract: 'src',
+    cache: 'false'
   },
 {
     url: 'http://www.theguardian.com/uk/sport',
     type: 'html',
     selector: '#sport > div > div.fc-container--rolled-up-hide.fc-container__body > div:nth-child(1) > ul > li.fc-slice__item.l-row__item.l-row__item--span-3.u-faux-block-link > div > div > a',
-    extract: 'href'
+    extract: 'href',
+    cache: 'false'
   },
 {
     url: 'http://www.theguardian.com/uk/sport',
     type: 'html',
     selector: '#sport > div > div.fc-container--rolled-up-hide.fc-container__body > div:nth-child(1) > ul > li.fc-slice__item.l-row__item.l-row__item--span-3.u-faux-block-link > div > div > a',
-    extract: 'text'
+    extract: 'text',
+    cache: 'false'
   },
 {
     url: 'http://www.theguardian.com/uk/sport',
     type: 'html',
     selector: '#sport > div > div.fc-container--rolled-up-hide.fc-container__body > div:nth-child(1) > ul > li.fc-slice__item.l-row__item.l-row__item--span-3.u-faux-block-link > div > div > div.fc-item__media-wrapper > div > img',
-    extract: 'src'
+    extract: 'src',
+    cache: 'false'
   },
 {
     url: 'http://www.theguardian.com/uk/sport',
     type: 'html',
     selector: '#sport > div > div.fc-container--rolled-up-hide.fc-container__body > div:nth-child(2) > ul > li:nth-child(2) > div > div > a',
-    extract: 'href'
+    extract: 'href',
+    cache: 'false'
   },
 {
     url: 'http://www.theguardian.com/uk/sport',
     type: 'html',
     selector: '#sport > div > div.fc-container--rolled-up-hide.fc-container__body > div:nth-child(2) > ul > li:nth-child(2) > div > div > a',
-    extract: 'text'
+    extract: 'text',
+    cache: 'false'
   },
 {
     url: 'http://www.theguardian.com/uk/sport',
     type: 'html',
     selector: '#sport > div > div.fc-container--rolled-up-hide.fc-container__body > div:nth-child(2) > ul > li:nth-child(2) > div > div > div.fc-item__media-wrapper > div > img',
-    extract: 'src'
+    extract: 'src',
+    cache: 'false'
   },
 ]
   uriQuery = encodeURIComponent(JSON.stringify(query)),

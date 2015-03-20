@@ -3,73 +3,85 @@ var query = [
     url: 'http://www.bbc.co.uk/news/technology/',
     type: 'html',
     selector: '#top-story > h2 > a',
-    extract: 'href'
+    extract: 'href',
+    cache: 'false'
   },
 {
     url: 'http://www.bbc.co.uk/news/technology/',
     type: 'html',
     selector: '#top-story > h2 > a > img',
-    extract: 'src'
+    extract: 'src',
+    cache: 'false'
   },
 {
     url: 'http://www.bbc.co.uk/news/technology/',
     type: 'html',
     selector: '#top-story > h2 > a',
-    extract: 'text'
+    extract: 'text',
+    cache: 'false'
   },
   {
     url: 'http://www.bbc.co.uk/news/technology/',
     type: 'html',
     selector: '#second-story > div > h2 > a',
-    extract: 'href'
+    extract: 'href',
+    cache: 'false'
   },
 {
     url: 'http://www.bbc.co.uk/news/technology/',
     type: 'html',
     selector: '#second-story > div > h2 > a > img',
-    extract: 'src'
+    extract: 'src',
+    cache: 'false'
   },
 {
     url: 'http://www.bbc.co.uk/news/technology/',
     type: 'html',
     selector: '#second-story > div > h2 > a',
-    extract: 'text'
+    extract: 'text',
+    cache: 'false'
   },
   {
     url: 'http://www.bbc.co.uk/news/technology/',
     type: 'html',
     selector: '#third-story > div > h2 > a',
-    extract: 'href'
+    extract: 'href',
+    cache: 'false'
   },
 {
     url: 'http://www.bbc.co.uk/news/technology/',
     type: 'html',
     selector: '#third-story > div > h2 > a > img',
-    extract: 'src'
+    extract: 'src',
+    cache: 'false'
   },
 {
     url: 'http://www.bbc.co.uk/news/technology/',
     type: 'html',
     selector: '#third-story > div > h2 > a',
-    extract: 'text'
+    extract: 'text',
+    cache: 'false'
   },
 {
     url: 'http://www.bbc.co.uk/news/technology/',
     type: 'html',
     selector: '#features-and-analysis > ul > li.first-child.large-image > h3 > a',
-    extract: 'href'
+    extract: 'href',
+    cache: 'false'
   },
 {
     url: 'http://www.bbc.co.uk/news/technology/',
     type: 'html',
     selector: '#features-and-analysis > ul > li.first-child.large-image > h3 > a > img',
-    extract: 'src'
+    extract: 'src',
+    cache: 'false'
   },
 {
     url: 'http://www.bbc.co.uk/news/technology/',
     type: 'html',
     selector: '#features-and-analysis > ul > li.first-child.large-image > h3 > a',
-    extract: 'text'
+    extract: 'text',
+    cache: 'false'
   }
 
 ],
@@ -100,73 +112,85 @@ var query = [
     url: 'http://www.technologyreview.com/',
     type: 'html',
     selector: '#section-news > div.hp-content > div > div.scroll-wrapper.left > div > section:nth-child(2) > ul > li:nth-child(1) > a',
-    extract: 'href'
+    extract: 'href',
+    cache: 'false'
   },
 {
     url: 'http://www.technologyreview.com/',
     type: 'html',
     selector: '#section-news > div.hp-content > div > div.scroll-wrapper.left > div > section:nth-child(2) > ul > li:nth-child(1) > a > article > img',
-    extract: 'src'
+    extract: 'src',
+    cache: 'false'
   },
 {
     url: 'http://www.technologyreview.com/',
     type: 'html',
     selector: '#section-news > div.hp-content > div > div.scroll-wrapper.left > div > section:nth-child(2) > ul > li:nth-child(1) > a > article > h1',
-    extract: 'text'
+    extract: 'text',
+    cache: 'false'
   },
 {
     url: 'http://www.technologyreview.com/',
     type: 'html',
     selector: '#section-news > div.hp-content > div > div.scroll-wrapper.left > div > section:nth-child(2) > ul > li:nth-child(2) > a',
-    extract: 'href'
+    extract: 'href',
+    cache: 'false'
   },
 {
     url: 'http://www.technologyreview.com/',
     type: 'html',
     selector: '#section-news > div.hp-content > div > div.scroll-wrapper.left > div > section:nth-child(2) > ul > li:nth-child(2) > a > article > img',
-    extract: 'src'
+    extract: 'src',
+    cache: 'false'
   },
 {
     url: 'http://www.technologyreview.com/',
     type: 'html',
     selector: '#section-news > div.hp-content > div > div.scroll-wrapper.left > div > section:nth-child(2) > ul > li:nth-child(2) > a > article > h1',
-    extract: 'text'
+    extract: 'text',
+    cache: 'false'
   },
 {
     url: 'http://www.technologyreview.com/',
     type: 'html',
     selector: '#section-news > div.hp-content > div > div.scroll-wrapper.left > div > section:nth-child(2) > ul > li:nth-child(3) > a',
-    extract: 'href'
+    extract: 'href',
+    cache: 'false'
   },
 {
     url: 'http://www.technologyreview.com/',
     type: 'html',
     selector: '#section-news > div.hp-content > div > div.scroll-wrapper.left > div > section:nth-child(2) > ul > li:nth-child(3) > a > article > img',
-    extract: 'src'
+    extract: 'src',
+    cache: 'false'
   },
 {
     url: 'http://www.technologyreview.com/',
     type: 'html',
     selector: '#section-news > div.hp-content > div > div.scroll-wrapper.left > div > section:nth-child(2) > ul > li:nth-child(3) > a > article > h1',
-    extract: 'text'
+    extract: 'text',
+    cache: 'false'
   },
 {
     url: 'http://www.technologyreview.com/',
     type: 'html',
     selector: '#section-news > div.hp-content > div > div.scroll-wrapper.left > div > section:nth-child(2) > ul > li:nth-child(4) > a',
-    extract: 'href'
+    extract: 'href',
+    cache: 'false'
   },
 {
     url: 'http://www.technologyreview.com/',
     type: 'html',
     selector: '#section-news > div.hp-content > div > div.scroll-wrapper.left > div > section:nth-child(2) > ul > li:nth-child(4) > a > article > img',
-    extract: 'src'
+    extract: 'src',
+    cache: 'false'
   },
 {
     url: 'http://www.technologyreview.com/',
     type: 'html',
     selector: '#section-news > div.hp-content > div > div.scroll-wrapper.left > div > section:nth-child(2) > ul > li:nth-child(4) > a > article > h1',
-    extract: 'text'
+    extract: 'text',
+    cache: 'false'
   }
 
 ],
@@ -195,73 +219,85 @@ var query = [
     url: 'http://news.sky.com/technology',
     type: 'html',
     selector: 'body > div.viewport > div.main.main--sponsored > div > div > div > div:nth-child(2) > ol > li.section-top-stories__item.section-top-stories__item--1.section-top-stories__item--odd > a',
-    extract: 'href'
+    extract: 'href',
+    cache: 'false'
   },
 {
     url: 'http://news.sky.com/technology',
     type: 'html',
     selector: 'body > div.viewport > div.main.main--sponsored > div > div > div > div:nth-child(2) > ol > li.section-top-stories__item.section-top-stories__item--1.section-top-stories__item--odd > a > div > div > img',
-    extract: 'src'
+    extract: 'src',
+    cache: 'false'
   },
 {
     url: 'http://news.sky.com/technology',
     type: 'html',
     selector: 'body > div.viewport > div.main.main--sponsored > div > div > div > div:nth-child(2) > ol > li.section-top-stories__item.section-top-stories__item--1.section-top-stories__item--odd > a > span',
-    extract: 'text'
+    extract: 'text',
+    cache: 'false'
   },
   {
     url: 'http://news.sky.com/technology',
     type: 'html',
     selector: 'body > div.viewport > div.main.main--sponsored > div > div > div > div:nth-child(2) > ol > li.section-top-stories__item.section-top-stories__item--3.section-top-stories__item--odd > a',
-    extract: 'href'
+    extract: 'href',
+    cache: 'false'
   },
 {
     url: 'http://news.sky.com/technology',
     type: 'html',
     selector: 'body > div.viewport > div.main.main--sponsored > div > div > div > div:nth-child(2) > ol > li.section-top-stories__item.section-top-stories__item--3.section-top-stories__item--odd > a > div > div > img',
-    extract: 'src'
+    extract: 'src',
+    cache: 'false'
   },
 {
     url: 'http://news.sky.com/technology',
     type: 'html',
     selector: 'body > div.viewport > div.main.main--sponsored > div > div > div > div:nth-child(2) > ol > li.section-top-stories__item.section-top-stories__item--3.section-top-stories__item--odd > a > span',
-    extract: 'text'
+    extract: 'text',
+    cache: 'false'
   },
 {
     url: 'http://news.sky.com/technology',
     type: 'html',
     selector: 'body > div.viewport > div.main.main--sponsored > div > div > div > div:nth-child(2) > ol > li.section-top-stories__item.section-top-stories__item--4.section-top-stories__item--even > a',
-    extract: 'href'
+    extract: 'href',
+    cache: 'false'
   },
 {
     url: 'http://news.sky.com/technology',
     type: 'html',
     selector: 'body > div.viewport > div.main.main--sponsored > div > div > div > div:nth-child(2) > ol > li.section-top-stories__item.section-top-stories__item--4.section-top-stories__item--even > a > div > div > img',
-    extract: 'src'
+    extract: 'src',
+    cache: 'false'
   },
 {
     url: 'http://news.sky.com/technology',
     type: 'html',
     selector: 'body > div.viewport > div.main.main--sponsored > div > div > div > div:nth-child(2) > ol > li.section-top-stories__item.section-top-stories__item--4.section-top-stories__item--even > a > span',
-    extract: 'text'
+    extract: 'text',
+    cache: 'false'
   },
 {
     url: 'http://news.sky.com/technology',
     type: 'html',
     selector: 'body > div.viewport > div.main.main--sponsored > div > div > div > div:nth-child(3) > ol > li.section-top-stories__item.section-top-stories__item--6.section-top-stories__item--even > a',
-    extract: 'href'
+    extract: 'href',
+    cache: 'false'
   },
 {
     url: 'http://news.sky.com/technology',
     type: 'html',
     selector: 'body > div.viewport > div.main.main--sponsored > div > div > div > div:nth-child(3) > ol > li.section-top-stories__item.section-top-stories__item--6.section-top-stories__item--even > a > div > div > img',
-    extract: 'src'
+    extract: 'src',
+    cache: 'false'
   },
 {
     url: 'http://news.sky.com/technology',
     type: 'html',
     selector: 'body > div.viewport > div.main.main--sponsored > div > div > div > div:nth-child(3) > ol > li.section-top-stories__item.section-top-stories__item--6.section-top-stories__item--even > a > span',
-    extract: 'text'
+    extract: 'text',
+    cache: 'false'
   }
 ],
   uriQuery = encodeURIComponent(JSON.stringify(query)),
@@ -290,73 +326,85 @@ var query = [
     url: 'http://techcrunch.com/',
     type: 'html',
     selector: 'body > div.fluid.flush.split.homepage > div.lc.flush.lc-island > div > div.l-main-container > div > div.island.plain-island > div > a',
-    extract: 'href'
+    extract: 'href',
+    cache: 'false'
   },
 {
     url: 'http://techcrunch.com/',
     type: 'html',
     selector: 'body > div.fluid.flush.split.homepage > div.lc.flush.lc-island > div > div.l-main-container > div > div.island.plain-island > div > a > div > h2',
-    extract: 'text'
+    extract: 'text',
+    cache: 'false'
   },
 {
     url: 'http://techcrunch.com/',
     type: 'html',
     selector: 'body > div.fluid.flush.split.homepage > div.lc.flush.lc-island > div > div.l-main-container > div > div.island.plain-island > div > a > img',
-    extract: 'src'
+    extract: 'src',
+    cache: 'false'
   },
 {
     url: 'http://techcrunch.com/',
     type: 'html',
     selector: 'body > div.fluid.flush.split.homepage > div.lc.flush.lc-island > div > div.l-main-container > div > div.island.plain-island > ul > li:nth-child(1) > a',
-    extract: 'href'
+    extract: 'href',
+    cache: 'false'
   },
 {
     url: 'http://techcrunch.com/',
     type: 'html',
     selector: 'body > div.fluid.flush.split.homepage > div.lc.flush.lc-island > div > div.l-main-container > div > div.island.plain-island > ul > li:nth-child(1) > a > div > h2',
-    extract: 'text'
+    extract: 'text',
+    cache: 'false'
   },
 {
     url: 'http://techcrunch.com/',
     type: 'html',
     selector: 'body > div.fluid.flush.split.homepage > div.lc.flush.lc-island > div > div.l-main-container > div > div.island.plain-island > ul > li:nth-child(1) > a > img',
-    extract: 'src'
+    extract: 'src',
+    cache: 'false'
   },
 {
     url: 'http://techcrunch.com/',
     type: 'html',
     selector: 'body > div.fluid.flush.split.homepage > div.lc.flush.lc-island > div > div.l-main-container > div > div.island.plain-island > ul > li:nth-child(2) > a',
-    extract: 'href'
+    extract: 'href',
+    cache: 'false'
   },
 {
     url: 'http://techcrunch.com/',
     type: 'html',
     selector: 'body > div.fluid.flush.split.homepage > div.lc.flush.lc-island > div > div.l-main-container > div > div.island.plain-island > ul > li:nth-child(2) > a > div > h2',
-    extract: 'text'
+    extract: 'text',
+    cache: 'false'
   },
 {
     url: 'http://techcrunch.com/',
     type: 'html',
     selector: 'body > div.fluid.flush.split.homepage > div.lc.flush.lc-island > div > div.l-main-container > div > div.island.plain-island > ul > li:nth-child(2) > a > img',
-    extract: 'src'
+    extract: 'src',
+    cache: 'false'
   },
   {
     url: 'http://techcrunch.com/',
     type: 'html',
     selector: 'body > div.fluid.flush.split.homepage > div.lc.flush.lc-island > div > div.l-main-container > div > div.island.plain-island > ul > li:nth-child(3) > a',
-    extract: 'href'
+    extract: 'href',
+    cache: 'false'
   },
 {
     url: 'http://techcrunch.com/',
     type: 'html',
     selector: 'body > div.fluid.flush.split.homepage > div.lc.flush.lc-island > div > div.l-main-container > div > div.island.plain-island > ul > li:nth-child(3) > a > div > h2',
-    extract: 'text'
+    extract: 'text',
+    cache: 'false'
   },
 {
     url: 'http://techcrunch.com/',
     type: 'html',
     selector: 'body > div.fluid.flush.split.homepage > div.lc.flush.lc-island > div > div.l-main-container > div > div.island.plain-island > ul > li:nth-child(3) > a > img',
-    extract: 'src'
+    extract: 'src',
+    cache: 'false'
   }
 ]
   uriQuery = encodeURIComponent(JSON.stringify(query)),

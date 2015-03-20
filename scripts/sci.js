@@ -3,73 +3,85 @@ var query = [
     url: 'http://www.bbc.co.uk/news/science_and_environment/',
     type: 'html',
     selector: '#top-story > h2 > a',
-    extract: 'href'
+    extract: 'href',
+    cache: 'false'
   },
 {
     url: 'http://www.bbc.co.uk/news/science_and_environment/',
     type: 'html',
     selector: '#top-story > h2 > a',
-    extract: 'text'
+    extract: 'text',
+    cache: 'false'
   },
 {
     url: 'http://www.bbc.co.uk/news/science_and_environment/',
     type: 'html',
     selector: '#top-story > h2 > a > img',
-    extract: 'src'
+    extract: 'src',
+    cache: 'false'
   },
 {
     url: 'http://www.bbc.co.uk/news/science_and_environment/',
     type: 'html',
     selector: '#second-story > div > h2 > a',
-    extract: 'href'
+    extract: 'href',
+    cache: 'false'
   },
 {
     url: 'http://www.bbc.co.uk/news/science_and_environment/',
     type: 'html',
     selector: '#second-story > div > h2 > a',
-    extract: 'text'
+    extract: 'text',
+    cache: 'false'
   },
 {
     url: 'http://www.bbc.co.uk/news/science_and_environment/',
     type: 'html',
     selector: '#second-story > div > h2 > a > img',
-    extract: 'src'
+    extract: 'src',
+    cache: 'false'
   },
 {
     url: 'http://www.bbc.co.uk/news/science_and_environment/',
     type: 'html',
     selector: '#third-story > div > h2 > a',
-    extract: 'href'
+    extract: 'href',
+    cache: 'false'
   },
 {
     url: 'http://www.bbc.co.uk/news/science_and_environment/',
     type: 'html',
     selector: '#third-story > div > h2 > a',
-    extract: 'text'
+    extract: 'text',
+    cache: 'false'
   },
 {
     url: 'http://www.bbc.co.uk/news/science_and_environment/',
     type: 'html',
     selector: '#third-story > div > h2 > a > img',
-    extract: 'src'
+    extract: 'src',
+    cache: 'false'
   },
 {
     url: 'http://www.bbc.co.uk/news/science_and_environment/',
     type: 'html',
     selector: '#features-and-analysis > ul > li:nth-child(2) > h3 > a',
-    extract: 'href'
+    extract: 'href',
+    cache: 'false'
   },
 {
     url: 'http://www.bbc.co.uk/news/science_and_environment/',
     type: 'html',
     selector: '#features-and-analysis > ul > li:nth-child(2) > h3 > a',
-    extract: 'text'
+    extract: 'text',
+    cache: 'false'
   },
 {
     url: 'http://www.bbc.co.uk/news/science_and_environment/',
     type: 'html',
     selector: '#features-and-analysis > ul > li:nth-child(2) > h3 > a > img',
-    extract: 'src'
+    extract: 'src',
+    cache: 'false'
   }
 
 ],
@@ -98,73 +110,85 @@ var query = [
     url: 'http://www.newscientist.com/section/science-news',
     type: 'html',
     selector: '#maincol > div > div.pnl.listpnl > div:nth-child(2) > h3 > a',
-    extract: 'href'
+    extract: 'href',
+    cache: 'false'
   },
 {
     url: 'http://www.newscientist.com/section/science-news',
     type: 'html',
     selector: '#maincol > div > div.pnl.listpnl > div:nth-child(2) > h3 > a',
-    extract: 'text'
+    extract: 'text',
+    cache: 'false'
   },
 {
     url: 'http://www.newscientist.com/section/science-news',
     type: 'html',
     selector: '#maincol > div > div.pnl.listpnl > div:nth-child(2) > div > a > img',
-    extract: 'src'
+    extract: 'src',
+    cache: 'false'
   },
   {
     url: 'http://www.newscientist.com/section/science-news',
     type: 'html',
     selector: '#maincol > div > div.pnl.listpnl > div:nth-child(3) > h3 > a',
-    extract: 'href'
+    extract: 'href',
+    cache: 'false'
   },
 {
     url: 'http://www.newscientist.com/section/science-news',
     type: 'html',
     selector: '#maincol > div > div.pnl.listpnl > div:nth-child(3) > h3 > a',
-    extract: 'text'
+    extract: 'text',
+    cache: 'false'
   },
 {
     url: 'http://www.newscientist.com/section/science-news',
     type: 'html',
     selector: '#maincol > div > div.pnl.listpnl > div:nth-child(3) > div > a > img',
-    extract: 'src'
+    extract: 'src',
+    cache: 'false'
   },
   {
     url: 'http://www.newscientist.com/section/science-news',
     type: 'html',
     selector: '#maincol > div > div.pnl.listpnl > div:nth-child(4) > h3 > a',
-    extract: 'href'
+    extract: 'href',
+    cache: 'false'
   },
 {
     url: 'http://www.newscientist.com/section/science-news',
     type: 'html',
     selector: '#maincol > div > div.pnl.listpnl > div:nth-child(4) > h3 > a',
-    extract: 'text'
+    extract: 'text',
+    cache: 'false'
   },
 {
     url: 'http://www.newscientist.com/section/science-news',
     type: 'html',
     selector: '#maincol > div > div.pnl.listpnl > div:nth-child(4) > div > a > img',
-    extract: 'src'
+    extract: 'src',
+    cache: 'false'
   },
   {
     url: 'http://www.newscientist.com/section/science-news',
     type: 'html',
     selector: '#maincol > div > div.pnl.listpnl > div:nth-child(5) > h3 > a',
-    extract: 'href'
+    extract: 'href',
+    cache: 'false'
   },
 {
     url: 'http://www.newscientist.com/section/science-news',
     type: 'html',
     selector: '#maincol > div > div.pnl.listpnl > div:nth-child(5) > h3 > a',
-    extract: 'text'
+    extract: 'text',
+    cache: 'false'
   },
 {
     url: 'http://www.newscientist.com/section/science-news',
     type: 'html',
     selector: '#maincol > div > div.pnl.listpnl > div:nth-child(5) > div > a > img',
-    extract: 'src'
+    extract: 'src',
+    cache: 'false'
   },
 ],
   uriQuery = encodeURIComponent(JSON.stringify(query)),
@@ -192,73 +216,85 @@ var query = [
     url: 'http://news.sciencemag.org/',
     type: 'html',
     selector: 'body > div.wrap-outer > div > div > div:nth-child(3) > div.content-primary > div.content-primary__main > div:nth-child(1) > div > div > ul > li:nth-child(1) > h3 > a',
-    extract: 'href'
+    extract: 'href',
+    cache: 'false'
   },
 {
     url: 'http://news.sciencemag.org/',
     type: 'html',
     selector: 'body > div.wrap-outer > div > div > div:nth-child(3) > div.content-primary > div.content-primary__main > div:nth-child(1) > div > div > ul > li:nth-child(1) > h3 > a',
-    extract: 'text'
+    extract: 'text',
+    cache: 'false'
   },
 {
     url: 'http://news.sciencemag.org/',
     type: 'html',
     selector: 'body > div.wrap-outer > div > div > div:nth-child(3) > div.content-primary > div.content-primary__main > div:nth-child(1) > div > div > ul > li:nth-child(1) > a > img',
-    extract: 'src'
+    extract: 'src',
+    cache: 'false'
   },
   {
     url: 'http://news.sciencemag.org/',
     type: 'html',
     selector: 'body > div.wrap-outer > div > div > div:nth-child(3) > div.content-primary > div.content-primary__main > div:nth-child(1) > div > div > ul > li:nth-child(2) > h3 > a',
-    extract: 'href'
+    extract: 'href',
+    cache: 'false'
   },
 {
     url: 'http://news.sciencemag.org/',
     type: 'html',
     selector: 'body > div.wrap-outer > div > div > div:nth-child(3) > div.content-primary > div.content-primary__main > div:nth-child(1) > div > div > ul > li:nth-child(2) > h3 > a',
-    extract: 'text'
+    extract: 'text',
+    cache: 'false'
   },
 {
     url: 'http://news.sciencemag.org/',
     type: 'html',
     selector: 'body > div.wrap-outer > div > div > div:nth-child(3) > div.content-primary > div.content-primary__main > div:nth-child(1) > div > div > ul > li:nth-child(2) > a > img',
-    extract: 'src'
+    extract: 'src',
+    cache: 'false'
   },
   {
     url: 'http://news.sciencemag.org/',
     type: 'html',
     selector: 'body > div.wrap-outer > div > div > div:nth-child(3) > div.content-primary > div.content-primary__main > div:nth-child(1) > div > div > ul > li:nth-child(3) > h3 > a',
-    extract: 'href'
+    extract: 'href',
+    cache: 'false'
   },
 {
     url: 'http://news.sciencemag.org/',
     type: 'html',
     selector: 'body > div.wrap-outer > div > div > div:nth-child(3) > div.content-primary > div.content-primary__main > div:nth-child(1) > div > div > ul > li:nth-child(3) > h3 > a',
-    extract: 'text'
+    extract: 'text',
+    cache: 'false'
   },
 {
     url: 'http://news.sciencemag.org/',
     type: 'html',
     selector: 'body > div.wrap-outer > div > div > div:nth-child(3) > div.content-primary > div.content-primary__main > div:nth-child(1) > div > div > ul > li:nth-child(3) > a > img',
-    extract: 'src'
+    extract: 'src',
+    cache: 'false'
   },
   {
     url: 'http://news.sciencemag.org/',
     type: 'html',
     selector: 'body > div.wrap-outer > div > div > div:nth-child(3) > div.content-primary > div.content-primary__main > div:nth-child(1) > div > div > ul > li:nth-child(4) > h3 > a',
-    extract: 'href'
+    extract: 'href',
+    cache: 'false'
   },
 {
     url: 'http://news.sciencemag.org/',
     type: 'html',
     selector: 'body > div.wrap-outer > div > div > div:nth-child(3) > div.content-primary > div.content-primary__main > div:nth-child(1) > div > div > ul > li:nth-child(4) > h3 > a',
-    extract: 'text'
+    extract: 'text',
+    cache: 'false'
   },
 {
     url: 'http://news.sciencemag.org/',
     type: 'html',
     selector: 'body > div.wrap-outer > div > div > div:nth-child(3) > div.content-primary > div.content-primary__main > div:nth-child(1) > div > div > ul > li:nth-child(4) > a > img',
-    extract: 'src'
+    extract: 'src',
+    cache: 'false'
   },
 ],
   uriQuery = encodeURIComponent(JSON.stringify(query)),
@@ -287,73 +323,85 @@ var query = [
     url: 'http://esciencenews.com/',
     type: 'html',
     selector: '#content > div.span-19.colborder > div > div.span-9.append-1 > div.top-story > div > h2 > a',
-    extract: 'href'
+    extract: 'href',
+    cache: 'false'
   },
 {
     url: 'http://esciencenews.com/',
     type: 'html',
     selector: '#content > div.span-19.colborder > div > div.span-9.append-1 > div.top-story > div > h2 > a',
-    extract: 'text'
+    extract: 'text',
+    cache: 'false'
   },
 {
     url: 'http://esciencenews.com/',
     type: 'html',
     selector: '#content > div.span-19.colborder > div > div.span-9.append-1 > div.top-story > a > img',
-    extract: 'src'
+    extract: 'src',
+    cache: 'false'
   },
 {
     url: 'http://esciencenews.com/',
     type: 'html',
     selector: '#content > div.span-19.colborder > div > div.span-9.last > div:nth-child(2) > h2 > a',
-    extract: 'href'
+    extract: 'href',
+    cache: 'false'
   },
 {
     url: 'http://esciencenews.com/',
     type: 'html',
     selector: '#content > div.span-19.colborder > div > div.span-9.last > div:nth-child(2) > h2 > a',
-    extract: 'text'
+    extract: 'text',
+    cache: 'false'
   },
 {
     url: 'http://esciencenews.com/',
     type: 'html',
     selector: '#content > div.span-19.colborder > div > div.span-9.last > div:nth-child(2) > p > a > img',
-    extract: 'src'
+    extract: 'src',
+    cache: 'false'
   },
 {
     url: 'http://esciencenews.com/',
     type: 'html',
     selector: '#content > div.span-19.colborder > div > div.span-9.last > div:nth-child(4) > h2 > a',
-    extract: 'href'
+    extract: 'href',
+    cache: 'false'
   },
 {
     url: 'http://esciencenews.com/',
     type: 'html',
     selector: '#content > div.span-19.colborder > div > div.span-9.last > div:nth-child(4) > h2 > a',
-    extract: 'text'
+    extract: 'text',
+    cache: 'false'
   },
 {
     url: 'http://esciencenews.com/',
     type: 'html',
     selector: '#content > div.span-19.colborder > div > div.span-9.last > div:nth-child(4) > p > a > img',
-    extract: 'src'
+    extract: 'src',
+    cache: 'false'
   },
 {
     url: 'http://esciencenews.com/',
     type: 'html',
     selector: '#content > div.span-19.colborder > div > div.span-9.append-1 > div:nth-child(2) > h2 > a',
-    extract: 'href'
+    extract: 'href',
+    cache: 'false'
   },
 {
     url: 'http://esciencenews.com/',
     type: 'html',
     selector: '#content > div.span-19.colborder > div > div.span-9.append-1 > div:nth-child(2) > h2 > a',
-    extract: 'text'
+    extract: 'text',
+    cache: 'false'
   },
 {
     url: 'http://esciencenews.com/',
     type: 'html',
     selector: '#content > div.span-19.colborder > div > div.span-9.append-1 > div:nth-child(2) > p > a > img',
-    extract: 'src'
+    extract: 'src',
+    cache: 'false'
   },
 ]
   uriQuery = encodeURIComponent(JSON.stringify(query)),

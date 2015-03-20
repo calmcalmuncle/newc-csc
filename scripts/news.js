@@ -1,24 +1,24 @@
 /*
 var query = [
   {
-    "url": "http://www.bbc.co.uk/news/",
-    "selector": "#most-popular > div.panel.open > ol > li.first-child.ol1 > a",
-    "extract": "href"
+    url: "http://www.bbc.co.uk/news/",
+    selector: "#most-popular > div.panel.open > ol > li.first-child.ol1 > a",
+    extract: "href"
   },
   {
-    "url": "http://www.bbc.co.uk/news/",
-    "selector": "#most-popular > div.panel.open > ol > li.ol2 > a",
-    "extract": "href"
+    url: "http://www.bbc.co.uk/news/",
+    selector: "#most-popular > div.panel.open > ol > li.ol2 > a",
+    extract: "href"
   },
     {
-    "url": "http://www.bbc.co.uk/news/",
-    "selector": "#most-popular > div.panel.open > ol > li.ol3 > a",
-    "extract": "href"
+    url: "http://www.bbc.co.uk/news/",
+    selector: "#most-popular > div.panel.open > ol > li.ol3 > a",
+    extract: "href"
   },
   {
-    "url": "http://www.bbc.co.uk/news/",
-    "selector": "#most-popular > div.panel.open > ol > li.ol4 > a",
-    "extract": "href"
+    url: "http://www.bbc.co.uk/news/",
+    selector: "#most-popular > div.panel.open > ol > li.ol4 > a",
+    extract: "href"
   },
   
 ],
@@ -41,64 +41,76 @@ jQuery.getJSON(request, function (data1) {
 
 var query = [
   {
-    "url": "http://www.bbc.co.uk/news/",
-    "selector": "#top-story > h2 > a",
-    "extract": "href"
+    url: "http://www.bbc.co.uk/news/",
+    selector: "#top-story > h2 > a",
+    extract: "href",
+    cache: 'false'
   },
   {
-    "url": "http://www.bbc.co.uk/news/",
-    "selector": "#top-story > h2",
-    "extract": "text"
+    url: "http://www.bbc.co.uk/news/",
+    selector: "#top-story > h2",
+    extract: "text",
+    cache: 'false'
   },
   {
-    "url": "http://www.bbc.co.uk/news/",
-    "selector": "#top-story > h2 > a > img",
-    "extract": "src"
+    url: "http://www.bbc.co.uk/news/",
+    selector: "#top-story > h2 > a > img",
+    extract: "src",
+    cache: 'false'
   },
   {
-    "url": "http://www.bbc.co.uk/news/",
-    "selector": "#most-popular > div.panel.open > ol > li.ol2 > a",
-    "extract": "href"
+    url: "http://www.bbc.co.uk/news/",
+    selector: "#most-popular > div.panel.open > ol > li.ol2 > a",
+    extract: "href",
+    cache: 'false'
   },
   {
-    "url": "http://www.bbc.co.uk/news/",
-    "selector": "#second-story > div > h2 > a",
-    "extract": "text"
+    url: "http://www.bbc.co.uk/news/",
+    selector: "#second-story > div > h2 > a",
+    extract: "text",
+    cache: 'false'
   },
   {
-    "url": "http://www.bbc.co.uk/news/",
-    "selector": "#second-story > div > h2 > a > img",
-    "extract": "src"
+    url: "http://www.bbc.co.uk/news/",
+    selector: "#second-story > div > h2 > a > img",
+    extract: "src",
+    cache: 'false'
   },
   {
-    "url": "http://www.bbc.co.uk/news/",
-    "selector": "#third-story > div > h2 > a",
-    "extract": "href"
+    url: "http://www.bbc.co.uk/news/",
+    selector: "#third-story > div > h2 > a",
+    extract: "href",
+    cache: 'false'
   },
   {
-    "url": "http://www.bbc.co.uk/news/",
-    "selector": "#third-story > div > h2 > a",
-    "extract": "text"
+    url: "http://www.bbc.co.uk/news/",
+    selector: "#third-story > div > h2 > a",
+    extract: "text",
+    cache: 'false'
   },
   {
-    "url": "http://www.bbc.co.uk/news/",
-    "selector": "#third-story > div > h2 > a > img",
-    "extract": "src"
+    url: "http://www.bbc.co.uk/news/",
+    selector: "#third-story > div > h2 > a > img",
+    extract: "src",
+    cache: 'false'
   },
   {
-    "url": "http://www.bbc.co.uk/news/",
-    "selector": "#explainers > ul > li.small-image.column-1.first-child > h3 > a",
-    "extract": "href"
+    url: "http://www.bbc.co.uk/news/",
+    selector: "#explainers > ul > li.small-image.column-1.first-child > h3 > a",
+    extract: "href",
+    cache: 'false'
   },
   {
-    "url": "http://www.bbc.co.uk/news/",
-    "selector": "#explainers > ul > li.small-image.column-1.first-child > h3 > a",
-    "extract": "text"
+    url: "http://www.bbc.co.uk/news/",
+    selector: "#explainers > ul > li.small-image.column-1.first-child > h3 > a",
+    extract: "text",
+    cache: 'false'
   },
   {
-    "url": "http://www.bbc.co.uk/news/",
-    "selector": "#explainers > ul > li.small-image.column-1.first-child > h3 > a > img",
-    "extract": "src"
+    url: "http://www.bbc.co.uk/news/",
+    selector: "#explainers > ul > li.small-image.column-1.first-child > h3 > a > img",
+    extract: "src",
+    cache: 'false'
   }
 
 ],
@@ -130,76 +142,88 @@ var query = [
     url: NewsLink2,
     type: 'html',
     selector: '#main-content > div:nth-child(2) > div:nth-child(2) > div > div:nth-child(1) > div > div > div > div > article.item.da-all.blurb-wide.clearfix > a',
-    extract: 'href'
+    extract: 'href',
+    cache: 'false'
   },
 {
     url: NewsLink2,
     type: 'html',
     selector: '#main-content > div:nth-child(2) > div:nth-child(2) > div > div:nth-child(1) > div > div > div > div > article.item.da-all.blurb-wide.clearfix > div > h1 > a',
-    extract: 'text'
+    extract: 'text',
+    cache: 'false'
   },
 {
     url: NewsLink2,
     type: 'html',
     selector: '#main-content > div:nth-child(2) > div:nth-child(2) > div > div:nth-child(1) > div > div > div > div > article.item.da-all.blurb-wide.clearfix > a > img',
-    extract: 'src'
+    extract: 'src',
+    cache: 'false'
   },
   /* Tier Two Circle One */
   {
     url: NewsLink2,
     type: 'html',
     selector: '#main-content > div:nth-child(2) > div:nth-child(2) > div > div:nth-child(1) > div > div > div > div > article.item.db1.tb1.blurb.clearfix > div > h1 > a',
-    extract: 'href'
+    extract: 'href',
+    cache: 'false'
   },
 {
     url: NewsLink2,
     type: 'html',
     selector: '#main-content > div:nth-child(2) > div:nth-child(2) > div > div:nth-child(1) > div > div > div > div > article.item.db1.tb1.blurb.clearfix > div > h1 > a',
-    extract: 'text'
+    extract: 'text',
+    cache: 'false'
   },
 {
     url: NewsLink2,
     type: 'html',
     selector: '#main-content > div:nth-child(2) > div:nth-child(2) > div > div:nth-child(1) > div > div > div > div > article.item.db1.tb1.blurb.clearfix > a > img',
-    extract: 'src'
+    extract: 'src',
+    cache: 'false'
   },
   /* Tier Two Circle Two */
   {
     url: NewsLink2,
     type: 'html',
     selector: '#main-content > div:nth-child(2) > div:nth-child(2) > div > div:nth-child(1) > div > div > div > div > article.item.db2.tb2.blurb.clearfix > div > h1 > a',
-    extract: 'href'
+    extract: 'href',
+    cache: 'false'
   },
 {
     url: NewsLink2,
     type: 'html',
     selector: '#main-content > div:nth-child(2) > div:nth-child(2) > div > div:nth-child(1) > div > div > div > div > article.item.db2.tb2.blurb.clearfix > div > h1 > a',
-    extract: 'text'
+    extract: 'text',
+    cache: 'false'
   },
 {
     url: NewsLink2,
     type: 'html',
     selector: '#main-content > div:nth-child(2) > div:nth-child(2) > div > div:nth-child(1) > div > div > div > div > article.item.db2.tb2.blurb.clearfix > a > img',
-    extract: 'src'
+    extract: 'src',
+    cache: 'false'
   },
   /* Tier Two Circle Three */
   {
     url: NewsLink2,
     type: 'html',
     selector: '#main-content > div:nth-child(2) > div:nth-child(2) > div > div:nth-child(1) > div > div > div > div > article.item.db3.tb3.blurb.clearfix > div > h1 > a',
-    extract: 'href'
+    extract: 'href',
+    cache: 'false'
   },
 {
     url: NewsLink2,
     type: 'html',
     selector: '#main-content > div:nth-child(2) > div:nth-child(2) > div > div:nth-child(1) > div > div > div > div > article.item.db3.tb3.blurb.clearfix > div > h1 > a',
-    extract: 'text'
+    extract: 'text',
+    cache: 'false'
   },
 {
     url: NewsLink2,
     type: 'html',
     selector: '#main-content > div:nth-child(2) > div:nth-child(2) > div > div:nth-child(1) > div > div > div > div > article.item.db3.tb3.blurb.clearfix > a > img',
-    extract: 'src'
+    extract: 'src',
+    cache: 'false'
   }
 ]
   uriQuery = encodeURIComponent(JSON.stringify(query)),
@@ -229,73 +253,85 @@ var query = [
     url: NewsLink3,
     type: 'html',
     selector: 'body > div.viewport > div.main > div > div > div > div:nth-child(2) > ol > li.section-top-stories__item.section-top-stories__item--1.section-top-stories__item--odd > a',
-    extract: 'href'
+    extract: 'href',
+    cache: 'false'
   },
 {
     url: NewsLink3,
     type: 'html',
     selector: 'body > div.viewport > div.main > div > div > div > div:nth-child(2) > ol > li.section-top-stories__item.section-top-stories__item--1.section-top-stories__item--odd > a > span',
-    extract: 'text'
+    extract: 'text',
+    cache: 'false'
   },
 {
     url: NewsLink3,
     type: 'html',
     selector: 'body > div.viewport > div.main > div > div > div > div:nth-child(2) > ol > li.section-top-stories__item.section-top-stories__item--1.section-top-stories__item--odd > a > div > div > img',
-    extract: 'src'
+    extract: 'src',
+    cache: 'false'
   },
   {
     url: NewsLink3,
     type: 'html',
     selector: 'body > div.viewport > div.main > div > div > div > div:nth-child(3) > ol > li.section-top-stories__item.section-top-stories__item--6.section-top-stories__item--even > a',
-    extract: 'href'
+    extract: 'href',
+    cache: 'false'
   },
 {
     url: NewsLink3,
     type: 'html',
     selector: 'body > div.viewport > div.main > div > div > div > div:nth-child(3) > ol > li.section-top-stories__item.section-top-stories__item--6.section-top-stories__item--even > a > span',
-    extract: 'text'
+    extract: 'text',
+    cache: 'false'
   },
 {
     url: NewsLink3,
     type: 'html',
     selector: 'body > div.viewport > div.main > div > div > div > div:nth-child(3) > ol > li.section-top-stories__item.section-top-stories__item--6.section-top-stories__item--even > a > div > div > img',
-    extract: 'src'
+    extract: 'src',
+    cache: 'false'
   },
   {
     url: NewsLink3,
     type: 'html',
     selector: 'body > div.viewport > div.main > div > div > div > div:nth-child(3) > ol > li.section-top-stories__item.section-top-stories__item--7.section-top-stories__item--odd > a',
-    extract: 'href'
+    extract: 'href',
+    cache: 'false'
   },
 {
     url: NewsLink3,
     type: 'html',
     selector: 'body > div.viewport > div.main > div > div > div > div:nth-child(3) > ol > li.section-top-stories__item.section-top-stories__item--7.section-top-stories__item--odd > a > span',
-    extract: 'text'
+    extract: 'text',
+    cache: 'false'
   },
 {
     url: NewsLink3,
     type: 'html',
     selector: 'body > div.viewport > div.main > div > div > div > div:nth-child(3) > ol > li.section-top-stories__item.section-top-stories__item--7.section-top-stories__item--odd > a > div > div > img',
-    extract: 'src'
+    extract: 'src',
+    cache: 'false'
   },
 {
     url: NewsLink3,
     type: 'html',
     selector: 'body > div.viewport > div.main > div > div > div > div:nth-child(3) > ol > li.section-top-stories__item.section-top-stories__item--8.section-top-stories__item--even > a',
-    extract: 'href'
+    extract: 'href',
+    cache: 'false'
   },
 {
     url: NewsLink3,
     type: 'html',
     selector: 'body > div.viewport > div.main > div > div > div > div:nth-child(3) > ol > li.section-top-stories__item.section-top-stories__item--8.section-top-stories__item--even > a > span',
-    extract: 'text'
+    extract: 'text',
+    cache: 'false'
   },
 {
     url: NewsLink3,
     type: 'html',
     selector: 'body > div.viewport > div.main > div > div > div > div:nth-child(3) > ol > li.section-top-stories__item.section-top-stories__item--8.section-top-stories__item--even > a > div > div > img',
-    extract: 'src'
+    extract: 'src',
+    cache: 'false'
   }
 ]
   uriQuery = encodeURIComponent(JSON.stringify(query)),
@@ -327,21 +363,21 @@ var query = [
     type: 'html',
     selector: '#r0c1p0 > div.js-headers.site-most-read-group.js-accordion.home.collapsed > div.site-most-read-content.link-bow.home.js-close.cleared > div:nth-child(1) > h2 > a',
     extract: 'href',
-	cache: false
+	cache: 'false'
   },
 {
     url: NewsLink4,
     type: 'html',
     selector: '#r0c1p0 > div.js-headers.site-most-read-group.js-accordion.home.collapsed > div.site-most-read-content.link-bow.home.js-close.cleared > div:nth-child(1) > h2',
     extract: 'text',
-	cache: false
+	cache: 'false'
   },
 {
     url: NewsLink4,
     type: 'html',
     selector: '#r0c1p0 > div.js-headers.site-most-read-group.js-accordion.home.collapsed > div.site-most-read-content.link-bow.home.js-close.cleared > div:nth-child(1) > div.articletext > a > img',
     extract: 'src',
-	cache: false
+	cache: 'false'
   },
   /* Tier Two Circle One */
   {
@@ -349,21 +385,21 @@ var query = [
     type: 'html',
     selector: '#r0c1p0 > div.js-headers.site-most-read-group.js-accordion.home.collapsed > div.site-most-read-content.link-bow.home.js-close.cleared > div:nth-child(2) > h2 > a',
     extract: 'href',
-	cache: false
+	cache: 'false'
   },
 {
     url: NewsLink4,
     type: 'html',
     selector: '#r0c1p0 > div.js-headers.site-most-read-group.js-accordion.home.collapsed > div.site-most-read-content.link-bow.home.js-close.cleared > div:nth-child(2) > h2 > a',
     extract: 'text',
-	cache: false
+	cache: 'false'
   },
 {
     url: NewsLink4,
     type: 'html',
     selector: '#r0c1p0 > div.js-headers.site-most-read-group.js-accordion.home.collapsed > div.site-most-read-content.link-bow.home.js-close.cleared > div:nth-child(2) > div.articletext > a > img',
     extract: 'src',
-	cache: false
+	cache: 'false'
   },
   /* Tier Two Circle Two */
   {
@@ -371,21 +407,21 @@ var query = [
     type: 'html',
     selector: '#r0c1p0 > div.js-headers.site-most-read-group.js-accordion.home.collapsed > div.site-most-read-content.link-bow.home.js-close.cleared > div:nth-child(3) > h2 > a',
     extract: 'href',
-	cache: false
+	cache: 'false'
   },
 {
     url: NewsLink4,
     type: 'html',
     selector: '#r0c1p0 > div.js-headers.site-most-read-group.js-accordion.home.collapsed > div.site-most-read-content.link-bow.home.js-close.cleared > div:nth-child(3) > h2 > a',
     extract: 'text',
-	cache: false
+	cache: 'false'
   },
 {
     url: NewsLink4,
     type: 'html',
     selector: '#r0c1p0 > div.js-headers.site-most-read-group.js-accordion.home.collapsed > div.site-most-read-content.link-bow.home.js-close.cleared > div:nth-child(3) > div.articletext > a > img',
     extract: 'src',
-	cache: false
+	cache: 'false'
   },
   /* Tier Two Circle three */
   {
@@ -393,21 +429,21 @@ var query = [
     type: 'html',
     selector: '#r0c1p0 > div.js-headers.site-most-read-group.js-accordion.home.collapsed > div.site-most-read-content.link-bow.home.js-close.cleared > div:nth-child(4) > h2 > a',
     extract: 'href',
-	cache: false
+	cache: 'false'
   },
 {
     url: NewsLink4,
     type: 'html',
     selector: '#r0c1p0 > div.js-headers.site-most-read-group.js-accordion.home.collapsed > div.site-most-read-content.link-bow.home.js-close.cleared > div:nth-child(4) > h2 > a',
     extract: 'text',
-	cache: false
+	cache: 'false'
   },
 {
     url: NewsLink4,
     type: 'html',
     selector: '#r0c1p0 > div.js-headers.site-most-read-group.js-accordion.home.collapsed > div.site-most-read-content.link-bow.home.js-close.cleared > div:nth-child(4) > div.articletext > a > img',
     extract: 'src',
-	cache: false
+	cache: 'false'
   },
 ]
   uriQuery = encodeURIComponent(JSON.stringify(query)),
