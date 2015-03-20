@@ -282,6 +282,25 @@ jQuery.getJSON(request, function (data) {
 });
 
 var query = [
+
+{
+    url: 'http://esciencenews.com/',
+    type: 'html',
+    selector: '#content > div.span-19.colborder > div > div.span-9.append-1 > div.top-story > div > h2 > a',
+    extract: 'href'
+  },
+{
+    url: 'http://esciencenews.com/',
+    type: 'html',
+    selector: '#content > div.span-19.colborder > div > div.span-9.append-1 > div.top-story > div > h2 > a',
+    extract: 'text'
+  },
+{
+    url: 'http://esciencenews.com/',
+    type: 'html',
+    selector: '#content > div.span-19.colborder > div > div.span-9.append-1 > div.top-story > a > img',
+    extract: 'src'
+  },
 {
     url: 'http://esciencenews.com/',
     type: 'html',
@@ -298,24 +317,6 @@ var query = [
     url: 'http://esciencenews.com/',
     type: 'html',
     selector: '#content > div.span-19.colborder > div > div.span-9.last > div:nth-child(2) > p > a > img',
-    extract: 'src'
-  },
-{
-    url: 'http://esciencenews.com/',
-    type: 'html',
-    selector: '#content > div.span-19.colborder > div > div.span-9.last > div:nth-child(3) > h2 > a',
-    extract: 'href'
-  },
-{
-    url: 'http://esciencenews.com/',
-    type: 'html',
-    selector: '#content > div.span-19.colborder > div > div.span-9.last > div:nth-child(3) > h2 > a',
-    extract: 'text'
-  },
-{
-    url: 'http://esciencenews.com/',
-    type: 'html',
-    selector: '#content > div.span-19.colborder > div > div.span-9.last > div:nth-child(3) > p > a > img',
     extract: 'src'
   },
 {
