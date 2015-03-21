@@ -146,19 +146,19 @@
 
 		<!-- Tier One Circles -->
 		<!-- Tier One Circle One -->
-		<a href="" class="iframe TierOneCircle TierOneCircleOne" id="T1C1Fetch"></a>
+		<a href="" title="Title One" class="iframe TierOneCircle TierOneCircleOne" id="T1C1Fetch"></a>
 		<div class="TierOneHeader" id="TierOneHeaderOne"><h2 class="T1H1TextFormat" id="T1H1Fetch"></h2></div>
 		
 		<!-- Tier One Circle Two -->
-		<a href="" class="iframe TierOneCircle TierOneCircleTwo" id="T1C2Fetch"></a>
+		<a href="" title="Title Two" class="iframe TierOneCircle TierOneCircleTwo" id="T1C2Fetch"></a>
 		<div class="TierOneHeader" id="TierOneHeaderTwo"><h2 class="T1H1TextFormat" id="T1H2Fetch"></h2></div>
 		
 		<!-- Tier One Circle Three -->
-		<a href="" class="iframe TierOneCircle TierOneCircleThree" id="T1C3Fetch"></a>
+		<a href="" title="Title Three" class="iframe TierOneCircle TierOneCircleThree" id="T1C3Fetch"></a>
 		<div class="TierOneHeader" id="TierOneHeaderThree"><h2 class="T1H1TextFormat" id="T1H3Fetch"></h2></div>
 		
 		<!-- Tier One Circle Four -->
-		<a href="" class="iframe TierOneCircle TierOneCircleFour" id="T1C4Fetch"></a>
+		<a href="" title="Title Four" class="iframe TierOneCircle TierOneCircleFour" id="T1C4Fetch"></a>
 		<div class="TierOneHeader" id="TierOneHeaderFour"><h2 class="T1H1TextFormat" id="T1H4Fetch"></h2></div>
 		
 		<!-- Tertiary Circles -->
@@ -190,11 +190,13 @@
 		<a href="" class="iframe zoom TierTwoCircle TierTwoCircleNine" id="T2C12Fetch"></a>
 		<div class="TierTwoHeader" id="TierTwoHeaderTwelve"><h3 id="T2H12Fetch"></h3></div>
 
+		
+		<div class="fb-share-button" data-href="http://treemac.com" data-layout="button_count"></div>
 	 </div>
 	 
 	<!--Facebook Comment Section -->
 	<div id="CommentSection" class="CommentSection"  style="display:none;">
-		<div class="fb-comments" data-href="http://test.treemac.com/TreeMac/pages/index.html" data-width="960" data-numposts="20" data-colorscheme="light"></div>
+		<div class="fb-comments" data-href="http://treemac.com/pages/index.html" data-width="960" data-numposts="20" data-colorscheme="light"></div>
 	</div>
 	
 	<div id="CommentButton" class="CommentButton"  style="" onClick="showDiv()">
@@ -225,17 +227,53 @@
 	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 	<link rel="stylesheet" href="../fancybox/source/jquery.fancybox.css" type="text/css" media="screen" />
 	<script type="text/javascript" src="../fancybox/source/jquery.fancybox.pack.js"></script>
+	
+	<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+	
 	<script type="text/javascript">
 		$(document).ready(function() {
-		$(".iframe").fancybox({
-		'width' : 1000,
-		'height' : 675,
-		'type' : 'iframe',
-		'autoScale' : false,
-		'padding' :0,
-		'onComplete' : function(){
-		$('#fancybox-content').css({height:'2000px',width:'2000px'});
-		}
+		$(".iframe")
+			.fancybox({
+			'width' : 1000,
+			'height' : 675,
+			'type' : 'iframe',
+			'autoScale' : false,
+			'padding' :0,
+			'onComplete' : function(){
+		$('#fancybox-content')	
+			.css({
+			height:'2000px',
+			width:'2000px'});
+		},
+		
+		'beforeShow': function () {
+            if (this.title) {
+                // New line
+                this.title += '<br />';
+                
+                // Add tweet button
+                this.title += '<a href="https://twitter.com/share" class="twitter-share-button" data-count="none" data-url="' + this.href + '">Tweet</a> ';
+                
+                // Add FaceBook like button
+                this.title += '<iframe class="twitter-share-button" src="//www.facebook.com/plugins/like.php?href=' + this.href + '&amp;layout=button_count&amp;show_faces=true&amp;width=500&amp;action=like&amp;font&amp;colorscheme=light&amp;height=23" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:110px; height:23px;" allowTransparency="true"></iframe>';
+            }
+        },
+        'afterShow': function() {
+            // Render tweet button
+            twttr.widgets.load();
+        },
+        'helpers' : {
+            title : {
+                type: 'inside'
+            }
+        }
 		});
 		});
 	</script>
@@ -247,14 +285,7 @@
 	}
 	</script>
 	
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.0";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
-</script>
+
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

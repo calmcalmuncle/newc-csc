@@ -4,6 +4,19 @@ padding-top: 60px;
 padding-top: 60px;
 }
 
+.fancybox-title .fancybox-title-inside-wrap{
+background-color:rgba(0,0,0,0.0);
+}
+
+.fancybox-title{
+background-color:rgba(0,0,0,0.0);
+}
+
+.twitter-share-button{
+height:20px;
+width:100px;
+}
+
 html {
 height: 100%;
 }
