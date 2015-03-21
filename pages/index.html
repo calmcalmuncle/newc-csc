@@ -11,7 +11,7 @@
 	<!-- Title -->
     <title>TreeMac</title>
 	
-	<link rel="icon" type="../image/png" href="../images/favicon.ico" />
+	<link rel="icon" type="../image/png" href="../images/favicon.ico">
 	
     <!-- Bootstrap core CSS -->
     <link href="../stylesheets/bootstrap.min.css" rel="stylesheet">
@@ -21,6 +21,9 @@
 	
 	<!-- Basic Stylesheet -->
 	<link href="../stylesheets/styles.css" rel="stylesheet">
+	
+	<!-- FancyBox -->
+	<link href="../stylesheets/fancybox.css" rel="stylesheet"/>
 	
 	<!-- Safari Tree Stylesheet -->
 	<script type="text/javascript">
@@ -33,9 +36,7 @@
 		}
 		
 	</script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-	<!-- adds the dynamic links via node/noodle -->
-	<script type="text/javascript" src="../scripts/some.js"></script>
+	
   </head>
   
 <!-- Body -->
@@ -214,29 +215,22 @@
   
 </footer>
 
+<!-- Scripts -->
+<!------------->
+    <!-- Load Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    
+	<!-- Node Scraper -->
+	<script type="text/javascript" src="../scripts/some.js"></script>
    
-   
-				    <!-- Bootstrap core JavaScript -->
-    <!-- ========================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
+	<!-- Bootstrap core JavaScript -->
     <script src="../scripts/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+   
+   <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../scripts/ie10-viewport-bug-workaround.js"></script>
 	
 	<!-- FancyBox -->
-	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-	<link rel="stylesheet" href="../fancybox/source/jquery.fancybox.css" type="text/css" media="screen" />
 	<script type="text/javascript" src="../fancybox/source/jquery.fancybox.pack.js"></script>
-	
-	<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.0";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
-</script>
-	
 	<script type="text/javascript">
 		$(document).ready(function() {
 		$(".iframe")
@@ -278,14 +272,23 @@
 		});
 	</script>
 	
-	<script>
+	<!-- FB Div Switch -->
+	<script type="text/javascript">
 	function showDiv() {
 		document.getElementById('CommentButton').style.display = "none";
 		document.getElementById('CommentSection').style.display = "block";
 	}
 	</script>
 	
-
+	<!-- FB and Analytics
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -298,8 +301,10 @@
 
 </script>
 
-  <!-- /Body -->
-  </body>
+ -->
+
+<!-- /Body -->
+</body>
   
 <!-- /HTML -->
 </html>
