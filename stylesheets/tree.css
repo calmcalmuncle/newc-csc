@@ -25,6 +25,31 @@ text-decoration:none;
 text-align:center;
 }
 
+.BranchOneChoiceOne{
+display: block;
+height:100px;
+width:100px;
+position:relative;
+background-color: #51B848;
+border:1px solid black;
+text-decoration:none;
+text-align:center;
+float:left;
+}
+
+#BranchOneSelector  {
+display: block;
+height:100px;
+width:480px;
+position:relative;
+top:45%;
+left:45%;
+transform:translateX(-90%) translatey(-50%);
+background-color:#990000;
+text-decoration:none;
+text-align:center;
+}
+
 .NewsText{
 padding-top:45%;
 color:white;
