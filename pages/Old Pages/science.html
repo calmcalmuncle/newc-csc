@@ -22,9 +22,6 @@
 	<!-- Basic Stylesheet -->
 	<link href="../stylesheets/styles.css" rel="stylesheet">
 	
-	<!-- FancyBox -->
-	<link href="../stylesheets/fancybox.css" rel="stylesheet"/>
-	
 	<!-- Safari Tree Stylesheet -->
 	<script type="text/javascript">
 	var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
@@ -36,14 +33,13 @@
 		}
 		
 	</script>
-	
-  </head> 
-	
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    	<!-- adds the dynamic links via node/noodle -->
+	<script type="text/javascript" src="../scripts/sci.js"></script>
+  </head>
+  
 <!-- Body -->
 <body>
-
-<!-- FB API Root -->
-<div id="fb-root"></div>
   
 <!-- Fixed NavBar -->
 <nav class="navbar navbar-default navbar-fixed-top">
@@ -89,10 +85,9 @@
 	<div id="BarLeft2">
 	<iframe src="https://www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2F947567261941535&amp;width=210&amp;height=290&amp;colorscheme=light&amp;show_faces=true&amp;header=true&amp;stream=false&amp;show_border=true" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:210px; height:290px;" allowTransparency="true"></iframe>
 
-	<!-- social media buttons add me below the iframe 
+	<!-- social media buttons add me below the iframe -->
 	<object width='154' height='48'><embed src='http://www.socialbuttonmaker.com/Swfs/97587ca6-7af7-49d3-94b9-161de40718df/button.swf' type='application/x-shockwave-flash' width='154' height='48' loop='false' wmode='transparent'><noscript><a href='http://soccerisland.info/'>soccerisland.info</a></noscript></embed><img src='' width=0 height=0 id='flashbutton'/><script type='text/javascript' src='http://www.socialbuttonmaker.com/Scripts/FlashButton.js'></script></object>
-	-->
-	</div>
+</div>
 
 </div> 
 
@@ -101,13 +96,13 @@
 
 	<!-- Right Bar One -->
 	<div class="BarRight" id="">
-	<button type="button" onClick="location.href='custom.html'" id="TopButton">Home</button>
-	<button type="button" onClick="NewsTree()" id="Video">News</button>
-	<button type="button" onClick="VideoTree()" id="Video">Video</button>
-	<button type="button" onClick="SportTree()" id="Twitter">Sport</button>
-	<button type="button" onClick="FashionTree()" id="Fash">Fashion</button>
-	<button type="button" onClick="ScienceTree()" id="Sci">Science</button>
-	<button type="button" onClick="TechnologyTree()" id="Tech">Technology</button>
+	<button type="button" onClick="location.href='index.html'" id="TopButton">Home</button>
+	<button type="button" onClick="location.href='news.html'" id="Video">News</button>
+	<button type="button" onClick="location.href='video.html'" id="Video">Video</button>
+	<button type="button" onClick="location.href='sport.html'" id="Twitter">Sport</button>
+	<button type="button" onClick="location.href='fashion.html'" id="Fash">Fashion</button>
+	<button type="button" onClick="location.href='science.html'" id="Sci">Science</button>
+	<button type="button" onClick="location.href='technology.html'" id="Tech">Technology</button>
     </div>
 	
 	<!-- Right Bar Two -->
@@ -121,7 +116,7 @@
 	
 	</div>
 	
-<!-- Right Bar Three -->
+	<!-- Right Bar Three -->
 	<div class="BarRight" id="BarRight3">
 	
 	<p>Editors Choice</p>
@@ -134,7 +129,6 @@
 	</a>
 	</div>
 
-
 	<!-- /WrapRight -->
 	</div>
 
@@ -142,22 +136,14 @@
 <div class="example " id="MainTree">
 	
 		<!-- Tier Zero Circle -->
-		<a class="MainCircleNews" id="MainCircleNews" href"#" onClick="BranchOneSelection()"><p class="NewsText" id="ChangeMe">Popular</p></a>
-		
-		<!-- Branch One Selector -->
-		<div id="BranchOneSelector"  style="display:none;">
-		<a class="BranchOneChoiceOne" href"#" onClick="BranchOneNews(); BranchOneSelectionClose();"><p class="VidText" id="ChangeNews">News</p></a>
-		<a class="BranchOneChoiceOne" href"#" onClick="BranchOneVideo(); BranchOneSelectionClose();"><p class="VidText">Video</p></a>
-		</div>
-		
-		
-		<a class="MainCircleVid" href"#" onClick="BranchTwo()"><p class="VidText">In the News</p></a>
-		<a class="MainCircleTwitch" href"#" onClick="BranchThree()"><p class="StreamText">Music</p></a>
-		<a class="MainCircleSport" href"#" onClick="BranchFour()"><p class="SportText">Comedy</p></a>
+		<a class="MainCircleNews" href"#"><p class="NewsText">BBC</p></a>
+		<a class="MainCircleVid" href"#"><p class="VidText" style="font-size:18px;margin-left:3px;">New Scientist</p></a>
+		<a class="MainCircleTwitch" href"#"><p class="StreamText" style="font-size:16px;margin-left:3px;">(e)Science News</p></a>
+		<a class="MainCircleSport" href"#"><p class="SportText">AAAS</p></a>
 
 		<!-- Tier One Circles -->
 		<!-- Tier One Circle One -->
-		<a href="" title="Title One" class="iframe TierOneCircle TierOneCircleOne" id="T1C1Fetch"></a>
+		<a href="" class="iframe TierOneCircle TierOneCircleOne" id="T1C1Fetch"></a>
 		<div class="TierOneHeader" id="TierOneHeaderOne"><h2 class="T1H1TextFormat" id="T1H1Fetch"></h2></div>
 		
 		<!-- Tier One Circle Two -->
@@ -201,20 +187,21 @@
 		<a href="" class="iframe zoom TierTwoCircle TierTwoCircleNine" id="T2C12Fetch"></a>
 		<div class="TierTwoHeader" id="TierTwoHeaderTwelve"><h3 id="T2H12Fetch"></h3></div>
 	
+	
 	 </div>
-	 
-<!--Facebook Comment Button -->
-<div id="CommentButton" class="CommentButton"  style="" onClick="showDiv()">
-<div class="Arrow"></div>
-</div>
-	 
-<!--Facebook Comment Section -->
-<div id="CommentSection" class="CommentSection"  style="display:none;">
-<div class="fb-comments" data-href="http://test.treemac.com/TreeMac/pages/video.html" data-width="960" data-numposts="20" data-colorscheme="light"></div>
-</div>
 	 
 <!-- /Wrapper -->
 </div> 
+
+<!--Facebook Comment Section -->
+	<div id="CommentSection" class="CommentSection"  style="display:none;">
+		<div class="fb-comments" data-href="http://test.treemac.com/TreeMac/pages/science.html" data-width="960" data-numposts="20" data-colorscheme="light"></div>
+	</div>
+	
+	<div id="CommentButton" class="CommentButton"  style="" onClick="showDiv()">
+		<div class="Arrow"></div>
+	</div>
+
 
 <!-- Footer -->
 <footer>
@@ -224,89 +211,37 @@
   
 </footer>
 
-<!-- Scripts -->
-<!------------->
-    <!-- Load Jquery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    
-	<!-- Node Scraper -->
-	<script type="text/javascript" src="../scripts/custom.js"></script>
    
-	<!-- Bootstrap core JavaScript -->
+   
+				    <!-- Bootstrap core JavaScript -->
+    <!-- ========================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
     <script src="../scripts/bootstrap.min.js"></script>
-   
-   <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../scripts/ie10-viewport-bug-workaround.js"></script>
+	<!-- Scroll to element animation -->
+	<script type="text/javascript" src="../scripts/scroll.js"></script>
 	
 	<!-- FancyBox -->
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<link rel="stylesheet" href="../fancybox/source/jquery.fancybox.css" type="text/css" media="screen" />
 	<script type="text/javascript" src="../fancybox/source/jquery.fancybox.pack.js"></script>
 	<script type="text/javascript">
-		$(document).ready(function() {
-		$(".iframe")
-			.fancybox({
-			'width' : 1000,
-			'height' : 675,
-			'type' : 'iframe',
-			'autoScale' : false,
-			'padding' :0,
-			'onComplete' : function(){
-		$('#fancybox-content')	
-			.css({
-			height:'2000px',
-			width:'2000px'});
-		},
-		
-		'beforeShow': function () {
-            if (this.title) {
-                // New line
-                this.title += '<br />';
-                
-                // Add tweet button
-                this.title += '<a href="https://twitter.com/share" class="twitter-share-button" data-count="none" data-url="' + this.href + '">Tweet</a> ';
-                
-                // Add FaceBook like button
-                this.title += '<iframe class="twitter-share-button" src="https://www.facebook.com/plugins/like.php?href=' + this.href + '&amp;layout=button_count&amp;show_faces=true&amp;width=500&amp;action=like&amp;font&amp;colorscheme=light&amp;height=23" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:110px; height:23px;" allowTransparency="true"></iframe>';
-            }
-        },
-        'afterShow': function() {
-            // Render tweet button
-            twttr.widgets.load();
-        },
-        'helpers' : {
-            title : {
-                type: 'inside'
-            }
-        }
-		});
-		});
-	</script>
-	
-	<!-- FB Div Switch -->
-	<script type="text/javascript">
-	function showDiv() {
-		document.getElementById('CommentButton').style.display = "none";
-		document.getElementById('CommentSection').style.display = "block";
-	}
-	</script>
-	
-	<!-- Branch One Selector Open -->
-	<script type="text/javascript">
-	function BranchOneSelection() {
-		document.getElementById('MainCircleNews').style.display = "none";
-		document.getElementById('BranchOneSelector').style.display = "block";
-	}
-	</script>
-	
-	<!-- Branch One Selector Close -->
-	<script type="text/javascript">
-	function BranchOneSelectionClose() {
-		document.getElementById('BranchOneSelector').style.display = "none";
-		document.getElementById('ChangeMe').innerHTML = document.getElementById('ChangeNews').innerHTML;
-		document.getElementById('MainCircleNews').style.display = "block";
-	}
-	</script>
-	
-	<!-- FB and Analytics
+$(document).ready(function() {
+$(".iframe").fancybox({
+'width' : 1000,
+'height' : 675,
+'type' : 'iframe',
+'autoScale' : false,
+'padding' :0,
+'onComplete' : function(){
+$('#fancybox-content').css({height:'2000px',width:'2000px'});
+}
+});
+});
+
+</script>
+
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
@@ -327,10 +262,9 @@
 
 </script>
 
- -->
 
-<!-- /Body -->
-</body>
+  <!-- /Body -->
+  </body>
   
 <!-- /HTML -->
 </html>

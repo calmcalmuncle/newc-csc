@@ -96,7 +96,7 @@ jQuery.getJSON(request, function (data) {
   document.getElementById('T2C3Fetch').style.backgroundImage = 'url("'+data[11].results+'")';
 });
 }
-	
+
 //BranchOne Video
 function BranchOneVideo() {
 	var query = [
@@ -178,6 +178,7 @@ jQuery.getJSON(request, function (data) {
   document.getElementById('T2C3Fetch').style.backgroundImage = 'url("http://i.ytimg.com/vi/'+res4+'/mqdefault.jpg")';
 });
 }
+
 
 
 
@@ -425,7 +426,17 @@ jQuery.getJSON(request, function (data) {
 });
 }
 
+
+
+//FULL TREES
 function NewsTree() {
+
+document.getElementById('T0B1Text').innerHTML = "BBC";
+document.getElementById('T0B2Text').innerHTML = "Al Jazeera";
+document.getElementById('T0B3Text').innerHTML = "Daily Mail";
+document.getElementById('T0B4Text').innerHTML = "Sky";
+
+
 var query = [
   {
     url: "http://www.bbc.co.uk/news/",
@@ -856,6 +867,12 @@ jQuery.getJSON(request, function (data) {
 }
 
 function VideoTree(){
+	
+	document.getElementById('T0B1Text').innerHTML = "Popular";
+	document.getElementById('T0B2Text').innerHTML = "In the News";
+	document.getElementById('T0B4Text').innerHTML = "Music";
+	document.getElementById('T0B3Text').innerHTML = "Comedy";
+
 var query = [
   {
     "url": "https://www.youtube.com/channel/UCR44SO_mdyRq-aTJHO5QxAw",
@@ -1178,6 +1195,12 @@ jQuery.getJSON(request, function (data) {
 }
 
 function SportTree(){
+	
+	document.getElementById('T0B1Text').innerHTML = "BBC";
+	document.getElementById('T0B2Text').innerHTML = "Sport.co.uk";
+	document.getElementById('T0B4Text').innerHTML = "Other";
+	document.getElementById('T0B3Text').innerHTML = "Sky";
+	
 	var query = [
   {
     url: "http://www.bbc.co.uk/sport/",
@@ -1595,6 +1618,12 @@ document.getElementById('T2C12Fetch').style.backgroundImage = 'url("http:'+data[
 }
 
 function FashionTree(){
+	
+	document.getElementById('T0B1Text').innerHTML = "Vogue";
+	document.getElementById('T0B2Text').innerHTML = "Grazia";
+	document.getElementById('T0B4Text').innerHTML = "Other";
+	document.getElementById('T0B3Text').innerHTML = "Elle";
+	
 	var query = [
   {
     url: 'http://www.vogue.co.uk/?international',
@@ -2024,6 +2053,12 @@ document.getElementById('T2C12Fetch').style.backgroundImage = 'url("'+data[11].r
 }
 
 function ScienceTree(){
+	
+	document.getElementById('T0B1Text').innerHTML = "BBC";
+	document.getElementById('T0B2Text').innerHTML = "New Scientist";
+	document.getElementById('T0B4Text').innerHTML = "(e)Science News";
+	document.getElementById('T0B3Text').innerHTML = "AAAS";
+	
 	var query = [
   {
     url: 'http://www.bbc.co.uk/news/science_and_environment/',
@@ -2454,6 +2489,12 @@ document.getElementById('T2C12Fetch').style.backgroundImage = 'url("'+data[11].r
 }
 
 function TechnologyTree(){
+	
+	document.getElementById('T0B1Text').innerHTML = "BBC";
+	document.getElementById('T0B2Text').innerHTML = "Tech Review";
+	document.getElementById('T0B4Text').innerHTML = "Tech Crunch";
+	document.getElementById('T0B3Text').innerHTML = "Sky";
+	
 	var query = [
   {
     url: 'http://www.bbc.co.uk/news/technology/',

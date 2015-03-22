@@ -1,3 +1,83 @@
+/* Branch Selection */
+.SelectorText{
+font-size:20px;
+color:white;
+padding-top:45%;
+}
+
+
+.BranchOneChoiceOne{
+display: block;
+height:100px;
+width:119px;
+position:relative;
+background-color: rgba(81,184,72,0.9);
+border:1px solid black;
+text-decoration:none;
+text-align:center;
+float:left;
+}
+
+#BranchOneSelector  {
+display: block;
+height:200px;
+width:955px;
+position:Absolute;
+margin-left:50%;
+margin-top:50%;
+transform:translateX(-50%) translateY(-50%);
+background-color:rgba(0,0,0,0.1);
+text-decoration:none;
+text-align:center;
+z-index: 1000;
+}
+
+.SecondarySelectorButton{
+display: block;
+height:100px;
+width:119px;
+position:relative;
+background-color: rgba(184, 72, 81,0.9);
+border:1px solid black;
+text-decoration:none;
+text-align:center;
+float:left;
+}
+
+#SecondarySelector  {
+display: block;
+height:100px;
+width:955px;
+position:relative;
+margin-top:100px;
+background-color:rgba(0,0,0,0.1);
+text-decoration:none;
+text-align:center;
+z-index: 1000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .MainCircle{
 display:block;
 height:200px;
@@ -16,35 +96,10 @@ display: block;
 height:100px;
 width:100px;
 border-top-left-radius:100%;
-position:relative;
+position:absolute;
 top:45%;
 left:45%;
 transform:translateX(-50%) translatey(-50%);
-background-color:#990000;
-text-decoration:none;
-text-align:center;
-}
-
-.BranchOneChoiceOne{
-display: block;
-height:100px;
-width:100px;
-position:relative;
-background-color: #51B848;
-border:1px solid black;
-text-decoration:none;
-text-align:center;
-float:left;
-}
-
-#BranchOneSelector  {
-display: block;
-height:100px;
-width:480px;
-position:relative;
-top:45%;
-left:45%;
-transform:translateX(-90%) translatey(-50%);
 background-color:#990000;
 text-decoration:none;
 text-align:center;
@@ -63,30 +118,24 @@ display: block;
 height:100px;
 width:100px;
 border-top-right-radius:100%;
-position:relative;
-top:34.6%;
-left:55.4%;
+position:absolute;
+top:45%;
+left:55%;
 transform:translateX(-50%) translatey(-50%);
 background-color:#000000;
 text-decoration:none;
 text-align:center;
 }
 
-.VidText{
-padding-top:45%;
-color:white;
-text-decoration:none;
-font-size:20px;
-transform: translateX(-8%);
-}
+
 
 a.MainCircleTwitch {
 display: block;
 height:100px;
 width:100px;
 border-bottom-left-radius:100%;
-position:relative;
-top:34.5%;
+position:absolute;
+top:55%;
 left:45%;
 transform:translateX(-50%) translatey(-50%);
 background-color:#5EA9DD;
@@ -107,9 +156,9 @@ display: block;
 height:100px;
 width:100px;
 border-bottom-right-radius:100%;
-position:relative;
-top:24.1%;
-left:55.4%;
+position:absolute;
+top:55%;
+left:55%;
 transform:translateX(-50%) translatey(-50%);
 background-color:#2b3a76;
 text-decoration:none;

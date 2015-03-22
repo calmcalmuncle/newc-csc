@@ -1,4 +1,4 @@
-  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+<!DOCTYPE html>
 <html lang="en">
   <head>
 	<!-- How are these referred to? Imports? Meta? (Change this comment when known) -->
@@ -37,12 +37,12 @@
 		
 	</script>
 	
-  </head>
-  
+  </head> 
+	
 <!-- Body -->
 <body>
 
-<!-- Something Required for FB Comments -->
+<!-- FB API Root -->
 <div id="fb-root"></div>
   
 <!-- Fixed NavBar -->
@@ -89,9 +89,10 @@
 	<div id="BarLeft2">
 	<iframe src="https://www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2F947567261941535&amp;width=210&amp;height=290&amp;colorscheme=light&amp;show_faces=true&amp;header=true&amp;stream=false&amp;show_border=true" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:210px; height:290px;" allowTransparency="true"></iframe>
 
-	<!-- social media buttons add me below the iframe -->
+	<!-- social media buttons add me below the iframe 
 	<object width='154' height='48'><embed src='http://www.socialbuttonmaker.com/Swfs/97587ca6-7af7-49d3-94b9-161de40718df/button.swf' type='application/x-shockwave-flash' width='154' height='48' loop='false' wmode='transparent'><noscript><a href='http://soccerisland.info/'>soccerisland.info</a></noscript></embed><img src='' width=0 height=0 id='flashbutton'/><script type='text/javascript' src='http://www.socialbuttonmaker.com/Scripts/FlashButton.js'></script></object>
-</div>
+	-->
+	</div>
 
 </div> 
 
@@ -101,12 +102,12 @@
 	<!-- Right Bar One -->
 	<div class="BarRight" id="">
 	<button type="button" onClick="location.href='index.html'" id="TopButton">Home</button>
-	<button type="button" onClick="location.href='news.html'" id="Video">News</button>
-	<button type="button" onClick="location.href='video.html'" id="Video">Video</button>
-	<button type="button" onClick="location.href='sport.html'" id="Twitter">Sport</button>
-	<button type="button" onClick="location.href='fashion.html'" id="Fash">Fashion</button>
-	<button type="button" onClick="location.href='science.html'" id="Sci">Science</button>
-	<button type="button" onClick="location.href='technology.html'" id="Tech">Technology</button>
+	<button type="button" onClick="NewsTree()" id="Video">News</button>
+	<button type="button" onClick="VideoTree()" id="Video">Video</button>
+	<button type="button" onClick="SportTree()" id="Twitter">Sport</button>
+	<button type="button" onClick="FashionTree()" id="Fash">Fashion</button>
+	<button type="button" onClick="ScienceTree()" id="Sci">Science</button>
+	<button type="button" onClick="TechnologyTree()" id="Tech">Technology</button>
     </div>
 	
 	<!-- Right Bar Two -->
@@ -120,7 +121,7 @@
 	
 	</div>
 	
-	<!-- Right Bar Three -->
+<!-- Right Bar Three -->
 	<div class="BarRight" id="BarRight3">
 	
 	<p>Editors Choice</p>
@@ -133,6 +134,7 @@
 	</a>
 	</div>
 
+
 	<!-- /WrapRight -->
 	</div>
 
@@ -140,10 +142,37 @@
 <div class="example " id="MainTree">
 	
 		<!-- Tier Zero Circle -->
-		<a class="MainCircleNews" href"#"><p class="NewsText">News</p></a>
-		<a class="MainCircleVid" href"#"><p class="VidText">Video</p></a>
-		<a class="MainCircleTwitch" href"#"><p class="StreamText">Fashion</p></a>
-		<a class="MainCircleSport" href"#"><p class="SportText">Sport</p></a>
+		<a class="MainCircleNews" id="MainCircleNews" href"#" onClick="BranchOneSelection()"><p class="SelectorText" id="T0B1Text">Popular</p></a>
+		
+		<!-- Branch One Selector -->
+		<div id="BranchOneSelector"  style="display:none;">
+		<a class="BranchOneChoiceOne" href"#" id="News" onClick="BranchOneNews(); BranchOneSelectionClose(this.id);"><p class="SelectorText" id="ChangeNews">News</p></a>
+		<a class="BranchOneChoiceOne" href"#" id="Video" onClick="BranchOneVideo(); BranchOneSelectionClose(this.id);"><p class="SelectorText">Video</p></a>
+		<a class="BranchOneChoiceOne" href"#" id="Sport" onClick="BranchOneVideo(); BranchOneSelectionClose(this.id);"><p class="SelectorText">Sport</p></a>
+		<a class="BranchOneChoiceOne" href"#" id="Fashion" onClick="BranchOneVideo(); BranchOneSelectionClose(this.id);"><p class="SelectorText">Fashion</p></a>
+		<a class="BranchOneChoiceOne" href"#" id="Science" onClick="BranchOneVideo(); BranchOneSelectionClose(this.id);"><p class="SelectorText">Science</p></a>
+		<a class="BranchOneChoiceOne" href"#" id="Technology" onClick="BranchOneVideo(); BranchOneSelectionClose(this.id);"><p class="SelectorText">Technology</p></a>
+		<a class="BranchOneChoiceOne" href"#" id="Technology" onClick="BranchOneVideo(); BranchOneSelectionClose(this.id);"><p class="SelectorText">Streaming</p></a>
+		<a class="BranchOneChoiceOne" href"#" id="Technology" onClick="BranchOneVideo(); BranchOneSelectionClose(this.id);"><p class="SelectorText">Food</p></a>
+		
+		
+		<!-- Secondary Selector -->
+		<div id="SecondarySelector"  style="display:none;">
+		<a class="SecondarySelectorButton" href"#" id="BBC" onClick="BranchOneNews(); BranchOneSelectionCloseFinal(this.id);"><p class="SelectorText" id="ChangeNews">BBC</p></a>
+		<a class="SecondarySelectorButton" href"#" id="Al Jazeera" onClick="BranchOneVideo(); BranchOneSelectionCloseFinal(this.id);"><p class="SelectorText">Al Jazeera</p></a>
+		<a class="SecondarySelectorButton" href"#" id="Sky" onClick="BranchOneVideo(); BranchOneSelectionCloseFinal(this.id);"><p class="SelectorText">Sky</p></a>
+		<a class="SecondarySelectorButton" href"#" id="Daily Mail" onClick="BranchOneVideo(); BranchOneSelectionCloseFinal(this.id);"><p class="SelectorText">Daily Mail</p></a>
+		</div>
+		
+		
+		</div>
+		
+
+		
+		
+		<a class="MainCircleVid" href"#" onClick="BranchTwo()"><p class="SelectorText" id="T0B2Text">In the News</p></a>
+		<a class="MainCircleTwitch" href"#" onClick="BranchThree()"><p class="StreamText" id="T0B4Text">Music</p></a>
+		<a class="MainCircleSport" href"#" onClick="BranchFour()"><p class="SportText" id="T0B3Text">Comedy</p></a>
 
 		<!-- Tier One Circles -->
 		<!-- Tier One Circle One -->
@@ -151,15 +180,15 @@
 		<div class="TierOneHeader" id="TierOneHeaderOne"><h2 class="T1H1TextFormat" id="T1H1Fetch"></h2></div>
 		
 		<!-- Tier One Circle Two -->
-		<a href="" title="Title Two" class="iframe TierOneCircle TierOneCircleTwo" id="T1C2Fetch"></a>
+		<a href="" class="iframe TierOneCircle TierOneCircleTwo" id="T1C2Fetch"></a>
 		<div class="TierOneHeader" id="TierOneHeaderTwo"><h2 class="T1H1TextFormat" id="T1H2Fetch"></h2></div>
 		
 		<!-- Tier One Circle Three -->
-		<a href="" title="Title Three" class="iframe TierOneCircle TierOneCircleThree" id="T1C3Fetch"></a>
+		<a href="" class="iframe TierOneCircle TierOneCircleThree" id="T1C3Fetch"></a>
 		<div class="TierOneHeader" id="TierOneHeaderThree"><h2 class="T1H1TextFormat" id="T1H3Fetch"></h2></div>
 		
 		<!-- Tier One Circle Four -->
-		<a href="" title="Title Four" class="iframe TierOneCircle TierOneCircleFour" id="T1C4Fetch"></a>
+		<a href="" class="iframe TierOneCircle TierOneCircleFour" id="T1C4Fetch"></a>
 		<div class="TierOneHeader" id="TierOneHeaderFour"><h2 class="T1H1TextFormat" id="T1H4Fetch"></h2></div>
 		
 		<!-- Tertiary Circles -->
@@ -190,19 +219,18 @@
 		<div class="TierTwoHeader" id="TierTwoHeaderEleven"><h3 id="T2H11Fetch"></h3></div>
 		<a href="" class="iframe zoom TierTwoCircle TierTwoCircleNine" id="T2C12Fetch"></a>
 		<div class="TierTwoHeader" id="TierTwoHeaderTwelve"><h3 id="T2H12Fetch"></h3></div>
-
-		
-		<div class="fb-share-button" data-href="http://treemac.com" data-layout="button_count"></div>
+	
 	 </div>
 	 
-	<!--Facebook Comment Section -->
-	<div id="CommentSection" class="CommentSection"  style="display:none;">
-		<div class="fb-comments" data-href="http://treemac.com/pages/index.html" data-width="960" data-numposts="20" data-colorscheme="light"></div>
-	</div>
-	
-	<div id="CommentButton" class="CommentButton"  style="" onClick="showDiv()">
-		<div class="Arrow"></div>
-	</div>
+<!--Facebook Comment Button -->
+<div id="CommentButton" class="CommentButton"  style="" onClick="showDiv()">
+<div class="Arrow"></div>
+</div>
+	 
+<!--Facebook Comment Section -->
+<div id="CommentSection" class="CommentSection"  style="display:none;">
+<div class="fb-comments" data-href="http://test.treemac.com/TreeMac/pages/video.html" data-width="960" data-numposts="20" data-colorscheme="light"></div>
+</div>
 	 
 <!-- /Wrapper -->
 </div> 
@@ -221,7 +249,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     
 	<!-- Node Scraper -->
-	<script type="text/javascript" src="../scripts/some.js"></script>
+	<script type="text/javascript" src="../scripts/custom.js"></script>
    
 	<!-- Bootstrap core JavaScript -->
     <script src="../scripts/bootstrap.min.js"></script>
@@ -277,6 +305,33 @@
 	function showDiv() {
 		document.getElementById('CommentButton').style.display = "none";
 		document.getElementById('CommentSection').style.display = "block";
+	}
+	</script>
+	
+	<!-- Branch One Selector Open -->
+	<script type="text/javascript">
+	function BranchOneSelection() {
+		document.getElementById('MainCircleNews').style.display = "none";
+		document.getElementById('BranchOneSelector').style.display = "block";
+	}
+	</script>
+	
+	<!-- Branch One Selector Close -->
+	<script type="text/javascript">
+	function BranchOneSelectionClose(clicked_id) {
+		document.getElementById('BranchOneSelector').style.display = "block";
+		document.getElementById('T0B1Text').innerHTML = clicked_id;
+		document.getElementById('SecondarySelector').style.display = "block";
+	}
+	</script>
+	
+		<!-- Branch One Selector Close -->
+	<script type="text/javascript">
+	function BranchOneSelectionCloseFinal(clicked_id) {
+		document.getElementById('MainCircleNews').style.display = "block";
+		document.getElementById('BranchOneSelector').style.display = "none";
+		document.getElementById('T0B1Text').innerHTML = clicked_id;
+		document.getElementById('SecondarySelector').style.display = "none";
 	}
 	</script>
 	
