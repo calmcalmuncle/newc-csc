@@ -141,37 +141,38 @@
 <!-- Main Tree Section -->
 <div class="example " id="MainTree">
 	
-		<!-- Tier Zero Circle -->
-		<a class="MainCircleNews" id="MainCircleNews" href"#" onClick="BranchOneMenu()"><p class="SelectorText" id="BS1">Popular</p></a>
+		<!-- Tier Zero Circle --> 					<!-- CategoryMenu() makes CategoryMenu Appear -->
+		<a class="MainCircleNews" id="BranchOne" href"#" onClick="CategoryMenu(this.id)"><p class="SelectorText" id="T0B1Text">Select</p></a>
+		<a class="MainCircleVid" id="BranchTwo" href"#" onClick="CategoryMenu(this.id)"><p class="SelectorText" id="T0B2Text">Select</p></a>
+		<a class="MainCircleSport" id="BranchThree" href"#" onClick="CategoryMenu(this.id)"><p class="SelectorText" id="T0B3Text">Select</p></a>
+		<a class="MainCircleTwitch" id="BranchFour" href"#" onClick="CategoryMenu(this.id)"><p class="SelectorText" id="T0B4Text">Select</p></a>
+
+	
 		
-	<!-- Branch One Selector -->
-	<div id="BranchOneSelector"  style="display:none;">
-		<a class="BranchOneChoiceOne" href"#" id="News" onClick="BranchOneSelection(this.id);"><p class="SelectorText">News</p></a>
-		<a class="BranchOneChoiceOne" href"#" id="Video" onClick="BranchOneSelection(this.id);"><p class="SelectorText">Video</p></a>
-		<a class="BranchOneChoiceOne" href"#" id="Sport" onClick="BranchOneSelection(this.id);"><p class="SelectorText">Sport</p></a>
-		<a class="BranchOneChoiceOne" href"#" id="Fashion" onClick="BranchOneSelection(this.id);"><p class="SelectorText">Fashion</p></a>
-		<a class="BranchOneChoiceOne" href"#" id="Science" onClick="BranchOneSelection(this.id);"><p class="SelectorText">Science</p></a>
-		<a class="BranchOneChoiceOne" href"#" id="Technology" onClick="BranchOneSelection(this.id);"><p class="SelectorText">Technology</p></a>
-		<a class="BranchOneChoiceOne" href"#" id="Streaming" onClick="BranchOneSelection(this.id);"><p class="SelectorText">Streaming</p></a>
-		<a class="BranchOneChoiceOne" href"#" id="Food" onClick="BranchOneSelection(this.id);"><p class="SelectorText">Food</p></a>
+	<!-- Category Menu -->
+	<div id="CategoryMenu"  style="display:none;">
+						<!-- BranchOneSelection() takes the id and uses it to set the text on the Subcategory menu -->
+		<a class="Category" href"#" onClick="BranchOneSelection(this.id);" id="News"><p class="CategoryText" id="CT1">News</p></a>
+		<a class="Category" href"#" onClick="BranchOneSelection(this.id);" id="Video"><p class="CategoryText" id="CT2">Video</p></a>
+		<a class="Category" href"#" onClick="BranchOneSelection(this.id);" id="Sport"><p class="CategoryText" id="CT3">Sport</p></a>
+		<a class="Category" href"#" onClick="BranchOneSelection(this.id);" id="Fashion"><p class="CategoryText" id="CT4">Fashion</p></a>
+		<a class="Category" href"#" onClick="BranchOneSelection(this.id);" id="Science"><p class="CategoryText" id="CT5">Science</p></a>
+		<a class="Category" href"#" onClick="BranchOneSelection(this.id);" id="Technology"><p class="CategoryText" id="CT6">Technology</p></a>
+		<a class="Category" href"#" onClick="BranchOneSelection(this.id);" id="Streaming"><p class="CategoryText" id="CT7">Streaming</p></a>
+		<a class="Category" href"#" onClick="BranchOneSelection(this.id);" id="Food"><p class="CategoryText" id="CT8">Food</p></a>
 		
 		
-		<!-- Branch One Secondary Selector NEWS -->
-		<div id="SecondarySelector"  style="display:none;">
-		<a class="SecondarySelectorButton" href"#" id="MakeMeDynamic" onClick="BranchOneBBC(); BranchOneSelectionCloseFinal(this.id);"><p class="SelectorText" id="BSOne"></p></a>
-		<a class="SecondarySelectorButton" href"#" id="MakeMeDynamic" onClick="BranchOneAlJazeera(); BranchOneSelectionCloseFinal(this.id);"><p class="SelectorText" id="BSTwo"></p></a>
-		<a class="SecondarySelectorButton" href"#" id="MakeMeDynamic" onClick="BranchOneSky(); BranchOneSelectionCloseFinal(this.id);"><p class="SelectorText" id="BSThree"></p></a>
-		<a class="SecondarySelectorButton" href"#" id="MakeMeDynamic" onClick="BranchOneDailyMail(); BranchOneSelectionCloseFinal(this.id);"><p class="SelectorText" id="BSFour"></p></a>
+		<!-- Subcategory Menu -->
+		<div id="SubcategoryMenu"  style="display:none;">
+					<!-- BranchOneBBC makes Branch One BBC --> 	<!--CloseMenus closes both menus -->
+		<a class="Subcategory" href"#" onClick="CloseMenus(this.id);" id="SC1"><p class="SelectorText" id="BSOne"></p></a>
+		<a class="Subcategory" href"#" onClick="CloseMenus(this.id);" id="SC2"><p class="SelectorText" id="BSTwo"></p></a>
+		<a class="Subcategory" href"#" onClick="CloseMenus(this.id);" id="SC3"><p class="SelectorText" id="BSThree"></p></a>
+		<a class="Subcategory" href"#" onClick="CloseMenus(this.id);" id="SC4"><p class="SelectorText" id="BSFour"></p></a>
 		</div>
 		
 	</div>
 		
-
-		
-		
-		<a class="MainCircleVid" href"#" onClick="BranchTwo()"><p class="SelectorText" id="T0B2Text">In the News</p></a>
-		<a class="MainCircleTwitch" href"#" onClick="BranchThree()"><p class="StreamText" id="T0B4Text">Music</p></a>
-		<a class="MainCircleSport" href"#" onClick="BranchFour()"><p class="SportText" id="T0B3Text">Comedy</p></a>
 
 		<!-- Tier One Circles -->
 		<!-- Tier One Circle One -->
@@ -205,19 +206,20 @@
 		<a href="" class="iframe zoom TierTwoCircle TierTwoCircleSix" id="T2C6Fetch"></a>
 		<div class="TierTwoHeader" id="TierTwoHeaderSix"><h3 id="T2H6Fetch"></h3></div>
 		
-		<a href="" class="iframe zoom TierTwoCircle TierTwoCircleTen" id="T2C7Fetch"></a>
+		<a href="" class="iframe zoom TierTwoCircle TierTwoCircleSeven" id="T2C7Fetch"></a>
 		<div class="TierTwoHeader" id="TierTwoHeaderSeven"><h3 id="T2H7Fetch"></h3></div>
-		<a href="" class="iframe zoom TierTwoCircle TierTwoCircleEleven" id="T2C8Fetch"></a>
+		<a href="" class="iframe zoom TierTwoCircle TierTwoCircleEight" id="T2C8Fetch"></a>
 		<div class="TierTwoHeader" id="TierTwoHeaderEight"><h3 id="T2H8Fetch"></h3></div>
-		<a href="" class="iframe zoom TierTwoCircle TierTwoCircleTwelve" id="T2C9Fetch"></a>
+		<a href="" class="iframe zoom TierTwoCircle TierTwoCircleNine" id="T2C9Fetch"></a>
 		<div class="TierTwoHeader" id="TierTwoHeaderNine"><h3 id="T2H9Fetch"></h3></div>
 		
-		<a href="" class="iframe zoom TierTwoCircle TierTwoCircleSeven" id="T2C10Fetch"></a>
+		<a href="" class="iframe zoom TierTwoCircle TierTwoCircleTen" id="T2C10Fetch"></a>
 		<div class="TierTwoHeader" id="TierTwoHeaderTen"><h3 id="T2H10Fetch"></h3></div>
-		<a href="" class="iframe zoom TierTwoCircle TierTwoCircleEight" id="T2C11Fetch"></a>
+		<a href="" class="iframe zoom TierTwoCircle TierTwoCircleEleven" id="T2C11Fetch"></a>
 		<div class="TierTwoHeader" id="TierTwoHeaderEleven"><h3 id="T2H11Fetch"></h3></div>
-		<a href="" class="iframe zoom TierTwoCircle TierTwoCircleNine" id="T2C12Fetch"></a>
+		<a href="" class="iframe zoom TierTwoCircle TierTwoCircleTwelve" id="T2C12Fetch"></a>
 		<div class="TierTwoHeader" id="TierTwoHeaderTwelve"><h3 id="T2H12Fetch"></h3></div>
+		
 	
 	 </div>
 	 
@@ -309,9 +311,10 @@
 	
 	<!-- Branch One Selector Open -->
 	<script type="text/javascript">
-	function BranchOneMenu() {
-		document.getElementById('MainCircleNews').style.display = "none";
-		document.getElementById('BranchOneSelector').style.display = "block";
+	function CategoryMenu(Branch) {
+		setBranch(Branch);
+		document.getElementById('BranchOne').style.display = "none";
+		document.getElementById('CategoryMenu').style.display = "block";
 	}
 	</script>
 	
@@ -369,8 +372,8 @@
 	document.getElementById('BSFour').innerHTML = "Eight";
 	}
 
-	document.getElementById('BranchOneSelector').style.display = "block";
-	document.getElementById('SecondarySelector').style.display = "block";
+	document.getElementById('CategoryMenu').style.display = "block";
+	document.getElementById('SubcategoryMenu').style.display = "block";
 	
 
 	
@@ -381,11 +384,31 @@
 	
 		<!-- Branch One Selector Close -->
 	<script type="text/javascript">
-	function BranchOneSelectionCloseFinal(clicked_id) {
-		document.getElementById('MainCircleNews').style.display = "block";
-		document.getElementById('BranchOneSelector').style.display = "none";
+	function CloseMenus(Choicey) {
+	
+	var picky = Choicey;
+	
+	if(picky == "SC1"){
+	setChoice(document.getElementById('BSOne').innerHTML);
+	}
+	else if(picky == "SC2"){
+	setChoice(document.getElementById('BSTwo').innerHTML);
+	}
+	else if(picky == "SC3"){
+	setChoice(document.getElementById('BSThree').innerHTML);
+	}
+	else if(picky == "SC4"){
+	setChoice(document.getElementById('BSFour').innerHTML);
+	}
+
+	alert(choice);
+	alert(branch)
+	Branch();
+	
+		document.getElementById('BranchOne').style.display = "block";
+		document.getElementById('CategoryMenu').style.display = "none";
 		document.getElementById('BS1').innerHTML = clicked_id;
-		document.getElementById('SecondarySelector').style.display = "none";
+		document.getElementById('SubcategoryMenu').style.display = "none";
 	}
 	</script>
 	

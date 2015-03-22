@@ -1,6 +1,30 @@
+var branch;
+var choice;
 
-//BranchOne News
-function BranchOneBBC() {
+function setBranch(Branchy){
+	branch = Branchy;
+}
+
+function getBranch(){
+	return branch;
+}
+
+function setChoice(Choicey){
+	choice = Choicey;
+}
+
+function getChoice(){
+	return choice;
+}
+
+
+//Custom
+function Branch() {
+
+if(choice == "BBC"){
+	
+	document.getElementById('T0B1Text').innerHTML = "BBC";
+	
 	var query = [
   {
     url: "http://www.bbc.co.uk/news/",
@@ -79,6 +103,8 @@ function BranchOneBBC() {
   uriQuery = encodeURIComponent(JSON.stringify(query)),
   request  = 'http://treemac.herokuapp.com/?q=' +
              uriQuery + '&callback=?';
+			 
+			 
 
 // Make Ajax request to Noodle server
 jQuery.getJSON(request, function (data) {
@@ -96,9 +122,11 @@ jQuery.getJSON(request, function (data) {
   document.getElementById('T2C3Fetch').style.backgroundImage = 'url("'+data[11].results+'")';
 });
 }
-
-function BranchOneAlJazeera() {
-	var NewsLink2 = "http://www.aljazeera.com/topics/regions/europe.html";
+	
+//NEAREST WORKING EXAMPLE, CAN SET AL JAZEERA TO BRANCH ONE OR TWO
+if(choice == "Al Jazeera"){
+	
+var NewsLink2 = "http://www.aljazeera.com/topics/regions/europe.html";
 
 var query = [
 /* Tier One Circle One */
@@ -193,8 +221,12 @@ var query = [
   uriQuery = encodeURIComponent(JSON.stringify(query)),
   request  = 'http://treemac.herokuapp.com/?q=' +
              uriQuery + '&callback=?';
-
-// Make Ajax request to Noodle server
+			 
+if(branch == "BranchOne"){
+	
+	document.getElementById('T0B1Text').innerHTML = "Al Jazeera";
+	
+	// Make Ajax request to Noodle server
 jQuery.getJSON(request, function (data) {
   document.getElementById('T1C1Fetch').href = 'http://www.aljazeera.com'+data[0].results;
   document.getElementById('T2C1Fetch').href = 'http://www.aljazeera.com'+data[3].results;
@@ -211,7 +243,74 @@ jQuery.getJSON(request, function (data) {
 });
 }
 
-function BranchOneSky() {
+else if(branch == "BranchTwo"){
+	
+	document.getElementById('T0B2Text').innerHTML = "Al Jazeera";
+	
+// Make Ajax request to Noodle server
+jQuery.getJSON(request, function (data) {
+  document.getElementById('T1C2Fetch').href = 'http://www.aljazeera.com'+data[0].results;
+  document.getElementById('T2C4Fetch').href = 'http://www.aljazeera.com'+data[3].results;
+  document.getElementById('T2C5Fetch').href = 'http://www.aljazeera.com'+data[6].results;
+  document.getElementById('T2C6Fetch').href = 'http://www.aljazeera.com'+data[9].results;
+  document.getElementById('T1H2Fetch').innerHTML = data[1].results;
+  document.getElementById('T2H4Fetch').innerHTML = data[4].results;
+  document.getElementById('T2H5Fetch').innerHTML = data[7].results;
+  document.getElementById('T2H6Fetch').innerHTML = data[10].results;
+  document.getElementById('T1C2Fetch').style.backgroundImage = 'url(http://www.aljazeera.com'+data[2].results+')';
+  document.getElementById('T2C4Fetch').style.backgroundImage = 'url(http://www.aljazeera.com'+data[5].results+')';
+  document.getElementById('T2C5Fetch').style.backgroundImage = 'url(http://www.aljazeera.com'+data[8].results+')';
+  document.getElementById('T2C6Fetch').style.backgroundImage = 'url(http://www.aljazeera.com'+data[11].results+')';
+});
+}
+
+else if(branch == "BranchThree"){
+	
+	document.getElementById('T0B3Text').innerHTML = "Al Jazeera";
+	
+// Make Ajax request to Noodle server
+jQuery.getJSON(request, function (data) {
+  document.getElementById('T1C3Fetch').href = 'http://www.aljazeera.com'+data[0].results;
+  document.getElementById('T2C7Fetch').href = 'http://www.aljazeera.com'+data[3].results;
+  document.getElementById('T2C8Fetch').href = 'http://www.aljazeera.com'+data[6].results;
+  document.getElementById('T2C9Fetch').href = 'http://www.aljazeera.com'+data[9].results;
+  document.getElementById('T1H3Fetch').innerHTML = data[1].results;
+  document.getElementById('T2H7Fetch').innerHTML = data[4].results;
+  document.getElementById('T2H8Fetch').innerHTML = data[7].results;
+  document.getElementById('T2H9Fetch').innerHTML = data[10].results;
+  document.getElementById('T1C3Fetch').style.backgroundImage = 'url(http://www.aljazeera.com'+data[2].results+')';
+  document.getElementById('T2C7Fetch').style.backgroundImage = 'url(http://www.aljazeera.com'+data[5].results+')';
+  document.getElementById('T2C8Fetch').style.backgroundImage = 'url(http://www.aljazeera.com'+data[8].results+')';
+  document.getElementById('T2C9Fetch').style.backgroundImage = 'url(http://www.aljazeera.com'+data[11].results+')';
+});
+}
+
+else if(branch == "BranchFour"){
+	
+	document.getElementById('T0B4Text').innerHTML = "Al Jazeera";
+	
+// Make Ajax request to Noodle server
+jQuery.getJSON(request, function (data) {
+  document.getElementById('T1C4Fetch').href = 'http://www.aljazeera.com'+data[0].results;
+  document.getElementById('T2C10Fetch').href = 'http://www.aljazeera.com'+data[3].results;
+  document.getElementById('T2C11Fetch').href = 'http://www.aljazeera.com'+data[6].results;
+  document.getElementById('T2C12Fetch').href = 'http://www.aljazeera.com'+data[9].results;
+  document.getElementById('T1H4Fetch').innerHTML = data[1].results;
+  document.getElementById('T2H10Fetch').innerHTML = data[4].results;
+  document.getElementById('T2H11Fetch').innerHTML = data[7].results;
+  document.getElementById('T2H12Fetch').innerHTML = data[10].results;
+  document.getElementById('T1C4Fetch').style.backgroundImage = 'url(http://www.aljazeera.com'+data[2].results+')';
+  document.getElementById('T2C10Fetch').style.backgroundImage = 'url(http://www.aljazeera.com'+data[5].results+')';
+  document.getElementById('T2C11Fetch').style.backgroundImage = 'url(http://www.aljazeera.com'+data[8].results+')';
+  document.getElementById('T2C12Fetch').style.backgroundImage = 'url(http://www.aljazeera.com'+data[11].results+')';
+});
+}
+
+}
+	
+if(choice == "Sky"){
+	document.getElementById('T0B1Text').innerHTML = "Sky";
+	
 	var NewsLink3 = "http://news.sky.com/uk";
 
 var query = [
@@ -306,22 +405,24 @@ var query = [
 
 // Make Ajax request to Noodle server
 jQuery.getJSON(request, function (data) {
-  document.getElementById('T1C1Fetch').href = 'http://news.sky.com'+data[0].results;
-  document.getElementById('T1H1Fetch').innerHTML = data[1].results;
-  document.getElementById('T1C1Fetch').style.backgroundImage = 'url("'+data[2].results+'")';
-  document.getElementById('T2C1Fetch').href = 'http://news.sky.com'+data[3].results;
-  document.getElementById('T2H1Fetch').innerHTML = data[4].results;
-  document.getElementById('T2C1Fetch').style.backgroundImage = 'url("'+data[5].results+'")';
-  document.getElementById('T2C2Fetch').href = 'http://news.sky.com'+data[6].results;
-  document.getElementById('T2H2Fetch').innerHTML = data[7].results;
-  document.getElementById('T2C2Fetch').style.backgroundImage = 'url("'+data[8].results+'")';
-  document.getElementById('T2C3Fetch').href = 'http://news.sky.com'+data[9].results;
-  document.getElementById('T2H3Fetch').innerHTML = data[10].results;
-  document.getElementById('T2C3Fetch').style.backgroundImage = 'url("'+data[11].results+'")';
+  document.getElementById('T1C3Fetch').href = 'http://news.sky.com'+data[0].results;
+  document.getElementById('T1H3Fetch').innerHTML = data[1].results;
+  document.getElementById('T1C3Fetch').style.backgroundImage = 'url("'+data[2].results+'")';
+  document.getElementById('T2C7Fetch').href = 'http://news.sky.com'+data[3].results;
+  document.getElementById('T2H7Fetch').innerHTML = data[4].results;
+  document.getElementById('T2C7Fetch').style.backgroundImage = 'url("'+data[5].results+'")';
+  document.getElementById('T2C8Fetch').href = 'http://news.sky.com'+data[6].results;
+  document.getElementById('T2H8Fetch').innerHTML = data[7].results;
+  document.getElementById('T2C8Fetch').style.backgroundImage = 'url("'+data[8].results+'")';
+  document.getElementById('T2C9Fetch').href = 'http://news.sky.com'+data[9].results;
+  document.getElementById('T2H9Fetch').innerHTML = data[10].results;
+  document.getElementById('T2C9Fetch').style.backgroundImage = 'url("'+data[11].results+'")';
 });
 }
+	
+if(choice == "Daily Mail"){
+	document.getElementById('T0B1Text').innerHTML = "Daily Mail";
 
-function BranchOneDailyMail() {
 	var NewsLink4 = "http://www.dailymail.co.uk/news/mostread/index.html?period=DAILY&channel=home";
 
 var query = [
@@ -420,23 +521,22 @@ var query = [
 
 // Make Ajax request to Noodle server
 jQuery.getJSON(request, function (data) {
-  document.getElementById('T1C1Fetch').href = "http://www.dailymail.co.uk/" +data[0].results;
-  document.getElementById('T1H1Fetch').innerHTML = data[1].results;
-  document.getElementById('T1C1Fetch').style.backgroundImage = 'url("'+data[2].results+'")';
-  document.getElementById('T2C1Fetch').href = "http://www.dailymail.co.uk/" +data[3].results;
-  document.getElementById('T2H1Fetch').innerHTML = data[4].results;
-  document.getElementById('T2C1Fetch').style.backgroundImage = 'url("'+data[5].results+'")';
-  document.getElementById('T2C2Fetch').href = "http://www.dailymail.co.uk/" +data[6].results;
-  document.getElementById('T2H2Fetch').innerHTML = data[7].results;
-  document.getElementById('T2C2Fetch').style.backgroundImage = 'url("'+data[8].results+'")';
-  document.getElementById('T2C3Fetch').href = "http://www.dailymail.co.uk/" +data[9].results;
-  document.getElementById('T2H3Fetch').innerHTML = data[10].results;
-  document.getElementById('T2C3Fetch').style.backgroundImage = 'url("'+data[11].results+'")';
+  document.getElementById('T1C4Fetch').href = "http://www.dailymail.co.uk/" +data[0].results;
+  document.getElementById('T1H4Fetch').innerHTML = data[1].results;
+  document.getElementById('T1C4Fetch').style.backgroundImage = 'url("'+data[2].results+'")';
+  document.getElementById('T2C10Fetch').href = "http://www.dailymail.co.uk/" +data[3].results;
+  document.getElementById('T2H10Fetch').innerHTML = data[4].results;
+  document.getElementById('T2C10Fetch').style.backgroundImage = 'url("'+data[5].results+'")';
+  document.getElementById('T2C11Fetch').href = "http://www.dailymail.co.uk/" +data[6].results;
+  document.getElementById('T2H11Fetch').innerHTML = data[7].results;
+  document.getElementById('T2C11Fetch').style.backgroundImage = 'url("'+data[8].results+'")';
+  document.getElementById('T2C12Fetch').href = "http://www.dailymail.co.uk/" +data[9].results;
+  document.getElementById('T2H12Fetch').innerHTML = data[10].results;
+  document.getElementById('T2C12Fetch').style.backgroundImage = 'url("'+data[11].results+'")';
 });
 }
+}
 
-
-//BranchOne Video
 
 
 
@@ -445,13 +545,12 @@ jQuery.getJSON(request, function (data) {
 //FULL TREES
 function NewsTree() {
 
-document.getElementById('T0B1Text').innerHTML = "BBC";
-document.getElementById('T0B2Text').innerHTML = "Al Jazeera";
-document.getElementById('T0B4Text').innerHTML = "Daily Mail";
-document.getElementById('T0B3Text').innerHTML = "Sky";
-
-
-var query = [
+	document.getElementById('T0B1Text').innerHTML = "BBC";
+	document.getElementById('T0B2Text').innerHTML = "Al Jazeera";
+	document.getElementById('T0B3Text').innerHTML = "Sky";
+	document.getElementById('T0B4Text').innerHTML = "Daily Mail";
+	
+	var query = [
   {
     url: "http://www.bbc.co.uk/news/",
     selector: "#top-story > h2 > a",
@@ -545,6 +644,7 @@ jQuery.getJSON(request, function (data) {
   document.getElementById('T2C2Fetch').style.backgroundImage = 'url("'+data[8].results+'")';
   document.getElementById('T2C3Fetch').style.backgroundImage = 'url("'+data[11].results+'")';
 });
+
 
 var NewsLink2 = "http://www.aljazeera.com/topics/regions/europe.html";
 
