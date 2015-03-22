@@ -142,30 +142,29 @@
 <div class="example " id="MainTree">
 	
 		<!-- Tier Zero Circle -->
-		<a class="MainCircleNews" id="MainCircleNews" href"#" onClick="BranchOneSelection()"><p class="SelectorText" id="T0B1Text">Popular</p></a>
+		<a class="MainCircleNews" id="MainCircleNews" href"#" onClick="BranchOneMenu()"><p class="SelectorText" id="BS1">Popular</p></a>
 		
-		<!-- Branch One Selector -->
-		<div id="BranchOneSelector"  style="display:none;">
-		<a class="BranchOneChoiceOne" href"#" id="News" onClick="BranchOneNews(); BranchOneSelectionClose(this.id);"><p class="SelectorText" id="ChangeNews">News</p></a>
-		<a class="BranchOneChoiceOne" href"#" id="Video" onClick="BranchOneVideo(); BranchOneSelectionClose(this.id);"><p class="SelectorText">Video</p></a>
-		<a class="BranchOneChoiceOne" href"#" id="Sport" onClick="BranchOneVideo(); BranchOneSelectionClose(this.id);"><p class="SelectorText">Sport</p></a>
-		<a class="BranchOneChoiceOne" href"#" id="Fashion" onClick="BranchOneVideo(); BranchOneSelectionClose(this.id);"><p class="SelectorText">Fashion</p></a>
-		<a class="BranchOneChoiceOne" href"#" id="Science" onClick="BranchOneVideo(); BranchOneSelectionClose(this.id);"><p class="SelectorText">Science</p></a>
-		<a class="BranchOneChoiceOne" href"#" id="Technology" onClick="BranchOneVideo(); BranchOneSelectionClose(this.id);"><p class="SelectorText">Technology</p></a>
-		<a class="BranchOneChoiceOne" href"#" id="Technology" onClick="BranchOneVideo(); BranchOneSelectionClose(this.id);"><p class="SelectorText">Streaming</p></a>
-		<a class="BranchOneChoiceOne" href"#" id="Technology" onClick="BranchOneVideo(); BranchOneSelectionClose(this.id);"><p class="SelectorText">Food</p></a>
+	<!-- Branch One Selector -->
+	<div id="BranchOneSelector"  style="display:none;">
+		<a class="BranchOneChoiceOne" href"#" id="News" onClick="BranchOneSelection(this.id);"><p class="SelectorText">News</p></a>
+		<a class="BranchOneChoiceOne" href"#" id="Video" onClick="BranchOneSelection(this.id);"><p class="SelectorText">Video</p></a>
+		<a class="BranchOneChoiceOne" href"#" id="Sport" onClick="BranchOneSelection(this.id);"><p class="SelectorText">Sport</p></a>
+		<a class="BranchOneChoiceOne" href"#" id="Fashion" onClick="BranchOneSelection(this.id);"><p class="SelectorText">Fashion</p></a>
+		<a class="BranchOneChoiceOne" href"#" id="Science" onClick="BranchOneSelection(this.id);"><p class="SelectorText">Science</p></a>
+		<a class="BranchOneChoiceOne" href"#" id="Technology" onClick="BranchOneSelection(this.id);"><p class="SelectorText">Technology</p></a>
+		<a class="BranchOneChoiceOne" href"#" id="Streaming" onClick="BranchOneSelection(this.id);"><p class="SelectorText">Streaming</p></a>
+		<a class="BranchOneChoiceOne" href"#" id="Food" onClick="BranchOneSelection(this.id);"><p class="SelectorText">Food</p></a>
 		
 		
-		<!-- Secondary Selector -->
+		<!-- Branch One Secondary Selector NEWS -->
 		<div id="SecondarySelector"  style="display:none;">
-		<a class="SecondarySelectorButton" href"#" id="BBC" onClick="BranchOneNews(); BranchOneSelectionCloseFinal(this.id);"><p class="SelectorText" id="ChangeNews">BBC</p></a>
-		<a class="SecondarySelectorButton" href"#" id="Al Jazeera" onClick="BranchOneVideo(); BranchOneSelectionCloseFinal(this.id);"><p class="SelectorText">Al Jazeera</p></a>
-		<a class="SecondarySelectorButton" href"#" id="Sky" onClick="BranchOneVideo(); BranchOneSelectionCloseFinal(this.id);"><p class="SelectorText">Sky</p></a>
-		<a class="SecondarySelectorButton" href"#" id="Daily Mail" onClick="BranchOneVideo(); BranchOneSelectionCloseFinal(this.id);"><p class="SelectorText">Daily Mail</p></a>
+		<a class="SecondarySelectorButton" href"#" id="MakeMeDynamic" onClick="BranchOneBBC(); BranchOneSelectionCloseFinal(this.id);"><p class="SelectorText" id="BSOne"></p></a>
+		<a class="SecondarySelectorButton" href"#" id="MakeMeDynamic" onClick="BranchOneAlJazeera(); BranchOneSelectionCloseFinal(this.id);"><p class="SelectorText" id="BSTwo"></p></a>
+		<a class="SecondarySelectorButton" href"#" id="MakeMeDynamic" onClick="BranchOneSky(); BranchOneSelectionCloseFinal(this.id);"><p class="SelectorText" id="BSThree"></p></a>
+		<a class="SecondarySelectorButton" href"#" id="MakeMeDynamic" onClick="BranchOneDailyMail(); BranchOneSelectionCloseFinal(this.id);"><p class="SelectorText" id="BSFour"></p></a>
 		</div>
 		
-		
-		</div>
+	</div>
 		
 
 		
@@ -310,7 +309,7 @@
 	
 	<!-- Branch One Selector Open -->
 	<script type="text/javascript">
-	function BranchOneSelection() {
+	function BranchOneMenu() {
 		document.getElementById('MainCircleNews').style.display = "none";
 		document.getElementById('BranchOneSelector').style.display = "block";
 	}
@@ -318,10 +317,65 @@
 	
 	<!-- Branch One Selector Close -->
 	<script type="text/javascript">
-	function BranchOneSelectionClose(clicked_id) {
-		document.getElementById('BranchOneSelector').style.display = "block";
-		document.getElementById('T0B1Text').innerHTML = clicked_id;
-		document.getElementById('SecondarySelector').style.display = "block";
+	function BranchOneSelection(Choice) {
+	var pick = Choice;
+	
+		if(pick == "News"){
+	document.getElementById('BSOne').innerHTML = "BBC";
+	document.getElementById('BSTwo').innerHTML = "Al Jazeera";
+	document.getElementById('BSThree').innerHTML = "Sky";
+	document.getElementById('BSFour').innerHTML = "Daily Mail";
+	}
+	else if(pick == "Video"){
+	document.getElementById('BSOne').innerHTML = "Popular";
+	document.getElementById('BSTwo').innerHTML = "In the News";
+	document.getElementById('BSThree').innerHTML = "Music";
+	document.getElementById('BSFour').innerHTML = "Comedy";
+	}
+	else if(pick == "Sport"){
+	document.getElementById('BSOne').innerHTML = "BBC";
+	document.getElementById('BSTwo').innerHTML = "Sport.co.uk";
+	document.getElementById('BSThree').innerHTML = "Other";
+	document.getElementById('BSFour').innerHTML = "Sky";
+	}
+	else if(pick == "Fashion"){
+	document.getElementById('BSOne').innerHTML = "Vogue";
+	document.getElementById('BSTwo').innerHTML = "Grazia";
+	document.getElementById('BSThree').innerHTML = "Other";
+	document.getElementById('BSFour').innerHTML = "Elle";
+	}
+	else if(pick == "Science"){
+	document.getElementById('BSOne').innerHTML = "BBC";
+	document.getElementById('BSTwo').innerHTML = "New Scientist";
+	document.getElementById('BSThree').innerHTML = "(e)Science News";
+	document.getElementById('BSFour').innerHTML = "AAAS";
+	}
+	else if(pick == "Technology"){
+	document.getElementById('BSOne').innerHTML = "BBC";
+	document.getElementById('BSTwo').innerHTML = "Tech Review";
+	document.getElementById('BSThree').innerHTML = "Tech Crunch";
+	document.getElementById('BSFour').innerHTML = "Sky";
+	}
+	else if(pick == "Streaming"){
+	document.getElementById('BSOne').innerHTML = "One";
+	document.getElementById('BSTwo').innerHTML = "Two";
+	document.getElementById('BSThree').innerHTML = "Three";
+	document.getElementById('BSFour').innerHTML = "Four";
+	}
+	else if(pick == "Food"){
+	document.getElementById('BSOne').innerHTML = "Five";
+	document.getElementById('BSTwo').innerHTML = "Six";
+	document.getElementById('BSThree').innerHTML = "Seven";
+	document.getElementById('BSFour').innerHTML = "Eight";
+	}
+
+	document.getElementById('BranchOneSelector').style.display = "block";
+	document.getElementById('SecondarySelector').style.display = "block";
+	
+
+	
+	
+		
 	}
 	</script>
 	
@@ -330,7 +384,7 @@
 	function BranchOneSelectionCloseFinal(clicked_id) {
 		document.getElementById('MainCircleNews').style.display = "block";
 		document.getElementById('BranchOneSelector').style.display = "none";
-		document.getElementById('T0B1Text').innerHTML = clicked_id;
+		document.getElementById('BS1').innerHTML = clicked_id;
 		document.getElementById('SecondarySelector').style.display = "none";
 	}
 	</script>

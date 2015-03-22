@@ -1,6 +1,6 @@
 
 //BranchOne News
-function BranchOneNews() {
+function BranchOneBBC() {
 	var query = [
   {
     url: "http://www.bbc.co.uk/news/",
@@ -97,334 +97,348 @@ jQuery.getJSON(request, function (data) {
 });
 }
 
-//BranchOne Video
-function BranchOneVideo() {
-	var query = [
-  {
-    "url": "https://www.youtube.com/channel/UCR44SO_mdyRq-aTJHO5QxAw",
-    "selector": "#browse-items-primary > li:nth-child(1) > div.feed-item-dismissable > div > div > div > div.compact-shelf.shelf-item.yt-uix-shelfslider.yt-uix-shelfslider-at-head.vve-check.clearfix.yt-section-hover-container.yt-uix-tdl > div > div > ul > li:nth-child(1) > div > div.yt-lockup-dismissable > div.yt-lockup-thumbnail > span > a",
-    "extract": "href",
-    "cache": "false"
-  },
-  {
-    "url": "https://www.youtube.com/channel/UCR44SO_mdyRq-aTJHO5QxAw",
-    "selector": "#browse-items-primary > li:nth-child(1) > div.feed-item-dismissable > div > div > div > div.compact-shelf.shelf-item.yt-uix-shelfslider.yt-uix-shelfslider-at-head.vve-check.clearfix.yt-section-hover-container.yt-uix-tdl > div > div > ul > li:nth-child(1) > div > div.yt-lockup-dismissable > div.yt-lockup-content > h3 > a",
-    "extract": "title",
-    "cache": "false"
-  },
-  {
-    "url": "https://www.youtube.com/channel/UCR44SO_mdyRq-aTJHO5QxAw",
-    "selector": "#browse-items-primary > li:nth-child(1) > div.feed-item-dismissable > div > div > div > div.compact-shelf.shelf-item.yt-uix-shelfslider.yt-uix-shelfslider-at-head.vve-check.clearfix.yt-section-hover-container.yt-uix-tdl > div > div > ul > li:nth-child(2) > div > div.yt-lockup-dismissable > div.yt-lockup-thumbnail > span > a",
-    "extract": "href",
-    "cache": "false"
-  },
-  {
-    "url": "https://www.youtube.com/channel/UCR44SO_mdyRq-aTJHO5QxAw",
-    "selector": "#browse-items-primary > li:nth-child(1) > div.feed-item-dismissable > div > div > div > div.compact-shelf.shelf-item.yt-uix-shelfslider.yt-uix-shelfslider-at-head.vve-check.clearfix.yt-section-hover-container.yt-uix-tdl > div > div > ul > li:nth-child(2) > div > div.yt-lockup-dismissable > div.yt-lockup-content > h3 > a",
-    "extract": "title",
-    "cache": "false"
-  },
-  {
-    "url": "https://www.youtube.com/channel/UCR44SO_mdyRq-aTJHO5QxAw",
-    "selector": "#browse-items-primary > li:nth-child(1) > div.feed-item-dismissable > div > div > div > div.compact-shelf.shelf-item.yt-uix-shelfslider.yt-uix-shelfslider-at-head.vve-check.clearfix.yt-section-hover-container.yt-uix-tdl > div > div > ul > li:nth-child(3) > div > div.yt-lockup-dismissable > div.yt-lockup-thumbnail > span > a",
-    "extract": "href",
-    "cache": "false"
-  },
-  {
-    "url": "https://www.youtube.com/channel/UCR44SO_mdyRq-aTJHO5QxAw",
-    "selector": "#browse-items-primary > li:nth-child(1) > div.feed-item-dismissable > div > div > div > div.compact-shelf.shelf-item.yt-uix-shelfslider.yt-uix-shelfslider-at-head.vve-check.clearfix.yt-section-hover-container.yt-uix-tdl > div > div > ul > li:nth-child(3) > div > div.yt-lockup-dismissable > div.yt-lockup-content > h3 > a",
-    "extract": "title",
-    "cache": "false"
-  },
-  {
-    "url": "https://www.youtube.com/channel/UCR44SO_mdyRq-aTJHO5QxAw",
-    "selector": "#browse-items-primary > li:nth-child(1) > div.feed-item-dismissable > div > div > div > div.compact-shelf.shelf-item.yt-uix-shelfslider.yt-uix-shelfslider-at-head.vve-check.clearfix.yt-section-hover-container.yt-uix-tdl > div > div > ul > li:nth-child(4) > div > div.yt-lockup-dismissable > div.yt-lockup-thumbnail > span > a",
-    "extract": "href",
-    "cache": "false"
-  },
-  {
-    "url": "https://www.youtube.com/channel/UCR44SO_mdyRq-aTJHO5QxAw",
-    "selector": "#browse-items-primary > li:nth-child(1) > div.feed-item-dismissable > div > div > div > div.compact-shelf.shelf-item.yt-uix-shelfslider.yt-uix-shelfslider-at-head.vve-check.clearfix.yt-section-hover-container.yt-uix-tdl > div > div > ul > li:nth-child(4) > div > div.yt-lockup-dismissable > div.yt-lockup-content > h3 > a",
-    "extract": "title",
-    "cache": "false"
-  },
+function BranchOneAlJazeera() {
+	var NewsLink2 = "http://www.aljazeera.com/topics/regions/europe.html";
 
-],
+var query = [
+/* Tier One Circle One */
+{
+    url: NewsLink2,
+    type: 'html',
+    selector: '#main-content > div:nth-child(2) > div:nth-child(2) > div > div:nth-child(1) > div > div > div > div > article.item.da-all.blurb-wide.clearfix > a',
+    extract: 'href',
+    cache: 'false'
+  },
+{
+    url: NewsLink2,
+    type: 'html',
+    selector: '#main-content > div:nth-child(2) > div:nth-child(2) > div > div:nth-child(1) > div > div > div > div > article.item.da-all.blurb-wide.clearfix > div > h1 > a',
+    extract: 'text',
+    cache: 'false'
+  },
+{
+    url: NewsLink2,
+    type: 'html',
+    selector: '#main-content > div:nth-child(2) > div:nth-child(2) > div > div:nth-child(1) > div > div > div > div > article.item.da-all.blurb-wide.clearfix > a > img',
+    extract: 'src',
+    cache: 'false'
+  },
+  /* Tier Two Circle One */
+  {
+    url: NewsLink2,
+    type: 'html',
+    selector: '#main-content > div:nth-child(2) > div:nth-child(2) > div > div:nth-child(1) > div > div > div > div > article.item.db1.tb1.blurb.clearfix > div > h1 > a',
+    extract: 'href',
+    cache: 'false'
+  },
+{
+    url: NewsLink2,
+    type: 'html',
+    selector: '#main-content > div:nth-child(2) > div:nth-child(2) > div > div:nth-child(1) > div > div > div > div > article.item.db1.tb1.blurb.clearfix > div > h1 > a',
+    extract: 'text',
+    cache: 'false'
+  },
+{
+    url: NewsLink2,
+    type: 'html',
+    selector: '#main-content > div:nth-child(2) > div:nth-child(2) > div > div:nth-child(1) > div > div > div > div > article.item.db1.tb1.blurb.clearfix > a > img',
+    extract: 'src',
+    cache: 'false'
+  },
+  /* Tier Two Circle Two */
+  {
+    url: NewsLink2,
+    type: 'html',
+    selector: '#main-content > div:nth-child(2) > div:nth-child(2) > div > div:nth-child(1) > div > div > div > div > article.item.db2.tb2.blurb.clearfix > div > h1 > a',
+    extract: 'href',
+    cache: 'false'
+  },
+{
+    url: NewsLink2,
+    type: 'html',
+    selector: '#main-content > div:nth-child(2) > div:nth-child(2) > div > div:nth-child(1) > div > div > div > div > article.item.db2.tb2.blurb.clearfix > div > h1 > a',
+    extract: 'text',
+    cache: 'false'
+  },
+{
+    url: NewsLink2,
+    type: 'html',
+    selector: '#main-content > div:nth-child(2) > div:nth-child(2) > div > div:nth-child(1) > div > div > div > div > article.item.db2.tb2.blurb.clearfix > a > img',
+    extract: 'src',
+    cache: 'false'
+  },
+  /* Tier Two Circle Three */
+  {
+    url: NewsLink2,
+    type: 'html',
+    selector: '#main-content > div:nth-child(2) > div:nth-child(2) > div > div:nth-child(1) > div > div > div > div > article.item.db3.tb3.blurb.clearfix > div > h1 > a',
+    extract: 'href',
+    cache: 'false'
+  },
+{
+    url: NewsLink2,
+    type: 'html',
+    selector: '#main-content > div:nth-child(2) > div:nth-child(2) > div > div:nth-child(1) > div > div > div > div > article.item.db3.tb3.blurb.clearfix > div > h1 > a',
+    extract: 'text',
+    cache: 'false'
+  },
+{
+    url: NewsLink2,
+    type: 'html',
+    selector: '#main-content > div:nth-child(2) > div:nth-child(2) > div > div:nth-child(1) > div > div > div > div > article.item.db3.tb3.blurb.clearfix > a > img',
+    extract: 'src',
+    cache: 'false'
+  }
+]
   uriQuery = encodeURIComponent(JSON.stringify(query)),
-  request  = 'https://secret-reaches-3678.herokuapp.com/?q=' +
+  request  = 'http://treemac.herokuapp.com/?q=' +
              uriQuery + '&callback=?';
 
 // Make Ajax request to Noodle server
 jQuery.getJSON(request, function (data) {
-  var string1 = ""+data[0].results;
-  var res1 = string1.substr(9);
-  var string2 = ""+data[2].results;
-  var res2 = string2.substr(9);
-  var string3 = ""+data[4].results;
-  var res3 = string3.substr(9);
-  var string4 = ""+data[6].results;
-  var res4 = string4.substr(9);
-  document.getElementById('T1C1Fetch').href = 'https://www.youtube.com/embed/'+res1+'?autoplay=1';
-  document.getElementById('T2C1Fetch').href = 'https://www.youtube.com/embed/'+res2+'?autoplay=1';
-  document.getElementById('T2C2Fetch').href = 'https://www.youtube.com/embed/'+res3+'?autoplay=1';
-  document.getElementById('T2C3Fetch').href = 'https://www.youtube.com/embed/'+res4+'?autoplay=1';
+  document.getElementById('T1C1Fetch').href = 'http://www.aljazeera.com'+data[0].results;
+  document.getElementById('T2C1Fetch').href = 'http://www.aljazeera.com'+data[3].results;
+  document.getElementById('T2C2Fetch').href = 'http://www.aljazeera.com'+data[6].results;
+  document.getElementById('T2C3Fetch').href = 'http://www.aljazeera.com'+data[9].results;
   document.getElementById('T1H1Fetch').innerHTML = data[1].results;
-  document.getElementById('T2H1Fetch').innerHTML = data[3].results;
-  document.getElementById('T2H2Fetch').innerHTML = data[5].results;
-  document.getElementById('T2H3Fetch').innerHTML = data[7].results;
-  document.getElementById('T1C1Fetch').style.backgroundImage = 'url("http://i.ytimg.com/vi/'+res1+'/mqdefault.jpg")';
-  document.getElementById('T2C1Fetch').style.backgroundImage = 'url("http://i.ytimg.com/vi/'+res2+'/mqdefault.jpg")';
-  document.getElementById('T2C2Fetch').style.backgroundImage = 'url("http://i.ytimg.com/vi/'+res3+'/mqdefault.jpg")';
-  document.getElementById('T2C3Fetch').style.backgroundImage = 'url("http://i.ytimg.com/vi/'+res4+'/mqdefault.jpg")';
+  document.getElementById('T2H1Fetch').innerHTML = data[4].results;
+  document.getElementById('T2H2Fetch').innerHTML = data[7].results;
+  document.getElementById('T2H3Fetch').innerHTML = data[10].results;
+  document.getElementById('T1C1Fetch').style.backgroundImage = 'url(http://www.aljazeera.com'+data[2].results+')';
+  document.getElementById('T2C1Fetch').style.backgroundImage = 'url(http://www.aljazeera.com'+data[5].results+')';
+  document.getElementById('T2C2Fetch').style.backgroundImage = 'url(http://www.aljazeera.com'+data[8].results+')';
+  document.getElementById('T2C3Fetch').style.backgroundImage = 'url(http://www.aljazeera.com'+data[11].results+')';
 });
 }
 
+function BranchOneSky() {
+	var NewsLink3 = "http://news.sky.com/uk";
 
-
-
-function BranchTwo() {
 var query = [
-  {
-    "url": "https://www.youtube.com/channel/UCR44SO_mdyRq-aTJHO5QxAw",
-    "selector": "#browse-items-primary > li:nth-child(2) > div.feed-item-dismissable > div > div > div > div.compact-shelf.shelf-item.yt-uix-shelfslider.yt-uix-shelfslider-at-head.vve-check.clearfix.yt-section-hover-container.yt-uix-tdl > div > div > ul > li:nth-child(1) > div > div.yt-lockup-dismissable > div.yt-lockup-thumbnail > span > a",
-    "extract": "href",
-    "cache": "false"
+{
+    url: NewsLink3,
+    type: 'html',
+    selector: 'body > div.viewport > div.main > div > div > div > div:nth-child(2) > ol > li.section-top-stories__item.section-top-stories__item--1.section-top-stories__item--odd > a',
+    extract: 'href',
+    cache: 'false'
+  },
+{
+    url: NewsLink3,
+    type: 'html',
+    selector: 'body > div.viewport > div.main > div > div > div > div:nth-child(2) > ol > li.section-top-stories__item.section-top-stories__item--1.section-top-stories__item--odd > a > span',
+    extract: 'text',
+    cache: 'false'
+  },
+{
+    url: NewsLink3,
+    type: 'html',
+    selector: 'body > div.viewport > div.main > div > div > div > div:nth-child(2) > ol > li.section-top-stories__item.section-top-stories__item--1.section-top-stories__item--odd > a > div > div > img',
+    extract: 'src',
+    cache: 'false'
   },
   {
-    "url": "https://www.youtube.com/channel/UCR44SO_mdyRq-aTJHO5QxAw",
-    "selector": "#browse-items-primary > li:nth-child(2) > div.feed-item-dismissable > div > div > div > div.compact-shelf.shelf-item.yt-uix-shelfslider.yt-uix-shelfslider-at-head.vve-check.clearfix.yt-section-hover-container.yt-uix-tdl > div > div > ul > li:nth-child(1) > div > div.yt-lockup-dismissable > div.yt-lockup-content > h3 > a",
-    "extract": "title",
-    "cache": "false"
+    url: NewsLink3,
+    type: 'html',
+    selector: 'body > div.viewport > div.main > div > div > div > div:nth-child(3) > ol > li.section-top-stories__item.section-top-stories__item--6.section-top-stories__item--even > a',
+    extract: 'href',
+    cache: 'false'
+  },
+{
+    url: NewsLink3,
+    type: 'html',
+    selector: 'body > div.viewport > div.main > div > div > div > div:nth-child(3) > ol > li.section-top-stories__item.section-top-stories__item--6.section-top-stories__item--even > a > span',
+    extract: 'text',
+    cache: 'false'
+  },
+{
+    url: NewsLink3,
+    type: 'html',
+    selector: 'body > div.viewport > div.main > div > div > div > div:nth-child(3) > ol > li.section-top-stories__item.section-top-stories__item--6.section-top-stories__item--even > a > div > div > img',
+    extract: 'src',
+    cache: 'false'
   },
   {
-    "url": "https://www.youtube.com/channel/UCR44SO_mdyRq-aTJHO5QxAw",
-    "selector": "#browse-items-primary > li:nth-child(2) > div.feed-item-dismissable > div > div > div > div.compact-shelf.shelf-item.yt-uix-shelfslider.yt-uix-shelfslider-at-head.vve-check.clearfix.yt-section-hover-container.yt-uix-tdl > div > div > ul > li:nth-child(2) > div > div.yt-lockup-dismissable > div.yt-lockup-thumbnail > span > a",
-    "extract": "href",
-    "cache": "false"
+    url: NewsLink3,
+    type: 'html',
+    selector: 'body > div.viewport > div.main > div > div > div > div:nth-child(3) > ol > li.section-top-stories__item.section-top-stories__item--7.section-top-stories__item--odd > a',
+    extract: 'href',
+    cache: 'false'
   },
-  {
-    "url": "https://www.youtube.com/channel/UCR44SO_mdyRq-aTJHO5QxAw",
-    "selector": "#browse-items-primary > li:nth-child(2) > div.feed-item-dismissable > div > div > div > div.compact-shelf.shelf-item.yt-uix-shelfslider.yt-uix-shelfslider-at-head.vve-check.clearfix.yt-section-hover-container.yt-uix-tdl > div > div > ul > li:nth-child(2) > div > div.yt-lockup-dismissable > div.yt-lockup-content > h3 > a",
-    "extract": "title",
-    "cache": "false"
+{
+    url: NewsLink3,
+    type: 'html',
+    selector: 'body > div.viewport > div.main > div > div > div > div:nth-child(3) > ol > li.section-top-stories__item.section-top-stories__item--7.section-top-stories__item--odd > a > span',
+    extract: 'text',
+    cache: 'false'
   },
-  {
-    "url": "https://www.youtube.com/channel/UCR44SO_mdyRq-aTJHO5QxAw",
-    "selector": "#browse-items-primary > li:nth-child(2) > div.feed-item-dismissable > div > div > div > div.compact-shelf.shelf-item.yt-uix-shelfslider.yt-uix-shelfslider-at-head.vve-check.clearfix.yt-section-hover-container.yt-uix-tdl > div > div > ul > li:nth-child(3) > div > div.yt-lockup-dismissable > div.yt-lockup-thumbnail > span > a",
-    "extract": "href",
-    "cache": "false"
+{
+    url: NewsLink3,
+    type: 'html',
+    selector: 'body > div.viewport > div.main > div > div > div > div:nth-child(3) > ol > li.section-top-stories__item.section-top-stories__item--7.section-top-stories__item--odd > a > div > div > img',
+    extract: 'src',
+    cache: 'false'
   },
-  {
-    "url": "https://www.youtube.com/channel/UCR44SO_mdyRq-aTJHO5QxAw",
-    "selector": "#browse-items-primary > li:nth-child(2) > div.feed-item-dismissable > div > div > div > div.compact-shelf.shelf-item.yt-uix-shelfslider.yt-uix-shelfslider-at-head.vve-check.clearfix.yt-section-hover-container.yt-uix-tdl > div > div > ul > li:nth-child(3) > div > div.yt-lockup-dismissable > div.yt-lockup-content > h3 > a",
-    "extract": "title",
-    "cache": "false"
+{
+    url: NewsLink3,
+    type: 'html',
+    selector: 'body > div.viewport > div.main > div > div > div > div:nth-child(3) > ol > li.section-top-stories__item.section-top-stories__item--8.section-top-stories__item--even > a',
+    extract: 'href',
+    cache: 'false'
   },
-  {
-    "url": "https://www.youtube.com/channel/UCR44SO_mdyRq-aTJHO5QxAw",
-    "selector": "#browse-items-primary > li:nth-child(2) > div.feed-item-dismissable > div > div > div > div.compact-shelf.shelf-item.yt-uix-shelfslider.yt-uix-shelfslider-at-head.vve-check.clearfix.yt-section-hover-container.yt-uix-tdl > div > div > ul > li:nth-child(4) > div > div.yt-lockup-dismissable > div.yt-lockup-thumbnail > span > a",
-    "extract": "href",
-    "cache": "false"
+{
+    url: NewsLink3,
+    type: 'html',
+    selector: 'body > div.viewport > div.main > div > div > div > div:nth-child(3) > ol > li.section-top-stories__item.section-top-stories__item--8.section-top-stories__item--even > a > span',
+    extract: 'text',
+    cache: 'false'
   },
-  {
-    "url": "https://www.youtube.com/channel/UCR44SO_mdyRq-aTJHO5QxAw",
-    "selector": "#browse-items-primary > li:nth-child(2) > div.feed-item-dismissable > div > div > div > div.compact-shelf.shelf-item.yt-uix-shelfslider.yt-uix-shelfslider-at-head.vve-check.clearfix.yt-section-hover-container.yt-uix-tdl > div > div > ul > li:nth-child(4) > div > div.yt-lockup-dismissable > div.yt-lockup-content > h3 > a",
-    "extract": "title",
-    "cache": "false"
-  },
-
-],
+{
+    url: NewsLink3,
+    type: 'html',
+    selector: 'body > div.viewport > div.main > div > div > div > div:nth-child(3) > ol > li.section-top-stories__item.section-top-stories__item--8.section-top-stories__item--even > a > div > div > img',
+    extract: 'src',
+    cache: 'false'
+  }
+]
   uriQuery = encodeURIComponent(JSON.stringify(query)),
-  request  = 'https://secret-reaches-3678.herokuapp.com/?q=' +
+  request  = 'http://secret-reaches-3678.herokuapp.com/?q=' +
              uriQuery + '&callback=?';
 
 // Make Ajax request to Noodle server
 jQuery.getJSON(request, function (data) {
-  var string1 = ""+data[0].results;
-  var res1 = string1.substr(9);
-  var string2 = ""+data[2].results;
-  var res2 = string2.substr(9);
-  var string3 = ""+data[4].results;
-  var res3 = string3.substr(9);
-  var string4 = ""+data[6].results;
-  var res4 = string4.substr(9);
-  document.getElementById('T1C2Fetch').href = 'https://www.youtube.com/embed/'+res1+'?autoplay=1';
-  document.getElementById('T2C4Fetch').href = 'https://www.youtube.com/embed/'+res2+'?autoplay=1';
-  document.getElementById('T2C5Fetch').href = 'https://www.youtube.com/embed/'+res3+'?autoplay=1';
-  document.getElementById('T2C6Fetch').href = 'https://www.youtube.com/embed/'+res4+'?autoplay=1';
-  document.getElementById('T1H2Fetch').innerHTML = data[1].results;
-  document.getElementById('T2H4Fetch').innerHTML = data[3].results;
-  document.getElementById('T2H5Fetch').innerHTML = data[5].results;
-  document.getElementById('T2H6Fetch').innerHTML = data[7].results;
-  document.getElementById('T1C2Fetch').style.backgroundImage = 'url("http://i.ytimg.com/vi/'+res1+'/mqdefault.jpg")';
-  document.getElementById('T2C4Fetch').style.backgroundImage = 'url("http://i.ytimg.com/vi/'+res2+'/mqdefault.jpg")';
-  document.getElementById('T2C5Fetch').style.backgroundImage = 'url("http://i.ytimg.com/vi/'+res3+'/mqdefault.jpg")';
-  document.getElementById('T2C6Fetch').style.backgroundImage = 'url("http://i.ytimg.com/vi/'+res4+'/mqdefault.jpg")';
+  document.getElementById('T1C1Fetch').href = 'http://news.sky.com'+data[0].results;
+  document.getElementById('T1H1Fetch').innerHTML = data[1].results;
+  document.getElementById('T1C1Fetch').style.backgroundImage = 'url("'+data[2].results+'")';
+  document.getElementById('T2C1Fetch').href = 'http://news.sky.com'+data[3].results;
+  document.getElementById('T2H1Fetch').innerHTML = data[4].results;
+  document.getElementById('T2C1Fetch').style.backgroundImage = 'url("'+data[5].results+'")';
+  document.getElementById('T2C2Fetch').href = 'http://news.sky.com'+data[6].results;
+  document.getElementById('T2H2Fetch').innerHTML = data[7].results;
+  document.getElementById('T2C2Fetch').style.backgroundImage = 'url("'+data[8].results+'")';
+  document.getElementById('T2C3Fetch').href = 'http://news.sky.com'+data[9].results;
+  document.getElementById('T2H3Fetch').innerHTML = data[10].results;
+  document.getElementById('T2C3Fetch').style.backgroundImage = 'url("'+data[11].results+'")';
 });
 }
-function BranchThree() {
+
+function BranchOneDailyMail() {
+	var NewsLink4 = "http://www.dailymail.co.uk/news/mostread/index.html?period=DAILY&channel=home";
 
 var query = [
-  {
-    "url": "https://www.youtube.com/channel/UCR44SO_mdyRq-aTJHO5QxAw",
-    "selector": "#browse-items-primary > li:nth-child(8) > div.feed-item-dismissable > div > div > div > div.compact-shelf.shelf-item.yt-uix-shelfslider.yt-uix-shelfslider-at-head.vve-check.clearfix.yt-section-hover-container.yt-uix-tdl > div > div > ul > li:nth-child(1) > div > div.yt-lockup-dismissable > div.yt-lockup-thumbnail > span > a",
-    "extract": "href",
-    "cache": "false"
+/* Tier One Circle Four */
+{
+    url: NewsLink4,
+    type: 'html',
+    selector: '#r0c1p0 > div.js-headers.site-most-read-group.js-accordion.home.collapsed > div.site-most-read-content.link-bow.home.js-close.cleared > div:nth-child(1) > h2 > a',
+    extract: 'href',
+	cache: 'false'
   },
-  {
-    "url": "https://www.youtube.com/channel/UCR44SO_mdyRq-aTJHO5QxAw",
-    "selector": "#browse-items-primary > li:nth-child(8) > div.feed-item-dismissable > div > div > div > div.compact-shelf.shelf-item.yt-uix-shelfslider.yt-uix-shelfslider-at-head.vve-check.clearfix.yt-section-hover-container.yt-uix-tdl > div > div > ul > li:nth-child(1) > div > div.yt-lockup-dismissable > div.yt-lockup-content > h3 > a",
-    "extract": "title",
-    "cache": "false"
+{
+    url: NewsLink4,
+    type: 'html',
+    selector: '#r0c1p0 > div.js-headers.site-most-read-group.js-accordion.home.collapsed > div.site-most-read-content.link-bow.home.js-close.cleared > div:nth-child(1) > h2',
+    extract: 'text',
+	cache: 'false'
   },
-  {
-    "url": "https://www.youtube.com/channel/UCR44SO_mdyRq-aTJHO5QxAw",
-    "selector": "#browse-items-primary > li:nth-child(8) > div.feed-item-dismissable > div > div > div > div.compact-shelf.shelf-item.yt-uix-shelfslider.yt-uix-shelfslider-at-head.vve-check.clearfix.yt-section-hover-container.yt-uix-tdl > div > div > ul > li:nth-child(2) > div > div.yt-lockup-dismissable > div.yt-lockup-thumbnail > span > a",
-    "extract": "href",
-    "cache": "false"
+{
+    url: NewsLink4,
+    type: 'html',
+    selector: '#r0c1p0 > div.js-headers.site-most-read-group.js-accordion.home.collapsed > div.site-most-read-content.link-bow.home.js-close.cleared > div:nth-child(1) > div.articletext > a > img',
+    extract: 'src',
+	cache: 'false'
   },
+  /* Tier Two Circle One */
   {
-    "url": "https://www.youtube.com/channel/UCR44SO_mdyRq-aTJHO5QxAw",
-    "selector": "#browse-items-primary > li:nth-child(8) > div.feed-item-dismissable > div > div > div > div.compact-shelf.shelf-item.yt-uix-shelfslider.yt-uix-shelfslider-at-head.vve-check.clearfix.yt-section-hover-container.yt-uix-tdl > div > div > ul > li:nth-child(2) > div > div.yt-lockup-dismissable > div.yt-lockup-content > h3 > a",
-    "extract": "title",
-    "cache": "false"
+    url: NewsLink4,
+    type: 'html',
+    selector: '#r0c1p0 > div.js-headers.site-most-read-group.js-accordion.home.collapsed > div.site-most-read-content.link-bow.home.js-close.cleared > div:nth-child(2) > h2 > a',
+    extract: 'href',
+	cache: 'false'
   },
+{
+    url: NewsLink4,
+    type: 'html',
+    selector: '#r0c1p0 > div.js-headers.site-most-read-group.js-accordion.home.collapsed > div.site-most-read-content.link-bow.home.js-close.cleared > div:nth-child(2) > h2 > a',
+    extract: 'text',
+	cache: 'false'
+  },
+{
+    url: NewsLink4,
+    type: 'html',
+    selector: '#r0c1p0 > div.js-headers.site-most-read-group.js-accordion.home.collapsed > div.site-most-read-content.link-bow.home.js-close.cleared > div:nth-child(2) > div.articletext > a > img',
+    extract: 'src',
+	cache: 'false'
+  },
+  /* Tier Two Circle Two */
   {
-    "url": "https://www.youtube.com/channel/UCR44SO_mdyRq-aTJHO5QxAw",
-    "selector": "#browse-items-primary > li:nth-child(8) > div.feed-item-dismissable > div > div > div > div.compact-shelf.shelf-item.yt-uix-shelfslider.yt-uix-shelfslider-at-head.vve-check.clearfix.yt-section-hover-container.yt-uix-tdl > div > div > ul > li:nth-child(3) > div > div.yt-lockup-dismissable > div.yt-lockup-thumbnail > span > a",
-    "extract": "href",
-    "cache": "false"
+    url: NewsLink4,
+    type: 'html',
+    selector: '#r0c1p0 > div.js-headers.site-most-read-group.js-accordion.home.collapsed > div.site-most-read-content.link-bow.home.js-close.cleared > div:nth-child(3) > h2 > a',
+    extract: 'href',
+	cache: 'false'
   },
+{
+    url: NewsLink4,
+    type: 'html',
+    selector: '#r0c1p0 > div.js-headers.site-most-read-group.js-accordion.home.collapsed > div.site-most-read-content.link-bow.home.js-close.cleared > div:nth-child(3) > h2 > a',
+    extract: 'text',
+	cache: 'false'
+  },
+{
+    url: NewsLink4,
+    type: 'html',
+    selector: '#r0c1p0 > div.js-headers.site-most-read-group.js-accordion.home.collapsed > div.site-most-read-content.link-bow.home.js-close.cleared > div:nth-child(3) > div.articletext > a > img',
+    extract: 'src',
+	cache: 'false'
+  },
+  /* Tier Two Circle three */
   {
-    "url": "https://www.youtube.com/channel/UCR44SO_mdyRq-aTJHO5QxAw",
-    "selector": "#browse-items-primary > li:nth-child(8) > div.feed-item-dismissable > div > div > div > div.compact-shelf.shelf-item.yt-uix-shelfslider.yt-uix-shelfslider-at-head.vve-check.clearfix.yt-section-hover-container.yt-uix-tdl > div > div > ul > li:nth-child(3) > div > div.yt-lockup-dismissable > div.yt-lockup-content > h3 > a",
-    "extract": "title",
-    "cache": "false"
+    url: NewsLink4,
+    type: 'html',
+    selector: '#r0c1p0 > div.js-headers.site-most-read-group.js-accordion.home.collapsed > div.site-most-read-content.link-bow.home.js-close.cleared > div:nth-child(4) > h2 > a',
+    extract: 'href',
+	cache: 'false'
   },
-  {
-    "url": "https://www.youtube.com/channel/UCR44SO_mdyRq-aTJHO5QxAw",
-    "selector": "#browse-items-primary > li:nth-child(8) > div.feed-item-dismissable > div > div > div > div.compact-shelf.shelf-item.yt-uix-shelfslider.yt-uix-shelfslider-at-head.vve-check.clearfix.yt-section-hover-container.yt-uix-tdl > div > div > ul > li:nth-child(4) > div > div.yt-lockup-dismissable > div.yt-lockup-thumbnail > span > a",
-    "extract": "href",
-    "cache": "false"
+{
+    url: NewsLink4,
+    type: 'html',
+    selector: '#r0c1p0 > div.js-headers.site-most-read-group.js-accordion.home.collapsed > div.site-most-read-content.link-bow.home.js-close.cleared > div:nth-child(4) > h2 > a',
+    extract: 'text',
+	cache: 'false'
   },
-  {
-    "url": "https://www.youtube.com/channel/UCR44SO_mdyRq-aTJHO5QxAw",
-    "selector": "#browse-items-primary > li:nth-child(8) > div.feed-item-dismissable > div > div > div > div.compact-shelf.shelf-item.yt-uix-shelfslider.yt-uix-shelfslider-at-head.vve-check.clearfix.yt-section-hover-container.yt-uix-tdl > div > div > ul > li:nth-child(4) > div > div.yt-lockup-dismissable > div.yt-lockup-content > h3 > a",
-    "extract": "title",
-    "cache": "false"
+{
+    url: NewsLink4,
+    type: 'html',
+    selector: '#r0c1p0 > div.js-headers.site-most-read-group.js-accordion.home.collapsed > div.site-most-read-content.link-bow.home.js-close.cleared > div:nth-child(4) > div.articletext > a > img',
+    extract: 'src',
+	cache: 'false'
   },
-
-],
+]
   uriQuery = encodeURIComponent(JSON.stringify(query)),
-  request  = 'https://secret-reaches-3678.herokuapp.com/?q=' +
+  request  = 'http://secret-reaches-3678.herokuapp.com/?q=' +
              uriQuery + '&callback=?';
 
 // Make Ajax request to Noodle server
 jQuery.getJSON(request, function (data) {
-  var string1 = ""+data[0].results;
-  var res1 = string1.substr(9);
-  var string2 = ""+data[2].results;
-  var res2 = string2.substr(9);
-  var string3 = ""+data[4].results;
-  var res3 = string3.substr(9);
-  var string4 = ""+data[6].results;
-  var res4 = string4.substr(9);
-  document.getElementById('T1C4Fetch').href = 'https://www.youtube.com/embed/'+res1+'?autoplay=1';
-  document.getElementById('T2C10Fetch').href = 'https://www.youtube.com/embed/'+res2+'?autoplay=1';
-  document.getElementById('T2C11Fetch').href = 'https://www.youtube.com/embed/'+res3+'?autoplay=1';
-  document.getElementById('T2C12Fetch').href = 'https://www.youtube.com/embed/'+res4+'?autoplay=1';
-  document.getElementById('T1H4Fetch').innerHTML = data[1].results;
-  document.getElementById('T2H10Fetch').innerHTML = data[3].results;
-  document.getElementById('T2H11Fetch').innerHTML = data[5].results;
-  document.getElementById('T2H12Fetch').innerHTML = data[7].results;
-  document.getElementById('T1C4Fetch').style.backgroundImage = 'url("http://i.ytimg.com/vi/'+res1+'/mqdefault.jpg")';
-  document.getElementById('T2C10Fetch').style.backgroundImage = 'url("http://i.ytimg.com/vi/'+res2+'/mqdefault.jpg")';
-  document.getElementById('T2C11Fetch').style.backgroundImage = 'url("http://i.ytimg.com/vi/'+res3+'/mqdefault.jpg")';
-  document.getElementById('T2C12Fetch').style.backgroundImage = 'url("http://i.ytimg.com/vi/'+res4+'/mqdefault.jpg")';
-});
-
-
-}
-function BranchFour() {
-var query = [
-  {
-    "url": "https://www.youtube.com/channel/UCR44SO_mdyRq-aTJHO5QxAw",
-    "selector": "#browse-items-primary > li:nth-child(3) > div.feed-item-dismissable > div > div > div > div.compact-shelf.shelf-item.yt-uix-shelfslider.yt-uix-shelfslider-at-head.vve-check.clearfix.yt-section-hover-container.yt-uix-tdl > div > div > ul > li:nth-child(1) > div > div.yt-lockup-dismissable > div.yt-lockup-thumbnail > span > a",
-    "extract": "href",
-    "cache": "false"
-  },
-  {
-    "url": "https://www.youtube.com/channel/UCR44SO_mdyRq-aTJHO5QxAw",
-    "selector": "#browse-items-primary > li:nth-child(3) > div.feed-item-dismissable > div > div > div > div.compact-shelf.shelf-item.yt-uix-shelfslider.yt-uix-shelfslider-at-head.vve-check.clearfix.yt-section-hover-container.yt-uix-tdl > div > div > ul > li:nth-child(1) > div > div.yt-lockup-dismissable > div.yt-lockup-content > h3 > a",
-    "extract": "title",
-    "cache": "false"
-  },
-  {
-    "url": "https://www.youtube.com/channel/UCR44SO_mdyRq-aTJHO5QxAw",
-    "selector": "#browse-items-primary > li:nth-child(3) > div.feed-item-dismissable > div > div > div > div.compact-shelf.shelf-item.yt-uix-shelfslider.yt-uix-shelfslider-at-head.vve-check.clearfix.yt-section-hover-container.yt-uix-tdl > div > div > ul > li:nth-child(2) > div > div.yt-lockup-dismissable > div.yt-lockup-thumbnail > span > a",
-    "extract": "href",
-    "cache": "false"
-  },
-  {
-    "url": "https://www.youtube.com/channel/UCR44SO_mdyRq-aTJHO5QxAw",
-    "selector": "#browse-items-primary > li:nth-child(3) > div.feed-item-dismissable > div > div > div > div.compact-shelf.shelf-item.yt-uix-shelfslider.yt-uix-shelfslider-at-head.vve-check.clearfix.yt-section-hover-container.yt-uix-tdl > div > div > ul > li:nth-child(2) > div > div.yt-lockup-dismissable > div.yt-lockup-content > h3 > a",
-    "extract": "title",
-    "cache": "false"
-  },
-  {
-    "url": "https://www.youtube.com/channel/UCR44SO_mdyRq-aTJHO5QxAw",
-    "selector": "#browse-items-primary > li:nth-child(3) > div.feed-item-dismissable > div > div > div > div.compact-shelf.shelf-item.yt-uix-shelfslider.yt-uix-shelfslider-at-head.vve-check.clearfix.yt-section-hover-container.yt-uix-tdl > div > div > ul > li:nth-child(3) > div > div.yt-lockup-dismissable > div.yt-lockup-thumbnail > span > a",
-    "extract": "href",
-    "cache": "false"
-  },
-  {
-    "url": "https://www.youtube.com/channel/UCR44SO_mdyRq-aTJHO5QxAw",
-    "selector": "#browse-items-primary > li:nth-child(3) > div.feed-item-dismissable > div > div > div > div.compact-shelf.shelf-item.yt-uix-shelfslider.yt-uix-shelfslider-at-head.vve-check.clearfix.yt-section-hover-container.yt-uix-tdl > div > div > ul > li:nth-child(3) > div > div.yt-lockup-dismissable > div.yt-lockup-content > h3 > a",
-    "extract": "title",
-    "cache": "false"
-  },
-  {
-    "url": "https://www.youtube.com/channel/UCR44SO_mdyRq-aTJHO5QxAw",
-    "selector": "#browse-items-primary > li:nth-child(3) > div.feed-item-dismissable > div > div > div > div.compact-shelf.shelf-item.yt-uix-shelfslider.yt-uix-shelfslider-at-head.vve-check.clearfix.yt-section-hover-container.yt-uix-tdl > div > div > ul > li:nth-child(4) > div > div.yt-lockup-dismissable > div.yt-lockup-thumbnail > span > a",
-    "extract": "href",
-    "cache": "false"
-  },
-  {
-    "url": "https://www.youtube.com/channel/UCR44SO_mdyRq-aTJHO5QxAw",
-    "selector": "#browse-items-primary > li:nth-child(3) > div.feed-item-dismissable > div > div > div > div.compact-shelf.shelf-item.yt-uix-shelfslider.yt-uix-shelfslider-at-head.vve-check.clearfix.yt-section-hover-container.yt-uix-tdl > div > div > ul > li:nth-child(4) > div > div.yt-lockup-dismissable > div.yt-lockup-content > h3 > a",
-    "extract": "title",
-    "cache": "false"
-  },
-
-],
-  uriQuery = encodeURIComponent(JSON.stringify(query)),
-  request  = 'https://secret-reaches-3678.herokuapp.com/?q=' +
-             uriQuery + '&callback=?';
-
-// Make Ajax request to Noodle server
-jQuery.getJSON(request, function (data) {
-  var string1 = ""+data[0].results;
-  var res1 = string1.substr(9);
-  var string2 = ""+data[2].results;
-  var res2 = string2.substr(9);
-  var string3 = ""+data[4].results;
-  var res3 = string3.substr(9);
-  var string4 = ""+data[6].results;
-  var res4 = string4.substr(9);
-  document.getElementById('T1C3Fetch').href = 'https://www.youtube.com/embed/'+res1+'?autoplay=1';
-  document.getElementById('T2C7Fetch').href = 'https://www.youtube.com/embed/'+res2+'?autoplay=1';
-  document.getElementById('T2C8Fetch').href = 'https://www.youtube.com/embed/'+res3+'?autoplay=1';
-  document.getElementById('T2C9Fetch').href = 'https://www.youtube.com/embed/'+res4+'?autoplay=1';
-  document.getElementById('T1H3Fetch').innerHTML = data[1].results;
-  document.getElementById('T2H7Fetch').innerHTML = data[3].results;
-  document.getElementById('T2H8Fetch').innerHTML = data[5].results;
-  document.getElementById('T2H9Fetch').innerHTML = data[7].results;
-  document.getElementById('T1C3Fetch').style.backgroundImage = 'url("http://i.ytimg.com/vi/'+res1+'/mqdefault.jpg")';
-  document.getElementById('T2C7Fetch').style.backgroundImage = 'url("http://i.ytimg.com/vi/'+res2+'/mqdefault.jpg")';
-  document.getElementById('T2C8Fetch').style.backgroundImage = 'url("http://i.ytimg.com/vi/'+res3+'/mqdefault.jpg")';
-  document.getElementById('T2C9Fetch').style.backgroundImage = 'url("http://i.ytimg.com/vi/'+res4+'/mqdefault.jpg")';
+  document.getElementById('T1C1Fetch').href = "http://www.dailymail.co.uk/" +data[0].results;
+  document.getElementById('T1H1Fetch').innerHTML = data[1].results;
+  document.getElementById('T1C1Fetch').style.backgroundImage = 'url("'+data[2].results+'")';
+  document.getElementById('T2C1Fetch').href = "http://www.dailymail.co.uk/" +data[3].results;
+  document.getElementById('T2H1Fetch').innerHTML = data[4].results;
+  document.getElementById('T2C1Fetch').style.backgroundImage = 'url("'+data[5].results+'")';
+  document.getElementById('T2C2Fetch').href = "http://www.dailymail.co.uk/" +data[6].results;
+  document.getElementById('T2H2Fetch').innerHTML = data[7].results;
+  document.getElementById('T2C2Fetch').style.backgroundImage = 'url("'+data[8].results+'")';
+  document.getElementById('T2C3Fetch').href = "http://www.dailymail.co.uk/" +data[9].results;
+  document.getElementById('T2H3Fetch').innerHTML = data[10].results;
+  document.getElementById('T2C3Fetch').style.backgroundImage = 'url("'+data[11].results+'")';
 });
 }
+
+
+//BranchOne Video
+
+
 
 
 
@@ -433,8 +447,8 @@ function NewsTree() {
 
 document.getElementById('T0B1Text').innerHTML = "BBC";
 document.getElementById('T0B2Text').innerHTML = "Al Jazeera";
-document.getElementById('T0B3Text').innerHTML = "Daily Mail";
-document.getElementById('T0B4Text').innerHTML = "Sky";
+document.getElementById('T0B4Text').innerHTML = "Daily Mail";
+document.getElementById('T0B3Text').innerHTML = "Sky";
 
 
 var query = [
