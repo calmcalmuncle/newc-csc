@@ -3,20 +3,15 @@
   <head>
 	<!-- How are these referred to? Imports? Meta? (Change this comment when known) -->
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
 
 	<!-- Title -->
     <title>TreeMac</title>
 	
+	<!-- Favicon -->
 	<link rel="icon" type="../image/png" href="../images/favicon.ico">
 	
-    <!-- Bootstrap core CSS -->
+    <!-- Bootstrap core CSS --> <!-- Try to work on removing Bootstrap, reduce non-essential JS -->
     <link href="../stylesheets/bootstrap.min.css" rel="stylesheet">
-	
-    <!-- Custom styles for this template -->
     <link href="../stylesheets/navbar-fixed-top.css" rel="stylesheet">
 	
 	<!-- Basic Stylesheet -->
@@ -25,7 +20,7 @@
 	<!-- FancyBox -->
 	<link href="../stylesheets/fancybox.css" rel="stylesheet"/>
 	
-	<!-- Safari Tree Stylesheet -->
+	<!-- Safari Tree Stylesheet --> <!-- Try to find a way to remove this and replace with non JS method -->
 	<script type="text/javascript">
 	var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
 		if (isSafari == true) 
@@ -34,7 +29,6 @@
 		} else {
 		 document.write('<link rel="stylesheet" type="text/css" href="../stylesheets/tree.css">');
 		}
-		
 	</script>
 	
   </head> 
@@ -101,13 +95,13 @@
 
 	<!-- Right Bar One -->
 	<div class="BarRight" id="">
-	<button type="button" onClick="location.href='index.html'" id="TopButton">Home</button>
-	<button type="button" onClick="NewsTree()" id="Video">News</button>
-	<button type="button" onClick="VideoTree()" id="Video">Video</button>
-	<button type="button" onClick="SportTree()" id="Twitter">Sport</button>
-	<button type="button" onClick="FashionTree()" id="Fash">Fashion</button>
-	<button type="button" onClick="ScienceTree()" id="Sci">Science</button>
-	<button type="button" onClick="TechnologyTree()" id="Tech">Technology</button>
+	<button type="button" id="TopButton">Home</button>
+	<button type="button" id="NewsTree">News</button>
+	<button type="button" id="VideoTree">Video</button>
+	<button type="button" id="SportTree">Sport</button>
+	<button type="button" id="FashionTree">Fashion</button>
+	<button type="button" id="ScienceTree">Science</button>
+	<button type="button" id="TechnologyTree">Technology</button>
     </div>
 	
 	<!-- Right Bar Two -->
@@ -142,33 +136,32 @@
 <div class="example " id="MainTree">
 	
 		<!-- Tier Zero Circle --> 					<!-- CategoryMenu() makes CategoryMenu Appear -->
-		<a class="MainCircleNews" id="BranchOne" href"#" onClick="CategoryMenu(this.id)"><p class="SelectorText" id="T0B1Text">Select</p></a>
-		<a class="MainCircleVid" id="BranchTwo" href"#" onClick="CategoryMenu(this.id)"><p class="SelectorText" id="T0B2Text">Select</p></a>
-		<a class="MainCircleSport" id="BranchThree" href"#" onClick="CategoryMenu(this.id)"><p class="SelectorText" id="T0B3Text">Select</p></a>
-		<a class="MainCircleTwitch" id="BranchFour" href"#" onClick="CategoryMenu(this.id)"><p class="SelectorText" id="T0B4Text">Select</p></a>
+		<a class="MainCircleNews" id="BranchOne" href"#" ><p class="SelectorText" id="T0B1Text">Select</p></a>
+		<a class="MainCircleVid" id="BranchTwo" href"#"><p class="SelectorText" id="T0B2Text">Select</p></a>
+		<a class="MainCircleSport" id="BranchThree" href"#"><p class="SelectorText" id="T0B3Text">Select</p></a>
+		<a class="MainCircleTwitch" id="BranchFour" href"#"><p class="SelectorText" id="T0B4Text">Select</p></a>
 
 	
 		
-	<!-- Category Menu -->
+	<!-- Menu -->
 	<div id="CategoryMenu"  style="display:none;">
-						<!-- BranchOneSelection() takes the id and uses it to set the text on the Subcategory menu -->
-		<a class="Category" href"#" onClick="BranchOneSelection(this.id);" id="News"><p class="CategoryText" id="CT1">News</p></a>
-		<a class="Category" href"#" onClick="BranchOneSelection(this.id);" id="Video"><p class="CategoryText" id="CT2">Video</p></a>
-		<a class="Category" href"#" onClick="BranchOneSelection(this.id);" id="Sport"><p class="CategoryText" id="CT3">Sport</p></a>
-		<a class="Category" href"#" onClick="BranchOneSelection(this.id);" id="Fashion"><p class="CategoryText" id="CT4">Fashion</p></a>
-		<a class="Category" href"#" onClick="BranchOneSelection(this.id);" id="Science"><p class="CategoryText" id="CT5">Science</p></a>
-		<a class="Category" href"#" onClick="BranchOneSelection(this.id);" id="Technology"><p class="CategoryText" id="CT6">Technology</p></a>
-		<a class="Category" href"#" onClick="BranchOneSelection(this.id);" id="Streaming"><p class="CategoryText" id="CT7">Streaming</p></a>
-		<a class="Category" href"#" onClick="BranchOneSelection(this.id);" id="Food"><p class="CategoryText" id="CT8">Food</p></a>
-		
+	
+		<!-- Category Menu -->
+		<a class="Category" href"#" id="ChooseNews"><p class="CategoryText" id="CT1">News</p></a>
+		<a class="Category" href"#" id="ChooseVideo"><p class="CategoryText" id="CT2">Video</p></a>
+		<a class="Category" href"#" id="ChooseSport"><p class="CategoryText" id="CT3">Sport</p></a>
+		<a class="Category" href"#" id="ChooseFashion"><p class="CategoryText" id="CT4">Fashion</p></a>
+		<a class="Category" href"#" id="ChooseScience"><p class="CategoryText" id="CT5">Science</p></a>
+		<a class="Category" href"#" id="ChooseTechnology"><p class="CategoryText" id="CT6">Technology</p></a>
+		<a class="Category" href"#" id="ChooseStreaming"><p class="CategoryText" id="CT7">Streaming</p></a>
+		<a class="Category" href"#" id="ChooseFood"><p class="CategoryText" id="CT8">Food</p></a>
 		
 		<!-- Subcategory Menu -->
 		<div id="SubcategoryMenu"  style="display:none;">
-					<!-- BranchOneBBC makes Branch One BBC --> 	<!--CloseMenus closes both menus -->
-		<a class="Subcategory" href"#" onClick="CloseMenus(this.id);" id="SC1"><p class="SelectorText" id="BSOne"></p></a>
-		<a class="Subcategory" href"#" onClick="CloseMenus(this.id);" id="SC2"><p class="SelectorText" id="BSTwo"></p></a>
-		<a class="Subcategory" href"#" onClick="CloseMenus(this.id);" id="SC3"><p class="SelectorText" id="BSThree"></p></a>
-		<a class="Subcategory" href"#" onClick="CloseMenus(this.id);" id="SC4"><p class="SelectorText" id="BSFour"></p></a>
+		<a class="Subcategory" href"#" id="SC1"><p class="SelectorText" id="SCT1"></p></a>
+		<a class="Subcategory" href"#" id="SC2"><p class="SelectorText" id="SCT2"></p></a>
+		<a class="Subcategory" href"#" id="SC3"><p class="SelectorText" id="SCT3"></p></a>
+		<a class="Subcategory" href"#" id="SC4"><p class="SelectorText" id="SCT4"></p></a>
 		</div>
 		
 	</div>
@@ -246,17 +239,12 @@
 
 <!-- Scripts -->
 <!------------->
+
     <!-- Load Jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     
 	<!-- Node Scraper -->
 	<script type="text/javascript" src="../scripts/custom.js"></script>
-   
-	<!-- Bootstrap core JavaScript -->
-    <script src="../scripts/bootstrap.min.js"></script>
-   
-   <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../scripts/ie10-viewport-bug-workaround.js"></script>
 	
 	<!-- FancyBox -->
 	<script type="text/javascript" src="../fancybox/source/jquery.fancybox.pack.js"></script>
@@ -301,7 +289,7 @@
 		});
 	</script>
 	
-	<!-- FB Div Switch -->
+	<!-- FB Div Switch --> <!-- Replace this with CSS click-to-change -->
 	<script type="text/javascript">
 	function showDiv() {
 		document.getElementById('CommentButton').style.display = "none";
@@ -309,108 +297,140 @@
 	}
 	</script>
 	
-	<!-- Branch One Selector Open -->
-	<script type="text/javascript">
-	function CategoryMenu(Branch) {
-		setBranch(Branch);
-		document.getElementById('BranchOne').style.display = "none";
-		document.getElementById('CategoryMenu').style.display = "block";
-	}
+	<!-- Full Trees -->
+	<script>
+	document.getElementById('NewsTree').addEventListener("click", NewsTree);
+	document.getElementById('VideoTree').addEventListener("click", VideoTree);
+	document.getElementById('SportTree').addEventListener("click", SportTree);
+	document.getElementById('FashionTree').addEventListener("click", FashionTree);
+	document.getElementById('ScienceTree').addEventListener("click", ScienceTree);
+	document.getElementById('TechnologyTree').addEventListener("click", TechnologyTree);
 	</script>
 	
-	<!-- Branch One Selector Close -->
+	<!-- Choose Branch and Open Menu -->
 	<script type="text/javascript">
-	function BranchOneSelection(Choice) {
-	var pick = Choice;
 	
-		if(pick == "News"){
-	document.getElementById('BSOne').innerHTML = "BBC";
-	document.getElementById('BSTwo').innerHTML = "Al Jazeera";
-	document.getElementById('BSThree').innerHTML = "Sky";
-	document.getElementById('BSFour').innerHTML = "Daily Mail";
-	}
-	else if(pick == "Video"){
-	document.getElementById('BSOne').innerHTML = "Popular";
-	document.getElementById('BSTwo').innerHTML = "In the News";
-	document.getElementById('BSThree').innerHTML = "Music";
-	document.getElementById('BSFour').innerHTML = "Comedy";
-	}
-	else if(pick == "Sport"){
-	document.getElementById('BSOne').innerHTML = "BBC";
-	document.getElementById('BSTwo').innerHTML = "Sport.co.uk";
-	document.getElementById('BSThree').innerHTML = "Other";
-	document.getElementById('BSFour').innerHTML = "Sky";
-	}
-	else if(pick == "Fashion"){
-	document.getElementById('BSOne').innerHTML = "Vogue";
-	document.getElementById('BSTwo').innerHTML = "Grazia";
-	document.getElementById('BSThree').innerHTML = "Other";
-	document.getElementById('BSFour').innerHTML = "Elle";
-	}
-	else if(pick == "Science"){
-	document.getElementById('BSOne').innerHTML = "BBC";
-	document.getElementById('BSTwo').innerHTML = "New Scientist";
-	document.getElementById('BSThree').innerHTML = "(e)Science News";
-	document.getElementById('BSFour').innerHTML = "AAAS";
-	}
-	else if(pick == "Technology"){
-	document.getElementById('BSOne').innerHTML = "BBC";
-	document.getElementById('BSTwo').innerHTML = "Tech Review";
-	document.getElementById('BSThree').innerHTML = "Tech Crunch";
-	document.getElementById('BSFour').innerHTML = "Sky";
-	}
-	else if(pick == "Streaming"){
-	document.getElementById('BSOne').innerHTML = "One";
-	document.getElementById('BSTwo').innerHTML = "Two";
-	document.getElementById('BSThree').innerHTML = "Three";
-	document.getElementById('BSFour').innerHTML = "Four";
-	}
-	else if(pick == "Food"){
-	document.getElementById('BSOne').innerHTML = "Five";
-	document.getElementById('BSTwo').innerHTML = "Six";
-	document.getElementById('BSThree').innerHTML = "Seven";
-	document.getElementById('BSFour').innerHTML = "Eight";
-	}
-
+	document.getElementById('BranchOne').addEventListener("click", function(event) { 
+	setBranch(event.target.id);
 	document.getElementById('CategoryMenu').style.display = "block";
+	});
+	
+	document.getElementById('BranchTwo').addEventListener("click", function(event) { 
+	setBranch(event.target.id);
+	document.getElementById('CategoryMenu').style.display = "block";
+	});
+	
+	document.getElementById('BranchThree').addEventListener("click", function(event) { 
+	setBranch(event.target.id);
+	document.getElementById('CategoryMenu').style.display = "block";
+	});
+	
+	document.getElementById('BranchFour').addEventListener("click", function(event) { 
+	setBranch(event.target.id);
+	document.getElementById('CategoryMenu').style.display = "block";
+	});
+	
+	</script>
+	
+	<!-- Choose Category and Assign Subcategory Buttons -->
+	<script type="text/javascript">
+	
+	document.getElementById('ChooseNews').addEventListener("click", function(event) {
+	setCategoryChoice('ChooseNews');
+	document.getElementById('SCT1').innerHTML = "BBC";
+	document.getElementById('SCT2').innerHTML = "Al Jazeera";
+	document.getElementById('SCT3').innerHTML = "Sky";
+	document.getElementById('SCT4').innerHTML = "Daily Mail";
 	document.getElementById('SubcategoryMenu').style.display = "block";
+	});
 	
-
+	document.getElementById('ChooseVideo').addEventListener("click", function(event) { 
+	setCategoryChoice('ChooseVideo');
+	document.getElementById('SCT1').innerHTML = "Popular";
+	document.getElementById('SCT2').innerHTML = "In the News";
+	document.getElementById('SCT3').innerHTML = "Comedy";
+	document.getElementById('SCT4').innerHTML = "Music";
+	document.getElementById('SubcategoryMenu').style.display = "block";
+	});
 	
+	document.getElementById('ChooseSport').addEventListener("click", function(event) { 
+	setCategoryChoice('ChooseSport');
+	document.getElementById('SCT1').innerHTML = "BBC";
+	document.getElementById('SCT2').innerHTML = "Sport.co.uk";
+	document.getElementById('SCT3').innerHTML = "Sky";
+	document.getElementById('SCT4').innerHTML = "Other";
+	document.getElementById('SubcategoryMenu').style.display = "block";
+	});
 	
-		
-	}
+	document.getElementById('ChooseFashion').addEventListener("click", function(event) { 
+	setCategoryChoice('ChooseFashion');
+	document.getElementById('SCT1').innerHTML = "Vogue";
+	document.getElementById('SCT2').innerHTML = "Grazia";
+	document.getElementById('SCT3').innerHTML = "Elle";
+	document.getElementById('SCT4').innerHTML = "Other";
+	document.getElementById('SubcategoryMenu').style.display = "block";
+	});
+	
+	document.getElementById('ChooseScience').addEventListener("click", function(event) { 
+	setCategoryChoice('ChooseScience');
+	document.getElementById('SCT1').innerHTML = "BBC";
+	document.getElementById('SCT2').innerHTML = "New Scientist";
+	document.getElementById('SCT3').innerHTML = "AAAS";
+	document.getElementById('SCT4').innerHTML = "(e)Science News";
+	document.getElementById('SubcategoryMenu').style.display = "block";
+	});
+	
+	document.getElementById('ChooseTechnology').addEventListener("click", function(event) { 
+	setCategoryChoice('ChooseTechnology');
+	document.getElementById('SCT1').innerHTML = "BBC";
+	document.getElementById('SCT2').innerHTML = "Tech Review";
+	document.getElementById('SCT3').innerHTML = "Sky";
+	document.getElementById('SCT4').innerHTML = "Tech Crunch";
+	document.getElementById('SubcategoryMenu').style.display = "block";
+	});
+	
 	</script>
 	
 		<!-- Branch One Selector Close -->
 	<script type="text/javascript">
-	function CloseMenus(Choicey) {
 	
-	var picky = Choicey;
+	document.getElementById('SC1').addEventListener("click", function(event) { 
+	setSubcategoryChoice(event.target.id);
+alert("Category: " + categoryChoice + "\nSubcategory: " + subcategoryChoice + "\nBranch: " + branch);
+	document.getElementById('CategoryMenu').style.display = "none";
+	document.getElementById('SubcategoryMenu').style.display = "none";
+	});
 	
-	if(picky == "SC1"){
-	setChoice(document.getElementById('BSOne').innerHTML);
-	}
-	else if(picky == "SC2"){
-	setChoice(document.getElementById('BSTwo').innerHTML);
-	}
-	else if(picky == "SC3"){
-	setChoice(document.getElementById('BSThree').innerHTML);
-	}
-	else if(picky == "SC4"){
-	setChoice(document.getElementById('BSFour').innerHTML);
-	}
+	document.getElementById('SC2').addEventListener("click", function(event) { 
+	setSubcategoryChoice(event.target.id);
+	alert("Category: " + categoryChoice + "\nSubcategory: " + subcategoryChoice + "\nBranch: " + branch);
+	document.getElementById('CategoryMenu').style.display = "none";
+	document.getElementById('SubcategoryMenu').style.display = "none";
+	});
+	
+	document.getElementById('SC3').addEventListener("click", function(event) { 
+	setSubcategoryChoice(event.target.id);
+	alert("Category: " + categoryChoice + "\nSubcategory: " + subcategoryChoice + "\nBranch: " + branch);
+	document.getElementById('CategoryMenu').style.display = "none";
+	document.getElementById('SubcategoryMenu').style.display = "none";
+	});
+	
+	document.getElementById('SC4').addEventListener("click", function(event) { 
+	setSubcategoryChoice(event.target.id);
+	alert("Category: " + categoryChoice + "\nSubcategory: " + subcategoryChoice + "\nBranch: " + branch);
+	document.getElementById('CategoryMenu').style.display = "none";
+	document.getElementById('SubcategoryMenu').style.display = "none";
+	});
 
-	alert(choice);
-	alert(branch)
-	Branch();
-	
-		document.getElementById('BranchOne').style.display = "block";
-		document.getElementById('CategoryMenu').style.display = "none";
-		document.getElementById('BS1').innerHTML = clicked_id;
-		document.getElementById('SubcategoryMenu').style.display = "none";
-	}
 	</script>
+	
+	
+	
+	<!-- Bootstrap core JavaScript --> <!-- We should work to get rid of this -->
+    <script src="../scripts/bootstrap.min.js"></script>
+	
+	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug --> <!-- We should figure out if we need this -->
+    <script src="../scripts/ie10-viewport-bug-workaround.js"></script>
 	
 	<!-- FB and Analytics
 <script>(function(d, s, id) {

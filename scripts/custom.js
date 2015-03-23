@@ -1,27 +1,158 @@
 var branch;
-var choice;
+var categoryChoice;
+var subcategoryChoice;
 
 function setBranch(Branchy){
 	branch = Branchy;
 }
 
-function getBranch(){
-	return branch;
+function setCategoryChoice(categoryChoicey){
+	categoryChoice = categoryChoicey;
 }
 
-function setChoice(Choicey){
-	choice = Choicey;
+function setSubcategoryChoice(subcategoryChoicey){
+
+	//Set Subcategory Choice
+	if(categoryChoice == "ChooseNews"){
+		if(subcategoryChoicey == "SC1"){
+			subcategoryChoice = "BBC";
+		}
+		else if(subcategoryChoicey == "SC2"){
+			subcategoryChoice = "Al Jazeera";
+		}
+		else if(subcategoryChoicey == "SC3"){
+			subcategoryChoice = "Sky";
+		}
+		else{
+			subcategoryChoice = "Daily Mail";
+		}
+	}
+	
+	else if(categoryChoice == "ChooseVideo"){
+		if(subcategoryChoicey == "SC1"){
+			subcategoryChoice = "Popular";
+		}
+		else if(subcategoryChoicey == "SC2"){
+			subcategoryChoice = "In the News";
+		}
+		else if(subcategoryChoicey == "SC3"){
+			subcategoryChoice = "Comedy";
+		}
+		else{
+			subcategoryChoice = "Music";
+		}
+	}
+	
+	else if(categoryChoice == "ChooseSport"){
+		if(subcategoryChoicey == "SC1"){
+			subcategoryChoice = "BBC";
+		}
+		else if(subcategoryChoicey == "SC2"){
+			subcategoryChoice = "Sport.co.uk";
+		}
+		else if(subcategoryChoicey == "SC3"){
+			subcategoryChoice = "Sky";
+		}
+		else{
+			subcategoryChoice = "Other";
+		}
+	}
+	
+	else if(categoryChoice == "ChooseFashion"){
+		if(subcategoryChoicey == "SC1"){
+			subcategoryChoice = "Vogue";
+		}
+		else if(subcategoryChoicey == "SC2"){
+			subcategoryChoice = "Grazia";
+		}
+		else if(subcategoryChoicey == "SC3"){
+			subcategoryChoice = "Elle";
+		}
+		else{
+			subcategoryChoice = "Other";
+		}
+	}
+	
+	else if(categoryChoice == "ChooseScience"){
+		if(subcategoryChoicey == "SC1"){
+			subcategoryChoice = "BBC";
+		}
+		else if(subcategoryChoicey == "SC2"){
+			subcategoryChoice = "New Scientist";
+		}
+		else if(subcategoryChoicey == "SC3"){
+			subcategoryChoice = "AAAS";
+		}
+		else{
+			subcategoryChoice = "(e)Science News";
+		}
+	}
+	
+	else if(categoryChoice == "ChooseTechnology"){
+		if(subcategoryChoicey == "SC1"){
+			subcategoryChoice = "BBC";
+		}
+		else if(subcategoryChoicey == "SC2"){
+			subcategoryChoice = "Tech Review";
+		}
+		else if(subcategoryChoicey == "SC3"){
+			subcategoryChoice = "Sky";
+		}
+		else{
+			subcategoryChoice = "Tech Crunch";
+		}
+	}
+	
+	else{
+		if(subcategoryChoicey == "SC1"){
+			subcategoryChoice = "FIXME";
+		}
+		else if(subcategoryChoicey == "SC2"){
+			subcategoryChoice = "FIXME";
+		}
+		else if(subcategoryChoicey == "SC3"){
+			subcategoryChoice = "FIXME";
+		}
+		else{
+			subcategoryChoice = "FIXME";
+		}
+	}
+	
+	
+	
+	//Set Central Circle Titles
+	if(branch == "BranchOne"){
+		document.getElementById('T0B1Text').innerHTML = subcategoryChoice;
+	}
+	else if(branch == "BranchTwo"){
+		document.getElementById('T0B2Text').innerHTML = subcategoryChoice;
+	}
+	else if(branch == "BranchThree"){
+		document.getElementById('T0B3Text').innerHTML = subcategoryChoice;
+	}
+	else{
+		document.getElementById('T0B4Text').innerHTML = subcategoryChoice;
+	}
+
+	
+	Branch();
 }
 
-function getChoice(){
-	return choice;
+
+function Custom(){
+	
+	
+	
 }
+
+
+
 
 
 //Custom
 function Branch() {
 
-if(choice == "BBC"){
+if(categoryChoice == "ChooseNews"){
 	
 	document.getElementById('T0B1Text').innerHTML = "BBC";
 	
@@ -124,7 +255,7 @@ jQuery.getJSON(request, function (data) {
 }
 	
 //NEAREST WORKING EXAMPLE, CAN SET AL JAZEERA TO BRANCH ONE OR TWO
-if(choice == "Al Jazeera"){
+if(categoryChoice == "Al Jazeera"){
 	
 var NewsLink2 = "http://www.aljazeera.com/topics/regions/europe.html";
 
@@ -308,7 +439,7 @@ jQuery.getJSON(request, function (data) {
 
 }
 	
-if(choice == "Sky"){
+if(categoryChoice == "Sky"){
 	document.getElementById('T0B1Text').innerHTML = "Sky";
 	
 	var NewsLink3 = "http://news.sky.com/uk";
@@ -420,7 +551,7 @@ jQuery.getJSON(request, function (data) {
 });
 }
 	
-if(choice == "Daily Mail"){
+if(categoryChoice == "Daily Mail"){
 	document.getElementById('T0B1Text').innerHTML = "Daily Mail";
 
 	var NewsLink4 = "http://www.dailymail.co.uk/news/mostread/index.html?period=DAILY&channel=home";
@@ -543,6 +674,7 @@ jQuery.getJSON(request, function (data) {
 
 
 //FULL TREES
+
 function NewsTree() {
 
 	document.getElementById('T0B1Text').innerHTML = "BBC";

@@ -5,6 +5,10 @@ color:white;
 padding-top:35%;
 }
 
+.SelectorText, .CategoryText{
+pointer-events: none;
+}
+
 
 .Category{
 display: block;
