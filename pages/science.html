@@ -11,7 +11,7 @@
 	<!-- Title -->
     <title>TreeMac</title>
 	
-	<link rel="icon" type="../image/png" href="images/favicon.ico">
+	<link rel="icon" type="../image/png" href="../images/favicon.ico">
 	
     <!-- Bootstrap core CSS -->
     <link href="../stylesheets/bootstrap.min.css" rel="stylesheet">
@@ -33,10 +33,9 @@
 		}
 		
 	</script>
-
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    	<!-- adds the dynamic links via node/noodle -->
+	<script type="text/javascript" src="../scripts/sci.js"></script>
   </head>
   
 <!-- Body -->
@@ -101,12 +100,9 @@
 	<button type="button" onClick="location.href='news.html'" id="Video">News</button>
 	<button type="button" onClick="location.href='video.html'" id="Video">Video</button>
 	<button type="button" onClick="location.href='sport.html'" id="Twitter">Sport</button>
-	<button type="button" onClick="location.href='streaming.html'" id="Stream">Streaming</button>
 	<button type="button" onClick="location.href='fashion.html'" id="Fash">Fashion</button>
 	<button type="button" onClick="location.href='science.html'" id="Sci">Science</button>
 	<button type="button" onClick="location.href='technology.html'" id="Tech">Technology</button>
-	<button type="button" onClick="location.href='food.html'" id="Food">Food</button>
-	<button type="button" id="BottomButton">Load More...</button>
     </div>
 	
 	<!-- Right Bar Two -->
@@ -123,8 +119,14 @@
 	<!-- Right Bar Three -->
 	<div class="BarRight" id="BarRight3">
 	
-	<p>Some Content</p>
-	
+	<p>Editors Choice</p>
+	<a href="http://www.bbc.co.uk/news/world-africa-31956026" class="iframe">
+	<div ><img id="EDimg" src="http://news.bbcimg.co.uk/media/images/81750000/jpg/_81750956_81750928.jpg"></div>
+	<div id="EDtxt"><p>Tunisia's president vows to fight 
+	terrorism "without mercy", following a gun attack on 
+	the Bardo Museum in the capital Tunis that killed 19 
+	people.</p></div>
+	</a>
 	</div>
 
 	<!-- /WrapRight -->
@@ -134,23 +136,27 @@
 <div class="example " id="MainTree">
 	
 		<!-- Tier Zero Circle -->
-		<a class="MainCircleNews" href"#"><p class="NewsText">News</p></a>
-		<a class="MainCircleVid" href"#"><p class="VidText">Video</p></a>
-		<a class="MainCircleTwitch" href"#"><p class="StreamText">Fashion</p></a>
-		<a class="MainCircleSport" href"#"><p class="SportText">Sport</p></a>
+		<a class="MainCircleNews" href"#"><p class="NewsText">BBC</p></a>
+		<a class="MainCircleVid" href"#"><p class="VidText" style="font-size:18px;margin-left:3px;">New Scientist</p></a>
+		<a class="MainCircleTwitch" href"#"><p class="StreamText" style="font-size:16px;margin-left:3px;">(e)Science News</p></a>
+		<a class="MainCircleSport" href"#"><p class="SportText">AAAS</p></a>
 
 		<!-- Tier One Circles -->
+		<!-- Tier One Circle One -->
 		<a href="" class="iframe TierOneCircle TierOneCircleOne" id="T1C1Fetch"></a>
-		<div class="TierOneHeader" id="TierOneHeaderOne"><h3 id="T1H1Fetch"></h3></div>
+		<div class="TierOneHeader" id="TierOneHeaderOne"><h2 class="T1H1TextFormat" id="T1H1Fetch"></h2></div>
 		
+		<!-- Tier One Circle Two -->
 		<a href="" class="iframe TierOneCircle TierOneCircleTwo" id="T1C2Fetch"></a>
-		<div class="TierOneHeader" id="TierOneHeaderTwo"><h3 id="T1H2Fetch"></h3></div>
+		<div class="TierOneHeader" id="TierOneHeaderTwo"><h2 class="T1H1TextFormat" id="T1H2Fetch"></h2></div>
 		
+		<!-- Tier One Circle Three -->
 		<a href="" class="iframe TierOneCircle TierOneCircleThree" id="T1C3Fetch"></a>
-		<div class="TierOneHeader" id="TierOneHeaderThree"><h3 id="T1H3Fetch"></h3></div>
+		<div class="TierOneHeader" id="TierOneHeaderThree"><h2 class="T1H1TextFormat" id="T1H3Fetch"></h2></div>
 		
+		<!-- Tier One Circle Four -->
 		<a href="" class="iframe TierOneCircle TierOneCircleFour" id="T1C4Fetch"></a>
-		<div class="TierOneHeader" id="TierOneHeaderFour"><h3 id="T1H4Fetch"></h3></div>
+		<div class="TierOneHeader" id="TierOneHeaderFour"><h2 class="T1H1TextFormat" id="T1H4Fetch"></h2></div>
 		
 		<!-- Tertiary Circles -->
 		<a href="" class="iframe zoom TierTwoCircle TierTwoCircleOne" id="T2C1Fetch"></a>
@@ -187,6 +193,16 @@
 <!-- /Wrapper -->
 </div> 
 
+<!--Facebook Comment Section -->
+	<div id="CommentSection" class="CommentSection"  style="display:none;">
+		<div class="fb-comments" data-href="http://test.treemac.com/TreeMac/pages/science.html" data-width="960" data-numposts="20" data-colorscheme="light"></div>
+	</div>
+	
+	<div id="CommentButton" class="CommentButton"  style="" onClick="showDiv()">
+		<div class="Arrow"></div>
+	</div>
+
+
 <!-- Footer -->
 <footer>
 
@@ -200,14 +216,11 @@
 				    <!-- Bootstrap core JavaScript -->
     <!-- ========================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="../scripts/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../scripts/ie10-viewport-bug-workaround.js"></script>
 	<!-- Scroll to element animation -->
 	<script type="text/javascript" src="../scripts/scroll.js"></script>
-	<!-- adds the dynamic links via node/noodle -->
-	<script type="text/javascript" src="../scripts/some.js"></script>
 	
 	<!-- FancyBox -->
 	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
@@ -226,6 +239,26 @@ $('#fancybox-content').css({height:'2000px',width:'2000px'});
 }
 });
 });
+
+</script>
+
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-60507187-1', 'auto');
+  ga('send', 'pageview');
 
 </script>
 
