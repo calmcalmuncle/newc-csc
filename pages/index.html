@@ -1,47 +1,34 @@
-  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+<!DOCTYPE html>
 <html lang="en">
   <head>
 	<!-- How are these referred to? Imports? Meta? (Change this comment when known) -->
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
 
 	<!-- Title -->
     <title>TreeMac</title>
 	
-	<link rel="icon" type="../image/png" href="../images/favicon.ico" />
+	<!-- Favicon -->
+	<link rel="icon" type="../image/png" href="../images/favicon.ico">
 	
-    <!-- Bootstrap core CSS -->
+    <!-- Bootstrap core CSS --> <!-- Try to work on removing Bootstrap, reduce non-essential JS -->
     <link href="../stylesheets/bootstrap.min.css" rel="stylesheet">
-	
-    <!-- Custom styles for this template -->
     <link href="../stylesheets/navbar-fixed-top.css" rel="stylesheet">
 	
 	<!-- Basic Stylesheet -->
 	<link href="../stylesheets/styles.css" rel="stylesheet">
 	
-	<!-- Safari Tree Stylesheet -->
-	<script type="text/javascript">
-	var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
-		if (isSafari == true) 
-		{
-  		 document.write('<link rel="stylesheet" type="text/css" href="../stylesheets/safari-tree.css">');        
-		} else {
-		 document.write('<link rel="stylesheet" type="text/css" href="../stylesheets/tree.css">');
-		}
-		
-	</script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-	<!-- adds the dynamic links via node/noodle -->
-	<script type="text/javascript" src="../scripts/some.js"></script>
-  </head>
-  
+	<!-- FancyBox -->
+	<link href="../stylesheets/fancybox.css" rel="stylesheet"/>
+	
+	<!-- Safari Tree Stylesheet --> <!-- Try to find a way to remove this and replace with non JS method -->
+	<link rel="stylesheet" type="text/css" href="../stylesheets/tree.css">');
+	
+  </head> 
+	
 <!-- Body -->
 <body>
 
-<!-- Something Required for FB Comments -->
+<!-- FB API Root -->
 <div id="fb-root"></div>
   
 <!-- Fixed NavBar -->
@@ -88,9 +75,11 @@
 	<div id="BarLeft2">
 	<iframe src="https://www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2F947567261941535&amp;width=210&amp;height=290&amp;colorscheme=light&amp;show_faces=true&amp;header=true&amp;stream=false&amp;show_border=true" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:210px; height:290px;" allowTransparency="true"></iframe>
 
-	<!-- social media buttons add me below the iframe -->
+	<!-- FIND OUT IF WE CAN REPLACE THIS WITH NON-JS -->
+	<!-- social media buttons add me below the iframe 
 	<object width='154' height='48'><embed src='http://www.socialbuttonmaker.com/Swfs/97587ca6-7af7-49d3-94b9-161de40718df/button.swf' type='application/x-shockwave-flash' width='154' height='48' loop='false' wmode='transparent'><noscript><a href='http://soccerisland.info/'>soccerisland.info</a></noscript></embed><img src='' width=0 height=0 id='flashbutton'/><script type='text/javascript' src='http://www.socialbuttonmaker.com/Scripts/FlashButton.js'></script></object>
-</div>
+	-->
+	</div>
 
 </div> 
 
@@ -99,13 +88,13 @@
 
 	<!-- Right Bar One -->
 	<div class="BarRight" id="">
-	<button type="button" onClick="location.href='index.html'" id="TopButton">Home</button>
-	<button type="button" onClick="location.href='news.html'" id="Video">News</button>
-	<button type="button" onClick="location.href='video.html'" id="Video">Video</button>
-	<button type="button" onClick="location.href='sport.html'" id="Twitter">Sport</button>
-	<button type="button" onClick="location.href='fashion.html'" id="Fash">Fashion</button>
-	<button type="button" onClick="location.href='science.html'" id="Sci">Science</button>
-	<button type="button" onClick="location.href='technology.html'" id="Tech">Technology</button>
+	<button type="button" id="TopButton">Home</button>
+	<button type="button" id="NewsTree">News</button>
+	<button type="button" id="VideoTree">Video</button>
+	<button type="button" id="SportTree">Sport</button>
+	<button type="button" id="FashionTree">Fashion</button>
+	<button type="button" id="ScienceTree">Science</button>
+	<button type="button" id="TechnologyTree">Technology</button>
     </div>
 	
 	<!-- Right Bar Two -->
@@ -119,7 +108,7 @@
 	
 	</div>
 	
-	<!-- Right Bar Three -->
+<!-- Right Bar Three -->
 	<div class="BarRight" id="BarRight3">
 	
 	<p>Editors Choice</p>
@@ -132,21 +121,47 @@
 	</a>
 	</div>
 
+
 	<!-- /WrapRight -->
 	</div>
 
 <!-- Main Tree Section -->
 <div class="example " id="MainTree">
 	
-		<!-- Tier Zero Circle -->
-		<a class="MainCircleNews" href"#"><p class="NewsText">News</p></a>
-		<a class="MainCircleVid" href"#"><p class="VidText">Video</p></a>
-		<a class="MainCircleTwitch" href"#"><p class="StreamText">Fashion</p></a>
-		<a class="MainCircleSport" href"#"><p class="SportText">Sport</p></a>
+		<!-- Tier Zero Circle --> 					<!-- CategoryMenu() makes CategoryMenu Appear -->
+		<a class="MainCircleNews" id="BranchOne" href"#" ><p class="SelectorText" id="T0B1Text">Select</p></a>
+		<a class="MainCircleVid" id="BranchTwo" href"#"><p class="SelectorText" id="T0B2Text">Select</p></a>
+		<a class="MainCircleSport" id="BranchThree" href"#"><p class="SelectorText" id="T0B3Text">Select</p></a>
+		<a class="MainCircleTwitch" id="BranchFour" href"#"><p class="SelectorText" id="T0B4Text">Select</p></a>
 
+	
+		
+	<!-- Menu -->
+	<div id="CategoryMenu"  style="display:none;">
+	
+		<!-- Category Menu -->
+		<a class="Category" href"#" id="ChooseNews"><p class="CategoryText" id="CT1">News</p></a>
+		<a class="Category" href"#" id="ChooseVideo"><p class="CategoryText" id="CT2">Video</p></a>
+		<a class="Category" href"#" id="ChooseSport"><p class="CategoryText" id="CT3">Sport</p></a>
+		<a class="Category" href"#" id="ChooseFashion"><p class="CategoryText" id="CT4">Fashion</p></a>
+		<a class="Category" href"#" id="ChooseScience"><p class="CategoryText" id="CT5">Science</p></a>
+		<a class="Category" href"#" id="ChooseTechnology"><p class="CategoryText" id="CT6">Technology</p></a>
+		<a class="Category" href"#" id="ChooseStreaming"><p class="CategoryText" id="CT7">Streaming</p></a>
+		<a class="Category" href"#" id="ChooseFood"><p class="CategoryText" id="CT8">Food</p></a>
+		
+		<!-- Subcategory Menu -->
+		<div id="SubcategoryMenu"  style="display:none;">
+		<a class="Subcategory" href"#" id="SC1"><p class="SelectorText" id="SCT1"></p></a>
+		<a class="Subcategory" href"#" id="SC2"><p class="SelectorText" id="SCT2"></p></a>
+		<a class="Subcategory" href"#" id="SC3"><p class="SelectorText" id="SCT3"></p></a>
+		<a class="Subcategory" href"#" id="SC4"><p class="SelectorText" id="SCT4"></p></a>
+		</div>
+		
+	</div>
+		
 		<!-- Tier One Circles -->
 		<!-- Tier One Circle One -->
-		<a href="" class="iframe TierOneCircle TierOneCircleOne" id="T1C1Fetch"></a>
+		<a href="" title="Title One" class="iframe TierOneCircle TierOneCircleOne" id="T1C1Fetch"></a>
 		<div class="TierOneHeader" id="TierOneHeaderOne"><h2 class="T1H1TextFormat" id="T1H1Fetch"></h2></div>
 		
 		<!-- Tier One Circle Two -->
@@ -176,30 +191,32 @@
 		<a href="" class="iframe zoom TierTwoCircle TierTwoCircleSix" id="T2C6Fetch"></a>
 		<div class="TierTwoHeader" id="TierTwoHeaderSix"><h3 id="T2H6Fetch"></h3></div>
 		
-		<a href="" class="iframe zoom TierTwoCircle TierTwoCircleTen" id="T2C7Fetch"></a>
+		<a href="" class="iframe zoom TierTwoCircle TierTwoCircleSeven" id="T2C7Fetch"></a>
 		<div class="TierTwoHeader" id="TierTwoHeaderSeven"><h3 id="T2H7Fetch"></h3></div>
-		<a href="" class="iframe zoom TierTwoCircle TierTwoCircleEleven" id="T2C8Fetch"></a>
+		<a href="" class="iframe zoom TierTwoCircle TierTwoCircleEight" id="T2C8Fetch"></a>
 		<div class="TierTwoHeader" id="TierTwoHeaderEight"><h3 id="T2H8Fetch"></h3></div>
-		<a href="" class="iframe zoom TierTwoCircle TierTwoCircleTwelve" id="T2C9Fetch"></a>
+		<a href="" class="iframe zoom TierTwoCircle TierTwoCircleNine" id="T2C9Fetch"></a>
 		<div class="TierTwoHeader" id="TierTwoHeaderNine"><h3 id="T2H9Fetch"></h3></div>
 		
-		<a href="" class="iframe zoom TierTwoCircle TierTwoCircleSeven" id="T2C10Fetch"></a>
+		<a href="" class="iframe zoom TierTwoCircle TierTwoCircleTen" id="T2C10Fetch"></a>
 		<div class="TierTwoHeader" id="TierTwoHeaderTen"><h3 id="T2H10Fetch"></h3></div>
-		<a href="" class="iframe zoom TierTwoCircle TierTwoCircleEight" id="T2C11Fetch"></a>
+		<a href="" class="iframe zoom TierTwoCircle TierTwoCircleEleven" id="T2C11Fetch"></a>
 		<div class="TierTwoHeader" id="TierTwoHeaderEleven"><h3 id="T2H11Fetch"></h3></div>
-		<a href="" class="iframe zoom TierTwoCircle TierTwoCircleNine" id="T2C12Fetch"></a>
+		<a href="" class="iframe zoom TierTwoCircle TierTwoCircleTwelve" id="T2C12Fetch"></a>
 		<div class="TierTwoHeader" id="TierTwoHeaderTwelve"><h3 id="T2H12Fetch"></h3></div>
-
+		
+	
 	 </div>
 	 
-	<!--Facebook Comment Section -->
-	<div id="CommentSection" class="CommentSection"  style="display:none;">
-		<div class="fb-comments" data-href="http://test.treemac.com/TreeMac/pages/index.html" data-width="960" data-numposts="20" data-colorscheme="light"></div>
-	</div>
-	
-	<div id="CommentButton" class="CommentButton"  style="" onClick="showDiv()">
-		<div class="Arrow"></div>
-	</div>
+<!--Facebook Comment Button -->
+<div id="CommentButton" class="CommentButton"  style="" onClick="showDiv()">
+<div class="Arrow"></div>
+</div>
+	 
+<!--Facebook Comment Section -->
+<div id="CommentSection" class="CommentSection"  style="display:none;">
+<div class="fb-comments" data-href="http://test.treemac.com/TreeMac/pages/video.html" data-width="960" data-numposts="20" data-colorscheme="light"></div>
+</div>
 	 
 <!-- /Wrapper -->
 </div> 
@@ -207,68 +224,225 @@
 <!-- Footer -->
 <footer>
 
-<address style="font-size:12px;">&copy; Copyright 2015 All Rights Reserved WWW.TREEMAC.COM <a href="mailto:booleanbadboys@gmail.com">Contact Us</a>
+<address style="font-size:12px;">
+&copy; Copyright 2015 All Rights Reserved WWW.TREEMAC.COM <a href="mailto:contact@treemac.com">Contact Us</a>
 </address>
   
 </footer>
 
-   
-   
-				    <!-- Bootstrap core JavaScript -->
-    <!-- ========================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="../scripts/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../scripts/ie10-viewport-bug-workaround.js"></script>
+<!-- Scripts -->
+<!------------->
+
+    <!-- Load Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    
+	<!-- Node Scraper -->
+	<script type="text/javascript" src="../scripts/custom.js"></script>
 	
 	<!-- FancyBox -->
-	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-	<link rel="stylesheet" href="../fancybox/source/jquery.fancybox.css" type="text/css" media="screen" />
 	<script type="text/javascript" src="../fancybox/source/jquery.fancybox.pack.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function() {
-		$(".iframe").fancybox({
-		'width' : 1000,
-		'height' : 675,
-		'type' : 'iframe',
-		'autoScale' : false,
-		'padding' :0,
-		'onComplete' : function(){
-		$('#fancybox-content').css({height:'2000px',width:'2000px'});
-		}
+		$(".iframe")
+			.fancybox({
+			'width' : 1000,
+			'height' : 675,
+			'type' : 'iframe',
+			'autoScale' : false,
+			'padding' :0,
+			'onComplete' : function(){
+		$('#fancybox-content')	
+			.css({
+			height:'2000px',
+			width:'2000px'});
+		},
+		
+		'beforeShow': function () {
+            if (this.title) {
+                // New line
+                this.title += '<br />';
+                
+                // Add tweet button
+                this.title += '<a href="https://twitter.com/share" class="twitter-share-button" data-count="none" data-url="' + this.href + '">Tweet</a> ';
+                
+                // Add FaceBook like button
+                this.title += '<iframe class="twitter-share-button" src="https://www.facebook.com/plugins/like.php?href=' + this.href + '&amp;layout=button_count&amp;show_faces=true&amp;width=500&amp;action=like&amp;font&amp;colorscheme=light&amp;height=23" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:110px; height:23px;" allowTransparency="true"></iframe>';
+            }
+        },
+        'afterShow': function() {
+            // Render tweet button
+            twttr.widgets.load();
+        },
+        'helpers' : {
+            title : {
+                type: 'inside'
+            }
+        }
 		});
 		});
 	</script>
 	
-	<script>
+	<!-- FB Div Switch --> <!-- Replace this with CSS click-to-change -->
+	<script type="text/javascript">
 	function showDiv() {
 		document.getElementById('CommentButton').style.display = "none";
 		document.getElementById('CommentSection').style.display = "block";
 	}
 	</script>
 	
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.0";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
-</script>
+	<!-- Build Full Tree -->
+	<script type="text/javascript">
+	document.getElementById('NewsTree').addEventListener("click", NewsTree);
+	document.getElementById('VideoTree').addEventListener("click", VideoTree);
+	document.getElementById('SportTree').addEventListener("click", SportTree);
+	document.getElementById('FashionTree').addEventListener("click", FashionTree);
+	document.getElementById('ScienceTree').addEventListener("click", ScienceTree);
+	document.getElementById('TechnologyTree').addEventListener("click", TechnologyTree);
+	</script>
+	
+	<!-- Choose Branch and Open Menu -->
+	<script type="text/javascript">
+	
+	document.getElementById('BranchOne').addEventListener("click", function(event) { 
+	setBranch(event.target.id);
+	document.getElementById('CategoryMenu').style.display = "block";
+	});
+	
+	document.getElementById('BranchTwo').addEventListener("click", function(event) { 
+	setBranch(event.target.id);
+	document.getElementById('CategoryMenu').style.display = "block";
+	});
+	
+	document.getElementById('BranchThree').addEventListener("click", function(event) { 
+	setBranch(event.target.id);
+	document.getElementById('CategoryMenu').style.display = "block";
+	});
+	
+	document.getElementById('BranchFour').addEventListener("click", function(event) { 
+	setBranch(event.target.id);
+	document.getElementById('CategoryMenu').style.display = "block";
+	});
+	
+	</script>
+	
+	<!-- Choose Category and Assign Subcategory Buttons -->
+	<script type="text/javascript">
+	
+	document.getElementById('ChooseNews').addEventListener("click", function(event) {
+	setCategoryChoice('ChooseNews');
+	document.getElementById('SCT1').innerHTML = "BBC";
+	document.getElementById('SCT2').innerHTML = "Al Jazeera";
+	document.getElementById('SCT3').innerHTML = "Sky";
+	document.getElementById('SCT4').innerHTML = "Daily Mail";
+	document.getElementById('SubcategoryMenu').style.display = "block";
+	});
+	
+	document.getElementById('ChooseVideo').addEventListener("click", function(event) { 
+	setCategoryChoice('ChooseVideo');
+	document.getElementById('SCT1').innerHTML = "Popular";
+	document.getElementById('SCT2').innerHTML = "In the News";
+	document.getElementById('SCT3').innerHTML = "Comedy";
+	document.getElementById('SCT4').innerHTML = "Music";
+	document.getElementById('SubcategoryMenu').style.display = "block";
+	});
+	
+	document.getElementById('ChooseSport').addEventListener("click", function(event) { 
+	setCategoryChoice('ChooseSport');
+	document.getElementById('SCT1').innerHTML = "BBC";
+	document.getElementById('SCT2').innerHTML = "Sport.co.uk";
+	document.getElementById('SCT3').innerHTML = "Sky";
+	document.getElementById('SCT4').innerHTML = "Other";
+	document.getElementById('SubcategoryMenu').style.display = "block";
+	});
+	
+	document.getElementById('ChooseFashion').addEventListener("click", function(event) { 
+	setCategoryChoice('ChooseFashion');
+	document.getElementById('SCT1').innerHTML = "Vogue";
+	document.getElementById('SCT2').innerHTML = "Grazia";
+	document.getElementById('SCT3').innerHTML = "Elle";
+	document.getElementById('SCT4').innerHTML = "Other";
+	document.getElementById('SubcategoryMenu').style.display = "block";
+	});
+	
+	document.getElementById('ChooseScience').addEventListener("click", function(event) { 
+	setCategoryChoice('ChooseScience');
+	document.getElementById('SCT1').innerHTML = "BBC";
+	document.getElementById('SCT2').innerHTML = "New Scientist";
+	document.getElementById('SCT3').innerHTML = "AAAS";
+	document.getElementById('SCT4').innerHTML = "(e)Science News";
+	document.getElementById('SubcategoryMenu').style.display = "block";
+	});
+	
+	document.getElementById('ChooseTechnology').addEventListener("click", function(event) { 
+	setCategoryChoice('ChooseTechnology');
+	document.getElementById('SCT1').innerHTML = "BBC";
+	document.getElementById('SCT2').innerHTML = "Tech Review";
+	document.getElementById('SCT3').innerHTML = "Sky";
+	document.getElementById('SCT4').innerHTML = "Tech Crunch";
+	document.getElementById('SubcategoryMenu').style.display = "block";
+	});
+	
+	</script>
+	
+	<!-- Branch One Selector Close -->
+	<script type="text/javascript">
+	
+	document.getElementById('SC1').addEventListener("click", function(event) { 
+	setSubcategoryChoice(event.target.id);
+	//alert("Category: " + categoryChoice + "\nSubcategory: " + subcategoryChoice + "\nBranch: " + branch);
+	document.getElementById('CategoryMenu').style.display = "none";
+	document.getElementById('SubcategoryMenu').style.display = "none";
+	});
+	
+	document.getElementById('SC2').addEventListener("click", function(event) { 
+	setSubcategoryChoice(event.target.id);
+	//alert("Category: " + categoryChoice + "\nSubcategory: " + subcategoryChoice + "\nBranch: " + branch);
+	document.getElementById('CategoryMenu').style.display = "none";
+	document.getElementById('SubcategoryMenu').style.display = "none";
+	});
+	
+	document.getElementById('SC3').addEventListener("click", function(event) { 
+	setSubcategoryChoice(event.target.id);
+	//alert("Category: " + categoryChoice + "\nSubcategory: " + subcategoryChoice + "\nBranch: " + branch);
+	document.getElementById('CategoryMenu').style.display = "none";
+	document.getElementById('SubcategoryMenu').style.display = "none";
+	});
+	
+	document.getElementById('SC4').addEventListener("click", function(event) { 
+	setSubcategoryChoice(event.target.id);
+	//alert("Category: " + categoryChoice + "\nSubcategory: " + subcategoryChoice + "\nBranch: " + branch);
+	document.getElementById('CategoryMenu').style.display = "none";
+	document.getElementById('SubcategoryMenu').style.display = "none";
+	});
 
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	</script>
+	
+	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug --> <!-- We should figure out if we need this -->
+    <script src="../scripts/ie10-viewport-bug-workaround.js"></script>
+	
+<!-- FB and Analytics
+	<script>
+	(function(d, s, id) {
+	var js, fjs = d.getElementsByTagName(s)[0];
+	if (d.getElementById(id)) return;
+	js = d.createElement(s); js.id = id;
+	js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.0";
+	fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));
+	</script>
 
-  ga('create', 'UA-60507187-1', 'auto');
-  ga('send', 'pageview');
+	<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-60507187-1', 'auto');
+	ga('send', 'pageview');
+	</script>
+ -->
 
-</script>
-
-  <!-- /Body -->
-  </body>
+<!-- /Body -->
+</body>
   
 <!-- /HTML -->
 </html>
