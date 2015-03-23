@@ -29,7 +29,7 @@ width:955px;
 position:Absolute;
 margin-left:50%;
 margin-top:50%;
-transform:translateX(-50%) translateY(-50%);
+-webkit-transform:translateX(-50%) translateY(-50%);
 background-color:rgba(0,0,0,0.1);
 text-decoration:none;
 text-align:center;
@@ -91,7 +91,7 @@ border-radius:50%;
 position: absolute;
 top:50%;
 left:50%;
-transform: translateX(-50%) translatey(-50%);
+-webkit-transform: translateX(-50%) translatey(-50%);
 /*background-image: url("../rangers.jpg");*/
 }
 
@@ -103,7 +103,7 @@ border-top-left-radius:100%;
 position:absolute;
 top:45%;
 left:45%;
-transform:translateX(-50%) translatey(-50%);
+-webkit-transform:translateX(-50%) translatey(-50%);
 background-color:#990000;
 text-decoration:none;
 text-align:center;
@@ -114,7 +114,7 @@ padding-top:45%;
 color:white;
 text-decoration:none;
 font-size:20px;
-transform: translateX(8%);
+-webkit-transform: translateX(8%);
 }
 
 a.MainCircleVid {
@@ -125,7 +125,7 @@ border-top-right-radius:100%;
 position:absolute;
 top:45%;
 left:55.4%;
-transform:translateX(-50%) translatey(-50%);
+-webkit-transform:translateX(-50%) translatey(-50%);
 background-color:#000000;
 text-decoration:none;
 text-align:center;
@@ -141,7 +141,7 @@ border-bottom-left-radius:100%;
 position:absolute;
 top:55%;
 left:45%;
-transform:translateX(-50%) translatey(-50%);
+-webkit-transform:translateX(-50%) translatey(-50%);
 background-color:#5EA9DD;
 text-decoration:none;
 text-align:center;
@@ -152,7 +152,7 @@ padding-top:30%;
 color:white;
 text-decoration:none;
 font-size:20px;
-transform: translateX(4%);
+-webkit-transform: translateX(4%);
 }
 
 a.MainCircleSport {
@@ -163,7 +163,7 @@ border-bottom-right-radius:100%;
 position:absolute;
 top:55%;
 left:55.4%;
-transform:translateX(-50%) translatey(-50%);
+-webkit-transform:translateX(-50%) translatey(-50%);
 background-color:#2b3a76;
 text-decoration:none;
 text-align:center;
@@ -174,7 +174,7 @@ padding-top:30%;
 color:white;
 text-decoration:none;
 font-size:20px;
-transform: translateX(-8%);
+-webkit-transform: translateX(-8%);
 }
 
 .zoom:hover { 
@@ -183,7 +183,7 @@ transform: translateX(-8%);
  
 .ap {
 color: white;
-transform: translateX(15%);
+-webkit-transform: translateX(15%);
 position: relative;
 top: 40%;
 font-size: 15px;
@@ -195,7 +195,7 @@ position: absolute;
 display:block;
 background-position: center;
 background-repeat:no-repeat;
-transform: translateX(-50%) translatey(-50%);
+-webkit-transform: translateX(-50%) translatey(-50%);
 border-radius:50%;
 background-size: cover;
 z-index: 1;
@@ -218,7 +218,7 @@ background: rgba(255,255,255,0.9);
 opacity: 0;
 transition: all ease-in-out 0.4s;
 pointer-events: none;
-transform: translateX(-50%) translatey(-100%);
+-webkit-transform: translateX(-50%) translatey(-100%);
 overflow:hidden;
 }
 
@@ -306,7 +306,7 @@ font-size:100px;
 display:block;
 height:100px;
 width:100px;
-transform: translateX(-50%) translatey(-50%);
+-webkit-transform: translateX(-50%) translatey(-50%);
 border-radius:50%;
 background-position: center;
 background-size: cover;
@@ -329,7 +329,7 @@ background: rgba(255,255,255,0.9);
 opacity: 0;
 transition: all ease-in-out 0.4s;
 pointer-events: none;
-transform: translateX(-50%) translatey(-100%);
+-webkit-transform: translateX(-50%) translatey(-100%);
 overflow:hidden;
 }
 

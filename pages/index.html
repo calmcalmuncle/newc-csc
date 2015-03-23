@@ -21,15 +21,7 @@
 	<link href="../stylesheets/fancybox.css" rel="stylesheet"/>
 	
 	<!-- Safari Tree Stylesheet --> <!-- Try to find a way to remove this and replace with non JS method -->
-	<script type="text/javascript">
-	var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
-		if (isSafari == true) 
-		{
-  		 document.write('<link rel="stylesheet" type="text/css" href="../stylesheets/safari-tree.css">');        
-		} else {
-		 document.write('<link rel="stylesheet" type="text/css" href="../stylesheets/tree.css">');
-		}
-	</script>
+	<link rel="stylesheet" type="text/css" href="../stylesheets/tree.css">');
 	
   </head> 
 	
@@ -83,6 +75,7 @@
 	<div id="BarLeft2">
 	<iframe src="https://www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2F947567261941535&amp;width=210&amp;height=290&amp;colorscheme=light&amp;show_faces=true&amp;header=true&amp;stream=false&amp;show_border=true" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:210px; height:290px;" allowTransparency="true"></iframe>
 
+	<!-- FIND OUT IF WE CAN REPLACE THIS WITH NON-JS -->
 	<!-- social media buttons add me below the iframe 
 	<object width='154' height='48'><embed src='http://www.socialbuttonmaker.com/Swfs/97587ca6-7af7-49d3-94b9-161de40718df/button.swf' type='application/x-shockwave-flash' width='154' height='48' loop='false' wmode='transparent'><noscript><a href='http://soccerisland.info/'>soccerisland.info</a></noscript></embed><img src='' width=0 height=0 id='flashbutton'/><script type='text/javascript' src='http://www.socialbuttonmaker.com/Scripts/FlashButton.js'></script></object>
 	-->
@@ -166,7 +159,6 @@
 		
 	</div>
 		
-
 		<!-- Tier One Circles -->
 		<!-- Tier One Circle One -->
 		<a href="" title="Title One" class="iframe TierOneCircle TierOneCircleOne" id="T1C1Fetch"></a>
@@ -232,7 +224,8 @@
 <!-- Footer -->
 <footer>
 
-<address style="font-size:12px;">&copy; Copyright 2015 All Rights Reserved WWW.TREEMAC.COM <a href="mailto:booleanbadboys@gmail.com">Contact Us</a>
+<address style="font-size:12px;">
+&copy; Copyright 2015 All Rights Reserved WWW.TREEMAC.COM <a href="mailto:contact@treemac.com">Contact Us</a>
 </address>
   
 </footer>
@@ -297,8 +290,8 @@
 	}
 	</script>
 	
-	<!-- Full Trees -->
-	<script>
+	<!-- Build Full Tree -->
+	<script type="text/javascript">
 	document.getElementById('NewsTree').addEventListener("click", NewsTree);
 	document.getElementById('VideoTree').addEventListener("click", VideoTree);
 	document.getElementById('SportTree').addEventListener("click", SportTree);
@@ -391,12 +384,12 @@
 	
 	</script>
 	
-		<!-- Branch One Selector Close -->
+	<!-- Branch One Selector Close -->
 	<script type="text/javascript">
 	
 	document.getElementById('SC1').addEventListener("click", function(event) { 
 	setSubcategoryChoice(event.target.id);
-alert("Category: " + categoryChoice + "\nSubcategory: " + subcategoryChoice + "\nBranch: " + branch);
+	alert("Category: " + categoryChoice + "\nSubcategory: " + subcategoryChoice + "\nBranch: " + branch);
 	document.getElementById('CategoryMenu').style.display = "none";
 	document.getElementById('SubcategoryMenu').style.display = "none";
 	});
@@ -424,35 +417,28 @@ alert("Category: " + categoryChoice + "\nSubcategory: " + subcategoryChoice + "\
 
 	</script>
 	
-	
-	
-	<!-- Bootstrap core JavaScript --> <!-- We should work to get rid of this -->
-    <script src="../scripts/bootstrap.min.js"></script>
-	
 	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug --> <!-- We should figure out if we need this -->
     <script src="../scripts/ie10-viewport-bug-workaround.js"></script>
 	
-	<!-- FB and Analytics
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.0";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
-</script>
+<!-- FB and Analytics
+	<script>
+	(function(d, s, id) {
+	var js, fjs = d.getElementsByTagName(s)[0];
+	if (d.getElementById(id)) return;
+	js = d.createElement(s); js.id = id;
+	js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.0";
+	fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));
+	</script>
 
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-60507187-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
-
+	<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-60507187-1', 'auto');
+	ga('send', 'pageview');
+	</script>
  -->
 
 <!-- /Body -->
