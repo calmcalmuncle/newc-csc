@@ -154,87 +154,70 @@ var query = bbcNewsQuery,
 if(branch == "BranchOne"){
 	
 	document.getElementById('T0B1Text').innerHTML = "BBC News";
-	
-	// Make Ajax request to Noodle server
-jQuery.getJSON(request, function (data) {
-  document.getElementById('T1C1Fetch').href = 'http://www.bbc.co.uk'+data[0].results;
-  document.getElementById('T2C1Fetch').href = 'http://www.bbc.co.uk'+data[3].results;
-  document.getElementById('T2C2Fetch').href = 'http://www.bbc.co.uk'+data[6].results;
-  document.getElementById('T2C3Fetch').href = 'http://www.bbc.co.uk'+data[9].results;
-  document.getElementById('T1H1Fetch').innerHTML = data[1].results;
-  document.getElementById('T2H1Fetch').innerHTML = data[4].results;
-  document.getElementById('T2H2Fetch').innerHTML = data[7].results;
-  document.getElementById('T2H3Fetch').innerHTML = data[10].results;
-  document.getElementById('T1C1Fetch').style.backgroundImage = 'url("'+data[2].results+'")';
-  document.getElementById('T2C1Fetch').style.backgroundImage = 'url("'+data[5].results+'")';
-  document.getElementById('T2C2Fetch').style.backgroundImage = 'url("'+data[8].results+'")';
-  document.getElementById('T2C3Fetch').style.backgroundImage = 'url("'+data[11].results+'")';
-});
+	var fetch1 = 'T1C1Fetch';
+	var fetch2 = 'T2C1Fetch';
+	var fetch3 = 'T2C2Fetch';
+	var fetch4 = 'T2C3Fetch';
+	var fetch5 = 'T1H1Fetch';
+	var fetch6 = 'T2H1Fetch';
+	var fetch7 = 'T2H2Fetch';
+	var fetch8 = 'T2H3Fetch';
+
 }
 
 else if(branch == "BranchTwo"){
 	
 	document.getElementById('T0B2Text').innerHTML = "BBC News";
-	
-// Make Ajax request to Noodle server
-jQuery.getJSON(request, function (data) {
-  document.getElementById('T1C2Fetch').href = 'http://www.bbc.co.uk'+data[0].results;
-  document.getElementById('T2C4Fetch').href = 'http://www.bbc.co.uk'+data[3].results;
-  document.getElementById('T2C5Fetch').href = 'http://www.bbc.co.uk'+data[6].results;
-  document.getElementById('T2C6Fetch').href = 'http://www.bbc.co.uk'+data[9].results;
-  document.getElementById('T1H2Fetch').innerHTML = data[1].results;
-  document.getElementById('T2H4Fetch').innerHTML = data[4].results;
-  document.getElementById('T2H5Fetch').innerHTML = data[7].results;
-  document.getElementById('T2H6Fetch').innerHTML = data[10].results;
-  document.getElementById('T1C2Fetch').style.backgroundImage = 'url("'+data[2].results+'")';
-  document.getElementById('T2C4Fetch').style.backgroundImage = 'url("'+data[5].results+'")';
-  document.getElementById('T2C5Fetch').style.backgroundImage = 'url("'+data[8].results+'")';
-  document.getElementById('T2C6Fetch').style.backgroundImage = 'url("'+data[11].results+'")';
-});
+	var fetch1 = 'T1C2Fetch';
+	var fetch2 = 'T2C4Fetch';
+	var fetch3 = 'T2C5Fetch';
+	var fetch4 = 'T2C6Fetch';
+	var fetch5 = 'T1H2Fetch';
+	var fetch6 = 'T2H4Fetch';
+	var fetch7 = 'T2H5Fetch';
+	var fetch8 = 'T2H6Fetch';
 }
 
 else if(branch == "BranchThree"){
 	
 	document.getElementById('T0B3Text').innerHTML = "BBC News";
-	
-// Make Ajax request to Noodle server
-jQuery.getJSON(request, function (data) {
-  document.getElementById('T1C3Fetch').href = 'http://www.bbc.co.uk'+data[0].results;
-  document.getElementById('T2C7Fetch').href = 'http://www.bbc.co.uk'+data[3].results;
-  document.getElementById('T2C8Fetch').href = 'http://www.bbc.co.uk'+data[6].results;
-  document.getElementById('T2C9Fetch').href = 'http://www.bbc.co.uk'+data[9].results;
-  document.getElementById('T1H3Fetch').innerHTML = data[1].results;
-  document.getElementById('T2H7Fetch').innerHTML = data[4].results;
-  document.getElementById('T2H8Fetch').innerHTML = data[7].results;
-  document.getElementById('T2H9Fetch').innerHTML = data[10].results;
-  document.getElementById('T1C3Fetch').style.backgroundImage = 'url("'+data[2].results+'")';
-  document.getElementById('T2C7Fetch').style.backgroundImage = 'url("'+data[5].results+'")';
-  document.getElementById('T2C8Fetch').style.backgroundImage = 'url("'+data[8].results+'")';
-  document.getElementById('T2C9Fetch').style.backgroundImage = 'url("'+data[11].results+'")';
-});
+	var fetch1 = 'T1C3Fetch';
+	var fetch2 = 'T2C7Fetch';
+	var fetch3 = 'T2C8Fetch';
+	var fetch4 = 'T2C9Fetch';
+	var fetch5 = 'T1H3Fetch';
+	var fetch6 = 'T2H7Fetch';
+	var fetch7 = 'T2H8Fetch';
+	var fetch8 = 'T2H9Fetch';
 }
 
 else if(branch == "BranchFour"){
 	
 	document.getElementById('T0B4Text').innerHTML = "BBC News";
-	
-// Make Ajax request to Noodle server
-jQuery.getJSON(request, function (data) {
-  document.getElementById('T1C4Fetch').href = 'http://www.bbc.co.uk'+data[0].results;
-  document.getElementById('T2C10Fetch').href = 'http://www.bbc.co.uk'+data[3].results;
-  document.getElementById('T2C11Fetch').href = 'http://www.bbc.co.uk'+data[6].results;
-  document.getElementById('T2C12Fetch').href = 'http://www.bbc.co.uk'+data[9].results;
-  document.getElementById('T1H4Fetch').innerHTML = data[1].results;
-  document.getElementById('T2H10Fetch').innerHTML = data[4].results;
-  document.getElementById('T2H11Fetch').innerHTML = data[7].results;
-  document.getElementById('T2H12Fetch').innerHTML = data[10].results;
-  document.getElementById('T1C4Fetch').style.backgroundImage = 'url("'+data[2].results+'")';
-  document.getElementById('T2C10Fetch').style.backgroundImage = 'url("'+data[5].results+'")';
-  document.getElementById('T2C11Fetch').style.backgroundImage = 'url("'+data[8].results+'")';
-  document.getElementById('T2C12Fetch').style.backgroundImage = 'url("'+data[11].results+'")';
-});
+	var fetch1 = 'T1C4Fetch';
+	var fetch2 = 'T2C10Fetch';
+	var fetch3 = 'T2C11Fetch';
+	var fetch4 = 'T2C12Fetch';
+	var fetch5 = 'T1H4Fetch';
+	var fetch6 = 'T2H10Fetch';
+	var fetch7 = 'T2H11Fetch';
+	var fetch8 = 'T2H12Fetch';
 }
-
+	// Make Ajax request to Noodle server
+jQuery.getJSON(request, function (data) {
+  document.getElementById(fetch1).href = 'http://www.bbc.co.uk'+data[0].results;
+  document.getElementById(fetch2).href = 'http://www.bbc.co.uk'+data[3].results;
+  document.getElementById(fetch3).href = 'http://www.bbc.co.uk'+data[6].results;
+  document.getElementById(fetch4).href = 'http://www.bbc.co.uk'+data[9].results;
+  document.getElementById(fetch5).innerHTML = data[1].results;
+  document.getElementById(fetch6).innerHTML = data[4].results;
+  document.getElementById(fetch7).innerHTML = data[7].results;
+  document.getElementById(fetch8).innerHTML = data[10].results;
+  document.getElementById(fetch1).style.backgroundImage = 'url("'+data[2].results+'")';
+  document.getElementById(fetch2).style.backgroundImage = 'url("'+data[5].results+'")';
+  document.getElementById(fetch3).style.backgroundImage = 'url("'+data[8].results+'")';
+  document.getElementById(fetch4).style.backgroundImage = 'url("'+data[11].results+'")';
+});
 }
 if(subcategoryChoice == "Al Jazeera"){
 	
@@ -247,87 +230,70 @@ var query = alJazeeraNewsQuery,
 if(branch == "BranchOne"){
 	
 	document.getElementById('T0B1Text').innerHTML = "Al Jazeera";
-	
-	// Make Ajax request to Noodle server
-jQuery.getJSON(request, function (data) {
-  document.getElementById('T1C1Fetch').href = 'http://www.aljazeera.com'+data[0].results;
-  document.getElementById('T2C1Fetch').href = 'http://www.aljazeera.com'+data[3].results;
-  document.getElementById('T2C2Fetch').href = 'http://www.aljazeera.com'+data[6].results;
-  document.getElementById('T2C3Fetch').href = 'http://www.aljazeera.com'+data[9].results;
-  document.getElementById('T1H1Fetch').innerHTML = data[1].results;
-  document.getElementById('T2H1Fetch').innerHTML = data[4].results;
-  document.getElementById('T2H2Fetch').innerHTML = data[7].results;
-  document.getElementById('T2H3Fetch').innerHTML = data[10].results;
-  document.getElementById('T1C1Fetch').style.backgroundImage = 'url(http://www.aljazeera.com'+data[2].results+')';
-  document.getElementById('T2C1Fetch').style.backgroundImage = 'url(http://www.aljazeera.com'+data[5].results+')';
-  document.getElementById('T2C2Fetch').style.backgroundImage = 'url(http://www.aljazeera.com'+data[8].results+')';
-  document.getElementById('T2C3Fetch').style.backgroundImage = 'url(http://www.aljazeera.com'+data[11].results+')';
-});
+	var fetch1 = 'T1C1Fetch';
+	var fetch2 = 'T2C1Fetch';
+	var fetch3 = 'T2C2Fetch';
+	var fetch4 = 'T2C3Fetch';
+	var fetch5 = 'T1H1Fetch';
+	var fetch6 = 'T2H1Fetch';
+	var fetch7 = 'T2H2Fetch';
+	var fetch8 = 'T2H3Fetch';
 }
 
 else if(branch == "BranchTwo"){
 	
 	document.getElementById('T0B2Text').innerHTML = "Al Jazeera";
-	
-// Make Ajax request to Noodle server
-jQuery.getJSON(request, function (data) {
-  document.getElementById('T1C2Fetch').href = 'http://www.aljazeera.com'+data[0].results;
-  document.getElementById('T2C4Fetch').href = 'http://www.aljazeera.com'+data[3].results;
-  document.getElementById('T2C5Fetch').href = 'http://www.aljazeera.com'+data[6].results;
-  document.getElementById('T2C6Fetch').href = 'http://www.aljazeera.com'+data[9].results;
-  document.getElementById('T1H2Fetch').innerHTML = data[1].results;
-  document.getElementById('T2H4Fetch').innerHTML = data[4].results;
-  document.getElementById('T2H5Fetch').innerHTML = data[7].results;
-  document.getElementById('T2H6Fetch').innerHTML = data[10].results;
-  document.getElementById('T1C2Fetch').style.backgroundImage = 'url(http://www.aljazeera.com'+data[2].results+')';
-  document.getElementById('T2C4Fetch').style.backgroundImage = 'url(http://www.aljazeera.com'+data[5].results+')';
-  document.getElementById('T2C5Fetch').style.backgroundImage = 'url(http://www.aljazeera.com'+data[8].results+')';
-  document.getElementById('T2C6Fetch').style.backgroundImage = 'url(http://www.aljazeera.com'+data[11].results+')';
-});
+	var fetch1 = 'T1C2Fetch';
+	var fetch2 = 'T2C4Fetch';
+	var fetch3 = 'T2C5Fetch';
+	var fetch4 = 'T2C6Fetch';
+	var fetch5 = 'T1H2Fetch';
+	var fetch6 = 'T2H4Fetch';
+	var fetch7 = 'T2H5Fetch';
+	var fetch8 = 'T2H6Fetch';
 }
 
 else if(branch == "BranchThree"){
 	
 	document.getElementById('T0B3Text').innerHTML = "Al Jazeera";
-	
-// Make Ajax request to Noodle server
-jQuery.getJSON(request, function (data) {
-  document.getElementById('T1C3Fetch').href = 'http://www.aljazeera.com'+data[0].results;
-  document.getElementById('T2C7Fetch').href = 'http://www.aljazeera.com'+data[3].results;
-  document.getElementById('T2C8Fetch').href = 'http://www.aljazeera.com'+data[6].results;
-  document.getElementById('T2C9Fetch').href = 'http://www.aljazeera.com'+data[9].results;
-  document.getElementById('T1H3Fetch').innerHTML = data[1].results;
-  document.getElementById('T2H7Fetch').innerHTML = data[4].results;
-  document.getElementById('T2H8Fetch').innerHTML = data[7].results;
-  document.getElementById('T2H9Fetch').innerHTML = data[10].results;
-  document.getElementById('T1C3Fetch').style.backgroundImage = 'url(http://www.aljazeera.com'+data[2].results+')';
-  document.getElementById('T2C7Fetch').style.backgroundImage = 'url(http://www.aljazeera.com'+data[5].results+')';
-  document.getElementById('T2C8Fetch').style.backgroundImage = 'url(http://www.aljazeera.com'+data[8].results+')';
-  document.getElementById('T2C9Fetch').style.backgroundImage = 'url(http://www.aljazeera.com'+data[11].results+')';
-});
+	var fetch1 = 'T1C3Fetch';
+	var fetch2 = 'T2C7Fetch';
+	var fetch3 = 'T2C8Fetch';
+	var fetch4 = 'T2C9Fetch';
+	var fetch5 = 'T1H3Fetch';
+	var fetch6 = 'T2H7Fetch';
+	var fetch7 = 'T2H8Fetch';
+	var fetch8 = 'T2H9Fetch';
 }
 
 else if(branch == "BranchFour"){
 	
 	document.getElementById('T0B4Text').innerHTML = "Al Jazeera";
-	
+	var fetch1 = 'T1C4Fetch';
+	var fetch2 = 'T2C10Fetch';
+	var fetch3 = 'T2C11Fetch';
+	var fetch4 = 'T2C12Fetch';
+	var fetch5 = 'T1H4Fetch';
+	var fetch6 = 'T2H10Fetch';
+	var fetch7 = 'T2H11Fetch';
+	var fetch8 = 'T2H12Fetch';
+
+}
 // Make Ajax request to Noodle server
 jQuery.getJSON(request, function (data) {
-  document.getElementById('T1C4Fetch').href = 'http://www.aljazeera.com'+data[0].results;
-  document.getElementById('T2C10Fetch').href = 'http://www.aljazeera.com'+data[3].results;
-  document.getElementById('T2C11Fetch').href = 'http://www.aljazeera.com'+data[6].results;
-  document.getElementById('T2C12Fetch').href = 'http://www.aljazeera.com'+data[9].results;
-  document.getElementById('T1H4Fetch').innerHTML = data[1].results;
-  document.getElementById('T2H10Fetch').innerHTML = data[4].results;
-  document.getElementById('T2H11Fetch').innerHTML = data[7].results;
-  document.getElementById('T2H12Fetch').innerHTML = data[10].results;
-  document.getElementById('T1C4Fetch').style.backgroundImage = 'url(http://www.aljazeera.com'+data[2].results+')';
-  document.getElementById('T2C10Fetch').style.backgroundImage = 'url(http://www.aljazeera.com'+data[5].results+')';
-  document.getElementById('T2C11Fetch').style.backgroundImage = 'url(http://www.aljazeera.com'+data[8].results+')';
-  document.getElementById('T2C12Fetch').style.backgroundImage = 'url(http://www.aljazeera.com'+data[11].results+')';
+  document.getElementById(fetch1).href = 'http://www.aljazeera.com'+data[0].results;
+  document.getElementById(fetch2).href = 'http://www.aljazeera.com'+data[3].results;
+  document.getElementById(fetch3).href = 'http://www.aljazeera.com'+data[6].results;
+  document.getElementById(fetch4).href = 'http://www.aljazeera.com'+data[9].results;
+  document.getElementById(fetch5).innerHTML = data[1].results;
+  document.getElementById(fetch6).innerHTML = data[4].results;
+  document.getElementById(fetch7).innerHTML = data[7].results;
+  document.getElementById(fetch8).innerHTML = data[10].results;
+  document.getElementById(fetch1).style.backgroundImage = 'url(http://www.aljazeera.com'+data[2].results+')';
+  document.getElementById(fetch2).style.backgroundImage = 'url(http://www.aljazeera.com'+data[5].results+')';
+  document.getElementById(fetch3).style.backgroundImage = 'url(http://www.aljazeera.com'+data[8].results+')';
+  document.getElementById(fetch4).style.backgroundImage = 'url(http://www.aljazeera.com'+data[11].results+')';
 });
-}
-
 }	
 if(subcategoryChoice == "Sky News"){
 	
