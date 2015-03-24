@@ -1,6 +1,7 @@
 var branch;
 var categoryChoice;
 var subcategoryChoice;
+var centerText;
 
 //Branch
 function setBranch(Branchy){
@@ -19,45 +20,53 @@ function setSubcategoryChoice(subcategoryChoicey){
 	if(categoryChoice == "ChooseNews"){
 		if(subcategoryChoicey == "SC1"){
 			subcategoryChoice = "BBC News";
+			centerText = "BBC News";
 		}
 		else if(subcategoryChoicey == "SC2"){
 			subcategoryChoice = "Al Jazeera";
+			centerText = "Al Jazeera";
 		}
 		else if(subcategoryChoicey == "SC3"){
 			subcategoryChoice = "Sky News";
+			centerText = "Sky News";
 		}
 		else{
 			subcategoryChoice = "Daily Mail";
+			centerText = "Daily Mail";
 		}
 	}
 	
 	else if(categoryChoice == "ChooseVideo"){
 		if(subcategoryChoicey == "SC1"){
 			subcategoryChoice = "Popular";
+			centerText = "YouTube";
 		}
 		else if(subcategoryChoicey == "SC2"){
 			subcategoryChoice = "In the News";
+			centerText = "In the News";
 		}
 		else if(subcategoryChoicey == "SC3"){
 			subcategoryChoice = "Comedy";
+			centerText = "Comedy";
 		}
 		else{
 			subcategoryChoice = "Music";
+			centerText = "Music";
 		}
 	}
 	
 	else if(categoryChoice == "ChooseSport"){
 		if(subcategoryChoicey == "SC1"){
-			subcategoryChoice = "BBC";
+			subcategoryChoice = "BBC Sports";
 		}
 		else if(subcategoryChoicey == "SC2"){
 			subcategoryChoice = "Sport.co.uk";
 		}
 		else if(subcategoryChoicey == "SC3"){
-			subcategoryChoice = "Sky";
+			subcategoryChoice = "Sky Sports";
 		}
 		else{
-			subcategoryChoice = "Other";
+			subcategoryChoice = "Other Sports";
 		}
 	}
 	
@@ -72,13 +81,13 @@ function setSubcategoryChoice(subcategoryChoicey){
 			subcategoryChoice = "Elle";
 		}
 		else{
-			subcategoryChoice = "Other";
+			subcategoryChoice = "Other Fashion";
 		}
 	}
 	
 	else if(categoryChoice == "ChooseScience"){
 		if(subcategoryChoicey == "SC1"){
-			subcategoryChoice = "BBC";
+			subcategoryChoice = "BBC Science";
 		}
 		else if(subcategoryChoicey == "SC2"){
 			subcategoryChoice = "New Scientist";
@@ -93,13 +102,13 @@ function setSubcategoryChoice(subcategoryChoicey){
 	
 	else if(categoryChoice == "ChooseTechnology"){
 		if(subcategoryChoicey == "SC1"){
-			subcategoryChoice = "BBC";
+			subcategoryChoice = "BBC Technology";
 		}
 		else if(subcategoryChoicey == "SC2"){
 			subcategoryChoice = "Tech Review";
 		}
 		else if(subcategoryChoicey == "SC3"){
-			subcategoryChoice = "Sky";
+			subcategoryChoice = "Sky Technology";
 		}
 		else{
 			subcategoryChoice = "Tech Crunch";
@@ -121,31 +130,30 @@ function setSubcategoryChoice(subcategoryChoicey){
 		}
 	}
 	
-
+	//Call on Custom();
 	Custom();
-	
 }
 
 
 //CUSTOM
 function Custom(){
 	
-//Set Central Circle Titles
-if(branch == "BranchOne"){
+	//Set Central Circle Titles //CHANGE TO centerText when centerText implemented in setSubcategoryChoice method
+	if(branch == "BranchOne"){
 		document.getElementById('T0B1Text').innerHTML = subcategoryChoice;
 	}
-else if(branch == "BranchTwo"){
+	else if(branch == "BranchTwo"){
 		document.getElementById('T0B2Text').innerHTML = subcategoryChoice;
 	}
-else if(branch == "BranchThree"){
+	else if(branch == "BranchThree"){
 		document.getElementById('T0B3Text').innerHTML = subcategoryChoice;
 	}
-else{
+	else{
 		document.getElementById('T0B4Text').innerHTML = subcategoryChoice;
 	}
 	
-//Set Branch Fetches
-if(branch == "BranchOne"){
+	//Set Branch Fetches
+	if(branch == "BranchOne"){
 	
 	var fetch1 = 'T1C1Fetch';
 	var fetch2 = 'T2C1Fetch';
@@ -157,7 +165,7 @@ if(branch == "BranchOne"){
 	var fetch8 = 'T2H3Fetch';
 
 }
-else if(branch == "BranchTwo"){
+	else if(branch == "BranchTwo"){
 	
 	var fetch1 = 'T1C2Fetch';
 	var fetch2 = 'T2C4Fetch';
@@ -168,7 +176,7 @@ else if(branch == "BranchTwo"){
 	var fetch7 = 'T2H5Fetch';
 	var fetch8 = 'T2H6Fetch';
 }
-else if(branch == "BranchThree"){
+	else if(branch == "BranchThree"){
 	
 	var fetch1 = 'T1C3Fetch';
 	var fetch2 = 'T2C7Fetch';
@@ -179,7 +187,7 @@ else if(branch == "BranchThree"){
 	var fetch7 = 'T2H8Fetch';
 	var fetch8 = 'T2H9Fetch';
 }
-else{
+	else{
 	
 	var fetch1 = 'T1C4Fetch';
 	var fetch2 = 'T2C10Fetch';
@@ -190,9 +198,9 @@ else{
 	var fetch7 = 'T2H11Fetch';
 	var fetch8 = 'T2H12Fetch';
 }
-	
-//BBC
-if(subcategoryChoice == "BBC News"){
+
+	//BBC
+	if(subcategoryChoice == "BBC News"){
 
 var query = bbcNewsQuery,
 			uriQuery = encodeURIComponent(JSON.stringify(query)),
@@ -216,8 +224,8 @@ jQuery.getJSON(request, function (data) {
   document.getElementById(fetch4).style.backgroundImage = 'url("'+data[11].results+'")';
 });
 }
-//Al Jazeera
-if(subcategoryChoice == "Al Jazeera"){
+	//Al Jazeera
+	else if(subcategoryChoice == "Al Jazeera"){
 
 var query = alJazeeraNewsQuery,
 			uriQuery = encodeURIComponent(JSON.stringify(query)),
@@ -241,33 +249,33 @@ jQuery.getJSON(request, function (data) {
   document.getElementById(fetch4).style.backgroundImage = 'url(http://www.aljazeera.com'+data[11].results+')';
 });
 }	
-//Sky News
-if(subcategoryChoice == "Sky News"){
+	//Sky News
+	else if(subcategoryChoice == "Sky News"){
 
-var query = skyNewsQuery,
-			uriQuery = encodeURIComponent(JSON.stringify(query)),
-			request  = 'http://treemac.herokuapp.com/?q=' +
-						uriQuery + '&callback=?';
+		var query = skyNewsQuery,
+		uriQuery = encodeURIComponent(JSON.stringify(query)),
+		request  = 'http://treemac.herokuapp.com/?q=' +
+					uriQuery + '&callback=?';
 			 
 			 
 	// Make Ajax request to Noodle server
-jQuery.getJSON(request, function (data) {
-  document.getElementById(fetch1).href = 'http://news.sky.com'+data[0].results;
-  document.getElementById(fetch2).href = 'http://news.sky.com'+data[3].results;
-  document.getElementById(fetch3).href = 'http://news.sky.com'+data[6].results;
-  document.getElementById(fetch4).href = 'http://news.sky.com'+data[9].results;
-  document.getElementById(fetch5).innerHTML = data[1].results;
-  document.getElementById(fetch6).innerHTML = data[4].results;
-  document.getElementById(fetch7).innerHTML = data[7].results;
-  document.getElementById(fetch8).innerHTML = data[10].results;
-  document.getElementById(fetch1).style.backgroundImage = 'url("'+data[2].results+'")';
-  document.getElementById(fetch2).style.backgroundImage = 'url("'+data[5].results+'")';
-  document.getElementById(fetch3).style.backgroundImage = 'url("'+data[8].results+'")';
-  document.getElementById(fetch4).style.backgroundImage = 'url("'+data[11].results+'")';
-});
-}
-//Daily Mail
-if(subcategoryChoice == "Daily Mail"){
+	jQuery.getJSON(request, function (data) {
+	document.getElementById(fetch1).href = 'http://news.sky.com'+data[0].results;
+	document.getElementById(fetch2).href = 'http://news.sky.com'+data[3].results;
+	document.getElementById(fetch3).href = 'http://news.sky.com'+data[6].results;
+	document.getElementById(fetch4).href = 'http://news.sky.com'+data[9].results;
+	document.getElementById(fetch5).innerHTML = data[1].results;
+	document.getElementById(fetch6).innerHTML = data[4].results;
+	document.getElementById(fetch7).innerHTML = data[7].results;
+	document.getElementById(fetch8).innerHTML = data[10].results;
+	document.getElementById(fetch1).style.backgroundImage = 'url("'+data[2].results+'")';
+	document.getElementById(fetch2).style.backgroundImage = 'url("'+data[5].results+'")';
+	document.getElementById(fetch3).style.backgroundImage = 'url("'+data[8].results+'")';
+	document.getElementById(fetch4).style.backgroundImage = 'url("'+data[11].results+'")';
+	});
+	}
+	//Daily Mail
+	else if(subcategoryChoice == "Daily Mail"){
 
 var query = dailyMailNewsQuery,
 			uriQuery = encodeURIComponent(JSON.stringify(query)),
@@ -292,16 +300,146 @@ jQuery.getJSON(request, function (data) {
 });
 }
 
-//Popular
-if(subcategoryChoice == "BBC News"){
+	//Popular
+	else if(subcategoryChoice == "Popular"){
 
-var query = bbcNewsQuery,
+var query = popularVideoQuery,
+			uriQuery = encodeURIComponent(JSON.stringify(query)),
+			request  = 'http://treemac.herokuapp.com/?q=' +
+						uriQuery + '&callback=?';
+			 
+	// Make Ajax request to Noodle server
+jQuery.getJSON(request, function (data) {
+	var string1 = ""+data[0].results;
+	var res1 = string1.substr(9);
+	var string2 = ""+data[2].results;
+	var res2 = string2.substr(9);
+	var string3 = ""+data[4].results;
+	var res3 = string3.substr(9);
+	var string4 = ""+data[6].results;
+	var res4 = string4.substr(9);
+	document.getElementById(fetch1).href = 'https://www.youtube.com/embed/'+res1+'?autoplay=1';
+	document.getElementById(fetch2).href = 'https://www.youtube.com/embed/'+res2+'?autoplay=1';
+	document.getElementById(fetch3).href = 'https://www.youtube.com/embed/'+res3+'?autoplay=1';
+	document.getElementById(fetch4).href = 'https://www.youtube.com/embed/'+res4+'?autoplay=1';
+	document.getElementById(fetch5).innerHTML = data[1].results;
+	document.getElementById(fetch6).innerHTML = data[3].results;
+	document.getElementById(fetch7).innerHTML = data[5].results;
+	document.getElementById(fetch8).innerHTML = data[7].results;
+	document.getElementById(fetch1).style.backgroundImage = 'url("http://i.ytimg.com/vi/'+res1+'/mqdefault.jpg")';
+	document.getElementById(fetch2).style.backgroundImage = 'url("http://i.ytimg.com/vi/'+res2+'/mqdefault.jpg")';
+	document.getElementById(fetch3).style.backgroundImage = 'url("http://i.ytimg.com/vi/'+res3+'/mqdefault.jpg")';
+	document.getElementById(fetch4).style.backgroundImage = 'url("http://i.ytimg.com/vi/'+res4+'/mqdefault.jpg")';
+});
+}
+	//In the News
+	else if(subcategoryChoice == "In the News"){
+
+var query = inTheNewsVideoQuery,
 			uriQuery = encodeURIComponent(JSON.stringify(query)),
 			request  = 'http://treemac.herokuapp.com/?q=' +
 						uriQuery + '&callback=?';
 			 
 			 
 	// Make Ajax request to Noodle server
+jQuery.getJSON(request, function (data) {
+	var string1 = ""+data[0].results;
+	var res1 = string1.substr(9);
+	var string2 = ""+data[2].results;
+	var res2 = string2.substr(9);
+	var string3 = ""+data[4].results;
+	var res3 = string3.substr(9);
+	var string4 = ""+data[6].results;
+	var res4 = string4.substr(9);
+	document.getElementById(fetch1).href = 'https://www.youtube.com/embed/'+res1+'?autoplay=1';
+	document.getElementById(fetch2).href = 'https://www.youtube.com/embed/'+res2+'?autoplay=1';
+	document.getElementById(fetch3).href = 'https://www.youtube.com/embed/'+res3+'?autoplay=1';
+	document.getElementById(fetch4).href = 'https://www.youtube.com/embed/'+res4+'?autoplay=1';
+	document.getElementById(fetch5).innerHTML = data[1].results;
+	document.getElementById(fetch6).innerHTML = data[3].results;
+	document.getElementById(fetch7).innerHTML = data[5].results;
+	document.getElementById(fetch8).innerHTML = data[7].results;
+	document.getElementById(fetch1).style.backgroundImage = 'url("http://i.ytimg.com/vi/'+res1+'/mqdefault.jpg")';
+	document.getElementById(fetch2).style.backgroundImage = 'url("http://i.ytimg.com/vi/'+res2+'/mqdefault.jpg")';
+	document.getElementById(fetch3).style.backgroundImage = 'url("http://i.ytimg.com/vi/'+res3+'/mqdefault.jpg")';
+	document.getElementById(fetch4).style.backgroundImage = 'url("http://i.ytimg.com/vi/'+res4+'/mqdefault.jpg")';
+});
+}	
+	//Comedy
+	else if(subcategoryChoice == "Comedy"){
+
+var query = comedyVideoQuery,
+			uriQuery = encodeURIComponent(JSON.stringify(query)),
+			request  = 'http://treemac.herokuapp.com/?q=' +
+						uriQuery + '&callback=?';
+			 
+// Make Ajax request to Noodle server
+jQuery.getJSON(request, function (data) {
+	var string1 = ""+data[0].results;
+	var res1 = string1.substr(9);
+	var string2 = ""+data[2].results;
+	var res2 = string2.substr(9);
+	var string3 = ""+data[4].results;
+	var res3 = string3.substr(9);
+	var string4 = ""+data[6].results;
+	var res4 = string4.substr(9);
+	document.getElementById(fetch1).href = 'https://www.youtube.com/embed/'+res1+'?autoplay=1';
+	document.getElementById(fetch2).href = 'https://www.youtube.com/embed/'+res2+'?autoplay=1';
+	document.getElementById(fetch3).href = 'https://www.youtube.com/embed/'+res3+'?autoplay=1';
+	document.getElementById(fetch4).href = 'https://www.youtube.com/embed/'+res4+'?autoplay=1';
+	document.getElementById(fetch5).innerHTML = data[1].results;
+	document.getElementById(fetch6).innerHTML = data[3].results;
+	document.getElementById(fetch7).innerHTML = data[5].results;
+	document.getElementById(fetch8).innerHTML = data[7].results;
+	document.getElementById(fetch1).style.backgroundImage = 'url("http://i.ytimg.com/vi/'+res1+'/mqdefault.jpg")';
+	document.getElementById(fetch2).style.backgroundImage = 'url("http://i.ytimg.com/vi/'+res2+'/mqdefault.jpg")';
+	document.getElementById(fetch3).style.backgroundImage = 'url("http://i.ytimg.com/vi/'+res3+'/mqdefault.jpg")';
+	document.getElementById(fetch4).style.backgroundImage = 'url("http://i.ytimg.com/vi/'+res4+'/mqdefault.jpg")';
+});
+}
+	//Music
+	else if(subcategoryChoice == "Music"){
+
+var query = musicVideoQuery,
+			uriQuery = encodeURIComponent(JSON.stringify(query)),
+			request  = 'http://treemac.herokuapp.com/?q=' +
+						uriQuery + '&callback=?';
+			 
+			 
+	// Make Ajax request to Noodle server
+jQuery.getJSON(request, function (data) {
+	var string1 = ""+data[0].results;
+	var res1 = string1.substr(9);
+	var string2 = ""+data[2].results;
+	var res2 = string2.substr(9);
+	var string3 = ""+data[4].results;
+	var res3 = string3.substr(9);
+	var string4 = ""+data[6].results;
+	var res4 = string4.substr(9);
+	document.getElementById(fetch1).href = 'https://www.youtube.com/embed/'+res1+'?autoplay=1';
+	document.getElementById(fetch2).href = 'https://www.youtube.com/embed/'+res2+'?autoplay=1';
+	document.getElementById(fetch3).href = 'https://www.youtube.com/embed/'+res3+'?autoplay=1';
+	document.getElementById(fetch4).href = 'https://www.youtube.com/embed/'+res4+'?autoplay=1';
+	document.getElementById(fetch5).innerHTML = data[1].results;
+	document.getElementById(fetch6).innerHTML = data[3].results;
+	document.getElementById(fetch7).innerHTML = data[5].results;
+	document.getElementById(fetch8).innerHTML = data[7].results;
+	document.getElementById(fetch1).style.backgroundImage = 'url("http://i.ytimg.com/vi/'+res1+'/mqdefault.jpg")';
+	document.getElementById(fetch2).style.backgroundImage = 'url("http://i.ytimg.com/vi/'+res2+'/mqdefault.jpg")';
+	document.getElementById(fetch3).style.backgroundImage = 'url("http://i.ytimg.com/vi/'+res3+'/mqdefault.jpg")';
+	document.getElementById(fetch4).style.backgroundImage = 'url("http://i.ytimg.com/vi/'+res4+'/mqdefault.jpg")';
+});
+}
+
+	//BBC Sports
+	else if(subcategoryChoice == "BBC Sports"){
+
+	var query = bbcSportQuery,
+	uriQuery = encodeURIComponent(JSON.stringify(query)),
+	request  = 'http://treemac.herokuapp.com/?q=' +
+             uriQuery + '&callback=?';
+
+// Make Ajax request to Noodle server
 jQuery.getJSON(request, function (data) {
   document.getElementById(fetch1).href = 'http://www.bbc.co.uk'+data[0].results;
   document.getElementById(fetch2).href = 'http://www.bbc.co.uk'+data[3].results;
@@ -317,46 +455,44 @@ jQuery.getJSON(request, function (data) {
   document.getElementById(fetch4).style.backgroundImage = 'url("'+data[11].results+'")';
 });
 }
-//In the News
-if(subcategoryChoice == "Al Jazeera"){
+	//Sport.co.uk
+	else if(subcategoryChoice == "Sport.co.uk"){
 
-var query = alJazeeraNewsQuery,
-			uriQuery = encodeURIComponent(JSON.stringify(query)),
-			request  = 'http://treemac.herokuapp.com/?q=' +
-						uriQuery + '&callback=?';
-			 
-			 
-	// Make Ajax request to Noodle server
+var query = sportCoUkSportQuery,
+  uriQuery = encodeURIComponent(JSON.stringify(query)),
+  request  = 'http://treemac.herokuapp.com/?q=' +
+             uriQuery + '&callback=?';
+
+// Make Ajax request to Noodle server
 jQuery.getJSON(request, function (data) {
-  document.getElementById(fetch1).href = 'http://www.aljazeera.com'+data[0].results;
-  document.getElementById(fetch2).href = 'http://www.aljazeera.com'+data[3].results;
-  document.getElementById(fetch3).href = 'http://www.aljazeera.com'+data[6].results;
-  document.getElementById(fetch4).href = 'http://www.aljazeera.com'+data[9].results;
+  document.getElementById(fetch1).href = 'http://www.sport.co.uk'+data[0].results;
+  document.getElementById(fetch2).href = 'http://www.sport.co.uk'+data[3].results;
+  document.getElementById(fetch3).href = 'http://www.sport.co.uk'+data[6].results;
+  document.getElementById(fetch4).href = 'http://www.sport.co.uk'+data[9].results;
   document.getElementById(fetch5).innerHTML = data[1].results;
   document.getElementById(fetch6).innerHTML = data[4].results;
   document.getElementById(fetch7).innerHTML = data[7].results;
   document.getElementById(fetch8).innerHTML = data[10].results;
-  document.getElementById(fetch1).style.backgroundImage = 'url(http://www.aljazeera.com'+data[2].results+')';
-  document.getElementById(fetch2).style.backgroundImage = 'url(http://www.aljazeera.com'+data[5].results+')';
-  document.getElementById(fetch3).style.backgroundImage = 'url(http://www.aljazeera.com'+data[8].results+')';
-  document.getElementById(fetch4).style.backgroundImage = 'url(http://www.aljazeera.com'+data[11].results+')';
+  document.getElementById(fetch1).style.backgroundImage = 'url("'+data[2].results+'")';
+  document.getElementById(fetch2).style.backgroundImage = 'url("'+data[5].results+'")';
+  document.getElementById(fetch3).style.backgroundImage = 'url("'+data[8].results+'")';
+  document.getElementById(fetch4).style.backgroundImage = 'url("'+data[11].results+'")';
 });
 }	
-//Comedy
-if(subcategoryChoice == "Sky News"){
+	//Sky Sports
+	else if(subcategoryChoice == "Sky Sports"){
 
-var query = skyNewsQuery,
-			uriQuery = encodeURIComponent(JSON.stringify(query)),
-			request  = 'http://treemac.herokuapp.com/?q=' +
-						uriQuery + '&callback=?';
-			 
-			 
-	// Make Ajax request to Noodle server
+var query = skySportQuery,
+  uriQuery = encodeURIComponent(JSON.stringify(query)),
+  request  = 'http://treemac.herokuapp.com/?q=' +
+             uriQuery + '&callback=?';
+
+// Make Ajax request to Noodle server
 jQuery.getJSON(request, function (data) {
-  document.getElementById(fetch1).href = 'http://news.sky.com'+data[0].results;
-  document.getElementById(fetch2).href = 'http://news.sky.com'+data[3].results;
-  document.getElementById(fetch3).href = 'http://news.sky.com'+data[6].results;
-  document.getElementById(fetch4).href = 'http://news.sky.com'+data[9].results;
+  document.getElementById(fetch1).href = data[0].results;
+  document.getElementById(fetch2).href = data[3].results;
+  document.getElementById(fetch3).href = data[6].results;
+  document.getElementById(fetch4).href = data[9].results;
   document.getElementById(fetch5).innerHTML = data[1].results;
   document.getElementById(fetch6).innerHTML = data[4].results;
   document.getElementById(fetch7).innerHTML = data[7].results;
@@ -367,21 +503,45 @@ jQuery.getJSON(request, function (data) {
   document.getElementById(fetch4).style.backgroundImage = 'url("'+data[11].results+'")';
 });
 }
-//Music
-if(subcategoryChoice == "Daily Mail"){
+	//Other
+	else if(subcategoryChoice == "Other Sports"){
 
-var query = dailyMailNewsQuery,
-			uriQuery = encodeURIComponent(JSON.stringify(query)),
-			request  = 'http://treemac.herokuapp.com/?q=' +
-						uriQuery + '&callback=?';
-			 
-			 
-	// Make Ajax request to Noodle server
+var query = otherSportQuery,
+  uriQuery = encodeURIComponent(JSON.stringify(query)),
+  request  = 'http://treemac.herokuapp.com/?q=' +
+             uriQuery + '&callback=?';
+
+// Make Ajax request to Noodle server
 jQuery.getJSON(request, function (data) {
-  document.getElementById(fetch1).href = "http://www.dailymail.co.uk/" +data[0].results;
-  document.getElementById(fetch2).href = "http://www.dailymail.co.uk/" +data[3].results;
-  document.getElementById(fetch3).href = "http://www.dailymail.co.uk/" +data[6].results;
-  document.getElementById(fetch4).href = "http://www.dailymail.co.uk/" +data[9].results;
+document.getElementById(fetch1).href = data[0].results;
+document.getElementById(fetch2).href = data[3].results;
+document.getElementById(fetch3).href = data[6].results;
+document.getElementById(fetch4).href = data[9].results;
+document.getElementById(fetch5).innerHTML = data[1].results;
+document.getElementById(fetch6).innerHTML = data[4].results;
+document.getElementById(fetch7).innerHTML = data[7].results;
+document.getElementById(fetch8).innerHTML = data[10].results;
+document.getElementById(fetch1).style.backgroundImage = 'url("'+data[2].results+'")';
+document.getElementById(fetch2).style.backgroundImage = 'url("http:'+data[5].results+'")';
+document.getElementById(fetch3).style.backgroundImage = 'url("http:'+data[8].results+'")';
+document.getElementById(fetch4).style.backgroundImage = 'url("http:'+data[11].results+'")';
+});
+}
+
+	//Vogue
+	else if(subcategoryChoice == "Vogue"){
+
+	var query = vogueFashionQuery,
+  uriQuery = encodeURIComponent(JSON.stringify(query)),
+  request  = 'http://treemac.herokuapp.com/?q=' +
+             uriQuery + '&callback=?';
+
+// Make Ajax request to Noodle server
+jQuery.getJSON(request, function (data) {
+  document.getElementById(fetch1).href = 'http://www.vogue.co.uk'+data[0].results;
+  document.getElementById(fetch2).href = 'http://www.vogue.co.uk'+data[3].results;
+  document.getElementById(fetch3).href = 'http://www.vogue.co.uk'+data[6].results;
+  document.getElementById(fetch4).href = 'http://www.vogue.co.uk'+data[9].results;
   document.getElementById(fetch5).innerHTML = data[1].results;
   document.getElementById(fetch6).innerHTML = data[4].results;
   document.getElementById(fetch7).innerHTML = data[7].results;
@@ -390,6 +550,94 @@ jQuery.getJSON(request, function (data) {
   document.getElementById(fetch2).style.backgroundImage = 'url("'+data[5].results+'")';
   document.getElementById(fetch3).style.backgroundImage = 'url("'+data[8].results+'")';
   document.getElementById(fetch4).style.backgroundImage = 'url("'+data[11].results+'")';
+});
+}
+	//Grazia
+	else if(subcategoryChoice == "Grazia"){
+
+var query = graziaFashionQuery,
+  uriQuery = encodeURIComponent(JSON.stringify(query)),
+  request  = 'http://treemac.herokuapp.com/?q=' +
+             uriQuery + '&callback=?';
+
+// Make Ajax request to Noodle server
+jQuery.getJSON(request, function (data) {
+  document.getElementById(fetch1).href = 'http://www.graziadaily.co.uk'+data[0].results;
+  document.getElementById(fetch2).href = 'http://www.graziadaily.co.uk'+data[3].results;
+  document.getElementById(fetch3).href = 'http://www.graziadaily.co.uk'+data[6].results;
+  document.getElementById(fetch4).href = 'http://www.graziadaily.co.uk'+data[9].results;
+  document.getElementById(fetch5).innerHTML = data[1].results;
+  document.getElementById(fetch6).innerHTML = data[4].results;
+  document.getElementById(fetch7).innerHTML = data[7].results;
+  document.getElementById(fetch8).innerHTML = data[10].results;
+  document.getElementById(fetch1).style.backgroundImage = 'url("http:'+data[2].results+'")';
+  document.getElementById(fetch2).style.backgroundImage = 'url("http:'+data[5].results+'")';
+  document.getElementById(fetch3).style.backgroundImage = 'url("http:'+data[8].results+'")';
+  document.getElementById(fetch4).style.backgroundImage = 'url("http:'+data[11].results+'")';
+});
+}	
+	//Elle
+	else if(subcategoryChoice == "Elle"){
+
+var query = elleFashionQuery,
+  uriQuery = encodeURIComponent(JSON.stringify(query)),
+  request  = 'http://treemac.herokuapp.com/?q=' +
+             uriQuery + '&callback=?';
+
+// Make Ajax request to Noodle server
+jQuery.getJSON(request, function (data) {
+  document.getElementById(fetch1).href = 'http://www.elle.com'+data[0].results;
+  document.getElementById(fetch2).href = 'http://www.elle.com'+data[3].results;
+  document.getElementById(fetch3).href = 'http://www.elle.com'+data[6].results;
+  document.getElementById(fetch4).href = 'http://www.elle.com'+data[9].results;
+  document.getElementById(fetch5).innerHTML = data[1].results;
+  document.getElementById(fetch6).innerHTML = data[4].results;
+  document.getElementById(fetch7).innerHTML = data[7].results;
+  document.getElementById(fetch8).innerHTML = data[10].results;
+  document.getElementById(fetch1).style.backgroundImage = 'url("'+data[2].results+'")';
+  document.getElementById(fetch2).style.backgroundImage = 'url("'+data[5].results+'")';
+  document.getElementById(fetch3).style.backgroundImage = 'url("'+data[8].results+'")';
+  document.getElementById(fetch4).style.backgroundImage = 'url("'+data[11].results+'")';
+});
+}
+	//Other
+	else if(subcategoryChoice == "Other Fashion"){
+
+// Make Ajax request to Noodle server
+jQuery.getJSON(request, function (data) {
+  document.getElementById('T1C3Fetch').href = 'http://www.elle.com'+data[0].results;
+  document.getElementById('T2C7Fetch').href = 'http://www.elle.com'+data[3].results;
+  document.getElementById('T2C8Fetch').href = 'http://www.elle.com'+data[6].results;
+  document.getElementById('T2C9Fetch').href = 'http://www.elle.com'+data[9].results;
+  document.getElementById('T1H3Fetch').innerHTML = data[1].results;
+  document.getElementById('T2H7Fetch').innerHTML = data[4].results;
+  document.getElementById('T2H8Fetch').innerHTML = data[7].results;
+  document.getElementById('T2H9Fetch').innerHTML = data[10].results;
+  document.getElementById('T1C3Fetch').style.backgroundImage = 'url("'+data[2].results+'")';
+  document.getElementById('T2C7Fetch').style.backgroundImage = 'url("'+data[5].results+'")';
+  document.getElementById('T2C8Fetch').style.backgroundImage = 'url("'+data[8].results+'")';
+  document.getElementById('T2C9Fetch').style.backgroundImage = 'url("'+data[11].results+'")';
+});
+
+var query = otherFashionQuery,
+  uriQuery = encodeURIComponent(JSON.stringify(query)),
+  request  = 'http://treemac.herokuapp.com/?q=' +
+             uriQuery + '&callback=?';
+
+// Make Ajax request to Noodle server
+jQuery.getJSON(request, function (data) {
+document.getElementById(fetch1).href = data[0].results;
+document.getElementById(fetch2).href = data[3].results;
+document.getElementById(fetch3).href = data[6].results;
+document.getElementById(fetch4).href = data[9].results;
+document.getElementById(fetch5).innerHTML = data[1].results;
+document.getElementById(fetch6).innerHTML = data[4].results;
+document.getElementById(fetch7).innerHTML = data[7].results;
+document.getElementById(fetch8).innerHTML = data[10].results;
+document.getElementById(fetch1).style.backgroundImage = 'url("'+data[2].results+'")';
+document.getElementById(fetch2).style.backgroundImage = 'url("http:'+data[5].results+'")';
+document.getElementById(fetch3).style.backgroundImage = 'url("'+data[8].results+'")';
+document.getElementById(fetch4).style.backgroundImage = 'url("'+data[11].results+'")';
 });
 }
 
@@ -575,22 +823,19 @@ jQuery.getJSON(request, function (data) {
   var res3 = string3.substr(9);
   var string4 = ""+data[6].results;
   var res4 = string4.substr(9);
-  document.getElementById('T1C4Fetch').href = 'https://www.youtube.com/embed/'+res1+'?autoplay=1';
-  document.getElementById('T2C10Fetch').href = 'https://www.youtube.com/embed/'+res2+'?autoplay=1';
-  document.getElementById('T2C11Fetch').href = 'https://www.youtube.com/embed/'+res3+'?autoplay=1';
-  document.getElementById('T2C12Fetch').href = 'https://www.youtube.com/embed/'+res4+'?autoplay=1';
-  document.getElementById('T1H4Fetch').innerHTML = data[1].results;
-  document.getElementById('T2H10Fetch').innerHTML = data[3].results;
-  document.getElementById('T2H11Fetch').innerHTML = data[5].results;
-  document.getElementById('T2H12Fetch').innerHTML = data[7].results;
-  document.getElementById('T1C4Fetch').style.backgroundImage = 'url("http://i.ytimg.com/vi/'+res1+'/mqdefault.jpg")';
-  document.getElementById('T2C10Fetch').style.backgroundImage = 'url("http://i.ytimg.com/vi/'+res2+'/mqdefault.jpg")';
-  document.getElementById('T2C11Fetch').style.backgroundImage = 'url("http://i.ytimg.com/vi/'+res3+'/mqdefault.jpg")';
-  document.getElementById('T2C12Fetch').style.backgroundImage = 'url("http://i.ytimg.com/vi/'+res4+'/mqdefault.jpg")';
+  document.getElementById('T1C3Fetch').href = 'https://www.youtube.com/embed/'+res1+'?autoplay=1';
+  document.getElementById('T2C7Fetch').href = 'https://www.youtube.com/embed/'+res2+'?autoplay=1';
+  document.getElementById('T2C8Fetch').href = 'https://www.youtube.com/embed/'+res3+'?autoplay=1';
+  document.getElementById('T2C9Fetch').href = 'https://www.youtube.com/embed/'+res4+'?autoplay=1';
+  document.getElementById('T1H3Fetch').innerHTML = data[1].results;
+  document.getElementById('T2H7Fetch').innerHTML = data[3].results;
+  document.getElementById('T2H8Fetch').innerHTML = data[5].results;
+  document.getElementById('T2H9Fetch').innerHTML = data[7].results;
+  document.getElementById('T1C3Fetch').style.backgroundImage = 'url("http://i.ytimg.com/vi/'+res1+'/mqdefault.jpg")';
+  document.getElementById('T2C7Fetch').style.backgroundImage = 'url("http://i.ytimg.com/vi/'+res2+'/mqdefault.jpg")';
+  document.getElementById('T2C8Fetch').style.backgroundImage = 'url("http://i.ytimg.com/vi/'+res3+'/mqdefault.jpg")';
+  document.getElementById('T2C9Fetch').style.backgroundImage = 'url("http://i.ytimg.com/vi/'+res4+'/mqdefault.jpg")';
 });
-
-
-
 
 var query = musicVideoQuery,
   uriQuery = encodeURIComponent(JSON.stringify(query)),
@@ -607,18 +852,18 @@ jQuery.getJSON(request, function (data) {
   var res3 = string3.substr(9);
   var string4 = ""+data[6].results;
   var res4 = string4.substr(9);
-  document.getElementById('T1C3Fetch').href = 'https://www.youtube.com/embed/'+res1+'?autoplay=1';
-  document.getElementById('T2C7Fetch').href = 'https://www.youtube.com/embed/'+res2+'?autoplay=1';
-  document.getElementById('T2C8Fetch').href = 'https://www.youtube.com/embed/'+res3+'?autoplay=1';
-  document.getElementById('T2C9Fetch').href = 'https://www.youtube.com/embed/'+res4+'?autoplay=1';
-  document.getElementById('T1H3Fetch').innerHTML = data[1].results;
-  document.getElementById('T2H7Fetch').innerHTML = data[3].results;
-  document.getElementById('T2H8Fetch').innerHTML = data[5].results;
-  document.getElementById('T2H9Fetch').innerHTML = data[7].results;
-  document.getElementById('T1C3Fetch').style.backgroundImage = 'url("http://i.ytimg.com/vi/'+res1+'/mqdefault.jpg")';
-  document.getElementById('T2C7Fetch').style.backgroundImage = 'url("http://i.ytimg.com/vi/'+res2+'/mqdefault.jpg")';
-  document.getElementById('T2C8Fetch').style.backgroundImage = 'url("http://i.ytimg.com/vi/'+res3+'/mqdefault.jpg")';
-  document.getElementById('T2C9Fetch').style.backgroundImage = 'url("http://i.ytimg.com/vi/'+res4+'/mqdefault.jpg")';
+  document.getElementById('T1C4Fetch').href = 'https://www.youtube.com/embed/'+res1+'?autoplay=1';
+  document.getElementById('T2C10Fetch').href = 'https://www.youtube.com/embed/'+res2+'?autoplay=1';
+  document.getElementById('T2C11Fetch').href = 'https://www.youtube.com/embed/'+res3+'?autoplay=1';
+  document.getElementById('T2C12Fetch').href = 'https://www.youtube.com/embed/'+res4+'?autoplay=1';
+  document.getElementById('T1H4Fetch').innerHTML = data[1].results;
+  document.getElementById('T2H10Fetch').innerHTML = data[3].results;
+  document.getElementById('T2H11Fetch').innerHTML = data[5].results;
+  document.getElementById('T2H12Fetch').innerHTML = data[7].results;
+  document.getElementById('T1C4Fetch').style.backgroundImage = 'url("http://i.ytimg.com/vi/'+res1+'/mqdefault.jpg")';
+  document.getElementById('T2C10Fetch').style.backgroundImage = 'url("http://i.ytimg.com/vi/'+res2+'/mqdefault.jpg")';
+  document.getElementById('T2C11Fetch').style.backgroundImage = 'url("http://i.ytimg.com/vi/'+res3+'/mqdefault.jpg")';
+  document.getElementById('T2C12Fetch').style.backgroundImage = 'url("http://i.ytimg.com/vi/'+res4+'/mqdefault.jpg")';
 });
 
 }
@@ -1009,8 +1254,8 @@ var dailyMailNewsQuery=[{url:"http://www.dailymail.co.uk/news/mostread/index.htm
 //Video - Are these all the same?
 var popularVideoQuery=[{url:"https://www.youtube.com/channel/UCR44SO_mdyRq-aTJHO5QxAw",selector:"#browse-items-primary > li:nth-child(1) > div.feed-item-dismissable > div > div > div > div.compact-shelf.shelf-item.yt-uix-shelfslider.yt-uix-shelfslider-at-head.vve-check.clearfix.yt-section-hover-container.yt-uix-tdl > div > div > ul > li:nth-child(1) > div > div.yt-lockup-dismissable > div.yt-lockup-thumbnail > span > a",extract:"href",cache:"false"},{url:"https://www.youtube.com/channel/UCR44SO_mdyRq-aTJHO5QxAw",selector:"#browse-items-primary > li:nth-child(1) > div.feed-item-dismissable > div > div > div > div.compact-shelf.shelf-item.yt-uix-shelfslider.yt-uix-shelfslider-at-head.vve-check.clearfix.yt-section-hover-container.yt-uix-tdl > div > div > ul > li:nth-child(1) > div > div.yt-lockup-dismissable > div.yt-lockup-content > h3 > a",extract:"title",cache:"false"},{url:"https://www.youtube.com/channel/UCR44SO_mdyRq-aTJHO5QxAw",selector:"#browse-items-primary > li:nth-child(1) > div.feed-item-dismissable > div > div > div > div.compact-shelf.shelf-item.yt-uix-shelfslider.yt-uix-shelfslider-at-head.vve-check.clearfix.yt-section-hover-container.yt-uix-tdl > div > div > ul > li:nth-child(2) > div > div.yt-lockup-dismissable > div.yt-lockup-thumbnail > span > a",extract:"href",cache:"false"},{url:"https://www.youtube.com/channel/UCR44SO_mdyRq-aTJHO5QxAw",selector:"#browse-items-primary > li:nth-child(1) > div.feed-item-dismissable > div > div > div > div.compact-shelf.shelf-item.yt-uix-shelfslider.yt-uix-shelfslider-at-head.vve-check.clearfix.yt-section-hover-container.yt-uix-tdl > div > div > ul > li:nth-child(2) > div > div.yt-lockup-dismissable > div.yt-lockup-content > h3 > a",extract:"title",cache:"false"},{url:"https://www.youtube.com/channel/UCR44SO_mdyRq-aTJHO5QxAw",selector:"#browse-items-primary > li:nth-child(1) > div.feed-item-dismissable > div > div > div > div.compact-shelf.shelf-item.yt-uix-shelfslider.yt-uix-shelfslider-at-head.vve-check.clearfix.yt-section-hover-container.yt-uix-tdl > div > div > ul > li:nth-child(3) > div > div.yt-lockup-dismissable > div.yt-lockup-thumbnail > span > a",extract:"href",cache:"false"},{url:"https://www.youtube.com/channel/UCR44SO_mdyRq-aTJHO5QxAw",selector:"#browse-items-primary > li:nth-child(1) > div.feed-item-dismissable > div > div > div > div.compact-shelf.shelf-item.yt-uix-shelfslider.yt-uix-shelfslider-at-head.vve-check.clearfix.yt-section-hover-container.yt-uix-tdl > div > div > ul > li:nth-child(3) > div > div.yt-lockup-dismissable > div.yt-lockup-content > h3 > a",extract:"title",cache:"false"},{url:"https://www.youtube.com/channel/UCR44SO_mdyRq-aTJHO5QxAw",selector:"#browse-items-primary > li:nth-child(1) > div.feed-item-dismissable > div > div > div > div.compact-shelf.shelf-item.yt-uix-shelfslider.yt-uix-shelfslider-at-head.vve-check.clearfix.yt-section-hover-container.yt-uix-tdl > div > div > ul > li:nth-child(4) > div > div.yt-lockup-dismissable > div.yt-lockup-thumbnail > span > a",extract:"href",cache:"false"},{url:"https://www.youtube.com/channel/UCR44SO_mdyRq-aTJHO5QxAw",selector:"#browse-items-primary > li:nth-child(1) > div.feed-item-dismissable > div > div > div > div.compact-shelf.shelf-item.yt-uix-shelfslider.yt-uix-shelfslider-at-head.vve-check.clearfix.yt-section-hover-container.yt-uix-tdl > div > div > ul > li:nth-child(4) > div > div.yt-lockup-dismissable > div.yt-lockup-content > h3 > a",extract:"title",cache:"false"}];
 var inTheNewsVideoQuery=[{url:"https://www.youtube.com/channel/UCR44SO_mdyRq-aTJHO5QxAw",selector:"#browse-items-primary > li:nth-child(2) > div.feed-item-dismissable > div > div > div > div.compact-shelf.shelf-item.yt-uix-shelfslider.yt-uix-shelfslider-at-head.vve-check.clearfix.yt-section-hover-container.yt-uix-tdl > div > div > ul > li:nth-child(1) > div > div.yt-lockup-dismissable > div.yt-lockup-thumbnail > span > a",extract:"href",cache:"false"},{url:"https://www.youtube.com/channel/UCR44SO_mdyRq-aTJHO5QxAw",selector:"#browse-items-primary > li:nth-child(2) > div.feed-item-dismissable > div > div > div > div.compact-shelf.shelf-item.yt-uix-shelfslider.yt-uix-shelfslider-at-head.vve-check.clearfix.yt-section-hover-container.yt-uix-tdl > div > div > ul > li:nth-child(1) > div > div.yt-lockup-dismissable > div.yt-lockup-content > h3 > a",extract:"title",cache:"false"},{url:"https://www.youtube.com/channel/UCR44SO_mdyRq-aTJHO5QxAw",selector:"#browse-items-primary > li:nth-child(2) > div.feed-item-dismissable > div > div > div > div.compact-shelf.shelf-item.yt-uix-shelfslider.yt-uix-shelfslider-at-head.vve-check.clearfix.yt-section-hover-container.yt-uix-tdl > div > div > ul > li:nth-child(2) > div > div.yt-lockup-dismissable > div.yt-lockup-thumbnail > span > a",extract:"href",cache:"false"},{url:"https://www.youtube.com/channel/UCR44SO_mdyRq-aTJHO5QxAw",selector:"#browse-items-primary > li:nth-child(2) > div.feed-item-dismissable > div > div > div > div.compact-shelf.shelf-item.yt-uix-shelfslider.yt-uix-shelfslider-at-head.vve-check.clearfix.yt-section-hover-container.yt-uix-tdl > div > div > ul > li:nth-child(2) > div > div.yt-lockup-dismissable > div.yt-lockup-content > h3 > a",extract:"title",cache:"false"},{url:"https://www.youtube.com/channel/UCR44SO_mdyRq-aTJHO5QxAw",selector:"#browse-items-primary > li:nth-child(2) > div.feed-item-dismissable > div > div > div > div.compact-shelf.shelf-item.yt-uix-shelfslider.yt-uix-shelfslider-at-head.vve-check.clearfix.yt-section-hover-container.yt-uix-tdl > div > div > ul > li:nth-child(3) > div > div.yt-lockup-dismissable > div.yt-lockup-thumbnail > span > a",extract:"href",cache:"false"},{url:"https://www.youtube.com/channel/UCR44SO_mdyRq-aTJHO5QxAw",selector:"#browse-items-primary > li:nth-child(2) > div.feed-item-dismissable > div > div > div > div.compact-shelf.shelf-item.yt-uix-shelfslider.yt-uix-shelfslider-at-head.vve-check.clearfix.yt-section-hover-container.yt-uix-tdl > div > div > ul > li:nth-child(3) > div > div.yt-lockup-dismissable > div.yt-lockup-content > h3 > a",extract:"title",cache:"false"},{url:"https://www.youtube.com/channel/UCR44SO_mdyRq-aTJHO5QxAw",selector:"#browse-items-primary > li:nth-child(2) > div.feed-item-dismissable > div > div > div > div.compact-shelf.shelf-item.yt-uix-shelfslider.yt-uix-shelfslider-at-head.vve-check.clearfix.yt-section-hover-container.yt-uix-tdl > div > div > ul > li:nth-child(4) > div > div.yt-lockup-dismissable > div.yt-lockup-thumbnail > span > a",extract:"href",cache:"false"},{url:"https://www.youtube.com/channel/UCR44SO_mdyRq-aTJHO5QxAw",selector:"#browse-items-primary > li:nth-child(2) > div.feed-item-dismissable > div > div > div > div.compact-shelf.shelf-item.yt-uix-shelfslider.yt-uix-shelfslider-at-head.vve-check.clearfix.yt-section-hover-container.yt-uix-tdl > div > div > ul > li:nth-child(4) > div > div.yt-lockup-dismissable > div.yt-lockup-content > h3 > a",extract:"title",cache:"false"}];
-var comedyVideoQuery=[{url:"https://www.youtube.com/channel/UCR44SO_mdyRq-aTJHO5QxAw",selector:"#browse-items-primary > li:nth-child(8) > div.feed-item-dismissable > div > div > div > div.compact-shelf.shelf-item.yt-uix-shelfslider.yt-uix-shelfslider-at-head.vve-check.clearfix.yt-section-hover-container.yt-uix-tdl > div > div > ul > li:nth-child(1) > div > div.yt-lockup-dismissable > div.yt-lockup-thumbnail > span > a",extract:"href",cache:"false"},{url:"https://www.youtube.com/channel/UCR44SO_mdyRq-aTJHO5QxAw",selector:"#browse-items-primary > li:nth-child(8) > div.feed-item-dismissable > div > div > div > div.compact-shelf.shelf-item.yt-uix-shelfslider.yt-uix-shelfslider-at-head.vve-check.clearfix.yt-section-hover-container.yt-uix-tdl > div > div > ul > li:nth-child(1) > div > div.yt-lockup-dismissable > div.yt-lockup-content > h3 > a",extract:"title",cache:"false"},{url:"https://www.youtube.com/channel/UCR44SO_mdyRq-aTJHO5QxAw",selector:"#browse-items-primary > li:nth-child(8) > div.feed-item-dismissable > div > div > div > div.compact-shelf.shelf-item.yt-uix-shelfslider.yt-uix-shelfslider-at-head.vve-check.clearfix.yt-section-hover-container.yt-uix-tdl > div > div > ul > li:nth-child(2) > div > div.yt-lockup-dismissable > div.yt-lockup-thumbnail > span > a",extract:"href",cache:"false"},{url:"https://www.youtube.com/channel/UCR44SO_mdyRq-aTJHO5QxAw",selector:"#browse-items-primary > li:nth-child(8) > div.feed-item-dismissable > div > div > div > div.compact-shelf.shelf-item.yt-uix-shelfslider.yt-uix-shelfslider-at-head.vve-check.clearfix.yt-section-hover-container.yt-uix-tdl > div > div > ul > li:nth-child(2) > div > div.yt-lockup-dismissable > div.yt-lockup-content > h3 > a",extract:"title",cache:"false"},{url:"https://www.youtube.com/channel/UCR44SO_mdyRq-aTJHO5QxAw",selector:"#browse-items-primary > li:nth-child(8) > div.feed-item-dismissable > div > div > div > div.compact-shelf.shelf-item.yt-uix-shelfslider.yt-uix-shelfslider-at-head.vve-check.clearfix.yt-section-hover-container.yt-uix-tdl > div > div > ul > li:nth-child(3) > div > div.yt-lockup-dismissable > div.yt-lockup-thumbnail > span > a",extract:"href",cache:"false"},{url:"https://www.youtube.com/channel/UCR44SO_mdyRq-aTJHO5QxAw",selector:"#browse-items-primary > li:nth-child(8) > div.feed-item-dismissable > div > div > div > div.compact-shelf.shelf-item.yt-uix-shelfslider.yt-uix-shelfslider-at-head.vve-check.clearfix.yt-section-hover-container.yt-uix-tdl > div > div > ul > li:nth-child(3) > div > div.yt-lockup-dismissable > div.yt-lockup-content > h3 > a",extract:"title",cache:"false"},{url:"https://www.youtube.com/channel/UCR44SO_mdyRq-aTJHO5QxAw",selector:"#browse-items-primary > li:nth-child(8) > div.feed-item-dismissable > div > div > div > div.compact-shelf.shelf-item.yt-uix-shelfslider.yt-uix-shelfslider-at-head.vve-check.clearfix.yt-section-hover-container.yt-uix-tdl > div > div > ul > li:nth-child(4) > div > div.yt-lockup-dismissable > div.yt-lockup-thumbnail > span > a",extract:"href",cache:"false"},{url:"https://www.youtube.com/channel/UCR44SO_mdyRq-aTJHO5QxAw",selector:"#browse-items-primary > li:nth-child(8) > div.feed-item-dismissable > div > div > div > div.compact-shelf.shelf-item.yt-uix-shelfslider.yt-uix-shelfslider-at-head.vve-check.clearfix.yt-section-hover-container.yt-uix-tdl > div > div > ul > li:nth-child(4) > div > div.yt-lockup-dismissable > div.yt-lockup-content > h3 > a",extract:"title",cache:"false"}];
-var musicVideoQuery=[{url:"https://www.youtube.com/channel/UCR44SO_mdyRq-aTJHO5QxAw",selector:"#browse-items-primary > li:nth-child(3) > div.feed-item-dismissable > div > div > div > div.compact-shelf.shelf-item.yt-uix-shelfslider.yt-uix-shelfslider-at-head.vve-check.clearfix.yt-section-hover-container.yt-uix-tdl > div > div > ul > li:nth-child(1) > div > div.yt-lockup-dismissable > div.yt-lockup-thumbnail > span > a",extract:"href",cache:"false"},{url:"https://www.youtube.com/channel/UCR44SO_mdyRq-aTJHO5QxAw",selector:"#browse-items-primary > li:nth-child(3) > div.feed-item-dismissable > div > div > div > div.compact-shelf.shelf-item.yt-uix-shelfslider.yt-uix-shelfslider-at-head.vve-check.clearfix.yt-section-hover-container.yt-uix-tdl > div > div > ul > li:nth-child(1) > div > div.yt-lockup-dismissable > div.yt-lockup-content > h3 > a",extract:"title",cache:"false"},{url:"https://www.youtube.com/channel/UCR44SO_mdyRq-aTJHO5QxAw",selector:"#browse-items-primary > li:nth-child(3) > div.feed-item-dismissable > div > div > div > div.compact-shelf.shelf-item.yt-uix-shelfslider.yt-uix-shelfslider-at-head.vve-check.clearfix.yt-section-hover-container.yt-uix-tdl > div > div > ul > li:nth-child(2) > div > div.yt-lockup-dismissable > div.yt-lockup-thumbnail > span > a",extract:"href",cache:"false"},{url:"https://www.youtube.com/channel/UCR44SO_mdyRq-aTJHO5QxAw",selector:"#browse-items-primary > li:nth-child(3) > div.feed-item-dismissable > div > div > div > div.compact-shelf.shelf-item.yt-uix-shelfslider.yt-uix-shelfslider-at-head.vve-check.clearfix.yt-section-hover-container.yt-uix-tdl > div > div > ul > li:nth-child(2) > div > div.yt-lockup-dismissable > div.yt-lockup-content > h3 > a",extract:"title",cache:"false"},{url:"https://www.youtube.com/channel/UCR44SO_mdyRq-aTJHO5QxAw",selector:"#browse-items-primary > li:nth-child(3) > div.feed-item-dismissable > div > div > div > div.compact-shelf.shelf-item.yt-uix-shelfslider.yt-uix-shelfslider-at-head.vve-check.clearfix.yt-section-hover-container.yt-uix-tdl > div > div > ul > li:nth-child(3) > div > div.yt-lockup-dismissable > div.yt-lockup-thumbnail > span > a",extract:"href",cache:"false"},{url:"https://www.youtube.com/channel/UCR44SO_mdyRq-aTJHO5QxAw",selector:"#browse-items-primary > li:nth-child(3) > div.feed-item-dismissable > div > div > div > div.compact-shelf.shelf-item.yt-uix-shelfslider.yt-uix-shelfslider-at-head.vve-check.clearfix.yt-section-hover-container.yt-uix-tdl > div > div > ul > li:nth-child(3) > div > div.yt-lockup-dismissable > div.yt-lockup-content > h3 > a",extract:"title",cache:"false"},{url:"https://www.youtube.com/channel/UCR44SO_mdyRq-aTJHO5QxAw",selector:"#browse-items-primary > li:nth-child(3) > div.feed-item-dismissable > div > div > div > div.compact-shelf.shelf-item.yt-uix-shelfslider.yt-uix-shelfslider-at-head.vve-check.clearfix.yt-section-hover-container.yt-uix-tdl > div > div > ul > li:nth-child(4) > div > div.yt-lockup-dismissable > div.yt-lockup-thumbnail > span > a",extract:"href",cache:"false"},{url:"https://www.youtube.com/channel/UCR44SO_mdyRq-aTJHO5QxAw",selector:"#browse-items-primary > li:nth-child(3) > div.feed-item-dismissable > div > div > div > div.compact-shelf.shelf-item.yt-uix-shelfslider.yt-uix-shelfslider-at-head.vve-check.clearfix.yt-section-hover-container.yt-uix-tdl > div > div > ul > li:nth-child(4) > div > div.yt-lockup-dismissable > div.yt-lockup-content > h3 > a",extract:"title",cache:"false"}];
+var musicVideoQuery=[{url:"https://www.youtube.com/channel/UCR44SO_mdyRq-aTJHO5QxAw",selector:"#browse-items-primary > li:nth-child(8) > div.feed-item-dismissable > div > div > div > div.compact-shelf.shelf-item.yt-uix-shelfslider.yt-uix-shelfslider-at-head.vve-check.clearfix.yt-section-hover-container.yt-uix-tdl > div > div > ul > li:nth-child(1) > div > div.yt-lockup-dismissable > div.yt-lockup-thumbnail > span > a",extract:"href",cache:"false"},{url:"https://www.youtube.com/channel/UCR44SO_mdyRq-aTJHO5QxAw",selector:"#browse-items-primary > li:nth-child(8) > div.feed-item-dismissable > div > div > div > div.compact-shelf.shelf-item.yt-uix-shelfslider.yt-uix-shelfslider-at-head.vve-check.clearfix.yt-section-hover-container.yt-uix-tdl > div > div > ul > li:nth-child(1) > div > div.yt-lockup-dismissable > div.yt-lockup-content > h3 > a",extract:"title",cache:"false"},{url:"https://www.youtube.com/channel/UCR44SO_mdyRq-aTJHO5QxAw",selector:"#browse-items-primary > li:nth-child(8) > div.feed-item-dismissable > div > div > div > div.compact-shelf.shelf-item.yt-uix-shelfslider.yt-uix-shelfslider-at-head.vve-check.clearfix.yt-section-hover-container.yt-uix-tdl > div > div > ul > li:nth-child(2) > div > div.yt-lockup-dismissable > div.yt-lockup-thumbnail > span > a",extract:"href",cache:"false"},{url:"https://www.youtube.com/channel/UCR44SO_mdyRq-aTJHO5QxAw",selector:"#browse-items-primary > li:nth-child(8) > div.feed-item-dismissable > div > div > div > div.compact-shelf.shelf-item.yt-uix-shelfslider.yt-uix-shelfslider-at-head.vve-check.clearfix.yt-section-hover-container.yt-uix-tdl > div > div > ul > li:nth-child(2) > div > div.yt-lockup-dismissable > div.yt-lockup-content > h3 > a",extract:"title",cache:"false"},{url:"https://www.youtube.com/channel/UCR44SO_mdyRq-aTJHO5QxAw",selector:"#browse-items-primary > li:nth-child(8) > div.feed-item-dismissable > div > div > div > div.compact-shelf.shelf-item.yt-uix-shelfslider.yt-uix-shelfslider-at-head.vve-check.clearfix.yt-section-hover-container.yt-uix-tdl > div > div > ul > li:nth-child(3) > div > div.yt-lockup-dismissable > div.yt-lockup-thumbnail > span > a",extract:"href",cache:"false"},{url:"https://www.youtube.com/channel/UCR44SO_mdyRq-aTJHO5QxAw",selector:"#browse-items-primary > li:nth-child(8) > div.feed-item-dismissable > div > div > div > div.compact-shelf.shelf-item.yt-uix-shelfslider.yt-uix-shelfslider-at-head.vve-check.clearfix.yt-section-hover-container.yt-uix-tdl > div > div > ul > li:nth-child(3) > div > div.yt-lockup-dismissable > div.yt-lockup-content > h3 > a",extract:"title",cache:"false"},{url:"https://www.youtube.com/channel/UCR44SO_mdyRq-aTJHO5QxAw",selector:"#browse-items-primary > li:nth-child(8) > div.feed-item-dismissable > div > div > div > div.compact-shelf.shelf-item.yt-uix-shelfslider.yt-uix-shelfslider-at-head.vve-check.clearfix.yt-section-hover-container.yt-uix-tdl > div > div > ul > li:nth-child(4) > div > div.yt-lockup-dismissable > div.yt-lockup-thumbnail > span > a",extract:"href",cache:"false"},{url:"https://www.youtube.com/channel/UCR44SO_mdyRq-aTJHO5QxAw",selector:"#browse-items-primary > li:nth-child(8) > div.feed-item-dismissable > div > div > div > div.compact-shelf.shelf-item.yt-uix-shelfslider.yt-uix-shelfslider-at-head.vve-check.clearfix.yt-section-hover-container.yt-uix-tdl > div > div > ul > li:nth-child(4) > div > div.yt-lockup-dismissable > div.yt-lockup-content > h3 > a",extract:"title",cache:"false"}];
+var comedyVideoQuery=[{url:"https://www.youtube.com/channel/UCR44SO_mdyRq-aTJHO5QxAw",selector:"#browse-items-primary > li:nth-child(3) > div.feed-item-dismissable > div > div > div > div.compact-shelf.shelf-item.yt-uix-shelfslider.yt-uix-shelfslider-at-head.vve-check.clearfix.yt-section-hover-container.yt-uix-tdl > div > div > ul > li:nth-child(1) > div > div.yt-lockup-dismissable > div.yt-lockup-thumbnail > span > a",extract:"href",cache:"false"},{url:"https://www.youtube.com/channel/UCR44SO_mdyRq-aTJHO5QxAw",selector:"#browse-items-primary > li:nth-child(3) > div.feed-item-dismissable > div > div > div > div.compact-shelf.shelf-item.yt-uix-shelfslider.yt-uix-shelfslider-at-head.vve-check.clearfix.yt-section-hover-container.yt-uix-tdl > div > div > ul > li:nth-child(1) > div > div.yt-lockup-dismissable > div.yt-lockup-content > h3 > a",extract:"title",cache:"false"},{url:"https://www.youtube.com/channel/UCR44SO_mdyRq-aTJHO5QxAw",selector:"#browse-items-primary > li:nth-child(3) > div.feed-item-dismissable > div > div > div > div.compact-shelf.shelf-item.yt-uix-shelfslider.yt-uix-shelfslider-at-head.vve-check.clearfix.yt-section-hover-container.yt-uix-tdl > div > div > ul > li:nth-child(2) > div > div.yt-lockup-dismissable > div.yt-lockup-thumbnail > span > a",extract:"href",cache:"false"},{url:"https://www.youtube.com/channel/UCR44SO_mdyRq-aTJHO5QxAw",selector:"#browse-items-primary > li:nth-child(3) > div.feed-item-dismissable > div > div > div > div.compact-shelf.shelf-item.yt-uix-shelfslider.yt-uix-shelfslider-at-head.vve-check.clearfix.yt-section-hover-container.yt-uix-tdl > div > div > ul > li:nth-child(2) > div > div.yt-lockup-dismissable > div.yt-lockup-content > h3 > a",extract:"title",cache:"false"},{url:"https://www.youtube.com/channel/UCR44SO_mdyRq-aTJHO5QxAw",selector:"#browse-items-primary > li:nth-child(3) > div.feed-item-dismissable > div > div > div > div.compact-shelf.shelf-item.yt-uix-shelfslider.yt-uix-shelfslider-at-head.vve-check.clearfix.yt-section-hover-container.yt-uix-tdl > div > div > ul > li:nth-child(3) > div > div.yt-lockup-dismissable > div.yt-lockup-thumbnail > span > a",extract:"href",cache:"false"},{url:"https://www.youtube.com/channel/UCR44SO_mdyRq-aTJHO5QxAw",selector:"#browse-items-primary > li:nth-child(3) > div.feed-item-dismissable > div > div > div > div.compact-shelf.shelf-item.yt-uix-shelfslider.yt-uix-shelfslider-at-head.vve-check.clearfix.yt-section-hover-container.yt-uix-tdl > div > div > ul > li:nth-child(3) > div > div.yt-lockup-dismissable > div.yt-lockup-content > h3 > a",extract:"title",cache:"false"},{url:"https://www.youtube.com/channel/UCR44SO_mdyRq-aTJHO5QxAw",selector:"#browse-items-primary > li:nth-child(3) > div.feed-item-dismissable > div > div > div > div.compact-shelf.shelf-item.yt-uix-shelfslider.yt-uix-shelfslider-at-head.vve-check.clearfix.yt-section-hover-container.yt-uix-tdl > div > div > ul > li:nth-child(4) > div > div.yt-lockup-dismissable > div.yt-lockup-thumbnail > span > a",extract:"href",cache:"false"},{url:"https://www.youtube.com/channel/UCR44SO_mdyRq-aTJHO5QxAw",selector:"#browse-items-primary > li:nth-child(3) > div.feed-item-dismissable > div > div > div > div.compact-shelf.shelf-item.yt-uix-shelfslider.yt-uix-shelfslider-at-head.vve-check.clearfix.yt-section-hover-container.yt-uix-tdl > div > div > ul > li:nth-child(4) > div > div.yt-lockup-dismissable > div.yt-lockup-content > h3 > a",extract:"title",cache:"false"}];
 
 //Sport
 var bbcSportQuery=[{url:"http://www.bbc.co.uk/sport/",selector:"#story-2 > a",extract:"href",cache:"false"},{url:"http://www.bbc.co.uk/sport/",selector:"#story-2 > a > span.headline-wrapper",extract:"text",cache:"false"},{url:"http://www.bbc.co.uk/sport/",selector:"#story-2 > a > span.image-wrapper.image-small > img",extract:"src",cache:"false"},{url:"http://www.bbc.co.uk/sport/",selector:"#story-3 > a",extract:"href",cache:"false"},{url:"http://www.bbc.co.uk/sport/",selector:"#story-3 > a > span.headline-wrapper",extract:"text",cache:"false"},{url:"http://www.bbc.co.uk/sport/",selector:"#story-3 > a > span.image-wrapper.image-small > img",extract:"src",cache:"false"},{url:"http://www.bbc.co.uk/sport/",selector:"#live-first-story > a",extract:"href",cache:"false"},{url:"http://www.bbc.co.uk/sport/",selector:"#live-first-story > a > h2",extract:"text",cache:"false"},{url:"http://www.bbc.co.uk/sport/",selector:"#live-first-story > a > img",extract:"src",cache:"false"},{url:"http://www.bbc.co.uk/sport/",selector:"#live-story-2 > a",extract:"href",cache:"false"},{url:"http://www.bbc.co.uk/sport/",selector:"#live-story-2 > a > span.headline-wrapper",extract:"text",cache:"false"},{url:"http://www.bbc.co.uk/sport/",selector:"#live-story-2 > a > span.image-wrapper.image-medium > img",extract:"src",cache:"false"}];
