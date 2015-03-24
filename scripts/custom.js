@@ -87,7 +87,7 @@ function setSubcategoryChoice(subcategoryChoicey){
 	
 	else if(categoryChoice == "ChooseScience"){
 		if(subcategoryChoicey == "SC1"){
-			subcategoryChoice = "BBC Science";
+			subcategoryChoice = "Sci BBC";
 		}
 		else if(subcategoryChoicey == "SC2"){
 			subcategoryChoice = "New Scientist";
@@ -102,13 +102,13 @@ function setSubcategoryChoice(subcategoryChoicey){
 	
 	else if(categoryChoice == "ChooseTechnology"){
 		if(subcategoryChoicey == "SC1"){
-			subcategoryChoice = "BBC Technology";
+			subcategoryChoice = "tech BBC";
 		}
 		else if(subcategoryChoicey == "SC2"){
 			subcategoryChoice = "Tech Review";
 		}
 		else if(subcategoryChoicey == "SC3"){
-			subcategoryChoice = "Sky Technology";
+			subcategoryChoice = "Tech Sky";
 		}
 		else{
 			subcategoryChoice = "Tech Crunch";
@@ -603,22 +603,6 @@ jQuery.getJSON(request, function (data) {
 	//Other
 	else if(subcategoryChoice == "Other Fashion"){
 
-// Make Ajax request to Noodle server
-jQuery.getJSON(request, function (data) {
-  document.getElementById('T1C3Fetch').href = 'http://www.elle.com'+data[0].results;
-  document.getElementById('T2C7Fetch').href = 'http://www.elle.com'+data[3].results;
-  document.getElementById('T2C8Fetch').href = 'http://www.elle.com'+data[6].results;
-  document.getElementById('T2C9Fetch').href = 'http://www.elle.com'+data[9].results;
-  document.getElementById('T1H3Fetch').innerHTML = data[1].results;
-  document.getElementById('T2H7Fetch').innerHTML = data[4].results;
-  document.getElementById('T2H8Fetch').innerHTML = data[7].results;
-  document.getElementById('T2H9Fetch').innerHTML = data[10].results;
-  document.getElementById('T1C3Fetch').style.backgroundImage = 'url("'+data[2].results+'")';
-  document.getElementById('T2C7Fetch').style.backgroundImage = 'url("'+data[5].results+'")';
-  document.getElementById('T2C8Fetch').style.backgroundImage = 'url("'+data[8].results+'")';
-  document.getElementById('T2C9Fetch').style.backgroundImage = 'url("'+data[11].results+'")';
-});
-
 var query = otherFashionQuery,
   uriQuery = encodeURIComponent(JSON.stringify(query)),
   request  = 'http://treemac.herokuapp.com/?q=' +
@@ -626,21 +610,216 @@ var query = otherFashionQuery,
 
 // Make Ajax request to Noodle server
 jQuery.getJSON(request, function (data) {
-document.getElementById(fetch1).href = data[0].results;
-document.getElementById(fetch2).href = data[3].results;
-document.getElementById(fetch3).href = data[6].results;
-document.getElementById(fetch4).href = data[9].results;
+  document.getElementById(fetch1).href = data[0].results;
+  document.getElementById(fetch2).href = data[3].results; 
+  document.getElementById(fetch3).href = data[6].results;
+  document.getElementById(fetch4).href = data[9].results;
+  document.getElementById(fetch5).innerHTML = data[1].results;
+  document.getElementById(fetch6).innerHTML = data[4].results;
+  document.getElementById(fetch7).innerHTML = data[7].results;
+  document.getElementById(fetch8).innerHTML = data[10].results;
+  document.getElementById(fetch1).style.backgroundImage = 'url("'+data[2].results+'")';
+  document.getElementById(fetch2).style.backgroundImage = 'url("http:'+data[5].results+'")';
+  document.getElementById(fetch3).style.backgroundImage = 'url("'+data[8].results+'")';
+  document.getElementById(fetch4).style.backgroundImage = 'url("'+data[11].results+'")';
+});
+}
+
+    //BBC science
+	else if(subcategoryChoice == "Sci BBC"){
+
+var query = bbcScienceQuery,
+  uriQuery = encodeURIComponent(JSON.stringify(query)),
+  request  = 'http://treemac.herokuapp.com/?q=' +
+             uriQuery + '&callback=?';
+
+// Make Ajax request to Noodle server
+jQuery.getJSON(request, function (data) {
+  document.getElementById(fetch1).href = 'http://www.bbc.co.uk'+data[0].results;
+  document.getElementById(fetch2).href = 'http://www.bbc.co.uk'+data[3].results;
+  document.getElementById(fetch3).href = 'http://www.bbc.co.uk'+data[6].results;
+  document.getElementById(fetch4).href = 'http://www.bbc.co.uk'+data[9].results;
+  document.getElementById(fetch5).innerHTML = data[1].results;
+  document.getElementById(fetch6).innerHTML = data[4].results;
+  document.getElementById(fetch7).innerHTML = data[7].results;
+  document.getElementById(fetch8).innerHTML = data[10].results;
+  document.getElementById(fetch1).style.backgroundImage = 'url("'+data[2].results+'")';
+  document.getElementById(fetch2).style.backgroundImage = 'url("'+data[5].results+'")';
+  document.getElementById(fetch3).style.backgroundImage = 'url("'+data[8].results+'")';
+  document.getElementById(fetch4).style.backgroundImage = 'url("'+data[11].results+'")';
+});
+}
+
+	else if(subcategoryChoice == "New Scientist"){
+	
+var query = newScientistScienceQuery,
+  uriQuery = encodeURIComponent(JSON.stringify(query)),
+  request  = 'http://treemac.herokuapp.com/?q=' +
+             uriQuery + '&callback=?';
+
+// Make Ajax request to Noodle server
+jQuery.getJSON(request, function (data) {
+  document.getElementById(fetch1).href = 'http://www.newscientist.com'+data[0].results;
+  document.getElementById(fetch2).href = 'http://www.newscientist.com'+data[3].results;
+  document.getElementById(fetch3).href = 'http://www.newscientist.com'+data[6].results;
+  document.getElementById(fetch4).href = 'http://www.newscientist.com'+data[9].results;
+  document.getElementById(fetch5).innerHTML = data[1].results;
+  document.getElementById(fetch6).innerHTML = data[4].results;
+  document.getElementById(fetch7).innerHTML = data[7].results;
+  document.getElementById(fetch8).innerHTML = data[10].results;
+  document.getElementById(fetch1).style.backgroundImage = 'url("http://www.newscientist.com'+data[2].results+'")';
+  document.getElementById(fetch2).style.backgroundImage = 'url("http://www.newscientist.com'+data[5].results+'")';
+  document.getElementById(fetch3).style.backgroundImage = 'url("http://www.newscientist.com'+data[8].results+'")';
+  document.getElementById(fetch4).style.backgroundImage = 'url("http://www.newscientist.com'+data[11].results+'")';
+});
+}
+
+  else if(subcategoryChoice == "(e)Science News"){
+
+var query = eScienceQuery,
+  uriQuery = encodeURIComponent(JSON.stringify(query)),
+  request  = 'http://treemac.herokuapp.com/?q=' +
+             uriQuery + '&callback=?';
+
+// Make Ajax request to Noodle server
+jQuery.getJSON(request, function (data) {
+document.getElementById(fetch1).href = 'http://esciencenews.com'+data[0].results;
+document.getElementById(fetch2).href = 'http://esciencenews.com'+data[3].results;
+document.getElementById(fetch3).href = 'http://esciencenews.com'+data[6].results;
+document.getElementById(fetch4).href = 'http://esciencenews.com'+data[9].results;
+
 document.getElementById(fetch5).innerHTML = data[1].results;
 document.getElementById(fetch6).innerHTML = data[4].results;
 document.getElementById(fetch7).innerHTML = data[7].results;
 document.getElementById(fetch8).innerHTML = data[10].results;
+
 document.getElementById(fetch1).style.backgroundImage = 'url("'+data[2].results+'")';
-document.getElementById(fetch2).style.backgroundImage = 'url("http:'+data[5].results+'")';
+document.getElementById(fetch2).style.backgroundImage = 'url("'+data[5].results+'")';
 document.getElementById(fetch3).style.backgroundImage = 'url("'+data[8].results+'")';
 document.getElementById(fetch4).style.backgroundImage = 'url("'+data[11].results+'")';
 });
 }
 
+
+else if(subcategoryChoice == "AAAS"){
+
+var query = aaasScienceQuery,
+  uriQuery = encodeURIComponent(JSON.stringify(query)),
+  request  = 'http://treemac.herokuapp.com/?q=' +
+             uriQuery + '&callback=?';
+
+// Make Ajax request to Noodle server
+jQuery.getJSON(request, function (data) {
+  document.getElementById(fetch1).href = 'http://news.sciencemag.org'+data[0].results;
+  document.getElementById(fetch2).href = 'http://news.sciencemag.org'+data[3].results;
+  document.getElementById(fetch3).href = 'http://news.sciencemag.org'+data[6].results;
+  document.getElementById(fetch4).href = 'http://news.sciencemag.org'+data[9].results;
+  document.getElementById(fetch5).innerHTML = data[1].results;
+  document.getElementById(fetch6).innerHTML = data[4].results;
+  document.getElementById(fetch7).innerHTML = data[7].results;
+  document.getElementById(fetch8).innerHTML = data[10].results;
+  document.getElementById(fetch1).style.backgroundImage = 'url("'+data[2].results+'")';
+  document.getElementById(fetch2).style.backgroundImage = 'url("'+data[5].results+'")';
+  document.getElementById(fetch3).style.backgroundImage = 'url("'+data[8].results+'")';
+  document.getElementById(fetch4).style.backgroundImage = 'url("'+data[11].results+'")';
+});
+}
+
+else if(subcategoryChoice == "tech BBC"){
+
+	var query = bbcTechnologyQuery,
+  uriQuery = encodeURIComponent(JSON.stringify(query)),
+  request  = 'http://treemac.herokuapp.com/?q=' +
+             uriQuery + '&callback=?';
+
+// Make Ajax request to Noodle server
+jQuery.getJSON(request, function (data) {
+  document.getElementById(fetch1).href = 'http://www.bbc.co.uk'+data[0].results;
+  document.getElementById(fetch2).href = 'http://www.bbc.co.uk'+data[3].results;
+  document.getElementById(fetch3).href = 'http://www.bbc.co.uk'+data[6].results;
+  document.getElementById(fetch4).href = 'http://www.bbc.co.uk'+data[9].results;
+  document.getElementById(fetch5).innerHTML = data[2].results;
+  document.getElementById(fetch6).innerHTML = data[5].results;
+  document.getElementById(fetch7).innerHTML = data[8].results;
+  document.getElementById(fetch8).innerHTML = data[11].results;
+  document.getElementById(fetch1).style.backgroundImage = 'url("'+data[1].results+'")';
+  document.getElementById(fetch2).style.backgroundImage = 'url("'+data[4].results+'")';
+  document.getElementById(fetch3).style.backgroundImage = 'url("'+data[7].results+'")';
+  document.getElementById(fetch4).style.backgroundImage = 'url("'+data[10].results+'")';
+});
+}
+
+else if(subcategoryChoice == "Tech Review"){
+
+var query = techReviewTechnologyQuery,
+  uriQuery = encodeURIComponent(JSON.stringify(query)),
+  request  = 'http://treemac.herokuapp.com/?q=' +
+             uriQuery + '&callback=?';
+
+// Make Ajax request to Noodle server
+jQuery.getJSON(request, function (data) {
+  document.getElementById(fetch1).href = 'http://www.technologyreview.com'+data[0].results;
+  document.getElementById(fetch2).href = 'http://www.technologyreview.com'+data[3].results;
+  document.getElementById(fetch3).href = 'http://www.technologyreview.com'+data[6].results;
+  document.getElementById(fetch4).href = 'http://www.technologyreview.com'+data[9].results;
+  document.getElementById(fetch5).innerHTML = data[2].results;
+  document.getElementById(fetch6).innerHTML = data[5].results;
+  document.getElementById(fetch7).innerHTML = data[8].results;
+  document.getElementById(fetch8).innerHTML = data[11].results;
+  document.getElementById(fetch1).style.backgroundImage = 'url("'+data[1].results+'")';
+  document.getElementById(fetch2).style.backgroundImage = 'url("'+data[4].results+'")';
+  document.getElementById(fetch3).style.backgroundImage = 'url("'+data[7].results+'")';
+  document.getElementById(fetch4).style.backgroundImage = 'url("'+data[10].results+'")';
+});
+  }
+  
+  else if(subcategoryChoice == "Tech Crunch"){
+  
+  var query = techCrunchTechnologyQuery,
+  uriQuery = encodeURIComponent(JSON.stringify(query)),
+  request  = 'http://treemac.herokuapp.com/?q=' +
+             uriQuery + '&callback=?';
+
+// Make Ajax request to Noodle server
+jQuery.getJSON(request, function (data) {
+  document.getElementById(fetch1).href = data[0].results;
+  document.getElementById(fetch2).href = data[3].results;
+  document.getElementById(fetch3).href = data[6].results;
+  document.getElementById(fetch4).href = data[9].results;
+  document.getElementById(fetch5).innerHTML = data[1].results;
+  document.getElementById(fetch6).innerHTML = data[4].results;
+  document.getElementById(fetch7).innerHTML = data[7].results;
+  document.getElementById(fetch8).innerHTML = data[10].results;
+  document.getElementById(fetch1).style.backgroundImage = 'url("'+data[2].results+'")';
+  document.getElementById(fetch2).style.backgroundImage = 'url("'+data[5].results+'")';
+  document.getElementById(fetch3).style.backgroundImage = 'url("'+data[8].results+'")';
+  document.getElementById(fetch4).style.backgroundImage = 'url("'+data[11].results+'")';
+});
+}
+
+else if(subcategoryChoice == "Tech Sky"){
+
+var query = skyTechnologyQuery,
+  uriQuery = encodeURIComponent(JSON.stringify(query)),
+  request  = 'http://secret-reaches-3678.herokuapp.com/?q=' +
+             uriQuery + '&callback=?';
+
+// Make Ajax request to Noodle server
+jQuery.getJSON(request, function (data) {
+  document.getElementById(fetch1).href = 'http://news.sky.com'+data[0].results;
+  document.getElementById(fetch2).href = 'http://news.sky.com'+data[3].results;
+  document.getElementById(fetch3).href = 'http://news.sky.com'+data[6].results;
+  document.getElementById(fetch4).href = 'http://news.sky.com'+data[9].results;
+  document.getElementById(fetch5).innerHTML = data[2].results;
+  document.getElementById(fetch6).innerHTML = data[5].results;
+  document.getElementById(fetch7).innerHTML = data[8].results;
+  document.getElementById(fetch8).innerHTML = data[11].results;
+  document.getElementById(fetch1).style.backgroundImage = 'url("'+data[1].results+'")';
+  document.getElementById(fetch2).style.backgroundImage = 'url("'+data[4].results+'")';
+  document.getElementById(fetch3).style.backgroundImage = 'url("'+data[7].results+'")';
+  document.getElementById(fetch4).style.backgroundImage = 'url("'+data[10].results+'")';
+});
+}
 }
 
 
