@@ -210,20 +210,185 @@ var query = bbcNewsQuery,
 			 
 	// Make Ajax request to Noodle server
 jQuery.getJSON(request, function (data) {
-  document.getElementById(fetch1).href = 'http://www.bbc.co.uk'+data[0].results;
-  document.getElementById(fetch2).href = 'http://www.bbc.co.uk'+data[3].results;
-  document.getElementById(fetch3).href = 'http://www.bbc.co.uk'+data[6].results;
-  document.getElementById(fetch4).href = 'http://www.bbc.co.uk'+data[9].results;
-  document.getElementById(fetch5).innerHTML = data[1].results;
-  document.getElementById(fetch6).innerHTML = data[4].results;
-  document.getElementById(fetch7).innerHTML = data[7].results;
-  document.getElementById(fetch8).innerHTML = data[10].results;
-  document.getElementById(fetch1).style.backgroundImage = 'url("'+data[2].results+'")';
-  document.getElementById(fetch2).style.backgroundImage = 'url("'+data[5].results+'")';
-  document.getElementById(fetch3).style.backgroundImage = 'url("'+data[8].results+'")';
-  document.getElementById(fetch4).style.backgroundImage = 'url("'+data[11].results+'")';
+  var holder = data[0].results;
+  var circle = fetch2
+  var header = fetch6
+  callback(holder, circle, header);
+  var holder = data[1].results;
+  var circle = fetch1
+  var header = fetch5
+  callback(holder, circle, header);
+  var holder = data[2].results;
+  var circle = fetch3
+  var header = fetch7
+  callback(holder, circle, header);
+  var holder = data[3].results;
+  var circle = fetch4
+  var header = fetch8
+  callback(holder, circle, header);
+});
+
+//for bbc to work
+function callback(holder, circle, header) {
+var url = 'http://www.bbc.co.uk'+holder;
+TryImage(url, circle);
+
+var query = {
+    url: url,
+    type: 'html',
+    selector: '#page > div > div.container--primary-and-secondary-columns.column-clearfix > div.column--primary > div.story-body > h1',
+    extract: 'text',
+    cache: 'false'
+  },
+  uriQuery = encodeURIComponent(JSON.stringify(query)),
+  request  = 'http://example.noodlejs.com/?q=' +
+             uriQuery + '&callback=?';
+
+// Make Ajax request to Noodle server
+jQuery.getJSON(request, function (data) {
+document.getElementById(header).innerHTML = data[0].results;
+document.getElementById(circle).href = url;
 });
 }
+
+function TryImage(global, circle) {
+
+var query = {
+    url: global,
+    type: 'html',
+    selector: '#page > div > div > div.column--primary > div.story-body > div.story-body__inner > figure.media-landscape.full-width.has-caption.lead > img',
+    extract: 'src'
+  },
+  uriQuery = encodeURIComponent(JSON.stringify(query)),
+  request  = 'http://example.noodlejs.com/?q=' +
+             uriQuery + '&callback=?';
+// Make Ajax request to Noodle server
+jQuery.getJSON(request, function (data) {
+  var tester = ""+data[0].results;
+  if (tester.length > 10) {
+  document.getElementById(circle).style.backgroundImage = 'url("'+data[0].results+'")';
+  }
+  else {
+  TryImage1();
+  }
+});
+
+function TryImage1() {
+var query = {
+    url: global,
+    type: 'html',
+    selector: '#page > div > div.column--primary > div:nth-child(1) > div.story-body > div.story-body__inner > figure.media-landscape.full-width.no-caption.lead > img',
+    extract: 'src'
+  },
+  uriQuery = encodeURIComponent(JSON.stringify(query)),
+  request  = 'http://example.noodlejs.com/?q=' +
+             uriQuery + '&callback=?';
+// Make Ajax request to Noodle server
+jQuery.getJSON(request, function (data) {
+  var tester = ""+data[0].results;
+   
+  if (tester.length > 10) {
+  document.getElementById(circle).style.backgroundImage = 'url("'+data[0].results+'")';
+  }
+  else {
+  TryImage2();
+  }
+});
+}
+
+function TryImage2() {
+var query = {
+    url: global,
+    type: 'html',
+    selector: '#page > div > div.column--primary > div:nth-child(1) > div.story-body > div.story-body__inner > figure.media-landscape.full-width.no-caption.lead > img',
+    extract: 'src'
+  },
+  uriQuery = encodeURIComponent(JSON.stringify(query)),
+  request  = 'http://example.noodlejs.com/?q=' +
+             uriQuery + '&callback=?';
+// Make Ajax request to Noodle server
+jQuery.getJSON(request, function (data) {
+  var tester = ""+data[0].results;
+   
+  if (tester.length > 10) {
+  document.getElementById(circle).style.backgroundImage = 'url("'+data[0].results+'")';
+  }
+  else {
+  TryImage3();
+  }
+});
+}
+
+function TryImage3() {
+var query = {
+    url: global,
+    type: 'html',
+    selector: '#page > div > div.container--primary-and-secondary-columns.column-clearfix > div.column--primary > div.story-body > div.story-body__inner > figure.media-landscape.full-width.no-caption.lead > img',
+    extract: 'src'
+  },
+  uriQuery = encodeURIComponent(JSON.stringify(query)),
+  request  = 'http://example.noodlejs.com/?q=' +
+             uriQuery + '&callback=?';
+// Make Ajax request to Noodle server
+jQuery.getJSON(request, function (data) {
+  var tester = ""+data[0].results;
+   
+  if (tester.length > 10) {
+  document.getElementById(circle).style.backgroundImage = 'url("'+data[0].results+'")';
+  }
+  else {
+  TryImage4();
+  }
+});
+}
+
+function TryImage4() {
+var query = {
+    url: global,
+    type: 'html',
+    selector: '#page > div > div.container--primary-and-secondary-columns.column-clearfix > div.column--primary > div:nth-child(1) > div.story-body__inner > figure.media-landscape.full-width.no-caption.lead > img',
+    extract: 'src'
+  },
+  uriQuery = encodeURIComponent(JSON.stringify(query)),
+  request  = 'http://example.noodlejs.com/?q=' +
+             uriQuery + '&callback=?';
+// Make Ajax request to Noodle server
+jQuery.getJSON(request, function (data) {
+  var tester = ""+data[0].results;
+   
+  if (tester.length > 10) {
+  document.getElementById(circle).style.backgroundImage = 'url("'+data[0].results+'")';
+  }
+  else {
+  TryImage5();
+  }
+});
+}
+
+function TryImage5() {
+var query = {
+    url: global,
+    type: 'html',
+    selector: '#page > div > div.container--primary-and-secondary-columns.column-clearfix > div.column--primary > div:nth-child(1) > div.story-body__inner > figure.media-landscape.full-width.has-caption.lead > img',
+    extract: 'src'
+  },
+  uriQuery = encodeURIComponent(JSON.stringify(query)),
+  request  = 'http://example.noodlejs.com/?q=' +
+             uriQuery + '&callback=?';
+// Make Ajax request to Noodle server
+jQuery.getJSON(request, function (data) {
+  var tester = ""+data[0].results;
+   
+  if (tester.length > 10) {
+  document.getElementById(circle).style.backgroundImage = 'url("'+data[0].results+'")';
+  }
+  else {
+  }
+});
+}
+}
+}
+
 	//Al Jazeera
 	else if(subcategoryChoice == "Al Jazeera"){
 
@@ -1425,7 +1590,8 @@ jQuery.getJSON(request, function (data) {
 }
 
 //News
-var bbcNewsQuery=[{url:"http://www.bbc.co.uk/news/",selector:"#top-story > h2 > a",extract:"href",cache:"false"},{url:"http://www.bbc.co.uk/news/",selector:"#top-story > h2",extract:"text",cache:"false"},{url:"http://www.bbc.co.uk/news/",selector:"#top-story > h2 > a > img",extract:"src",cache:"false"},{url:"http://www.bbc.co.uk/news/",selector:"#most-popular > div.panel.open > ol > li.ol2 > a",extract:"href",cache:"false"},{url:"http://www.bbc.co.uk/news/",selector:"#second-story > div > h2 > a",extract:"text",cache:"false"},{url:"http://www.bbc.co.uk/news/",selector:"#second-story > div > h2 > a > img",extract:"src",cache:"false"},{url:"http://www.bbc.co.uk/news/",selector:"#third-story > div > h2 > a",extract:"href",cache:"false"},{url:"http://www.bbc.co.uk/news/",selector:"#third-story > div > h2 > a",extract:"text",cache:"false"},{url:"http://www.bbc.co.uk/news/",selector:"#third-story > div > h2 > a > img",extract:"src",cache:"false"},{url:"http://www.bbc.co.uk/news/",selector:"#explainers > ul > li.small-image.column-1.first-child > h3 > a",extract:"href",cache:"false"},{url:"http://www.bbc.co.uk/news/",selector:"#explainers > ul > li.small-image.column-1.first-child > h3 > a",extract:"text",cache:"false"},{url:"http://www.bbc.co.uk/news/",selector:"#explainers > ul > li.small-image.column-1.first-child > h3 > a > img",extract:"src",cache:"false"}];
+var bbcNewsQuery =[{url:'http://www.bbc.co.uk/news',type:'html',selector:'#comp-candy-asset-munger > div > div:nth-child(1) > div.pigeon-item__body > a.title-link',extract: 'href',cache: 'false'},{url: 'http://www.bbc.co.uk/news',type: 'html',selector: '#comp-candy-asset-munger > div > div.pigeon__column.pigeon__column--b > div:nth-child(3) > a.title-link',extract: 'href',cache: 'false'},{url: 'http://www.bbc.co.uk/news',type: 'html',selector: '#comp-candy-asset-munger > div > div.pigeon__column.pigeon__column--b > div:nth-child(2) > a.title-link',extract: 'href',cache: 'false'},{url: 'http://www.bbc.co.uk/news',type: 'html',selector: '#comp-candy-asset-munger > div > div:nth-child(2) > div.pigeon-item__body > a.title-link',extract: 'href',cache: 'false'}];
+//var bbcNewsQuery=[{url:"http://www.bbc.co.uk/news/",selector:"#top-story > h2 > a",extract:"href",cache:"false"},{url:"http://www.bbc.co.uk/news/",selector:"#top-story > h2",extract:"text",cache:"false"},{url:"http://www.bbc.co.uk/news/",selector:"#top-story > h2 > a > img",extract:"src",cache:"false"},{url:"http://www.bbc.co.uk/news/",selector:"#most-popular > div.panel.open > ol > li.ol2 > a",extract:"href",cache:"false"},{url:"http://www.bbc.co.uk/news/",selector:"#second-story > div > h2 > a",extract:"text",cache:"false"},{url:"http://www.bbc.co.uk/news/",selector:"#second-story > div > h2 > a > img",extract:"src",cache:"false"},{url:"http://www.bbc.co.uk/news/",selector:"#third-story > div > h2 > a",extract:"href",cache:"false"},{url:"http://www.bbc.co.uk/news/",selector:"#third-story > div > h2 > a",extract:"text",cache:"false"},{url:"http://www.bbc.co.uk/news/",selector:"#third-story > div > h2 > a > img",extract:"src",cache:"false"},{url:"http://www.bbc.co.uk/news/",selector:"#explainers > ul > li.small-image.column-1.first-child > h3 > a",extract:"href",cache:"false"},{url:"http://www.bbc.co.uk/news/",selector:"#explainers > ul > li.small-image.column-1.first-child > h3 > a",extract:"text",cache:"false"},{url:"http://www.bbc.co.uk/news/",selector:"#explainers > ul > li.small-image.column-1.first-child > h3 > a > img",extract:"src",cache:"false"}];
 var alJazeeraNewsQuery=[{url:"http://www.aljazeera.com/topics/regions/europe.html",type:"html",selector:"#main-content > div:nth-child(2) > div:nth-child(2) > div > div:nth-child(1) > div > div > div > div > article.item.da-all.blurb-wide.clearfix > a",extract:"href",cache:"false"},{url:"http://www.aljazeera.com/topics/regions/europe.html",type:"html",selector:"#main-content > div:nth-child(2) > div:nth-child(2) > div > div:nth-child(1) > div > div > div > div > article.item.da-all.blurb-wide.clearfix > div > h1 > a",extract:"text",cache:"false"},{url:"http://www.aljazeera.com/topics/regions/europe.html",type:"html",selector:"#main-content > div:nth-child(2) > div:nth-child(2) > div > div:nth-child(1) > div > div > div > div > article.item.da-all.blurb-wide.clearfix > a > img",extract:"src",cache:"false"},{url:"http://www.aljazeera.com/topics/regions/europe.html",type:"html",selector:"#main-content > div:nth-child(2) > div:nth-child(2) > div > div:nth-child(1) > div > div > div > div > article.item.db1.tb1.blurb.clearfix > div > h1 > a",extract:"href",cache:"false"},{url:"http://www.aljazeera.com/topics/regions/europe.html",type:"html",selector:"#main-content > div:nth-child(2) > div:nth-child(2) > div > div:nth-child(1) > div > div > div > div > article.item.db1.tb1.blurb.clearfix > div > h1 > a",extract:"text",cache:"false"},{url:"http://www.aljazeera.com/topics/regions/europe.html",type:"html",selector:"#main-content > div:nth-child(2) > div:nth-child(2) > div > div:nth-child(1) > div > div > div > div > article.item.db1.tb1.blurb.clearfix > a > img",extract:"src",cache:"false"},{url:"http://www.aljazeera.com/topics/regions/europe.html",type:"html",selector:"#main-content > div:nth-child(2) > div:nth-child(2) > div > div:nth-child(1) > div > div > div > div > article.item.db2.tb2.blurb.clearfix > div > h1 > a",extract:"href",cache:"false"},{url:"http://www.aljazeera.com/topics/regions/europe.html",type:"html",selector:"#main-content > div:nth-child(2) > div:nth-child(2) > div > div:nth-child(1) > div > div > div > div > article.item.db2.tb2.blurb.clearfix > div > h1 > a",extract:"text",cache:"false"},{url:"http://www.aljazeera.com/topics/regions/europe.html",type:"html",selector:"#main-content > div:nth-child(2) > div:nth-child(2) > div > div:nth-child(1) > div > div > div > div > article.item.db2.tb2.blurb.clearfix > a > img",extract:"src",cache:"false"},{url:"http://www.aljazeera.com/topics/regions/europe.html",type:"html",selector:"#main-content > div:nth-child(2) > div:nth-child(2) > div > div:nth-child(1) > div > div > div > div > article.item.db3.tb3.blurb.clearfix > div > h1 > a",extract:"href",cache:"false"},{url:"http://www.aljazeera.com/topics/regions/europe.html",type:"html",selector:"#main-content > div:nth-child(2) > div:nth-child(2) > div > div:nth-child(1) > div > div > div > div > article.item.db3.tb3.blurb.clearfix > div > h1 > a",extract:"text",cache:"false"},{url:"http://www.aljazeera.com/topics/regions/europe.html",type:"html",selector:"#main-content > div:nth-child(2) > div:nth-child(2) > div > div:nth-child(1) > div > div > div > div > article.item.db3.tb3.blurb.clearfix > a > img",extract:"src",cache:"false"}];
 var skyNewsQuery=[{url:"http://news.sky.com/uk",type:"html",selector:"body > div.viewport > div.main > div > div > div > div:nth-child(2) > ol > li.section-top-stories__item.section-top-stories__item--1.section-top-stories__item--odd > a",extract:"href",cache:"false"},{url:"http://news.sky.com/uk",type:"html",selector:"body > div.viewport > div.main > div > div > div > div:nth-child(2) > ol > li.section-top-stories__item.section-top-stories__item--1.section-top-stories__item--odd > a > span",extract:"text",cache:"false"},{url:"http://news.sky.com/uk",type:"html",selector:"body > div.viewport > div.main > div > div > div > div:nth-child(2) > ol > li.section-top-stories__item.section-top-stories__item--1.section-top-stories__item--odd > a > div > div > img",extract:"src",cache:"false"},{url:"http://news.sky.com/uk",type:"html",selector:"body > div.viewport > div.main > div > div > div > div:nth-child(3) > ol > li.section-top-stories__item.section-top-stories__item--6.section-top-stories__item--even > a",extract:"href",cache:"false"},{url:"http://news.sky.com/uk",type:"html",selector:"body > div.viewport > div.main > div > div > div > div:nth-child(3) > ol > li.section-top-stories__item.section-top-stories__item--6.section-top-stories__item--even > a > span",extract:"text",cache:"false"},{url:"http://news.sky.com/uk",type:"html",selector:"body > div.viewport > div.main > div > div > div > div:nth-child(3) > ol > li.section-top-stories__item.section-top-stories__item--6.section-top-stories__item--even > a > div > div > img",extract:"src",cache:"false"},{url:"http://news.sky.com/uk",type:"html",selector:"body > div.viewport > div.main > div > div > div > div:nth-child(3) > ol > li.section-top-stories__item.section-top-stories__item--7.section-top-stories__item--odd > a",extract:"href",cache:"false"},{url:"http://news.sky.com/uk",type:"html",selector:"body > div.viewport > div.main > div > div > div > div:nth-child(3) > ol > li.section-top-stories__item.section-top-stories__item--7.section-top-stories__item--odd > a > span",extract:"text",cache:"false"},{url:"http://news.sky.com/uk",type:"html",selector:"body > div.viewport > div.main > div > div > div > div:nth-child(3) > ol > li.section-top-stories__item.section-top-stories__item--7.section-top-stories__item--odd > a > div > div > img",extract:"src",cache:"false"},{url:"http://news.sky.com/uk",type:"html",selector:"body > div.viewport > div.main > div > div > div > div:nth-child(3) > ol > li.section-top-stories__item.section-top-stories__item--8.section-top-stories__item--even > a",extract:"href",cache:"false"},{url:"http://news.sky.com/uk",type:"html",selector:"body > div.viewport > div.main > div > div > div > div:nth-child(3) > ol > li.section-top-stories__item.section-top-stories__item--8.section-top-stories__item--even > a > span",extract:"text",cache:"false"},{url:"http://news.sky.com/uk",type:"html",selector:"body > div.viewport > div.main > div > div > div > div:nth-child(3) > ol > li.section-top-stories__item.section-top-stories__item--8.section-top-stories__item--even > a > div > div > img",extract:"src",cache:"false"}];
 var dailyMailNewsQuery=[{url:"http://www.dailymail.co.uk/news/mostread/index.html?period=DAILY&channel=home",type:"html",selector:"#r0c1p0 > div.js-headers.site-most-read-group.js-accordion.home.collapsed > div.site-most-read-content.link-bow.home.js-close.cleared > div:nth-child(1) > h2 > a",extract:"href",cache:"false"},{url:"http://www.dailymail.co.uk/news/mostread/index.html?period=DAILY&channel=home",type:"html",selector:"#r0c1p0 > div.js-headers.site-most-read-group.js-accordion.home.collapsed > div.site-most-read-content.link-bow.home.js-close.cleared > div:nth-child(1) > h2",extract:"text",cache:"false"},{url:"http://www.dailymail.co.uk/news/mostread/index.html?period=DAILY&channel=home",type:"html",selector:"#r0c1p0 > div.js-headers.site-most-read-group.js-accordion.home.collapsed > div.site-most-read-content.link-bow.home.js-close.cleared > div:nth-child(1) > div.articletext > a > img",extract:"src",cache:"false"},{url:"http://www.dailymail.co.uk/news/mostread/index.html?period=DAILY&channel=home",type:"html",selector:"#r0c1p0 > div.js-headers.site-most-read-group.js-accordion.home.collapsed > div.site-most-read-content.link-bow.home.js-close.cleared > div:nth-child(2) > h2 > a",extract:"href",cache:"false"},{url:"http://www.dailymail.co.uk/news/mostread/index.html?period=DAILY&channel=home",type:"html",selector:"#r0c1p0 > div.js-headers.site-most-read-group.js-accordion.home.collapsed > div.site-most-read-content.link-bow.home.js-close.cleared > div:nth-child(2) > h2 > a",extract:"text",cache:"false"},{url:"http://www.dailymail.co.uk/news/mostread/index.html?period=DAILY&channel=home",type:"html",selector:"#r0c1p0 > div.js-headers.site-most-read-group.js-accordion.home.collapsed > div.site-most-read-content.link-bow.home.js-close.cleared > div:nth-child(2) > div.articletext > a > img",extract:"src",cache:"false"},{url:"http://www.dailymail.co.uk/news/mostread/index.html?period=DAILY&channel=home",type:"html",selector:"#r0c1p0 > div.js-headers.site-most-read-group.js-accordion.home.collapsed > div.site-most-read-content.link-bow.home.js-close.cleared > div:nth-child(3) > h2 > a",extract:"href",cache:"false"},{url:"http://www.dailymail.co.uk/news/mostread/index.html?period=DAILY&channel=home",type:"html",selector:"#r0c1p0 > div.js-headers.site-most-read-group.js-accordion.home.collapsed > div.site-most-read-content.link-bow.home.js-close.cleared > div:nth-child(3) > h2 > a",extract:"text",cache:"false"},{url:"http://www.dailymail.co.uk/news/mostread/index.html?period=DAILY&channel=home",type:"html",selector:"#r0c1p0 > div.js-headers.site-most-read-group.js-accordion.home.collapsed > div.site-most-read-content.link-bow.home.js-close.cleared > div:nth-child(3) > div.articletext > a > img",extract:"src",cache:"false"},{url:"http://www.dailymail.co.uk/news/mostread/index.html?period=DAILY&channel=home",type:"html",selector:"#r0c1p0 > div.js-headers.site-most-read-group.js-accordion.home.collapsed > div.site-most-read-content.link-bow.home.js-close.cleared > div:nth-child(4) > h2 > a",extract:"href",cache:"false"},{url:"http://www.dailymail.co.uk/news/mostread/index.html?period=DAILY&channel=home",type:"html",selector:"#r0c1p0 > div.js-headers.site-most-read-group.js-accordion.home.collapsed > div.site-most-read-content.link-bow.home.js-close.cleared > div:nth-child(4) > h2 > a",extract:"text",cache:"false"},{url:"http://www.dailymail.co.uk/news/mostread/index.html?period=DAILY&channel=home",type:"html",selector:"#r0c1p0 > div.js-headers.site-most-read-group.js-accordion.home.collapsed > div.site-most-read-content.link-bow.home.js-close.cleared > div:nth-child(4) > div.articletext > a > img",extract:"src",cache:"false"}];
