@@ -383,6 +383,30 @@ jQuery.getJSON(request, function (data) {
   document.getElementById(circle).style.backgroundImage = 'url("'+data[0].results+'")';
   }
   else {
+  TryImage6();
+  }
+});
+}
+
+function TryImage6() {
+var query = {
+    url: global,
+    type: 'html',
+    selector: '#page > div > div.container--primary-and-secondary-columns.column-clearfix > div.column--primary > div.story-body > div.story-body__inner > figure:nth-child(21) > img',
+    extract: 'src'
+  },
+  uriQuery = encodeURIComponent(JSON.stringify(query)),
+  request  = 'http://example.noodlejs.com/?q=' +
+             uriQuery + '&callback=?';
+// Make Ajax request to Noodle server
+jQuery.getJSON(request, function (data) {
+  var tester = ""+data[0].results;
+   
+  if (tester.length > 10) {
+  document.getElementById(circle).style.backgroundImage = 'url("'+data[0].results+'")';
+  }
+  else {
+  document.getElementById(circle).style.backgroundImage = 'url("../images/noimage.jpg")';
   }
 });
 }
@@ -792,27 +816,216 @@ jQuery.getJSON(request, function (data) {
 
     //BBC science
 	else if(subcategoryChoice == "Sci BBC"){
-
+	
 var query = bbcScienceQuery,
+			uriQuery = encodeURIComponent(JSON.stringify(query)),
+			request  = 'http://treemac.herokuapp.com/?q=' +
+						uriQuery + '&callback=?';
+			 
+			 
+	// Make Ajax request to Noodle server
+jQuery.getJSON(request, function (data) {
+  var holder = data[0].results;
+  var circle = fetch2
+  var header = fetch6
+  callback(holder, circle, header);
+  var holder = data[1].results;
+  var circle = fetch1
+  var header = fetch5
+  callback(holder, circle, header);
+  var holder = data[2].results;
+  var circle = fetch3
+  var header = fetch7
+  callback(holder, circle, header);
+  var holder = data[3].results;
+  var circle = fetch4
+  var header = fetch8
+  callback(holder, circle, header);
+});
+
+//for bbc to work
+function callback(holder, circle, header) {
+var url = 'http://www.bbc.co.uk'+holder;
+TryImage(url, circle);
+
+var query = {
+    url: url,
+    type: 'html',
+    selector: '#page > div > div.container--primary-and-secondary-columns.column-clearfix > div.column--primary > div.story-body > h1',
+    extract: 'text',
+    cache: 'false'
+  },
   uriQuery = encodeURIComponent(JSON.stringify(query)),
-  request  = 'http://treemac.herokuapp.com/?q=' +
+  request  = 'http://example.noodlejs.com/?q=' +
              uriQuery + '&callback=?';
 
 // Make Ajax request to Noodle server
 jQuery.getJSON(request, function (data) {
-  document.getElementById(fetch1).href = 'http://www.bbc.co.uk'+data[0].results;
-  document.getElementById(fetch2).href = 'http://www.bbc.co.uk'+data[3].results;
-  document.getElementById(fetch3).href = 'http://www.bbc.co.uk'+data[6].results;
-  document.getElementById(fetch4).href = 'http://www.bbc.co.uk'+data[9].results;
-  document.getElementById(fetch5).innerHTML = data[1].results;
-  document.getElementById(fetch6).innerHTML = data[4].results;
-  document.getElementById(fetch7).innerHTML = data[7].results;
-  document.getElementById(fetch8).innerHTML = data[10].results;
-  document.getElementById(fetch1).style.backgroundImage = 'url("'+data[2].results+'")';
-  document.getElementById(fetch2).style.backgroundImage = 'url("'+data[5].results+'")';
-  document.getElementById(fetch3).style.backgroundImage = 'url("'+data[8].results+'")';
-  document.getElementById(fetch4).style.backgroundImage = 'url("'+data[11].results+'")';
+document.getElementById(header).innerHTML = data[0].results;
+document.getElementById(circle).href = url;
 });
+}
+
+function TryImage(global, circle) {
+
+var query = {
+    url: global,
+    type: 'html',
+    selector: '#page > div > div > div.column--primary > div.story-body > div.story-body__inner > figure.media-landscape.full-width.has-caption.lead > img',
+    extract: 'src'
+  },
+  uriQuery = encodeURIComponent(JSON.stringify(query)),
+  request  = 'http://example.noodlejs.com/?q=' +
+             uriQuery + '&callback=?';
+// Make Ajax request to Noodle server
+jQuery.getJSON(request, function (data) {
+  var tester = ""+data[0].results;
+  if (tester.length > 10) {
+  document.getElementById(circle).style.backgroundImage = 'url("'+data[0].results+'")';
+  }
+  else {
+  TryImage1();
+  }
+});
+
+function TryImage1() {
+var query = {
+    url: global,
+    type: 'html',
+    selector: '#page > div > div.column--primary > div:nth-child(1) > div.story-body > div.story-body__inner > figure.media-landscape.full-width.no-caption.lead > img',
+    extract: 'src'
+  },
+  uriQuery = encodeURIComponent(JSON.stringify(query)),
+  request  = 'http://example.noodlejs.com/?q=' +
+             uriQuery + '&callback=?';
+// Make Ajax request to Noodle server
+jQuery.getJSON(request, function (data) {
+  var tester = ""+data[0].results;
+   
+  if (tester.length > 10) {
+  document.getElementById(circle).style.backgroundImage = 'url("'+data[0].results+'")';
+  }
+  else {
+  TryImage2();
+  }
+});
+}
+
+function TryImage2() {
+var query = {
+    url: global,
+    type: 'html',
+    selector: '#page > div > div.column--primary > div:nth-child(1) > div.story-body > div.story-body__inner > figure.media-landscape.full-width.no-caption.lead > img',
+    extract: 'src'
+  },
+  uriQuery = encodeURIComponent(JSON.stringify(query)),
+  request  = 'http://example.noodlejs.com/?q=' +
+             uriQuery + '&callback=?';
+// Make Ajax request to Noodle server
+jQuery.getJSON(request, function (data) {
+  var tester = ""+data[0].results;
+   
+  if (tester.length > 10) {
+  document.getElementById(circle).style.backgroundImage = 'url("'+data[0].results+'")';
+  }
+  else {
+  TryImage3();
+  }
+});
+}
+
+function TryImage3() {
+var query = {
+    url: global,
+    type: 'html',
+    selector: '#page > div > div.container--primary-and-secondary-columns.column-clearfix > div.column--primary > div.story-body > div.story-body__inner > figure.media-landscape.full-width.no-caption.lead > img',
+    extract: 'src'
+  },
+  uriQuery = encodeURIComponent(JSON.stringify(query)),
+  request  = 'http://example.noodlejs.com/?q=' +
+             uriQuery + '&callback=?';
+// Make Ajax request to Noodle server
+jQuery.getJSON(request, function (data) {
+  var tester = ""+data[0].results;
+   
+  if (tester.length > 10) {
+  document.getElementById(circle).style.backgroundImage = 'url("'+data[0].results+'")';
+  }
+  else {
+  TryImage4();
+  }
+});
+}
+
+function TryImage4() {
+var query = {
+    url: global,
+    type: 'html',
+    selector: '#page > div > div.container--primary-and-secondary-columns.column-clearfix > div.column--primary > div:nth-child(1) > div.story-body__inner > figure.media-landscape.full-width.no-caption.lead > img',
+    extract: 'src'
+  },
+  uriQuery = encodeURIComponent(JSON.stringify(query)),
+  request  = 'http://example.noodlejs.com/?q=' +
+             uriQuery + '&callback=?';
+// Make Ajax request to Noodle server
+jQuery.getJSON(request, function (data) {
+  var tester = ""+data[0].results;
+   
+  if (tester.length > 10) {
+  document.getElementById(circle).style.backgroundImage = 'url("'+data[0].results+'")';
+  }
+  else {
+  TryImage5();
+  }
+});
+}
+
+function TryImage5() {
+var query = {
+    url: global,
+    type: 'html',
+    selector: '#page > div > div.container--primary-and-secondary-columns.column-clearfix > div.column--primary > div:nth-child(1) > div.story-body__inner > figure.media-landscape.full-width.has-caption.lead > img',
+    extract: 'src'
+  },
+  uriQuery = encodeURIComponent(JSON.stringify(query)),
+  request  = 'http://example.noodlejs.com/?q=' +
+             uriQuery + '&callback=?';
+// Make Ajax request to Noodle server
+jQuery.getJSON(request, function (data) {
+  var tester = ""+data[0].results;
+   
+  if (tester.length > 10) {
+  document.getElementById(circle).style.backgroundImage = 'url("'+data[0].results+'")';
+  }
+  else {
+  TryImage6();
+  }
+});
+}
+
+function TryImage6() {
+var query = {
+    url: global,
+    type: 'html',
+    selector: '#page > div > div.container--primary-and-secondary-columns.column-clearfix > div.column--primary > div.story-body > div.story-body__inner > figure:nth-child(21) > img',
+    extract: 'src'
+  },
+  uriQuery = encodeURIComponent(JSON.stringify(query)),
+  request  = 'http://example.noodlejs.com/?q=' +
+             uriQuery + '&callback=?';
+// Make Ajax request to Noodle server
+jQuery.getJSON(request, function (data) {
+  var tester = ""+data[0].results;
+   
+  if (tester.length > 10) {
+  document.getElementById(circle).style.backgroundImage = 'url("'+data[0].results+'")';
+  }
+  else {
+  document.getElementById(circle).style.backgroundImage = 'url("../images/noimage.jpg")';
+  }
+});
+}
+}
 }
 
 	else if(subcategoryChoice == "New Scientist"){
@@ -893,25 +1106,214 @@ jQuery.getJSON(request, function (data) {
 else if(subcategoryChoice == "tech BBC"){
 
 	var query = bbcTechnologyQuery,
+			uriQuery = encodeURIComponent(JSON.stringify(query)),
+			request  = 'http://treemac.herokuapp.com/?q=' +
+						uriQuery + '&callback=?';
+			 
+			 
+	// Make Ajax request to Noodle server
+jQuery.getJSON(request, function (data) {
+  var holder = data[0].results;
+  var circle = fetch2
+  var header = fetch6
+  callback(holder, circle, header);
+  var holder = data[1].results;
+  var circle = fetch1
+  var header = fetch5
+  callback(holder, circle, header);
+  var holder = data[2].results;
+  var circle = fetch3
+  var header = fetch7
+  callback(holder, circle, header);
+  var holder = data[3].results;
+  var circle = fetch4
+  var header = fetch8
+  callback(holder, circle, header);
+});
+
+//for bbc to work
+function callback(holder, circle, header) {
+var url = 'http://www.bbc.co.uk'+holder;
+TryImage(url, circle);
+
+var query = {
+    url: url,
+    type: 'html',
+    selector: '#page > div > div.container--primary-and-secondary-columns.column-clearfix > div.column--primary > div.story-body > h1',
+    extract: 'text',
+    cache: 'false'
+  },
   uriQuery = encodeURIComponent(JSON.stringify(query)),
-  request  = 'http://treemac.herokuapp.com/?q=' +
+  request  = 'http://example.noodlejs.com/?q=' +
              uriQuery + '&callback=?';
 
 // Make Ajax request to Noodle server
 jQuery.getJSON(request, function (data) {
-  document.getElementById(fetch1).href = 'http://www.bbc.co.uk'+data[0].results;
-  document.getElementById(fetch2).href = 'http://www.bbc.co.uk'+data[3].results;
-  document.getElementById(fetch3).href = 'http://www.bbc.co.uk'+data[6].results;
-  document.getElementById(fetch4).href = 'http://www.bbc.co.uk'+data[9].results;
-  document.getElementById(fetch5).innerHTML = data[2].results;
-  document.getElementById(fetch6).innerHTML = data[5].results;
-  document.getElementById(fetch7).innerHTML = data[8].results;
-  document.getElementById(fetch8).innerHTML = data[11].results;
-  document.getElementById(fetch1).style.backgroundImage = 'url("'+data[1].results+'")';
-  document.getElementById(fetch2).style.backgroundImage = 'url("'+data[4].results+'")';
-  document.getElementById(fetch3).style.backgroundImage = 'url("'+data[7].results+'")';
-  document.getElementById(fetch4).style.backgroundImage = 'url("'+data[10].results+'")';
+document.getElementById(header).innerHTML = data[0].results;
+document.getElementById(circle).href = url;
 });
+}
+
+function TryImage(global, circle) {
+
+var query = {
+    url: global,
+    type: 'html',
+    selector: '#page > div > div > div.column--primary > div.story-body > div.story-body__inner > figure.media-landscape.full-width.has-caption.lead > img',
+    extract: 'src'
+  },
+  uriQuery = encodeURIComponent(JSON.stringify(query)),
+  request  = 'http://example.noodlejs.com/?q=' +
+             uriQuery + '&callback=?';
+// Make Ajax request to Noodle server
+jQuery.getJSON(request, function (data) {
+  var tester = ""+data[0].results;
+  if (tester.length > 10) {
+  document.getElementById(circle).style.backgroundImage = 'url("'+data[0].results+'")';
+  }
+  else {
+  TryImage1();
+  }
+});
+
+function TryImage1() {
+var query = {
+    url: global,
+    type: 'html',
+    selector: '#page > div > div.column--primary > div:nth-child(1) > div.story-body > div.story-body__inner > figure.media-landscape.full-width.no-caption.lead > img',
+    extract: 'src'
+  },
+  uriQuery = encodeURIComponent(JSON.stringify(query)),
+  request  = 'http://example.noodlejs.com/?q=' +
+             uriQuery + '&callback=?';
+// Make Ajax request to Noodle server
+jQuery.getJSON(request, function (data) {
+  var tester = ""+data[0].results;
+   
+  if (tester.length > 10) {
+  document.getElementById(circle).style.backgroundImage = 'url("'+data[0].results+'")';
+  }
+  else {
+  TryImage2();
+  }
+});
+}
+
+function TryImage2() {
+var query = {
+    url: global,
+    type: 'html',
+    selector: '#page > div > div.column--primary > div:nth-child(1) > div.story-body > div.story-body__inner > figure.media-landscape.full-width.no-caption.lead > img',
+    extract: 'src'
+  },
+  uriQuery = encodeURIComponent(JSON.stringify(query)),
+  request  = 'http://example.noodlejs.com/?q=' +
+             uriQuery + '&callback=?';
+// Make Ajax request to Noodle server
+jQuery.getJSON(request, function (data) {
+  var tester = ""+data[0].results;
+   
+  if (tester.length > 10) {
+  document.getElementById(circle).style.backgroundImage = 'url("'+data[0].results+'")';
+  }
+  else {
+  TryImage3();
+  }
+});
+}
+
+function TryImage3() {
+var query = {
+    url: global,
+    type: 'html',
+    selector: '#page > div > div.container--primary-and-secondary-columns.column-clearfix > div.column--primary > div.story-body > div.story-body__inner > figure.media-landscape.full-width.no-caption.lead > img',
+    extract: 'src'
+  },
+  uriQuery = encodeURIComponent(JSON.stringify(query)),
+  request  = 'http://example.noodlejs.com/?q=' +
+             uriQuery + '&callback=?';
+// Make Ajax request to Noodle server
+jQuery.getJSON(request, function (data) {
+  var tester = ""+data[0].results;
+   
+  if (tester.length > 10) {
+  document.getElementById(circle).style.backgroundImage = 'url("'+data[0].results+'")';
+  }
+  else {
+  TryImage4();
+  }
+});
+}
+
+function TryImage4() {
+var query = {
+    url: global,
+    type: 'html',
+    selector: '#page > div > div.container--primary-and-secondary-columns.column-clearfix > div.column--primary > div:nth-child(1) > div.story-body__inner > figure.media-landscape.full-width.no-caption.lead > img',
+    extract: 'src'
+  },
+  uriQuery = encodeURIComponent(JSON.stringify(query)),
+  request  = 'http://example.noodlejs.com/?q=' +
+             uriQuery + '&callback=?';
+// Make Ajax request to Noodle server
+jQuery.getJSON(request, function (data) {
+  var tester = ""+data[0].results;
+   
+  if (tester.length > 10) {
+  document.getElementById(circle).style.backgroundImage = 'url("'+data[0].results+'")';
+  }
+  else {
+  TryImage5();
+  }
+});
+}
+
+function TryImage5() {
+var query = {
+    url: global,
+    type: 'html',
+    selector: '#page > div > div.container--primary-and-secondary-columns.column-clearfix > div.column--primary > div:nth-child(1) > div.story-body__inner > figure.media-landscape.full-width.has-caption.lead > img',
+    extract: 'src'
+  },
+  uriQuery = encodeURIComponent(JSON.stringify(query)),
+  request  = 'http://example.noodlejs.com/?q=' +
+             uriQuery + '&callback=?';
+// Make Ajax request to Noodle server
+jQuery.getJSON(request, function (data) {
+  var tester = ""+data[0].results;
+   
+  if (tester.length > 10) {
+  document.getElementById(circle).style.backgroundImage = 'url("'+data[0].results+'")';
+  }
+  else {
+  TryImage6();
+  }
+});
+}
+
+function TryImage6() {
+var query = {
+    url: global,
+    type: 'html',
+    selector: '#page > div > div.container--primary-and-secondary-columns.column-clearfix > div.column--primary > div.story-body > div.story-body__inner > figure:nth-child(21) > img',
+    extract: 'src'
+  },
+  uriQuery = encodeURIComponent(JSON.stringify(query)),
+  request  = 'http://example.noodlejs.com/?q=' +
+             uriQuery + '&callback=?';
+// Make Ajax request to Noodle server
+jQuery.getJSON(request, function (data) {
+  var tester = ""+data[0].results;
+   
+  if (tester.length > 10) {
+  document.getElementById(circle).style.backgroundImage = 'url("'+data[0].results+'")';
+  }
+  else {
+  document.getElementById(circle).style.backgroundImage = 'url("../images/noimage.jpg")';
+  }
+});
+}
+}
 }
 
 else if(subcategoryChoice == "Tech Review"){
@@ -1615,13 +2017,13 @@ var elleFashionQuery=[{url:"http://www.elle.com/fashion/",type:"html",selector:"
 var otherFashionQuery=[{url:"http://www.vogue.com/?us_site=y",type:"html",selector:"#main > div.feed-page.feed-page__home > div.feed-page--left > article:nth-child(2) > div.feed-card--info > h2 > a",extract:"href",cache:"false"},{url:"http://www.vogue.com/?us_site=y",type:"html",selector:"#main > div.feed-page.feed-page__home > div.feed-page--left > article:nth-child(2) > div.feed-card--info > h2 > a",extract:"text",cache:"false"},{url:"http://www.vogue.com/?us_site=y",type:"html",selector:"#main > div.feed-page.feed-page__home > div.feed-page--left > article:nth-child(3) > div.feed-card--image > a > picture",extract:"data-src",cache:"false"},{url:"http://www.theguardian.com/fashion",type:"html",selector:"#fashion > div > div.fc-container--rolled-up-hide.fc-container__body.fc-show-more--hidden > div:nth-child(1) > ul > li.fc-slice__item.l-row__item.l-row__item--span-3.u-faux-block-link > div > div > a",extract:"href",cache:"false"},{url:"http://www.theguardian.com/fashion",type:"html",selector:"#fashion > div > div.fc-container--rolled-up-hide.fc-container__body.fc-show-more--hidden > div:nth-child(1) > ul > li.fc-slice__item.l-row__item.l-row__item--span-3.u-faux-block-link > div > div > a",extract:"text",cache:"false"},{url:"http://www.theguardian.com/fashion",type:"html",selector:"#fashion > div > div.fc-container--rolled-up-hide.fc-container__body.fc-show-more--hidden > div:nth-child(1) > ul > li.fc-slice__item.l-row__item.l-row__item--span-3.u-faux-block-link > div > div > div.fc-item__media-wrapper > div > img",extract:"src",cache:"false"},{url:"http://fashion.telegraph.co.uk/",type:"html",selector:"#Carousel1_ctl00_ctl06_ContainingFormView_hypBottomLink1",extract:"href",cache:"false"},{url:"http://fashion.telegraph.co.uk/",type:"html",selector:"#Carousel1_ctl00_ctl06_ContainingFormView_hypBottomLink1 > span.colourTtl.sp.themeColor",extract:"text",cache:"false"},{url:"http://fashion.telegraph.co.uk/",type:"html",selector:"#Carousel1_ctl00_ctl06_ContainingFormView_imgMain1",extract:"src",cache:"false"},{url:"http://www.vogue.com/fashion/trends/",type:"html",selector:"#main > article.hero.multi-story.multi-story__recommended > div > ul > li:nth-child(1) > h3 > a",extract:"href",cache:"false"},{url:"http://www.vogue.com/fashion/trends/",type:"html",selector:"#main > article.hero.multi-story.multi-story__recommended > div > ul > li:nth-child(1) > h3 > a",extract:"text",cache:"false"},{url:"http://www.vogue.com/fashion/trends/",type:"html",selector:"#main > article.hero.multi-story.multi-story__recommended > div > ul > li:nth-child(1) > div > a > picture",extract:"data-src",cache:"false"}];
 
 //Science
-var bbcScienceQuery=[{url:"http://www.bbc.co.uk/news/science_and_environment/",type:"html",selector:"#top-story > h2 > a",extract:"href",cache:"false"},{url:"http://www.bbc.co.uk/news/science_and_environment/",type:"html",selector:"#top-story > h2 > a",extract:"text",cache:"false"},{url:"http://www.bbc.co.uk/news/science_and_environment/",type:"html",selector:"#top-story > h2 > a > img",extract:"src",cache:"false"},{url:"http://www.bbc.co.uk/news/science_and_environment/",type:"html",selector:"#second-story > div > h2 > a",extract:"href",cache:"false"},{url:"http://www.bbc.co.uk/news/science_and_environment/",type:"html",selector:"#second-story > div > h2 > a",extract:"text",cache:"false"},{url:"http://www.bbc.co.uk/news/science_and_environment/",type:"html",selector:"#second-story > div > h2 > a > img",extract:"src",cache:"false"},{url:"http://www.bbc.co.uk/news/science_and_environment/",type:"html",selector:"#third-story > div > h2 > a",extract:"href",cache:"false"},{url:"http://www.bbc.co.uk/news/science_and_environment/",type:"html",selector:"#third-story > div > h2 > a",extract:"text",cache:"false"},{url:"http://www.bbc.co.uk/news/science_and_environment/",type:"html",selector:"#third-story > div > h2 > a > img",extract:"src",cache:"false"},{url:"http://www.bbc.co.uk/news/science_and_environment/",type:"html",selector:"#features-and-analysis > ul > li:nth-child(2) > h3 > a",extract:"href",cache:"false"},{url:"http://www.bbc.co.uk/news/science_and_environment/",type:"html",selector:"#features-and-analysis > ul > li:nth-child(2) > h3 > a",extract:"text",cache:"false"},{url:"http://www.bbc.co.uk/news/science_and_environment/",type:"html",selector:"#features-and-analysis > ul > li:nth-child(2) > h3 > a > img",extract:"src",cache:"false"}];
+var bbcScienceQuery=[{url:'http://www.bbc.co.uk/news/science_and_environment',type:'html',selector:'#comp-candy-asset-munger > div > div:nth-child(1) > div.pigeon-item__body > a.title-link',extract: 'href',cache: 'false'},{url: 'http://www.bbc.co.uk/news/science_and_environment',type: 'html',selector: '#comp-candy-asset-munger > div > div:nth-child(2) > div.pigeon-item__body > a.title-link',extract: 'href',cache: 'false'},{url: 'http://www.bbc.co.uk/news/science_and_environment',type: 'html',selector: '#comp-candy-asset-munger > div > div.pigeon__column.pigeon__column--b > div:nth-child(1) > a.title-link',extract: 'href',cache: 'false'},{url: 'http://www.bbc.co.uk/news/science_and_environment',type: 'html',selector: '#comp-candy-asset-munger > div > div.pigeon__column.pigeon__column--b > div:nth-child(2) > a.title-link',extract: 'href',cache: 'false'}];
 var newScientistScienceQuery=[{url:"http://www.newscientist.com/section/science-news",type:"html",selector:"#maincol > div > div.pnl.listpnl > div:nth-child(2) > h3 > a",extract:"href",cache:"false"},{url:"http://www.newscientist.com/section/science-news",type:"html",selector:"#maincol > div > div.pnl.listpnl > div:nth-child(2) > h3 > a",extract:"text",cache:"false"},{url:"http://www.newscientist.com/section/science-news",type:"html",selector:"#maincol > div > div.pnl.listpnl > div:nth-child(2) > div > a > img",extract:"src",cache:"false"},{url:"http://www.newscientist.com/section/science-news",type:"html",selector:"#maincol > div > div.pnl.listpnl > div:nth-child(3) > h3 > a",extract:"href",cache:"false"},{url:"http://www.newscientist.com/section/science-news",type:"html",selector:"#maincol > div > div.pnl.listpnl > div:nth-child(3) > h3 > a",extract:"text",cache:"false"},{url:"http://www.newscientist.com/section/science-news",type:"html",selector:"#maincol > div > div.pnl.listpnl > div:nth-child(3) > div > a > img",extract:"src",cache:"false"},{url:"http://www.newscientist.com/section/science-news",type:"html",selector:"#maincol > div > div.pnl.listpnl > div:nth-child(4) > h3 > a",extract:"href",cache:"false"},{url:"http://www.newscientist.com/section/science-news",type:"html",selector:"#maincol > div > div.pnl.listpnl > div:nth-child(4) > h3 > a",extract:"text",cache:"false"},{url:"http://www.newscientist.com/section/science-news",type:"html",selector:"#maincol > div > div.pnl.listpnl > div:nth-child(4) > div > a > img",extract:"src",cache:"false"},{url:"http://www.newscientist.com/section/science-news",type:"html",selector:"#maincol > div > div.pnl.listpnl > div:nth-child(5) > h3 > a",extract:"href",cache:"false"},{url:"http://www.newscientist.com/section/science-news",type:"html",selector:"#maincol > div > div.pnl.listpnl > div:nth-child(5) > h3 > a",extract:"text",cache:"false"},{url:"http://www.newscientist.com/section/science-news",type:"html",selector:"#maincol > div > div.pnl.listpnl > div:nth-child(5) > div > a > img",extract:"src",cache:"false"}];
 var aaasScienceQuery=[{url:"http://news.sciencemag.org/",type:"html",selector:"body > div.wrap-outer > div > div > div:nth-child(3) > div.content-primary > div.content-primary__main > div:nth-child(1) > div > div > ul > li:nth-child(1) > h3 > a",extract:"href",cache:"false"},{url:"http://news.sciencemag.org/",type:"html",selector:"body > div.wrap-outer > div > div > div:nth-child(3) > div.content-primary > div.content-primary__main > div:nth-child(1) > div > div > ul > li:nth-child(1) > h3 > a",extract:"text",cache:"false"},{url:"http://news.sciencemag.org/",type:"html",selector:"body > div.wrap-outer > div > div > div:nth-child(3) > div.content-primary > div.content-primary__main > div:nth-child(1) > div > div > ul > li:nth-child(1) > a > img",extract:"src",cache:"false"},{url:"http://news.sciencemag.org/",type:"html",selector:"body > div.wrap-outer > div > div > div:nth-child(3) > div.content-primary > div.content-primary__main > div:nth-child(1) > div > div > ul > li:nth-child(2) > h3 > a",extract:"href",cache:"false"},{url:"http://news.sciencemag.org/",type:"html",selector:"body > div.wrap-outer > div > div > div:nth-child(3) > div.content-primary > div.content-primary__main > div:nth-child(1) > div > div > ul > li:nth-child(2) > h3 > a",extract:"text",cache:"false"},{url:"http://news.sciencemag.org/",type:"html",selector:"body > div.wrap-outer > div > div > div:nth-child(3) > div.content-primary > div.content-primary__main > div:nth-child(1) > div > div > ul > li:nth-child(2) > a > img",extract:"src",cache:"false"},{url:"http://news.sciencemag.org/",type:"html",selector:"body > div.wrap-outer > div > div > div:nth-child(3) > div.content-primary > div.content-primary__main > div:nth-child(1) > div > div > ul > li:nth-child(3) > h3 > a",extract:"href",cache:"false"},{url:"http://news.sciencemag.org/",type:"html",selector:"body > div.wrap-outer > div > div > div:nth-child(3) > div.content-primary > div.content-primary__main > div:nth-child(1) > div > div > ul > li:nth-child(3) > h3 > a",extract:"text",cache:"false"},{url:"http://news.sciencemag.org/",type:"html",selector:"body > div.wrap-outer > div > div > div:nth-child(3) > div.content-primary > div.content-primary__main > div:nth-child(1) > div > div > ul > li:nth-child(3) > a > img",extract:"src",cache:"false"},{url:"http://news.sciencemag.org/",type:"html",selector:"body > div.wrap-outer > div > div > div:nth-child(3) > div.content-primary > div.content-primary__main > div:nth-child(1) > div > div > ul > li:nth-child(4) > h3 > a",extract:"href",cache:"false"},{url:"http://news.sciencemag.org/",type:"html",selector:"body > div.wrap-outer > div > div > div:nth-child(3) > div.content-primary > div.content-primary__main > div:nth-child(1) > div > div > ul > li:nth-child(4) > h3 > a",extract:"text",cache:"false"},{url:"http://news.sciencemag.org/",type:"html",selector:"body > div.wrap-outer > div > div > div:nth-child(3) > div.content-primary > div.content-primary__main > div:nth-child(1) > div > div > ul > li:nth-child(4) > a > img",extract:"src",cache:"false"}];
 var eScienceQuery=[{url:"http://esciencenews.com/",type:"html",selector:"#content > div.span-19.colborder > div > div.span-9.append-1 > div.top-story > div > h2 > a",extract:"href",cache:"false"},{url:"http://esciencenews.com/",type:"html",selector:"#content > div.span-19.colborder > div > div.span-9.append-1 > div.top-story > div > h2 > a",extract:"text",cache:"false"},{url:"http://esciencenews.com/",type:"html",selector:"#content > div.span-19.colborder > div > div.span-9.append-1 > div.top-story > a > img",extract:"src",cache:"false"},{url:"http://esciencenews.com/",type:"html",selector:"#content > div.span-19.colborder > div > div.span-9.last > div:nth-child(2) > h2 > a",extract:"href",cache:"false"},{url:"http://esciencenews.com/",type:"html",selector:"#content > div.span-19.colborder > div > div.span-9.last > div:nth-child(2) > h2 > a",extract:"text",cache:"false"},{url:"http://esciencenews.com/",type:"html",selector:"#content > div.span-19.colborder > div > div.span-9.last > div:nth-child(2) > p > a > img",extract:"src",cache:"false"},{url:"http://esciencenews.com/",type:"html",selector:"#content > div.span-19.colborder > div > div.span-9.last > div:nth-child(4) > h2 > a",extract:"href",cache:"false"},{url:"http://esciencenews.com/",type:"html",selector:"#content > div.span-19.colborder > div > div.span-9.last > div:nth-child(4) > h2 > a",extract:"text",cache:"false"},{url:"http://esciencenews.com/",type:"html",selector:"#content > div.span-19.colborder > div > div.span-9.last > div:nth-child(4) > p > a > img",extract:"src",cache:"false"},{url:"http://esciencenews.com/",type:"html",selector:"#content > div.span-19.colborder > div > div.span-9.append-1 > div:nth-child(2) > h2 > a",extract:"href",cache:"false"},{url:"http://esciencenews.com/",type:"html",selector:"#content > div.span-19.colborder > div > div.span-9.append-1 > div:nth-child(2) > h2 > a",extract:"text",cache:"false"},{url:"http://esciencenews.com/",type:"html",selector:"#content > div.span-19.colborder > div > div.span-9.append-1 > div:nth-child(2) > p > a > img",extract:"src",cache:"false"}];
 
 //Technology
-var bbcTechnologyQuery=[{url:"http://www.bbc.co.uk/news/technology/",type:"html",selector:"#top-story > h2 > a",extract:"href",cache:"false"},{url:"http://www.bbc.co.uk/news/technology/",type:"html",selector:"#top-story > h2 > a > img",extract:"src",cache:"false"},{url:"http://www.bbc.co.uk/news/technology/",type:"html",selector:"#top-story > h2 > a",extract:"text",cache:"false"},{url:"http://www.bbc.co.uk/news/technology/",type:"html",selector:"#second-story > div > h2 > a",extract:"href",cache:"false"},{url:"http://www.bbc.co.uk/news/technology/",type:"html",selector:"#second-story > div > h2 > a > img",extract:"src",cache:"false"},{url:"http://www.bbc.co.uk/news/technology/",type:"html",selector:"#second-story > div > h2 > a",extract:"text",cache:"false"},{url:"http://www.bbc.co.uk/news/technology/",type:"html",selector:"#third-story > div > h2 > a",extract:"href",cache:"false"},{url:"http://www.bbc.co.uk/news/technology/",type:"html",selector:"#third-story > div > h2 > a > img",extract:"src",cache:"false"},{url:"http://www.bbc.co.uk/news/technology/",type:"html",selector:"#third-story > div > h2 > a",extract:"text",cache:"false"},{url:"http://www.bbc.co.uk/news/technology/",type:"html",selector:"#features-and-analysis > ul > li.first-child.large-image > h3 > a",extract:"href",cache:"false"},{url:"http://www.bbc.co.uk/news/technology/",type:"html",selector:"#features-and-analysis > ul > li.first-child.large-image > h3 > a > img",extract:"src",cache:"false"},{url:"http://www.bbc.co.uk/news/technology/",type:"html",selector:"#features-and-analysis > ul > li.first-child.large-image > h3 > a",extract:"text",cache:"false"}];
+var bbcTechnologyQuery=[{url:'http://www.bbc.co.uk/news/technology',type:'html',selector:'#comp-candy-asset-munger > div > div.pigeon__column.pigeon__column--b > div:nth-child(2) > a.title-link',extract: 'href',cache: 'false'},{url: 'http://www.bbc.co.uk/news/technology',type: 'html',selector: '#comp-candy-asset-munger > div > div:nth-child(1) > div.pigeon-item__body > a.title-link',extract: 'href',cache: 'false'},{url: 'http://www.bbc.co.uk/news/technology',type: 'html',selector: '#comp-candy-asset-munger > div > div:nth-child(2) > div.pigeon-item__body > a.title-link',extract: 'href',cache: 'false'},{url: 'http://www.bbc.co.uk/news/technology',type: 'html',selector: '#comp-candy-asset-munger > div > div.pigeon__column.pigeon__column--b > div:nth-child(1) > a.title-link',extract: 'href',cache: 'false'}];
 var techReviewTechnologyQuery=[{url:"http://www.technologyreview.com/",type:"html",selector:"#section-news > div.hp-content > div > div.scroll-wrapper.left > div > section:nth-child(2) > ul > li:nth-child(1) > a",extract:"href",cache:"false"},{url:"http://www.technologyreview.com/",type:"html",selector:"#section-news > div.hp-content > div > div.scroll-wrapper.left > div > section:nth-child(2) > ul > li:nth-child(1) > a > article > img",extract:"src",cache:"false"},{url:"http://www.technologyreview.com/",type:"html",selector:"#section-news > div.hp-content > div > div.scroll-wrapper.left > div > section:nth-child(2) > ul > li:nth-child(1) > a > article > h1",extract:"text",cache:"false"},{url:"http://www.technologyreview.com/",type:"html",selector:"#section-news > div.hp-content > div > div.scroll-wrapper.left > div > section:nth-child(2) > ul > li:nth-child(2) > a",extract:"href",cache:"false"},{url:"http://www.technologyreview.com/",type:"html",selector:"#section-news > div.hp-content > div > div.scroll-wrapper.left > div > section:nth-child(2) > ul > li:nth-child(2) > a > article > img",extract:"src",cache:"false"},{url:"http://www.technologyreview.com/",type:"html",selector:"#section-news > div.hp-content > div > div.scroll-wrapper.left > div > section:nth-child(2) > ul > li:nth-child(2) > a > article > h1",extract:"text",cache:"false"},{url:"http://www.technologyreview.com/",type:"html",selector:"#section-news > div.hp-content > div > div.scroll-wrapper.left > div > section:nth-child(2) > ul > li:nth-child(3) > a",extract:"href",cache:"false"},{url:"http://www.technologyreview.com/",type:"html",selector:"#section-news > div.hp-content > div > div.scroll-wrapper.left > div > section:nth-child(2) > ul > li:nth-child(3) > a > article > img",extract:"src",cache:"false"},{url:"http://www.technologyreview.com/",type:"html",selector:"#section-news > div.hp-content > div > div.scroll-wrapper.left > div > section:nth-child(2) > ul > li:nth-child(3) > a > article > h1",extract:"text",cache:"false"},{url:"http://www.technologyreview.com/",type:"html",selector:"#section-news > div.hp-content > div > div.scroll-wrapper.left > div > section:nth-child(2) > ul > li:nth-child(4) > a",extract:"href",cache:"false"},{url:"http://www.technologyreview.com/",type:"html",selector:"#section-news > div.hp-content > div > div.scroll-wrapper.left > div > section:nth-child(2) > ul > li:nth-child(4) > a > article > img",extract:"src",cache:"false"},{url:"http://www.technologyreview.com/",type:"html",selector:"#section-news > div.hp-content > div > div.scroll-wrapper.left > div > section:nth-child(2) > ul > li:nth-child(4) > a > article > h1",extract:"text",cache:"false"}];
 var skyTechnologyQuery=[{url:"http://news.sky.com/technology",type:"html",selector:"body > div.viewport > div.main.main--sponsored > div > div > div > div:nth-child(2) > ol > li.section-top-stories__item.section-top-stories__item--1.section-top-stories__item--odd > a",extract:"href",cache:"false"},{url:"http://news.sky.com/technology",type:"html",selector:"body > div.viewport > div.main.main--sponsored > div > div > div > div:nth-child(2) > ol > li.section-top-stories__item.section-top-stories__item--1.section-top-stories__item--odd > a > div > div > img",extract:"src",cache:"false"},{url:"http://news.sky.com/technology",type:"html",selector:"body > div.viewport > div.main.main--sponsored > div > div > div > div:nth-child(2) > ol > li.section-top-stories__item.section-top-stories__item--1.section-top-stories__item--odd > a > span",extract:"text",cache:"false"},{url:"http://news.sky.com/technology",type:"html",selector:"body > div.viewport > div.main.main--sponsored > div > div > div > div:nth-child(2) > ol > li.section-top-stories__item.section-top-stories__item--3.section-top-stories__item--odd > a",extract:"href",cache:"false"},{url:"http://news.sky.com/technology",type:"html",selector:"body > div.viewport > div.main.main--sponsored > div > div > div > div:nth-child(2) > ol > li.section-top-stories__item.section-top-stories__item--3.section-top-stories__item--odd > a > div > div > img",extract:"src",cache:"false"},{url:"http://news.sky.com/technology",type:"html",selector:"body > div.viewport > div.main.main--sponsored > div > div > div > div:nth-child(2) > ol > li.section-top-stories__item.section-top-stories__item--3.section-top-stories__item--odd > a > span",extract:"text",cache:"false"},{url:"http://news.sky.com/technology",type:"html",selector:"body > div.viewport > div.main.main--sponsored > div > div > div > div:nth-child(2) > ol > li.section-top-stories__item.section-top-stories__item--4.section-top-stories__item--even > a",extract:"href",cache:"false"},{url:"http://news.sky.com/technology",type:"html",selector:"body > div.viewport > div.main.main--sponsored > div > div > div > div:nth-child(2) > ol > li.section-top-stories__item.section-top-stories__item--4.section-top-stories__item--even > a > div > div > img",extract:"src",cache:"false"},{url:"http://news.sky.com/technology",type:"html",selector:"body > div.viewport > div.main.main--sponsored > div > div > div > div:nth-child(2) > ol > li.section-top-stories__item.section-top-stories__item--4.section-top-stories__item--even > a > span",extract:"text",cache:"false"},{url:"http://news.sky.com/technology",type:"html",selector:"body > div.viewport > div.main.main--sponsored > div > div > div > div:nth-child(3) > ol > li.section-top-stories__item.section-top-stories__item--6.section-top-stories__item--even > a",extract:"href",cache:"false"},{url:"http://news.sky.com/technology",type:"html",selector:"body > div.viewport > div.main.main--sponsored > div > div > div > div:nth-child(3) > ol > li.section-top-stories__item.section-top-stories__item--6.section-top-stories__item--even > a > div > div > img",extract:"src",cache:"false"},{url:"http://news.sky.com/technology",type:"html",selector:"body > div.viewport > div.main.main--sponsored > div > div > div > div:nth-child(3) > ol > li.section-top-stories__item.section-top-stories__item--6.section-top-stories__item--even > a > span",extract:"text",cache:"false"}];
 var techCrunchTechnologyQuery=[{url:"http://techcrunch.com/",type:"html",selector:"body > div.fluid.flush.split.homepage > div.lc.flush.lc-island > div > div.l-main-container > div > div.island.plain-island > div > a",extract:"href",cache:"false"},{url:"http://techcrunch.com/",type:"html",selector:"body > div.fluid.flush.split.homepage > div.lc.flush.lc-island > div > div.l-main-container > div > div.island.plain-island > div > a > div > h2",extract:"text",cache:"false"},{url:"http://techcrunch.com/",type:"html",selector:"body > div.fluid.flush.split.homepage > div.lc.flush.lc-island > div > div.l-main-container > div > div.island.plain-island > div > a > img",extract:"src",cache:"false"},{url:"http://techcrunch.com/",type:"html",selector:"body > div.fluid.flush.split.homepage > div.lc.flush.lc-island > div > div.l-main-container > div > div.island.plain-island > ul > li:nth-child(1) > a",extract:"href",cache:"false"},{url:"http://techcrunch.com/",type:"html",selector:"body > div.fluid.flush.split.homepage > div.lc.flush.lc-island > div > div.l-main-container > div > div.island.plain-island > ul > li:nth-child(1) > a > div > h2",extract:"text",cache:"false"},{url:"http://techcrunch.com/",type:"html",selector:"body > div.fluid.flush.split.homepage > div.lc.flush.lc-island > div > div.l-main-container > div > div.island.plain-island > ul > li:nth-child(1) > a > img",extract:"src",cache:"false"},{url:"http://techcrunch.com/",type:"html",selector:"body > div.fluid.flush.split.homepage > div.lc.flush.lc-island > div > div.l-main-container > div > div.island.plain-island > ul > li:nth-child(2) > a",extract:"href",cache:"false"},{url:"http://techcrunch.com/",type:"html",selector:"body > div.fluid.flush.split.homepage > div.lc.flush.lc-island > div > div.l-main-container > div > div.island.plain-island > ul > li:nth-child(2) > a > div > h2",extract:"text",cache:"false"},{url:"http://techcrunch.com/",type:"html",selector:"body > div.fluid.flush.split.homepage > div.lc.flush.lc-island > div > div.l-main-container > div > div.island.plain-island > ul > li:nth-child(2) > a > img",extract:"src",cache:"false"},{url:"http://techcrunch.com/",type:"html",selector:"body > div.fluid.flush.split.homepage > div.lc.flush.lc-island > div > div.l-main-container > div > div.island.plain-island > ul > li:nth-child(3) > a",extract:"href",cache:"false"},{url:"http://techcrunch.com/",type:"html",selector:"body > div.fluid.flush.split.homepage > div.lc.flush.lc-island > div > div.l-main-container > div > div.island.plain-island > ul > li:nth-child(3) > a > div > h2",extract:"text",cache:"false"},{url:"http://techcrunch.com/",type:"html",selector:"body > div.fluid.flush.split.homepage > div.lc.flush.lc-island > div > div.l-main-container > div > div.island.plain-island > ul > li:nth-child(3) > a > img",extract:"src",cache:"false"}];
