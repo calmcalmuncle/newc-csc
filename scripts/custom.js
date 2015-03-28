@@ -1390,6 +1390,21 @@ jQuery.getJSON(request, function (data) {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //FULL TREES
 function NewsTree() {
 	document.getElementById('T0B1Text').innerHTML = "BBC";
@@ -1405,19 +1420,30 @@ var query = bbcNewsQuery,
 	uriQuery + '&callback=?';
 
 // Make Ajax request to Noodle server
+var query = bbcNewsQuery,
+			uriQuery = encodeURIComponent(JSON.stringify(query)),
+			request  = 'http://treemac.herokuapp.com/?q=' +
+						uriQuery + '&callback=?';
+			 
+			 
+	// Make Ajax request to Noodle server
 jQuery.getJSON(request, function (data) {
-  document.getElementById('T1C1Fetch').href = 'http://www.bbc.co.uk'+data[0].results;
-  document.getElementById('T2C1Fetch').href = 'http://www.bbc.co.uk'+data[3].results;
-  document.getElementById('T2C2Fetch').href = 'http://www.bbc.co.uk'+data[6].results;
-  document.getElementById('T2C3Fetch').href = 'http://www.bbc.co.uk'+data[9].results;
-  document.getElementById('T1H1Fetch').innerHTML = data[1].results;
-  document.getElementById('T2H1Fetch').innerHTML = data[4].results;
-  document.getElementById('T2H2Fetch').innerHTML = data[7].results;
-  document.getElementById('T2H3Fetch').innerHTML = data[10].results;
-  document.getElementById('T1C1Fetch').style.backgroundImage = 'url("'+data[2].results+'")';
-  document.getElementById('T2C1Fetch').style.backgroundImage = 'url("'+data[5].results+'")';
-  document.getElementById('T2C2Fetch').style.backgroundImage = 'url("'+data[8].results+'")';
-  document.getElementById('T2C3Fetch').style.backgroundImage = 'url("'+data[11].results+'")';
+  var holder = data[0].results;
+  var circle = 'T2C1Fetch'
+  var header = 'T2H1Fetch'
+  callback(holder, circle, header);
+  var holder = data[1].results;
+  var circle = 'T1C1Fetch'
+  var header = 'T1H1Fetch'
+  callback(holder, circle, header);
+  var holder = data[2].results;
+  var circle = 'T2C2Fetch'
+  var header = 'T2H2Fetch'
+  callback(holder, circle, header);
+  var holder = data[3].results;
+  var circle = 'T2C3Fetch'
+  var header = 'T2H3Fetch'
+  callback(holder, circle, header);
 });
 
 
@@ -1486,6 +1512,189 @@ jQuery.getJSON(request, function (data) {
   document.getElementById('T2H12Fetch').innerHTML = data[10].results;
   document.getElementById('T2C12Fetch').style.backgroundImage = 'url("'+data[11].results+'")';
 });
+
+function callback(holder, circle, header) {
+var url = 'http://www.bbc.co.uk'+holder;
+TryImage(url, circle);
+
+var query = {
+    url: url,
+    type: 'html',
+    selector: '#page > div > div.container--primary-and-secondary-columns.column-clearfix > div.column--primary > div.story-body > h1',
+    extract: 'text',
+    cache: 'false'
+  },
+  uriQuery = encodeURIComponent(JSON.stringify(query)),
+  request  = 'http://example.noodlejs.com/?q=' +
+             uriQuery + '&callback=?';
+
+// Make Ajax request to Noodle server
+jQuery.getJSON(request, function (data) {
+document.getElementById(header).innerHTML = data[0].results;
+document.getElementById(circle).href = url;
+});
+}
+
+function TryImage(global, circle) {
+
+var query = {
+    url: global,
+    type: 'html',
+    selector: '#page > div > div > div.column--primary > div.story-body > div.story-body__inner > figure.media-landscape.full-width.has-caption.lead > img',
+    extract: 'src'
+  },
+  uriQuery = encodeURIComponent(JSON.stringify(query)),
+  request  = 'http://example.noodlejs.com/?q=' +
+             uriQuery + '&callback=?';
+// Make Ajax request to Noodle server
+jQuery.getJSON(request, function (data) {
+  var tester = ""+data[0].results;
+  if (tester.length > 10) {
+  document.getElementById(circle).style.backgroundImage = 'url("'+data[0].results+'")';
+  }
+  else {
+  TryImage1();
+  }
+});
+
+function TryImage1() {
+var query = {
+    url: global,
+    type: 'html',
+    selector: '#page > div > div.column--primary > div:nth-child(1) > div.story-body > div.story-body__inner > figure.media-landscape.full-width.no-caption.lead > img',
+    extract: 'src'
+  },
+  uriQuery = encodeURIComponent(JSON.stringify(query)),
+  request  = 'http://example.noodlejs.com/?q=' +
+             uriQuery + '&callback=?';
+// Make Ajax request to Noodle server
+jQuery.getJSON(request, function (data) {
+  var tester = ""+data[0].results;
+   
+  if (tester.length > 10) {
+  document.getElementById(circle).style.backgroundImage = 'url("'+data[0].results+'")';
+  }
+  else {
+  TryImage2();
+  }
+});
+}
+
+function TryImage2() {
+var query = {
+    url: global,
+    type: 'html',
+    selector: '#page > div > div.column--primary > div:nth-child(1) > div.story-body > div.story-body__inner > figure.media-landscape.full-width.no-caption.lead > img',
+    extract: 'src'
+  },
+  uriQuery = encodeURIComponent(JSON.stringify(query)),
+  request  = 'http://example.noodlejs.com/?q=' +
+             uriQuery + '&callback=?';
+// Make Ajax request to Noodle server
+jQuery.getJSON(request, function (data) {
+  var tester = ""+data[0].results;
+   
+  if (tester.length > 10) {
+  document.getElementById(circle).style.backgroundImage = 'url("'+data[0].results+'")';
+  }
+  else {
+  TryImage3();
+  }
+});
+}
+
+function TryImage3() {
+var query = {
+    url: global,
+    type: 'html',
+    selector: '#page > div > div.container--primary-and-secondary-columns.column-clearfix > div.column--primary > div.story-body > div.story-body__inner > figure.media-landscape.full-width.no-caption.lead > img',
+    extract: 'src'
+  },
+  uriQuery = encodeURIComponent(JSON.stringify(query)),
+  request  = 'http://example.noodlejs.com/?q=' +
+             uriQuery + '&callback=?';
+// Make Ajax request to Noodle server
+jQuery.getJSON(request, function (data) {
+  var tester = ""+data[0].results;
+   
+  if (tester.length > 10) {
+  document.getElementById(circle).style.backgroundImage = 'url("'+data[0].results+'")';
+  }
+  else {
+  TryImage4();
+  }
+});
+}
+
+function TryImage4() {
+var query = {
+    url: global,
+    type: 'html',
+    selector: '#page > div > div.container--primary-and-secondary-columns.column-clearfix > div.column--primary > div:nth-child(1) > div.story-body__inner > figure.media-landscape.full-width.no-caption.lead > img',
+    extract: 'src'
+  },
+  uriQuery = encodeURIComponent(JSON.stringify(query)),
+  request  = 'http://example.noodlejs.com/?q=' +
+             uriQuery + '&callback=?';
+// Make Ajax request to Noodle server
+jQuery.getJSON(request, function (data) {
+  var tester = ""+data[0].results;
+   
+  if (tester.length > 10) {
+  document.getElementById(circle).style.backgroundImage = 'url("'+data[0].results+'")';
+  }
+  else {
+  TryImage5();
+  }
+});
+}
+
+function TryImage5() {
+var query = {
+    url: global,
+    type: 'html',
+    selector: '#page > div > div.container--primary-and-secondary-columns.column-clearfix > div.column--primary > div:nth-child(1) > div.story-body__inner > figure.media-landscape.full-width.has-caption.lead > img',
+    extract: 'src'
+  },
+  uriQuery = encodeURIComponent(JSON.stringify(query)),
+  request  = 'http://example.noodlejs.com/?q=' +
+             uriQuery + '&callback=?';
+// Make Ajax request to Noodle server
+jQuery.getJSON(request, function (data) {
+  var tester = ""+data[0].results;
+   
+  if (tester.length > 10) {
+  document.getElementById(circle).style.backgroundImage = 'url("'+data[0].results+'")';
+  }
+  else {
+  TryImage6();
+  }
+});
+}
+
+function TryImage6() {
+var query = {
+    url: global,
+    type: 'html',
+    selector: '#page > div > div.container--primary-and-secondary-columns.column-clearfix > div.column--primary > div.story-body > div.story-body__inner > figure:nth-child(21) > img',
+    extract: 'src'
+  },
+  uriQuery = encodeURIComponent(JSON.stringify(query)),
+  request  = 'http://example.noodlejs.com/?q=' +
+             uriQuery + '&callback=?';
+// Make Ajax request to Noodle server
+jQuery.getJSON(request, function (data) {
+  var tester = ""+data[0].results;
+   
+  if (tester.length > 10) {
+  document.getElementById(circle).style.backgroundImage = 'url("'+data[0].results+'")';
+  }
+  else {
+  document.getElementById(circle).style.backgroundImage = 'url("../images/noimage.jpg")';
+  }
+});
+}
+}
 
 }
 
@@ -1810,24 +2019,29 @@ function ScienceTree(){
 	document.getElementById('T0B3Text').innerHTML = "AAAS";
 	
 	var query = bbcScienceQuery,
-  uriQuery = encodeURIComponent(JSON.stringify(query)),
-  request  = 'http://treemac.herokuapp.com/?q=' +
-             uriQuery + '&callback=?';
-
-// Make Ajax request to Noodle server
+			uriQuery = encodeURIComponent(JSON.stringify(query)),
+			request  = 'http://treemac.herokuapp.com/?q=' +
+						uriQuery + '&callback=?';
+			 
+			 
+	// Make Ajax request to Noodle server
 jQuery.getJSON(request, function (data) {
-  document.getElementById('T1C1Fetch').href = 'http://www.bbc.co.uk'+data[0].results;
-  document.getElementById('T2C1Fetch').href = 'http://www.bbc.co.uk'+data[3].results;
-  document.getElementById('T2C2Fetch').href = 'http://www.bbc.co.uk'+data[6].results;
-  document.getElementById('T2C3Fetch').href = 'http://www.bbc.co.uk'+data[9].results;
-  document.getElementById('T1H1Fetch').innerHTML = data[1].results;
-  document.getElementById('T2H1Fetch').innerHTML = data[4].results;
-  document.getElementById('T2H2Fetch').innerHTML = data[7].results;
-  document.getElementById('T2H3Fetch').innerHTML = data[10].results;
-  document.getElementById('T1C1Fetch').style.backgroundImage = 'url("'+data[2].results+'")';
-  document.getElementById('T2C1Fetch').style.backgroundImage = 'url("'+data[5].results+'")';
-  document.getElementById('T2C2Fetch').style.backgroundImage = 'url("'+data[8].results+'")';
-  document.getElementById('T2C3Fetch').style.backgroundImage = 'url("'+data[11].results+'")';
+  var holder = data[0].results;
+  var circle = 'T2C1Fetch'
+  var header = 'T2H1Fetch'
+  callback(holder, circle, header);
+  var holder = data[1].results;
+  var circle = 'T1C1Fetch'
+  var header = 'T1H1Fetch'
+  callback(holder, circle, header);
+  var holder = data[2].results;
+  var circle = 'T2C2Fetch'
+  var header = 'T2H2Fetch'
+  callback(holder, circle, header);
+  var holder = data[3].results;
+  var circle = 'T2C3Fetch'
+  var header = 'T2H3Fetch'
+  callback(holder, circle, header);
 });
 
 var query = newScientistScienceQuery,
@@ -1894,6 +2108,190 @@ document.getElementById('T2C10Fetch').style.backgroundImage = 'url("'+data[5].re
 document.getElementById('T2C11Fetch').style.backgroundImage = 'url("'+data[8].results+'")';
 document.getElementById('T2C12Fetch').style.backgroundImage = 'url("'+data[11].results+'")';
 });
+
+function callback(holder, circle, header) {
+var url = 'http://www.bbc.co.uk'+holder;
+TryImage(url, circle);
+
+var query = {
+    url: url,
+    type: 'html',
+    selector: '#page > div > div.container--primary-and-secondary-columns.column-clearfix > div.column--primary > div.story-body > h1',
+    extract: 'text',
+    cache: 'false'
+  },
+  uriQuery = encodeURIComponent(JSON.stringify(query)),
+  request  = 'http://example.noodlejs.com/?q=' +
+             uriQuery + '&callback=?';
+
+// Make Ajax request to Noodle server
+jQuery.getJSON(request, function (data) {
+document.getElementById(header).innerHTML = data[0].results;
+document.getElementById(circle).href = url;
+});
+}
+
+function TryImage(global, circle) {
+
+var query = {
+    url: global,
+    type: 'html',
+    selector: '#page > div > div > div.column--primary > div.story-body > div.story-body__inner > figure.media-landscape.full-width.has-caption.lead > img',
+    extract: 'src'
+  },
+  uriQuery = encodeURIComponent(JSON.stringify(query)),
+  request  = 'http://example.noodlejs.com/?q=' +
+             uriQuery + '&callback=?';
+// Make Ajax request to Noodle server
+jQuery.getJSON(request, function (data) {
+  var tester = ""+data[0].results;
+  if (tester.length > 10) {
+  document.getElementById(circle).style.backgroundImage = 'url("'+data[0].results+'")';
+  }
+  else {
+  TryImage1();
+  }
+});
+
+function TryImage1() {
+var query = {
+    url: global,
+    type: 'html',
+    selector: '#page > div > div.column--primary > div:nth-child(1) > div.story-body > div.story-body__inner > figure.media-landscape.full-width.no-caption.lead > img',
+    extract: 'src'
+  },
+  uriQuery = encodeURIComponent(JSON.stringify(query)),
+  request  = 'http://example.noodlejs.com/?q=' +
+             uriQuery + '&callback=?';
+// Make Ajax request to Noodle server
+jQuery.getJSON(request, function (data) {
+  var tester = ""+data[0].results;
+   
+  if (tester.length > 10) {
+  document.getElementById(circle).style.backgroundImage = 'url("'+data[0].results+'")';
+  }
+  else {
+  TryImage2();
+  }
+});
+}
+
+function TryImage2() {
+var query = {
+    url: global,
+    type: 'html',
+    selector: '#page > div > div.column--primary > div:nth-child(1) > div.story-body > div.story-body__inner > figure.media-landscape.full-width.no-caption.lead > img',
+    extract: 'src'
+  },
+  uriQuery = encodeURIComponent(JSON.stringify(query)),
+  request  = 'http://example.noodlejs.com/?q=' +
+             uriQuery + '&callback=?';
+// Make Ajax request to Noodle server
+jQuery.getJSON(request, function (data) {
+  var tester = ""+data[0].results;
+   
+  if (tester.length > 10) {
+  document.getElementById(circle).style.backgroundImage = 'url("'+data[0].results+'")';
+  }
+  else {
+  TryImage3();
+  }
+});
+}
+
+function TryImage3() {
+var query = {
+    url: global,
+    type: 'html',
+    selector: '#page > div > div.container--primary-and-secondary-columns.column-clearfix > div.column--primary > div.story-body > div.story-body__inner > figure.media-landscape.full-width.no-caption.lead > img',
+    extract: 'src'
+  },
+  uriQuery = encodeURIComponent(JSON.stringify(query)),
+  request  = 'http://example.noodlejs.com/?q=' +
+             uriQuery + '&callback=?';
+// Make Ajax request to Noodle server
+jQuery.getJSON(request, function (data) {
+  var tester = ""+data[0].results;
+   
+  if (tester.length > 10) {
+  document.getElementById(circle).style.backgroundImage = 'url("'+data[0].results+'")';
+  }
+  else {
+  TryImage4();
+  }
+});
+}
+
+function TryImage4() {
+var query = {
+    url: global,
+    type: 'html',
+    selector: '#page > div > div.container--primary-and-secondary-columns.column-clearfix > div.column--primary > div:nth-child(1) > div.story-body__inner > figure.media-landscape.full-width.no-caption.lead > img',
+    extract: 'src'
+  },
+  uriQuery = encodeURIComponent(JSON.stringify(query)),
+  request  = 'http://example.noodlejs.com/?q=' +
+             uriQuery + '&callback=?';
+// Make Ajax request to Noodle server
+jQuery.getJSON(request, function (data) {
+  var tester = ""+data[0].results;
+   
+  if (tester.length > 10) {
+  document.getElementById(circle).style.backgroundImage = 'url("'+data[0].results+'")';
+  }
+  else {
+  TryImage5();
+  }
+});
+}
+
+function TryImage5() {
+var query = {
+    url: global,
+    type: 'html',
+    selector: '#page > div > div.container--primary-and-secondary-columns.column-clearfix > div.column--primary > div:nth-child(1) > div.story-body__inner > figure.media-landscape.full-width.has-caption.lead > img',
+    extract: 'src'
+  },
+  uriQuery = encodeURIComponent(JSON.stringify(query)),
+  request  = 'http://example.noodlejs.com/?q=' +
+             uriQuery + '&callback=?';
+// Make Ajax request to Noodle server
+jQuery.getJSON(request, function (data) {
+  var tester = ""+data[0].results;
+   
+  if (tester.length > 10) {
+  document.getElementById(circle).style.backgroundImage = 'url("'+data[0].results+'")';
+  }
+  else {
+  TryImage6();
+  }
+});
+}
+
+function TryImage6() {
+var query = {
+    url: global,
+    type: 'html',
+    selector: '#page > div > div.container--primary-and-secondary-columns.column-clearfix > div.column--primary > div.story-body > div.story-body__inner > figure:nth-child(21) > img',
+    extract: 'src'
+  },
+  uriQuery = encodeURIComponent(JSON.stringify(query)),
+  request  = 'http://example.noodlejs.com/?q=' +
+             uriQuery + '&callback=?';
+// Make Ajax request to Noodle server
+jQuery.getJSON(request, function (data) {
+  var tester = ""+data[0].results;
+   
+  if (tester.length > 10) {
+  document.getElementById(circle).style.backgroundImage = 'url("'+data[0].results+'")';
+  }
+  else {
+  document.getElementById(circle).style.backgroundImage = 'url("../images/noimage.jpg")';
+  }
+});
+}
+}
+
 }
 
 function TechnologyTree(){
@@ -1908,20 +2306,23 @@ function TechnologyTree(){
   request  = 'http://treemac.herokuapp.com/?q=' +
              uriQuery + '&callback=?';
 
-// Make Ajax request to Noodle server
 jQuery.getJSON(request, function (data) {
-  document.getElementById('T1C1Fetch').href = 'http://www.bbc.co.uk'+data[0].results;
-  document.getElementById('T2C1Fetch').href = 'http://www.bbc.co.uk'+data[3].results;
-  document.getElementById('T2C2Fetch').href = 'http://www.bbc.co.uk'+data[6].results;
-  document.getElementById('T2C3Fetch').href = 'http://www.bbc.co.uk'+data[9].results;
-  document.getElementById('T1H1Fetch').innerHTML = data[2].results;
-  document.getElementById('T2H1Fetch').innerHTML = data[5].results;
-  document.getElementById('T2H2Fetch').innerHTML = data[8].results;
-  document.getElementById('T2H3Fetch').innerHTML = data[11].results;
-  document.getElementById('T1C1Fetch').style.backgroundImage = 'url("'+data[1].results+'")';
-  document.getElementById('T2C1Fetch').style.backgroundImage = 'url("'+data[4].results+'")';
-  document.getElementById('T2C2Fetch').style.backgroundImage = 'url("'+data[7].results+'")';
-  document.getElementById('T2C3Fetch').style.backgroundImage = 'url("'+data[10].results+'")';
+  var holder = data[0].results;
+  var circle = 'T2C1Fetch'
+  var header = 'T2H1Fetch'
+  callback(holder, circle, header);
+  var holder = data[1].results;
+  var circle = 'T1C1Fetch'
+  var header = 'T1H1Fetch'
+  callback(holder, circle, header);
+  var holder = data[2].results;
+  var circle = 'T2C2Fetch'
+  var header = 'T2H2Fetch'
+  callback(holder, circle, header);
+  var holder = data[3].results;
+  var circle = 'T2C3Fetch'
+  var header = 'T2H3Fetch'
+  callback(holder, circle, header);
 });
 
 
@@ -1989,6 +2390,190 @@ jQuery.getJSON(request, function (data) {
   document.getElementById('T2C11Fetch').style.backgroundImage = 'url("'+data[8].results+'")';
   document.getElementById('T2C12Fetch').style.backgroundImage = 'url("'+data[11].results+'")';
 });
+
+function callback(holder, circle, header) {
+var url = 'http://www.bbc.co.uk'+holder;
+TryImage(url, circle);
+
+var query = {
+    url: url,
+    type: 'html',
+    selector: '#page > div > div.container--primary-and-secondary-columns.column-clearfix > div.column--primary > div.story-body > h1',
+    extract: 'text',
+    cache: 'false'
+  },
+  uriQuery = encodeURIComponent(JSON.stringify(query)),
+  request  = 'http://example.noodlejs.com/?q=' +
+             uriQuery + '&callback=?';
+
+// Make Ajax request to Noodle server
+jQuery.getJSON(request, function (data) {
+document.getElementById(header).innerHTML = data[0].results;
+document.getElementById(circle).href = url;
+});
+}
+
+function TryImage(global, circle) {
+
+var query = {
+    url: global,
+    type: 'html',
+    selector: '#page > div > div > div.column--primary > div.story-body > div.story-body__inner > figure.media-landscape.full-width.has-caption.lead > img',
+    extract: 'src'
+  },
+  uriQuery = encodeURIComponent(JSON.stringify(query)),
+  request  = 'http://example.noodlejs.com/?q=' +
+             uriQuery + '&callback=?';
+// Make Ajax request to Noodle server
+jQuery.getJSON(request, function (data) {
+  var tester = ""+data[0].results;
+  if (tester.length > 10) {
+  document.getElementById(circle).style.backgroundImage = 'url("'+data[0].results+'")';
+  }
+  else {
+  TryImage1();
+  }
+});
+
+function TryImage1() {
+var query = {
+    url: global,
+    type: 'html',
+    selector: '#page > div > div.column--primary > div:nth-child(1) > div.story-body > div.story-body__inner > figure.media-landscape.full-width.no-caption.lead > img',
+    extract: 'src'
+  },
+  uriQuery = encodeURIComponent(JSON.stringify(query)),
+  request  = 'http://example.noodlejs.com/?q=' +
+             uriQuery + '&callback=?';
+// Make Ajax request to Noodle server
+jQuery.getJSON(request, function (data) {
+  var tester = ""+data[0].results;
+   
+  if (tester.length > 10) {
+  document.getElementById(circle).style.backgroundImage = 'url("'+data[0].results+'")';
+  }
+  else {
+  TryImage2();
+  }
+});
+}
+
+function TryImage2() {
+var query = {
+    url: global,
+    type: 'html',
+    selector: '#page > div > div.column--primary > div:nth-child(1) > div.story-body > div.story-body__inner > figure.media-landscape.full-width.no-caption.lead > img',
+    extract: 'src'
+  },
+  uriQuery = encodeURIComponent(JSON.stringify(query)),
+  request  = 'http://example.noodlejs.com/?q=' +
+             uriQuery + '&callback=?';
+// Make Ajax request to Noodle server
+jQuery.getJSON(request, function (data) {
+  var tester = ""+data[0].results;
+   
+  if (tester.length > 10) {
+  document.getElementById(circle).style.backgroundImage = 'url("'+data[0].results+'")';
+  }
+  else {
+  TryImage3();
+  }
+});
+}
+
+function TryImage3() {
+var query = {
+    url: global,
+    type: 'html',
+    selector: '#page > div > div.container--primary-and-secondary-columns.column-clearfix > div.column--primary > div.story-body > div.story-body__inner > figure.media-landscape.full-width.no-caption.lead > img',
+    extract: 'src'
+  },
+  uriQuery = encodeURIComponent(JSON.stringify(query)),
+  request  = 'http://example.noodlejs.com/?q=' +
+             uriQuery + '&callback=?';
+// Make Ajax request to Noodle server
+jQuery.getJSON(request, function (data) {
+  var tester = ""+data[0].results;
+   
+  if (tester.length > 10) {
+  document.getElementById(circle).style.backgroundImage = 'url("'+data[0].results+'")';
+  }
+  else {
+  TryImage4();
+  }
+});
+}
+
+function TryImage4() {
+var query = {
+    url: global,
+    type: 'html',
+    selector: '#page > div > div.container--primary-and-secondary-columns.column-clearfix > div.column--primary > div:nth-child(1) > div.story-body__inner > figure.media-landscape.full-width.no-caption.lead > img',
+    extract: 'src'
+  },
+  uriQuery = encodeURIComponent(JSON.stringify(query)),
+  request  = 'http://example.noodlejs.com/?q=' +
+             uriQuery + '&callback=?';
+// Make Ajax request to Noodle server
+jQuery.getJSON(request, function (data) {
+  var tester = ""+data[0].results;
+   
+  if (tester.length > 10) {
+  document.getElementById(circle).style.backgroundImage = 'url("'+data[0].results+'")';
+  }
+  else {
+  TryImage5();
+  }
+});
+}
+
+function TryImage5() {
+var query = {
+    url: global,
+    type: 'html',
+    selector: '#page > div > div.container--primary-and-secondary-columns.column-clearfix > div.column--primary > div:nth-child(1) > div.story-body__inner > figure.media-landscape.full-width.has-caption.lead > img',
+    extract: 'src'
+  },
+  uriQuery = encodeURIComponent(JSON.stringify(query)),
+  request  = 'http://example.noodlejs.com/?q=' +
+             uriQuery + '&callback=?';
+// Make Ajax request to Noodle server
+jQuery.getJSON(request, function (data) {
+  var tester = ""+data[0].results;
+   
+  if (tester.length > 10) {
+  document.getElementById(circle).style.backgroundImage = 'url("'+data[0].results+'")';
+  }
+  else {
+  TryImage6();
+  }
+});
+}
+
+function TryImage6() {
+var query = {
+    url: global,
+    type: 'html',
+    selector: '#page > div > div.container--primary-and-secondary-columns.column-clearfix > div.column--primary > div.story-body > div.story-body__inner > figure:nth-child(21) > img',
+    extract: 'src'
+  },
+  uriQuery = encodeURIComponent(JSON.stringify(query)),
+  request  = 'http://example.noodlejs.com/?q=' +
+             uriQuery + '&callback=?';
+// Make Ajax request to Noodle server
+jQuery.getJSON(request, function (data) {
+  var tester = ""+data[0].results;
+   
+  if (tester.length > 10) {
+  document.getElementById(circle).style.backgroundImage = 'url("'+data[0].results+'")';
+  }
+  else {
+  document.getElementById(circle).style.backgroundImage = 'url("../images/noimage.jpg")';
+  }
+});
+}
+}
+
 }
 
 //News
