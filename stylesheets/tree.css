@@ -1,8 +1,9 @@
 /* Branch Selection */
 .CategoryText, .SelectorText{
-font-size:20px;
-color:white;
 padding-top:35%;
+font-size:18.5px;
+font-weight: bold;
+color:rgba(0,0,0,0.8);
 }
 
 .SelectorText, .CategoryText{
@@ -104,14 +105,16 @@ position:absolute;
 top:45%;
 left:45%;
 -webkit-transform:translateX(-50%) translatey(-50%);
-background-color:#990000;
+background-color: #51B848;
+border-bottom:1px solid #C8C8C8;
+border-right:1px solid #C8C8C8;
 text-decoration:none;
 text-align:center;
 }
 
 .NewsText{
 padding-top:45%;
-color:white;
+color:rgba(0,0,0,0.8);
 text-decoration:none;
 font-size:20px;
 -webkit-transform: translateX(8%);
@@ -126,7 +129,9 @@ position:absolute;
 top:45%;
 left:55.4%;
 -webkit-transform:translateX(-50%) translatey(-50%);
-background-color:#000000;
+background-color: #51B848;
+border-bottom:1px solid #C8C8C8;
+border-left:1px solid #C8C8C8;
 text-decoration:none;
 text-align:center;
 }
@@ -142,14 +147,16 @@ position:absolute;
 top:55%;
 left:45%;
 -webkit-transform:translateX(-50%) translatey(-50%);
-background-color:#5EA9DD;
+background-color: #51B848;
+border-top:1px solid #C8C8C8;
+border-right:1px solid #C8C8C8;
 text-decoration:none;
 text-align:center;
 }
 
 .StreamText{
 padding-top:30%;
-color:white;
+color:rgba(0,0,0,0.8);
 text-decoration:none;
 font-size:20px;
 -webkit-transform: translateX(4%);
@@ -164,14 +171,16 @@ position:absolute;
 top:55%;
 left:55.4%;
 -webkit-transform:translateX(-50%) translatey(-50%);
-background-color:#2b3a76;
+background-color: #51B848;
+border-top:1px solid #C8C8C8;
+border-left:1px solid #C8C8C8;
 text-decoration:none;
 text-align:center;
 }
 
 .SportText{
 padding-top:30%;
-color:white;
+color:rgba(0,0,0,0.8);
 text-decoration:none;
 font-size:20px;
 -webkit-transform: translateX(-8%);
@@ -182,7 +191,7 @@ font-size:20px;
  }
  
 .ap {
-color: white;
+color:rgba(0,0,0,0.8);
 -webkit-transform: translateX(15%);
 position: relative;
 top: 40%;
@@ -224,7 +233,7 @@ overflow:hidden;
 
 .TierOneHeader h2{
 text-align: center;
-color:black;
+color:rgba(0,0,0,0.8);
 padding:5px;
 margin:0px;
 font-size:20px;
@@ -233,7 +242,7 @@ line-height:22px;
 
 .TierTwoHeader h3 {
 text-align: center;
-color:black;
+color:rgba(0,0,0,0.8);
 padding:5px;
 margin:0px;
 font-size:17.5px;
@@ -242,7 +251,7 @@ line-height:22px;
 
 #TierOneHeaderOne{
 text-align:center;
-color:black;
+color:rgba(0,0,0,0.8);
 top:30%;
 left:30%;
 }
@@ -256,7 +265,7 @@ border:1px solid #990000;
 
 #TierOneHeaderTwo{
 text-align:center;
-color:black;
+color:rgba(0,0,0,0.8);
 top:30%;
 left:70%;
 }
@@ -270,7 +279,7 @@ background-color:#000000;
 
 #TierOneHeaderFour{
 text-align:center;
-color:black;
+color:rgba(0,0,0,0.8);
 top:70%;
 left:30%;
 }
@@ -284,7 +293,7 @@ background-color:#5EA9DD;
 
 #TierOneHeaderThree{
 text-align:center;
-color:black;
+color:rgba(0,0,0,0.8);
 top:70%;
 left:70%;
 }
@@ -335,7 +344,7 @@ overflow:hidden;
 
 #TierTwoHeaderOne{
 text-align:center;
-color:black;
+color:rgba(0,0,0,0.8);
 top:15%;
 left:15%;
 }
@@ -349,7 +358,7 @@ background-color:#990000;
 
 #TierTwoHeaderTwo{
 text-align:center;
-color:black;
+color:rgba(0,0,0,0.8);
 top:30%;
 left:10%;
 }
@@ -363,7 +372,7 @@ background-color:#990000;
 
 #TierTwoHeaderThree{
 text-align:center;
-color:black;
+color:rgba(0,0,0,0.8);
 top:10%;
 left:30%;
 }
@@ -377,7 +386,7 @@ background-color:#990000;
 
 #TierTwoHeaderFour{
 text-align:center;
-color:black;
+color:rgba(0,0,0,0.8);
 top:15%;
 left:85%;
 }
@@ -391,7 +400,7 @@ background-color:#000000;
 
 #TierTwoHeaderFive{
 text-align:center;
-color:black;
+color:rgba(0,0,0,0.8);
 top:10%;
 left:70%;
 }
@@ -405,7 +414,7 @@ background-color:#000000;
 
 #TierTwoHeaderSix{
 text-align:center;
-color:black;
+color:rgba(0,0,0,0.8);
 top:30%;
 left:90%;
 }
@@ -421,7 +430,7 @@ background-color:#000000;
 top:70%;
 left:90%;
 text-align:center;
-color:black;
+color:rgba(0,0,0,0.8);
 }
 
 .TierTwoCircleSeven{
@@ -435,7 +444,7 @@ background-color:#2b3a76;
 top:85%;
 left:85%;
 text-align:center;
-color:black;
+color:rgba(0,0,0,0.8);
 }
 
 .TierTwoCircleEight{
@@ -449,7 +458,7 @@ background-color:#2b3a76;
 top:90%;
 left:70%;
 text-align:center;
-color:black;
+color:rgba(0,0,0,0.8);
 }
 
 .TierTwoCircleNine{
@@ -461,7 +470,7 @@ background-color:#2b3a76;
 
 #TierTwoHeaderTen{
 text-align:center;
-color:black;
+color:rgba(0,0,0,0.8);
 top:70%;
 left:10%;
 }
@@ -477,7 +486,7 @@ background-color:#5EA9DD;
 top:90%;
 left:30%;
 text-align:center;
-color:black;
+color:rgba(0,0,0,0.8);
 }
 
 .TierTwoCircleEleven{
@@ -491,7 +500,7 @@ background-color:#5EA9DD;
 top:85%;
 left:15%;
 text-align:center;
-color:black;
+color:rgba(0,0,0,0.8);
 }
 
 .TierTwoCircleTwelve{

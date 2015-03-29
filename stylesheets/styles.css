@@ -41,6 +41,9 @@ margin: 0;
 padding: 5px;
 list-style-type: none;
 text-align: center;
+font-size:15px;
+font-weight: bold;
+color:rgba(0,0,0,0.8);
 }
 
 #navcontainer ul li { 
@@ -51,7 +54,7 @@ display: inline;
 {
 text-decoration: none;
 margin:10px;
-color: black;
+color:rgba(0,0,0,0.8);
 }
 
 
@@ -117,6 +120,9 @@ float:left;
 #FeaturedText{
 margin-top:5px;
 text-align:center;
+font-size:15px;
+font-weight: bold;
+color:rgba(0,0,0,0.8);
 }
 
 #FeaturedOne{
@@ -174,6 +180,9 @@ width: inherit;
 height: 57px;
 border-right-color:#e7e7e7;
 border-left-color:#e7e7e7;
+font-size:15px;
+font-weight: bold;
+color:rgba(0,0,0,0.8);
 }
 .BarRight button:focus{
 outline: 0;
@@ -226,14 +235,14 @@ width: 200px;
 
 #EDtxt {
 background-color: white;
-color: black;
+color:rgba(0,0,0,0.8);
 border-bottom-left-radius:10px;
 border-bottom-right-radius:10px;
 font-size:13px;
 margin-left:auto;
 margin-right:auto;
 width:200px;
-height:92px;
+height:86px;
 }
 
 a:link {
