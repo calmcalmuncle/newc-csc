@@ -60,7 +60,7 @@ function setSubcategoryChoice(subcategoryChoicey){
 			subcategoryChoice = "BBC Sports";
 		}
 		else if(subcategoryChoicey == "SC2"){
-			subcategoryChoice = "Sport.co.uk";
+			subcategoryChoice = "Sport .co.uk";
 		}
 		else if(subcategoryChoicey == "SC3"){
 			subcategoryChoice = "Sky Sports";
@@ -1826,7 +1826,7 @@ jQuery.getJSON(request, function (data) {
 function SportTree(){
 	
 	document.getElementById('T0B1Text').innerHTML = "BBC";
-	document.getElementById('T0B2Text').innerHTML = "Sport.co.uk";
+	document.getElementById('T0B2Text').innerHTML = "Sport .co.uk";
 	document.getElementById('T0B4Text').innerHTML = "Other";
 	document.getElementById('T0B3Text').innerHTML = "Sky";
 	
@@ -2015,6 +2015,7 @@ function ScienceTree(){
 	
 	document.getElementById('T0B1Text').innerHTML = "BBC";
 	document.getElementById('T0B2Text').innerHTML = "New Scientist";
+	//document.getElementById("T0B4Text").style.fontSize = "medium";
 	document.getElementById('T0B4Text').innerHTML = "(e)Science News";
 	document.getElementById('T0B3Text').innerHTML = "AAAS";
 	

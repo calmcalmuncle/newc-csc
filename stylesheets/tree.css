@@ -1,9 +1,35 @@
 /* Branch Selection */
-.CategoryText, .SelectorText{
+.CategoryText{
 padding-top:35%;
+}
+
+.CategoryText, .SelectorTextOne , .SelectorTextTwo, .SelectorTextThree, .SelectorTextFour{
 font-size:18.5px;
 font-weight: bold;
 color:rgba(0,0,0,0.8);
+}
+
+.SelectorTextOne , .SelectorTextTwo, .SelectorTextThree, .SelectorTextFour{
+width:80px;
+line-height: 125%;
+font-size:18px;
+}
+
+.SelectorTextOne , .SelectorTextFour{
+width:80px;
+float:right;
+}
+
+.SelectorTextOne , .SelectorTextTwo{
+width:80px;
+margin-top:30px;
+height:65px;
+}
+
+.SelectorTextThree , .SelectorTextFour{
+width:80px;
+margin-top:25px;
+height:50px;
 }
 
 .SelectorText, .CategoryText{
