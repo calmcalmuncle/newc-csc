@@ -162,6 +162,14 @@ text-decoration:none;
 text-align:center;
 }
 
+.VidText{
+padding-top:45%;
+color:rgba(0,0,0,0.8);
+text-decoration:none;
+font-size:20px;
+
+}
+
 
 
 a.MainCircleTwitch {
@@ -285,8 +293,8 @@ left:30%;
 .TierOneCircleOne{
 top:30%;
 left:30%;
-background-color:#990000;
-border:1px solid #990000;
+background-color:#51B848;
+border:1px solid #51B848;
 }
 
 #TierOneHeaderTwo{
@@ -299,8 +307,8 @@ left:70%;
 .TierOneCircleTwo{
 top:30%;
 left:70%;
-border:1px solid #000000;
-background-color:#000000;
+background-color:#51B848;
+border:1px solid #51B848;
 }
 
 #TierOneHeaderFour{
@@ -313,8 +321,8 @@ left:30%;
 .TierOneCircleFour{
 top:70%;
 left:30%;
-border:1px solid #5EA9DD;
-background-color:#5EA9DD;
+background-color:#51B848;
+border:1px solid #51B848;
 }
 
 #TierOneHeaderThree{
@@ -327,8 +335,8 @@ left:70%;
 .TierOneCircleThree{
 top:70%;
 left:70%;
-border:1px solid #2b3a76;
-background-color:#2b3a76;
+background-color:#51B848;
+border:1px solid #51B848;
 }
 
 
@@ -347,6 +355,8 @@ background-position: center;
 background-size: cover;
 background-repeat: no-repeat;
 position: absolute;
+background-color:#51B848;
+border:1px solid #51B848;
 }
 
 .TierTwoCircle:hover +.TierTwoHeader {
@@ -378,8 +388,6 @@ left:15%;
 .TierTwoCircleOne{
 top:15%;
 left:15%;
-border:1px solid #990000;
-background-color:#990000;
 }
 
 #TierTwoHeaderTwo{
@@ -392,8 +400,6 @@ left:10%;
 .TierTwoCircleTwo{
 top:30%;
 left:10%;
-border:1px solid #990000;
-background-color:#990000;
 }
 
 #TierTwoHeaderThree{
@@ -406,8 +412,6 @@ left:30%;
 .TierTwoCircleThree{
 top:10%;
 left:30%;
-border:1px solid #990000;
-background-color:#990000;
 }
 
 #TierTwoHeaderFour{
@@ -420,8 +424,6 @@ left:85%;
 .TierTwoCircleFour{
 top:15%;
 left:85%;
-border:1px solid #000000;
-background-color:#000000;
 }
 
 #TierTwoHeaderFive{
@@ -434,8 +436,6 @@ left:70%;
 .TierTwoCircleFive{
 top:10%;
 left:70%;
-border:1px solid #000000;
-background-color:#000000;
 }
 
 #TierTwoHeaderSix{
@@ -448,8 +448,6 @@ left:90%;
 .TierTwoCircleSix{
 top:30%;
 left:90%;
-border:1px solid #000000;
-background-color:#000000;
 }
 
 #TierTwoHeaderSeven{
@@ -462,8 +460,6 @@ color:rgba(0,0,0,0.8);
 .TierTwoCircleSeven{
 top:70%;
 left:90%;
-border:1px solid #2b3a76;
-background-color:#2b3a76;
 }
 
 #TierTwoHeaderEight{
@@ -476,8 +472,6 @@ color:rgba(0,0,0,0.8);
 .TierTwoCircleEight{
 top:85%;
 left:85%;
-border:1px solid #2b3a76;
-background-color:#2b3a76;
 }
 
 #TierTwoHeaderNine{
@@ -490,8 +484,6 @@ color:rgba(0,0,0,0.8);
 .TierTwoCircleNine{
 top:90%;
 left:70%;
-border:1px solid #2b3a76;
-background-color:#2b3a76;
 }
 
 #TierTwoHeaderTen{
@@ -504,8 +496,6 @@ left:10%;
 .TierTwoCircleTen{
 top:70%;
 left:10%;
-border:1px solid ##5EA9DD;
-background-color:#5EA9DD;
 }
 
 #TierTwoHeaderEleven{
@@ -518,8 +508,6 @@ color:rgba(0,0,0,0.8);
 .TierTwoCircleEleven{
 top:90%;
 left:30%;
-border:1px solid ##5EA9DD;
-background-color:#5EA9DD;
 }
 
 #TierTwoHeaderTwelve{
@@ -532,6 +520,4 @@ color:rgba(0,0,0,0.8);
 .TierTwoCircleTwelve{
 top:85%;
 left:15%;
-border:1px solid ##5EA9DD;
-background-color:#5EA9DD;
 }
