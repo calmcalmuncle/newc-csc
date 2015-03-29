@@ -3,30 +3,30 @@
 padding-top:35%;
 }
 
-.CategoryText, .SelectorTextOne , .SelectorTextTwo, .SelectorTextThree, .SelectorTextFour{
+.CategoryText, .SelectorText, #T0B1Text , #T0B2Text, #T0B3Text, #T0B4Text{
 font-size:18.5px;
 font-weight: bold;
 color:rgba(0,0,0,0.8);
 }
 
-.SelectorTextOne , .SelectorTextTwo, .SelectorTextThree, .SelectorTextFour{
+#T0B1Text , #T0B2Text, #T0B3Text, #T0B4Text{
 width:80px;
 line-height: 125%;
 font-size:18px;
 }
 
-.SelectorTextOne , .SelectorTextFour{
+#T0B1Text , #T0B4Text{
 width:80px;
 float:right;
 }
 
-.SelectorTextOne , .SelectorTextTwo{
+#T0B1Text , #T0B2Text{
 width:80px;
 margin-top:30px;
 height:65px;
 }
 
-.SelectorTextThree , .SelectorTextFour{
+#T0B3Text, #T0B4Text{
 width:80px;
 margin-top:25px;
 height:50px;
