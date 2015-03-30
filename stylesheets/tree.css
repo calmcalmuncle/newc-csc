@@ -244,6 +244,7 @@ background-size: cover;
 z-index: 1;
 width: 150px;
 height: 150px;
+background-color:#51B848;
 }
 
 .TierOneCircle:hover +.TierOneHeader {
@@ -293,8 +294,6 @@ left:30%;
 .TierOneCircleOne{
 top:30%;
 left:30%;
-background-color:#51B848;
-border:1px solid #51B848;
 }
 
 #TierOneHeaderTwo{
@@ -307,8 +306,6 @@ left:70%;
 .TierOneCircleTwo{
 top:30%;
 left:70%;
-background-color:#51B848;
-border:1px solid #51B848;
 }
 
 #TierOneHeaderFour{
@@ -321,8 +318,6 @@ left:30%;
 .TierOneCircleFour{
 top:70%;
 left:30%;
-background-color:#51B848;
-border:1px solid #51B848;
 }
 
 #TierOneHeaderThree{
@@ -335,8 +330,6 @@ left:70%;
 .TierOneCircleThree{
 top:70%;
 left:70%;
-background-color:#51B848;
-border:1px solid #51B848;
 }
 
 
@@ -356,7 +349,7 @@ background-size: cover;
 background-repeat: no-repeat;
 position: absolute;
 background-color:#51B848;
-border:1px solid #51B848;
+
 }
 
 .TierTwoCircle:hover +.TierTwoHeader {
