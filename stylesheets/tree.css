@@ -39,20 +39,64 @@ pointer-events: none;
 
 .Category{
 display: block;
-height:100px;
-width:119px;
-position:relative;
+width: 150px;
+height: 150px;
+position:absolute;
 background-color: rgba(81,184,72,0.9);
 border:1px solid black;
+border-radius:50%;
 text-decoration:none;
 text-align:center;
-float:left;
+}
+
+#ChooseNews{
+margin-left:82.5px;
+margin-top:82.5px;
+}
+
+#ChooseVideo{
+margin-left:50%;
+margin-top:0%;
+-webkit-transform: translateX(-50%);
+}
+
+#ChooseSport{
+margin-left:467px;
+margin-top:82.5px;
+}
+
+#ChooseFashion{
+margin-left:100%;
+margin-top:50%;
+-webkit-transform: translateX(-100%) translatey(-50%);
+}
+
+#ChooseScience{
+margin-left:468px;
+margin-top:468px;
+}
+
+#ChooseTechnology{
+margin-left:50%;
+margin-top:100%;
+-webkit-transform: translateX(-50%) translatey(-100%);
+}
+
+#ChooseStreaming{
+margin-left:82.5px;
+margin-top:468px;
+}
+
+#ChooseFood{
+margin-left:0%;
+margin-top:50%;
+-webkit-transform: translateX(0%) translatey(-50%);
 }
 
 #CategoryMenu  {
 display: block;
-height:200px;
-width:955px;
+height:700px;
+width:700px;
 position:Absolute;
 margin-left:50%;
 margin-top:50%;
@@ -61,6 +105,7 @@ background-color:rgba(0,0,0,0.1);
 text-decoration:none;
 text-align:center;
 z-index: 1000;
+border-radius:50%;
 }
 
 .Subcategory{
